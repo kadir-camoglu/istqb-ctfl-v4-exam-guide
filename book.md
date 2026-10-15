@@ -250,7 +250,7 @@ The back matter is built for practice and final revision. The **Answers & Ration
 
 > Technical baseline: this book follows the **English CTFL Syllabus v4.0.1** (errata release) and the exam structure tables cited above.
 
-**Extra time.** ISTQB® rules allow 25% extra time when the exam is not in your native language; how this is applied depends on your exam provider and Member Board (some bilingual exams do not grant it). For the 60-minute CTFL exam, the extension gives you 75 minutes. In other words, do not assume the extra 15 minutes when you plan your pacing. Ask your provider whether it applies to your booking, and plan for 60 minutes until they confirm it.
+**Extra time.** ISTQB® rules allow 25% extra time when the exam is not in your native language; how this is applied depends on your exam provider and Member Board. For the 60-minute CTFL exam, the extension gives you 75 minutes. In other words, do not assume the extra 15 minutes when you plan your pacing. Ask your provider whether it applies to your booking, and plan for 60 minutes until they confirm it.
 
 
 
