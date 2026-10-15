@@ -7,6 +7,7 @@ Free, independent study guide for the ISTQB® Certified Tester Foundation Level 
 - Site: https://kadir-camoglu.github.io/istqb-ctfl-v4-exam-guide/
 - Full text on one page: `all.html`
 - Markdown source: `book.md`
+- Feedback: kadir.camoglu@gmail.com
 
 Independent and unofficial. Not affiliated with or endorsed by ISTQB®.
 
