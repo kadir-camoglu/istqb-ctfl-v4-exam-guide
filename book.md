@@ -41,7 +41,7 @@ Built on what the exam actually measures. Readable for a complete beginner, accu
 
 **No warranty.** Passing any certification exam depends on the candidate. This guide aims to prepare, not to guarantee.
 
-First Edition · 2026 · Published via Leanpub.
+First Edition · 2026.
 
 \newpage
 
