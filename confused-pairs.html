@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="draft-banner" role="note"><strong>Public draft — under review.</strong> Feedback: <a href="mailto:kadir.camoglu@gmail.com">kadir.camoglu@gmail.com</a></div>
 <header class="topbar"><div class="inner"><a href="index.html">ISTQB® CTFL v4.0 Exam Guide</a><span class="meta"><span class="ind">Independent · Unofficial study guide · </span><a href="all.html">Full text on one page</a></span></div></header>
 <div class="layout">
 <nav class="side"><details id="navd"><summary>Contents</summary><div class="navbody">
@@ -50,12 +51,8 @@
 </li>
 <li><a href="final-revision.html">Final Revision Plan</a>
 </li>
-</ul>
-<div class="group">Mock exam</div><ul>
 <li><a href="mock-exam-1.html">Mock Exam 1 — 40 Questions with Rationale</a>
 </li>
-</ul>
-<div class="group">Back matter</div><ul>
 <li><a href="further-resources.html">Further Resources</a>
 </li>
 </ul>
@@ -63,8 +60,8 @@
 <main>
 <section id="commonly-confused-pairs-master-list" class="level1">
 <h1>Commonly Confused Pairs — Master List</h1>
-<p>The most common distractor on the CTFL exam is not a random wrong answer. It is the neighbour of the right answer, a concept that sits so close to the target that only one detail separates them. This list gathers the “critical concept pairs” from the end of every chapter into one list, chapter by chapter, so you can revise all of those distinctions in one sitting.</p>
-<p>Read each row as one sentence: the concept in the first column is not the concept in the second, and the third column gives the detail that tells them apart. A good test of readiness is to cover the third column and state the separator in your own words. If you can do that for every row, you are well protected against the near-miss options the exam uses most often.</p>
+<p>A well-built wrong answer is rarely random. It is usually the neighbour of the right answer, a concept that sits so close to the target that only one detail separates them. This list gathers the “critical concept pairs” boxes from the end of every chapter, chapter by chapter, so you can revise all of those distinctions in one sitting. Each box pair appears once (a pair that sits in two chapter boxes is listed under the chapter that teaches it first), and four further pairs are added that no chapter box carries: three in Chapter 1 (presence versus absence of defects, tests wear out versus pesticide paradox, test implementation versus test execution) and one in Chapter 3 (static versus dynamic testing).</p>
+<p>Read each row as one sentence: the concept in the first column is not the concept in the second, and the third column gives the detail that tells them apart. A good test of readiness is to cover the third column and state the separator in your own words. If you can do that for every row, you are well protected against near-miss options.</p>
 <section id="chapter-1-fundamentals-of-testing-2" class="level3">
 <h3>Chapter 1 — Fundamentals of Testing</h3>
 <div class="table-wrap">
@@ -161,7 +158,7 @@
 <tr class="odd">
 <td>Test level</td>
 <td>Test type</td>
-<td>A level is where in the lifecycle and at what scope (component to acceptance); a type is which quality perspective (functional, non-functional, black-box, white-box).</td>
+<td>A level is where in the lifecycle and at what scope (component to acceptance); a type is which test objective the activities serve: what is checked (functional, non-functional) or where the tests are derived from (black-box, white-box).</td>
 </tr>
 <tr class="even">
 <td>Component integration testing</td>
@@ -171,7 +168,7 @@
 <tr class="odd">
 <td>Confirmation testing</td>
 <td>Regression testing</td>
-<td>“Was the original defect fixed?” versus “Did the change break anything else?”</td>
+<td>“Was the original defect fixed?” versus “Did the change break anything that used to work?”</td>
 </tr>
 <tr class="even">
 <td>TDD</td>
@@ -298,7 +295,7 @@
 <tr class="even">
 <td>All states coverage</td>
 <td>Valid transitions coverage</td>
-<td>Visit every state; exercise every valid transition. Full valid transitions coverage guarantees full all states coverage.</td>
+<td>Exercise every state at least once; exercise every valid transition at least once. Full valid transitions coverage guarantees full all states coverage.</td>
 </tr>
 <tr class="odd">
 <td>Statement coverage</td>
@@ -409,5 +406,6 @@
 </main>
 </div>
 <script>if (window.matchMedia('(min-width: 901px)').matches) document.getElementById('navd').open = true;</script>
+<script>(function(){function od(){var h=decodeURIComponent(location.hash.slice(1));if(!h)return;var e=document.getElementById(h);while(e){if(e.tagName==='DETAILS')e.open=true;e=e.parentElement;}}addEventListener('hashchange',od);od();})();</script>
 </body>
 </html>

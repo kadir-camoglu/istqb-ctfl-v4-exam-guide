@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="draft-banner" role="note"><strong>Public draft — under review.</strong> Feedback: <a href="mailto:kadir.camoglu@gmail.com">kadir.camoglu@gmail.com</a></div>
 <header class="topbar"><div class="inner"><a href="index.html">ISTQB® CTFL v4.0 Exam Guide</a><span class="meta"><span class="ind">Independent · Unofficial study guide · </span><a href="all.html">Full text on one page</a></span></div></header>
 <div class="layout">
 <nav class="side"><details id="navd"><summary>Contents</summary><div class="navbody">
@@ -51,12 +52,8 @@
 </li>
 <li><a href="final-revision.html">Final Revision Plan</a>
 </li>
-</ul>
-<div class="group">Mock exam</div><ul>
 <li><a href="mock-exam-1.html">Mock Exam 1 — 40 Questions with Rationale</a>
 </li>
-</ul>
-<div class="group">Back matter</div><ul>
 <li><a href="further-resources.html">Further Resources</a>
 </li>
 </ul>
@@ -74,7 +71,7 @@
 <p>A test plan is a formal document that sets out the project’s test objectives, the resources it will use (people, tools, environment), the processes it will follow, the budget, the constraints, and the schedule. It records the decisions taken during planning and communicates them to stakeholders. The syllabus gives the plan four purposes: it sets out the means and schedule for reaching the test objectives, it helps confirm that the activities will meet the agreed criteria, it keeps the team and other stakeholders informed, and it shows whether testing follows the test policy and strategy or, if not, why it departs from them. A test strategy describes, usually at organisational level, how testing is generally done; the test plan applies it to one test project. Preparing the plan also forces the team to confront future challenges related to risks, schedules, people, tools, costs, and effort while there is still time to act.</p>
 <p>According to ISTQB®, a typical test plan includes these main components: the context of testing (scope, objectives, and the test-basis documents the tests will draw on); assumptions and constraints (what was taken to be true when planning, for example “the test environment will be ready in sprint 3”, and the project constraints); stakeholders and roles (who takes which responsibility, and the team’s training and hiring needs); communication and reporting (how often, in which templates, and to whom status reports go); the risk register (the analysis of the product and project risks that could arise); the test approach (the test levels and test types, the test techniques, the test deliverables, entry and exit criteria, the independence of testing, the metrics to be collected, test data and test environment requirements, and any deviations from the test policy and test strategy); and the budget and schedule (milestones and cost breakdowns).</p>
 <p>In agile projects, planning is layered: release planning draws the broad strategic frame, while iteration (sprint) planning adds the detailed test tasks for each cycle. A test plan is not a heavy object written once at the start and shelved; it is a living document, continually updated as the process moves on.</p>
-<p><em>Exam focus.</em> A common pattern gives you four work products and asks which is, or is not, a test-plan content. Entry and exit criteria, risks, and the test approach belong in the plan. The distractors are usually outputs produced in the later execution stages: test logs, defect-statistics dumps, or test completion reports never sit inside a test plan; they are outputs from the end of the process. The plan’s main mission is not to guarantee quality on its own but to record and communicate the strategy.</p>
+<p><em>Exam focus.</em> A common pattern gives you four work products and asks which is, or is not, a test-plan content. Entry and exit criteria, risks, and the test approach belong in the plan. Watch for options that name outputs produced in the later execution stages: test logs, defect-statistics dumps, or test completion reports never sit inside a test plan; they are outputs from the end of the process. The plan’s main mission is not to guarantee quality on its own but to record and communicate the strategy.</p>
 <p><strong>Check your understanding</strong></p>
 <p><em>CYU 5.1.1-a.</em> Which of the following is a purpose of a test plan?</p>
 <div class="mc">
@@ -85,9 +82,9 @@
 <li>(d) To show that testing will follow the existing test policy and test strategy, or to explain why it will deviate from them</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (d). The syllabus lists this among the purposes of a test plan. Detailed test steps (a) are produced later, during test implementation; defect lists (b) and defect assignments (c) belong to defect management, not to the plan.</p>
-</div>
+</div></details>
 <p><em>CYU 5.1.1-b.</em> What is the main purpose of a test plan?</p>
 <div class="mc">
 <ul>
@@ -97,9 +94,9 @@
 <li>(d) To record the results of test execution</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (b). The plan documents and communicates decisions; it does not guarantee quality on its own, it applies the test strategy rather than replacing it, and execution results are recorded later.</p>
-</div>
+</div></details>
 <p><em>CYU 5.1.1-c.</em> In a team using an iterative lifecycle, how should the test plan be handled as release planning and iteration planning progress?</p>
 <div class="mc">
 <ul>
@@ -109,9 +106,9 @@
 <li>(d) It is replaced by the Definition of Done, so no test planning is needed</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (c). The test plan is a living document. Release planning establishes the foundation of the test approach and test plan for every iteration, and the plan is refined as each planning level adds detail.</p>
-</div>
+</div></details>
 </section>
 <section id="fl-5-1-2" class="level3">
 <h3>The tester’s contributions to iteration and release planning (FL-5.1.2 — K1)</h3>
@@ -146,7 +143,7 @@
 </tbody>
 </table>
 </div>
-<p><em>Exam focus.</em> This objective is a direct recall question. The most common distractors are managerial tasks outside the tester’s authority (for example “deciding the go-live date alone” or “assigning developers to tasks”). The tester states effort and does analysis but does not make administrative date assignments.</p>
+<p><em>Exam focus.</em> This objective is a direct recall question. Wrong options can be managerial tasks outside the tester’s authority (for example “deciding the go-live date alone” or “assigning developers to tasks”). The tester states effort and does analysis but does not make administrative date assignments.</p>
 <p><strong>Check your understanding</strong></p>
 <p><em>CYU 5.1.2-a.</em> Which tester contribution belongs to iteration planning rather than release planning?</p>
 <div class="mc">
@@ -157,9 +154,9 @@
 <li>(d) Planning the testing for the release</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (c). Breaking stories into tasks, especially testing tasks, and estimating the effort for them is an iteration-planning contribution. Options (a), (b), and (d) are release-planning contributions.</p>
-</div>
+</div></details>
 <p><em>CYU 5.1.2-b.</em> Which of the following is NOT a planning contribution of a tester?</p>
 <div class="mc">
 <ul>
@@ -169,9 +166,9 @@
 <li>(d) Splitting stories into test tasks</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (c). Announcing the release date is a managerial decision; the tester informs it but does not decide it alone.</p>
-</div>
+</div></details>
 <p><em>CYU 5.1.2-c.</em> A tester takes part in release planning for a new mobile banking app. Which of the following is a typical tester contribution at this planning level?</p>
 <div class="mc">
 <ul>
@@ -181,16 +178,16 @@
 <li>(d) Helping to write testable user stories and acceptance criteria</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (d). In release planning, testers help write testable user stories and acceptance criteria, take part in risk analysis, estimate test effort, and plan the testing for the release. The other options are management or operations tasks, not tester contributions.</p>
-</div>
+</div></details>
 </section>
 <section id="fl-5-1-3" class="level3">
 <h3>Managing entry criteria and exit criteria (FL-5.1.3 — K2)</h3>
 <p>Entry criteria define the preconditions that must be met to start a given test activity formally. If the entry criteria are not met, the activity is likely to be more difficult, time-consuming, costly, and riskier, because instead of finding defects the team loses time on readiness problems such as setting up the environment or chasing missing data. Entry criteria cover three basic areas: resources being ready (environment, tools, people, data, budget), work products being ready (test basis, written test cases), and the test object’s initial quality level (for example the code passing a smoke test). Exit criteria define what must be achieved to declare a test activity complete. They include measures of thoroughness, such as the achieved coverage, the number of unresolved defects, the defect density, and the number of failed test cases, and yes-or-no criteria, such as whether the planned tests have run, whether static testing is done, whether every defect found has been logged, and whether all regression tests are automated. Each test level needs its own entry and exit criteria, and these vary with the test objectives.</p>
 <p>Figure 5.1 shows the two sets of criteria as gates on either side of a test activity. The entry gate asks, “Are we ready to start?” The exit gate asks, “Are we ready to stop?”</p>
 <figure>
-<img src="figures/fig_5_1_entry_exit_gates.png" alt="" /><figcaption>Figure 5.1 — Entry criteria and exit criteria as two gates around a test activity. A decision diamond labelled “Entry criteria: Are we ready to start?” leads on “Yes” into a box labelled “Testing”, and its “No” branch reads “fix readiness, wait”. The testing box leads to a second diamond labelled “Exit criteria: Are we ready to stop?”, whose “Yes” branch leads to “done” and whose “No” branch reads “keep testing; stop early only if stakeholders accept the residual risk”.</figcaption>
+<img src="figures/fig_5_1_entry_exit_gates.png" alt="Figure 5.1 — Entry criteria and exit criteria as two gates around a test activity. A decision diamond labelled “Entry criteria: Are we ready to start?” leads on “Yes” into a box labelled “Testing”, and its “No” branch reads “fix readiness, wait”. The testing box leads to a second diamond labelled “Exit criteria: Are we ready to stop?”, whose “Yes” branch leads to “done” and whose “No” branch reads “keep testing; stop early only if stakeholders accept the residual risk”." /><figcaption>Figure 5.1 — Entry criteria and exit criteria as two gates around a test activity.</figcaption>
 </figure>
 <p>Two special rules matter for the exam. First, a project running out of time or budget can also force testing to end. This is only legitimate if the stakeholders consciously accept and approve the remaining risks of going live without the exit criteria met. Second, in agile terminology these gates change names: in agile teams, the Definition of Ready plays the role of entry criteria for user stories, and the Definition of Done plays the role of exit criteria.</p>
 <p><em>Exam focus.</em> You are given a practical situation and asked which criterion it is. The distinction is in the words: “the environment being ready, the smoke test passing, the data being loaded” points to the start of testing, so it is an entry criterion (DoR); “coverage reached, no open defects above the limit, all planned test cases run” points to the end of testing, so it is an exit criterion (DoD).</p>
@@ -204,9 +201,9 @@
 <li>(d) All defects found have been reported</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (c). The availability of resources is a typical entry criterion. Options (a), (b), and (d) describe what must be achieved to finish testing, so they are exit criteria.</p>
-</div>
+</div></details>
 <p><em>CYU 5.1.3-b.</em> Can testing be ended by running out of time or budget?</p>
 <div class="mc">
 <ul>
@@ -216,9 +213,9 @@
 <li>(d) Yes, if stakeholders review and accept the risk of going live without further testing</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (d). Stopping before the exit criteria are met is only legitimate with the conscious acceptance and reporting of the remaining risk.</p>
-</div>
+</div></details>
 <p><em>CYU 5.1.3-c.</em> An agile team agrees that a user story counts as finished only when its acceptance tests pass, its automated regression tests pass, and no high-severity defect remains open. What is this agreement called, and which classic concept does it correspond to?</p>
 <div class="mc">
 <ul>
@@ -228,9 +225,9 @@
 <li>(d) Definition of Done; entry criteria</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (a). The conditions for calling a story finished are the team’s Definition of Done, which is the agile name for exit criteria. The Definition of Ready, on the other hand, holds the entry criteria a story must meet before work on it starts.</p>
-</div>
+</div></details>
 </section>
 <section id="fl-5-1-4" class="level3">
 <h3>Estimation techniques (FL-5.1.4 — K3)</h3>
@@ -242,13 +239,13 @@
 <p>Part 2 (three-point calculation). For an unknown new API integration, the team agrees: optimistic (a) = 12 hours; most likely (m) = 18 hours; pessimistic (b) = 36 hours.</p>
 <p>E = (12 + 4 × 18 + 36) / 6 = 120 / 6 = 20 hours. SD = (36 − 12) / 6 = 4 hours.</p>
 <p>The team reports this test estimate to management as 20 ± 4 hours: the work will most likely finish between 16 and 24 hours.</p>
-<p><em>Exam focus.</em> To avoid errors in the K3 maths, weight the most likely value m by 4 as the formula requires. The most common distractor is the option computed with the plain arithmetic mean (a + m + b) / 3; in the example above that mistake would give 22 instead of 20. In remaining-effort versus total-effort questions, watch which one is actually asked.</p>
+<p><em>Exam focus.</em> To avoid errors in the K3 maths, weight the most likely value m by 4 as the formula requires. A tempting wrong option is the one computed with the plain arithmetic mean (a + m + b) / 3; in the example above that mistake would give 22 instead of 20. In remaining-effort versus total-effort questions, watch which one is actually asked.</p>
 </section>
 <section id="independent-exercise-5.a" class="level4">
 <h4>Independent exercise 5.A</h4>
 <p>For a data-migration project’s testing, the experts give these three-point effort values: optimistic (a) = 4 person-days, most likely (m) = 10 person-days, pessimistic (b) = 22 person-days. Compute the final estimate (E) and the standard deviation (SD). (Solution at the end of this chapter.)</p>
 <p><em>Check your understanding.</em> The practice is the worked example plus 5.A; the single question reinforces the formula.</p>
-<p><em>CYU 5.1.4.</em> What is the classic wrong answer in three-point estimation?</p>
+<p><em>CYU 5.1.4.</em> Which common slip gives a wrong answer in three-point estimation?</p>
 <div class="mc">
 <ul>
 <li>(a) Using the formula E = (a + 4m + b) / 6</li>
@@ -257,9 +254,9 @@
 <li>(d) Using the simple arithmetic mean (a + m + b) / 3</li>
 </ul>
 </div>
-<div class="answer">
-<p>Answer: (d). The most likely value must be weighted by 4; the plain average is the classic distractor.</p>
-</div>
+<details class="ans"><summary>Show answer</summary><div class="answer">
+<p>Answer: (d). The most likely value must be weighted by 4; the plain average is a tempting wrong answer.</p>
+</div></details>
 </section>
 </section>
 <section id="fl-5-1-5" class="level3">
@@ -267,7 +264,7 @@
 <p>When the written test cases and procedures are ready, the order in which they run on the schedule must be decided. The syllabus defines three prioritisation strategies. Risk-based prioritisation runs test cases covering the most important risks first. Coverage-based prioritisation runs the cases achieving the highest coverage first; in the <strong>additional coverage prioritisation</strong> variant, each next case is the one that adds the most coverage not already achieved. <strong>Requirements-based prioritisation</strong> orders test cases by the stakeholder-defined priorities of the requirements to which they trace.</p>
 <p><strong>Two constraints can change the ideal order.</strong> Whatever strategy is chosen, the ideal order may not work if test cases or the features being tested have dependencies. If a high-priority test B can run only after a low-priority test A has created the data it needs, A must run before B, however low A’s own priority is. The order must also take into account the availability of resources: test tools, test environments, or people may be available only in a specific time window. Figure 5.2 summarises these steps, from choosing a strategy to the final execution order.</p>
 <figure>
-<img src="figures/fig_5_2_prioritization_flow.png" alt="" /><figcaption>Figure 5.2 — From prioritisation strategy to final execution order. A five-step flow: choose a risk-, coverage-, or requirements-based strategy; sort the tests by that strategy; pull prerequisite tests forward, because dependencies override priority; check the availability of people, tools, environments, and data; then produce the final execution order.</figcaption>
+<img src="figures/fig_5_2_prioritization_flow.png" alt="Figure 5.2 — From prioritisation strategy to final execution order. A five-step flow: choose a risk-, coverage-, or requirements-based strategy; sort the tests by that strategy; pull prerequisite tests forward, because dependencies override priority; check the availability of people, tools, environments, and data; then produce the final execution order." /><figcaption>Figure 5.2 — From prioritisation strategy to final execution order.</figcaption>
 </figure>
 <section id="worked-example-ordering-the-returns-module-tests" class="level4">
 <h4>Worked example — ordering the returns-module tests</h4>
@@ -319,12 +316,12 @@
 <p>Task: derive the correct final execution order, respecting requirement-based prioritisation and the technical dependency constraints.</p>
 <p>Step 1, order by business priority alone. Priority 1 comes first: T2 and T5. Then priority 2, T3; then priority 3, T1; and last priority 4, T4. Pure ordering: T2, T5, T3, T1, T4.</p>
 <p>Step 2, apply the technical dependency filters. T5 and T1 both need a return request to have been opened in the system first, that is, T3 completed. This forces T3 to the left of (before) T5 and T1 on the schedule, even though its business priority is lower than T5’s.</p>
-<p>Step 3, finalise the execution order: T2, T3, T5, T1, T4. T2 is both highest-priority and independent, so it stays first. T3 moves forward because of the dependencies; T5 and T1 follow it, and T4 takes its place last at the lowest priority.</p>
-<p><em>Exam focus.</em> In the K3 scenario questions you are asked for this final execution order. The most common distractor ignores the dependencies and lines the cases up by the business-priority column as-is. Focus on the option that does not break the technical constraints and moves the precondition case to the front.</p>
+<p>Step 3, finalise the execution order: T2, T3, T5, T1, T4. T2 and T5 share priority 1, but only T2 can run at once; T5 has to wait for T3. So T2 stays first, and T3 is pulled forward only as far as it needs to go, to just before T5, not ahead of T2. T5 and T1 follow T3, and T4 takes its place last at the lowest priority.</p>
+<p><em>Exam focus.</em> In the K3 scenario questions you are asked for this final execution order. A tempting wrong option ignores the dependencies and lines the cases up by the business-priority column as-is. Focus on the option that does not break the technical constraints and moves the precondition case just ahead of the case that needs it, not further.</p>
 </section>
 <section id="independent-exercise-5.b" class="level4">
 <h4>Independent exercise 5.B</h4>
-<p>You have four test cases: A (product risk level: High), B (risk: Medium), C (risk: High), D (risk: Low). Technical analysis has found that C can only run after B has itself been run and completed. There are no other constraints. Order these four tests, respecting risk-based prioritisation and the dependency constraint. (Solution at the end of this chapter.)</p>
+<p>You have four test cases. The product risk analysis gives the area each one covers a risk level (likelihood × impact; higher means riskier): A, 16; B, 8; C, 20; D, 3. Technical analysis has found that C can run only after B has been run and completed. There are no other constraints. Order these four tests, respecting risk-based prioritisation and the dependency constraint. (Solution at the end of this chapter.)</p>
 <p><em>Check your understanding.</em> The practice is the worked example plus 5.B.</p>
 <p><em>CYU 5.1.5.</em> Test case T7 has the highest priority, but it can run only after test case T2, which has a low priority, has created the customer account T7 needs. What should the execution schedule do?</p>
 <div class="mc">
@@ -335,18 +332,18 @@
 <li>(d) Run T7 and T2 at the same time to save time</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (c). If a higher-priority test case depends on a lower-priority one, the lower-priority test case must be executed first.</p>
-</div>
+</div></details>
 </section>
 </section>
 <section id="fl-5-1-6" class="level3">
 <h3>The test pyramid (FL-5.1.6 — K1)</h3>
 <p>The test pyramid is a model of how tests differ in granularity. It helps the team plan automation and divide test effort, since each test objective calls for a different level of automation. Moving up the pyramid, granularity gets coarser, isolation drops (meaning more dependence on other parts of the system), and execution time rises. Tests in the bottom layer are small, isolated, and fast, and each checks a small piece of functionality, so many of them are usually needed to reach reasonable coverage. The top layer holds complex, high-level, end-to-end tests; they are slower and each checks a large piece of functionality, so usually only a few are needed. The number and naming of the layers may differ: the original model by Cohn uses unit, service, and UI tests, while another popular version uses unit (component), integration (component integration), and end-to-end tests. Figure 5.3 shows a three-layer version.</p>
 <figure>
-<img src="figures/fig_5_3_test_pyramid.png" alt="" /><figcaption>Figure 5.3 — The test pyramid. Many small, fast unit or component tests sit at the base, a moderate number of service, API, or integration tests of moderate speed sit in the middle, and a few broad, slow UI or end-to-end tests sit at the top. An arrow beside the pyramid shows fewer tests towards the top and more tests towards the base.</figcaption>
+<img src="figures/fig_5_3_test_pyramid.png" alt="Figure 5.3 — The test pyramid. Many small, fast unit or component tests sit at the base, a moderate number of service, API, or integration tests of moderate speed sit in the middle, and a few broad, slow UI or end-to-end tests sit at the top. An arrow beside the pyramid shows fewer tests towards the top and more tests towards the base." /><figcaption>Figure 5.3 — The test pyramid.</figcaption>
 </figure>
-<p><em>Exam focus.</em> Questions on this objective are usually K1 and test the layer properties: granularity, isolation, execution time, and how many tests each layer needs. The thing to watch out for is an option that reverses one property, for example “top-layer tests are faster because each covers more functionality”. Some practitioners call an inverted pyramid an “ice cream cone”; the term is useful background, but it is not a syllabus concept.</p>
+<p><em>Exam focus.</em> Questions on this objective are K1 and test the layer properties: granularity, isolation, execution time, and how many tests each layer needs. The thing to watch out for is an option that reverses one property, for example “top-layer tests are faster because each covers more functionality”. Some practitioners call an inverted pyramid an “ice cream cone”; the term is useful background, but it is not a syllabus concept.</p>
 <p><strong>Check your understanding</strong></p>
 <p><em>CYU 5.1.6-a.</em> In the test pyramid, which layer holds the many fast, isolated tests?</p>
 <div class="mc">
@@ -357,9 +354,9 @@
 <li>(d) No layer; tests are spread evenly</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (a). The base holds many small, fast, isolated tests.</p>
-</div>
+</div></details>
 <p><em>CYU 5.1.6-b.</em> What does the test pyramid support the team in?</p>
 <div class="mc">
 <ul>
@@ -369,9 +366,9 @@
 <li>(d) Test automation and test effort allocation</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (d). The pyramid helps teams plan automation and split test effort, because tests differ in granularity. It does not assign techniques (a), order test cases (b), or set exit criteria (c).</p>
-</div>
+</div></details>
 <p><em>CYU 5.1.6-c.</em> Which statement about the tests in the top layer of the test pyramid is correct?</p>
 <div class="mc">
 <ul>
@@ -381,18 +378,18 @@
 <li>(d) They have the highest degree of test isolation in the pyramid</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (c). The higher the layer, the lower the granularity and isolation, and the longer the execution time. Each end-to-end test at the top checks a large piece of functionality, so a few of them usually give reasonable coverage at that level.</p>
-</div>
+</div></details>
 </section>
 <section id="fl-5-1-7" class="level3">
 <h3>The testing quadrants (FL-5.1.7 — K2)</h3>
 <p>The testing quadrants model is a two-axis classification that pairs test levels with suitable test types, activities, techniques, and work products for agile development. It lets test management check that every suitable test type and level appears in the SDLC, and it reveals that certain test types fit certain levels better. It also gives developers, testers, and business representatives a shared way to describe and tell apart the test types. The horizontal axis measures whether a test supports the team (tests that guide development) or critiques the product (tests that evaluate the product). The vertical axis classifies whether the test’s focus is business-facing (in non-technical stakeholder language) or technology-facing (in technical code and architecture language). The four quadrants that result are: Q1, technology-facing and team-supporting (component tests and component integration tests, automated and included in the CI process); Q2, business-facing and team-supporting (functional tests, examples, user story tests, UX prototypes, API tests, and simulations; these check the acceptance criteria and can be manual or automated); Q3, business-facing and product-critiquing (exploratory testing, usability testing, and user acceptance testing, which are user-oriented and often manual); and Q4, technology-facing and product-critiquing (smoke tests and non-functional tests except usability, for example performance, load, and security testing; these are often automated).</p>
 <p>Figure 5.4 places the four quadrants on the two axes, with the typical tests the syllabus lists in each one.</p>
 <figure>
-<img src="figures/fig_5_4_testing_quadrants.png" alt="" /><figcaption>Figure 5.4 — The testing quadrants on two axes: business-facing or technology-facing, and supporting the team or critiquing the product. Q1 (technology-facing, support the team) holds component and component integration tests, automated in CI. Q2 (business-facing, support the team) holds functional tests, examples, user story tests, UX prototypes, API testing, and simulations, which can be manual or automated. Q3 (business-facing, critique the product) holds exploratory testing, usability testing, and user acceptance testing, which are user-oriented and often manual. Q4 (technology-facing, critique the product) holds smoke tests and non-functional tests except usability tests, which are often automated.</figcaption>
+<img src="figures/fig_5_4_testing_quadrants.png" alt="Figure 5.4 — The testing quadrants on two axes: business-facing or technology-facing, and supporting the team or critiquing the product. Q1 (technology-facing, support the team) holds component and component integration tests, automated in CI. Q2 (business-facing, support the team) holds functional tests, examples, user story tests, UX prototypes, API testing, and simulations, which can be manual or automated. Q3 (business-facing, critique the product) holds exploratory testing, usability testing, and user acceptance testing, which are user-oriented and often manual. Q4 (technology-facing, critique the product) holds smoke tests and non-functional tests except usability tests, which are often automated." /><figcaption>Figure 5.4 — The testing quadrants on two axes: business-facing or technology-facing, and supporting the team or critiquing the product.</figcaption>
 </figure>
-<p><em>Exam focus.</em> You are given a specific test activity (say penetration testing or usability testing) and asked which quadrant it belongs to. Candidates most often fall for the fine line between Q2 and Q3, which are both business-facing. Ask this question: does the work help define what and how something will be built, or does it evaluate the finished software? If it defines, it is Q2; if it inspects or experiences finished work, it is Q3.</p>
+<p><em>Exam focus.</em> You are given a specific test activity (say penetration testing or usability testing) and asked which quadrant it belongs to. The fine line between Q2 and Q3, which are both business-facing, is easy to blur. Ask this question: does the work help define what and how something will be built, or does it evaluate the finished software? If it defines, it is Q2; if it inspects or experiences finished work, it is Q3.</p>
 <p><strong>Check your understanding</strong></p>
 <p><em>CYU 5.1.7-a.</em> Automated component tests that run in the CI pipeline on every commit belong to which quadrant?</p>
 <div class="mc">
@@ -403,9 +400,9 @@
 <li>(d) Q4 (technology-facing and product-critiquing)</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (a). Component tests are technology-facing and support the team’s daily development, so they belong to Q1.</p>
-</div>
+</div></details>
 <p><em>CYU 5.1.7-b.</em> Exploratory testing, usability testing, and user acceptance testing (UAT) belong to which quadrant?</p>
 <div class="mc">
 <ul>
@@ -415,9 +412,9 @@
 <li>(d) Q4 (technology-facing and product-critiquing)</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (c). Business-facing tests that judge the finished product (mostly manual) are Q3.</p>
-</div>
+</div></details>
 <p><em>CYU 5.1.7-c.</em> Q2 and Q3 are both business-facing. What is the main difference between them?</p>
 <div class="mc">
 <ul>
@@ -427,9 +424,9 @@
 <li>(d) Q2 tests are run only by developers, while Q3 tests are run only by business representatives</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (b). Q2 tests, such as examples and user story tests, check the acceptance criteria and guide development. Q3 tests, such as exploratory testing and user acceptance testing, measure the product against user expectations. Q2 tests can be manual or automated and Q3 tests are often manual, so (c) reverses the facts and makes them absolute.</p>
-</div>
+</div></details>
 </section>
 </section>
 <section id="risk-management" class="level2">
@@ -438,6 +435,7 @@
 <section id="fl-5-2-1" class="level3">
 <h3>Risk, likelihood, impact, and risk level (FL-5.2.1 — K1)</h3>
 <p>A risk is something that might happen (an event, hazard, threat, or situation) and, if it did, would harm the project or the product. Every risk is characterised by two factors. Risk likelihood is the probability of the risk occurring, greater than 0 and less than 1; something certain to occur is no longer a risk but an issue, and something impossible cannot be a risk either. Risk impact is the size of the harm the risk would do to the project’s budget, its schedule, or the product’s quality if it occurred. Risk level is a measure for the risk; it is determined from likelihood and impact. In a quantitative approach, risk level is calculated as likelihood multiplied by impact; in a qualitative approach, it is read from a risk matrix (for example, likelihood and impact each rated low, medium, or high and combined in a grid); a mix of the two is also possible. Risk level is the main input deciding how much test effort an area receives.</p>
+<p><em>Exam focus.</em> This K1 objective is a recall item: risk level comes from likelihood and impact together, by calculation or from a risk matrix, never from one of them alone. Likelihood lies strictly between 0 and 1, so a certain event is an issue rather than a risk. Watch for an option that ranks a risk by impact only or by likelihood only.</p>
 <p><strong>Check your understanding</strong></p>
 <p><em>CYU 5.2.1-a.</em> What determines risk level?</p>
 <div class="mc">
@@ -448,9 +446,9 @@
 <li>(d) The number of test cases planned for the area</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (c). Risk level is determined from likelihood and impact: calculated as their product in a quantitative approach, or read from a risk matrix in a qualitative one.</p>
-</div>
+</div></details>
 <p><em>CYU 5.2.1-b.</em> Which is true of risk likelihood?</p>
 <div class="mc">
 <ul>
@@ -460,9 +458,9 @@
 <li>(d) It is the same as impact</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (a). Likelihood is in the range 0 &lt; p &lt; 1; the extremes (certain/impossible) are not risks.</p>
-</div>
+</div></details>
 <p><em>CYU 5.2.1-c.</em> During a risk workshop, a business analyst says: “If the overnight interest batch fails, around 40,000 customer accounts would show wrong balances the next morning.” Which risk attribute does this statement describe?</p>
 <div class="mc">
 <ul>
@@ -472,16 +470,16 @@
 <li>(d) Risk mitigation</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (b). The statement describes the consequences if the risk occurs, which is risk impact. It says nothing about how probable the failure is, and risk level needs likelihood and impact together.</p>
-</div>
+</div></details>
 </section>
 <section id="fl-5-2-2" class="level3">
 <h3>Project risks versus product risks (FL-5.2.2 — K2)</h3>
 <p>The syllabus divides risks into two families by the area they affect and asks you to tell which is which. Project risks concern how the project is managed and controlled; when they occur, they affect the project’s schedule, budget, or scope, and so its ability to achieve its objectives. The syllabus groups them: organisational issues (delays in work-product deliveries, inaccurate estimates, cost cutting), people issues (insufficient skills, conflicts, communication problems, shortage of staff), technical issues (scope creep, poor tool support), and supplier issues (a third party failing to deliver, or the supporting company going bankrupt). Product risks are related to the product’s quality characteristics (for example, those in the ISO 25010 quality model), the possibility that the software fails to meet the users’ needs. For instance: functionality that is missing or wrong, miscalculations, runtime crashes, weak architecture, slow algorithms, sluggish response times, a poor user experience, and security vulnerabilities. When product risks occur, the consequences may include user dissatisfaction; loss of revenue, trust, or reputation; damage to third parties; high maintenance costs and an overloaded help desk; criminal penalties; and, in extreme cases, physical damage, injuries, or even death.</p>
 <p>Figure 5.5 sets the two families side by side, with the examples the syllabus gives for each.</p>
 <figure>
-<img src="figures/fig_5_5_project_vs_product_risk.png" alt="" /><figcaption>Figure 5.5 — Project risk versus product risk. A box labelled “Risk” branches into “Project risk”, which affects schedule, budget, and scope, and “Product risk”, which affects product quality. The project risk examples are grouped as organisational (delays, inaccurate estimates), people (insufficient skills, staff shortage), technical (scope creep, poor tool support), and supplier (third-party delivery failure). The product risk examples are missing or wrong functionality, incorrect calculations, runtime errors, poor architecture and inefficient algorithms, inadequate response time, poor user experience, and security vulnerabilities.</figcaption>
+<img src="figures/fig_5_5_project_vs_product_risk.png" alt="Figure 5.5 — Project risk versus product risk. A box labelled “Risk” branches into “Project risk”, which affects schedule, budget, and scope, and “Product risk”, which affects product quality. The project risk examples are grouped as organisational (delays, inaccurate estimates), people (insufficient skills, staff shortage), technical (scope creep, poor tool support), and supplier (third-party delivery failure). The product risk examples are missing or wrong functionality, incorrect calculations, runtime errors, poor architecture and inefficient algorithms, inadequate response time, poor user experience, and security vulnerabilities." /><figcaption>Figure 5.5 — Project risk versus product risk.</figcaption>
 </figure>
 <p><em>Exam focus.</em> To classify the risk in a scenario, ask: if this danger occurs, is it the project’s managerial schedule and budget that suffer, or the quality of the software in the user’s hands? If the effect is on the schedule and the team’s work (for example “the test environment may not be delivered on time” or “the automation engineer may resign mid-release”), it is a project risk; if the effect is on the software’s quality in the user’s hands, it is a product risk.</p>
 <p><strong>Check your understanding</strong></p>
@@ -494,9 +492,9 @@
 <li>(d) Organisational management risk</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (b). The risk concerns the correctness of the software’s calculations, a quality characteristic of the product, so it is a product risk.</p>
-</div>
+</div></details>
 <p><em>CYU 5.2.2-b.</em> “The only automation architect with payment-domain knowledge resigning mid-release” is which risk class?</p>
 <div class="mc">
 <ul>
@@ -506,9 +504,9 @@
 <li>(d) Calculation risk</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (a). The main effect is on the team’s ability to deliver (schedule/resource), so it is a project risk.</p>
-</div>
+</div></details>
 <p><em>CYU 5.2.2-c.</em> Which question best separates a project risk from a product risk?</p>
 <div class="mc">
 <ul>
@@ -518,9 +516,9 @@
 <li>(d) If the risk occurs, does it affect the project’s schedule, budget, or scope, or the quality of the product?</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (d). Project risks affect the project’s ability to achieve its objectives through its schedule, budget, or scope. Product risks relate to the product’s quality characteristics. Likelihood, mitigation cost, and the person who reported the risk do not decide its class.</p>
-</div>
+</div></details>
 </section>
 <section id="fl-5-2-3" class="level3">
 <h3>Risk-based testing and risk control (FL-5.2.3, FL-5.2.4 — K2)</h3>
@@ -529,7 +527,7 @@
 <p>To mitigate a risk by testing, the team can, for example, give higher-risk areas more experienced testers, greater independence, earlier reviews and static analysis, stronger techniques and coverage levels, appropriate test types, and more dynamic and regression testing. Risk control consists of risk mitigation and risk monitoring. Mitigation implements actions proposed during assessment to reduce risk level. Monitoring checks whether those actions work, gathers information to improve assessment, and identifies emerging risks. Once a risk has been analysed, possible responses include mitigation by testing, acceptance, transfer, and a contingency plan. Risk acceptance means consciously taking the risk on, usually after stakeholders have agreed. Risk transfer shifts the consequences to a third party, for example through insurance or a contract. A contingency plan prepares the actions to take if the risk does occur.</p>
 <p>Figure 5.6 shows how these pieces fit together. Risk analysis feeds the response options, and risk monitoring follows every one of them.</p>
 <figure>
-<img src="figures/fig_5_6_risk_control.png" alt="" /><figcaption>Figure 5.6 — Risk analysis and risk control. Under the heading “Risk analysis”, risk identification leads to risk assessment, which determines likelihood, impact, and level. Under the heading “Risk control”, the assessment feeds four risk responses: risk mitigation by testing, risk acceptance, risk transfer, and a contingency plan. All four responses lead into risk monitoring, which checks that the actions work, improves the assessment, and spots emerging risks.</figcaption>
+<img src="figures/fig_5_6_risk_control.png" alt="Figure 5.6 — Risk analysis and risk control. Under the heading “Risk analysis”, risk identification leads to risk assessment, which determines likelihood, impact, and level. Under the heading “Risk control”, the assessment feeds four risk responses: risk mitigation by testing, risk acceptance, risk transfer, and a contingency plan. All four responses lead into risk monitoring, which checks that the actions work, improves the assessment, and spots emerging risks." /><figcaption>Figure 5.6 — Risk analysis and risk control.</figcaption>
 </figure>
 <p><em>Exam focus.</em> You are given a practical product-risk control move and asked which response type it is. “Shifting responsibility to an external organisation with a penalty clause in the contract” is transfer; “approving go-live with defects in non-critical areas by stakeholder decision” is acceptance; “writing extra test cases and adding experienced testers there” is mitigation. Commissioning additional, independent testing to reduce a risk is also mitigation, even when an outside firm does it.</p>
 <p><strong>Check your understanding</strong></p>
@@ -542,9 +540,9 @@
 <li>(d) It gives higher-risk areas stricter techniques and more testing, so effort is proportioned to risk</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (d). In risk-based testing, effort is distributed in proportion to the risk level.</p>
-</div>
+</div></details>
 <p><em>CYU 5.2.3-b.</em> Product risk analysis consists of which two activities?</p>
 <div class="mc">
 <ul>
@@ -554,9 +552,9 @@
 <li>(d) Test monitoring and test control</li>
 </ul>
 </div>
-<div class="answer">
-<p>Answer: (a). Risk analysis is identification plus assessment. Mitigation and monitoring make up risk control, which is the sibling activity the exam usually swaps in as a distractor.</p>
-</div>
+<details class="ans"><summary>Show answer</summary><div class="answer">
+<p>Answer: (a). Risk analysis is identification plus assessment. Mitigation and monitoring make up risk control, which is the sibling activity that a wrong option can swap in.</p>
+</div></details>
 <p><em>CYU 5.2.4-a.</em> To limit the financial consequences of a possible security breach in its new payment gateway, a company buys a cyber-insurance policy and adds an indemnity clause to its contract with the gateway supplier, so that the insurer and the supplier carry the losses if a breach occurs. Which risk control response is this?</p>
 <div class="mc">
 <ul>
@@ -566,9 +564,9 @@
 <li>(d) Contingency planning</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (b). Shifting the consequences of a risk to a third party through insurance or a contract is risk transfer. Nothing here lowers the likelihood or impact through testing, so it is not mitigation. The risk is not simply taken on, so it is not acceptance. No fallback actions are prepared, so it is not a contingency plan.</p>
-</div>
+</div></details>
 <p><em>CYU 5.2.4-b.</em> Consciously taking on and reporting a remaining low risk by explicit stakeholder decision is which response?</p>
 <div class="mc">
 <ul>
@@ -578,9 +576,9 @@
 <li>(d) Contingency plan</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (c). Consciously taking on the remaining risk is acceptance.</p>
-</div>
+</div></details>
 </section>
 </section>
 <section id="test-monitoring-test-control-and-test-completion" class="level2">
@@ -588,6 +586,7 @@
 <section id="fl-5-3-1" class="level3">
 <h3>Metrics for test monitoring and control (FL-5.3.1 — K1)</h3>
 <p>Test monitoring is the activity of continuously gathering, tracking, and comparing the real progress data, metrics, and status of the test process against the targets in the plan. Test control is the act of taking corrective decisions and management directives to bring the process back on track when the metrics gathered during monitoring show a deviation from the plan (for example the tests falling behind schedule); the metrics gathered during monitoring form the basis of these decisions (for example reprioritising tests when a risk becomes an issue, re-evaluating whether a test item meets the entry or exit criteria after rework, adjusting the schedule when the test environment is delivered late, or adding resources where needed). Test completion gathers information from finished test activities and consolidates lessons, testware, and other useful material once a test level, an iteration, or a release wraps up. The syllabus groups the main families of metrics that can be gathered during monitoring: project progress metrics (task completion rates, budget and resource consumption rates); test progress metrics (planned versus actually run test-case counts, pass/fail ratios); product quality metrics (system reliability such as mean time to failure, availability, and response times); defect metrics (defects found and fixed, defect density per module, defect-detection percentage); coverage metrics (the proportion of requirements tested, white-box code coverage percentages); risk metrics (for example the residual risk level); and cost metrics (the cost of testing, the organisational cost of quality).</p>
+<p><em>Exam focus.</em> This K1 objective asks you to recognise which family a metric belongs to: project progress, test progress, product quality, defect, coverage, risk, or cost. Learn the families, not long lists of figures, and watch for an option that files a measure under the wrong family.</p>
 <p><strong>Check your understanding</strong></p>
 <p><em>CYU 5.3.1-a.</em> Which of the following is a test progress metric?</p>
 <div class="mc">
@@ -598,9 +597,9 @@
 <li>(d) The availability of the system in production</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (a). Tests run and pass/fail ratios are test progress metrics. Defect density (c) is a defect metric, availability (d) is a product quality metric, and backlog size (b) is not a test metric.</p>
-</div>
+</div></details>
 <p><em>CYU 5.3.1-b.</em> Gathering defect-density data, then deciding on the basis of that data to extend testing, are respectively what?</p>
 <div class="mc">
 <ul>
@@ -610,9 +609,9 @@
 <li>(d) Both test monitoring</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (b). Gathering data is monitoring; taking a corrective decision from it is control.</p>
-</div>
+</div></details>
 <p><em>CYU 5.3.1-c.</em> A test manager reports the residual risk level at the end of each test cycle. Which metric family does this belong to, and what does it mainly help stakeholders decide?</p>
 <div class="mc">
 <ul>
@@ -622,9 +621,9 @@
 <li>(d) Cost metrics; how much the organisation spends on quality</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (c). Residual risk level is a risk metric. It tells stakeholders how much product risk remains, which supports the decision to release or to continue testing.</p>
-</div>
+</div></details>
 </section>
 <section id="fl-5-3-2" class="level3">
 <h3>Test reports: progress and completion (FL-5.3.2, FL-5.3.3 — K2)</h3>
@@ -632,7 +631,7 @@
 <p>A test completion report is written at the close of a project, a test level, or a test type (for example at the end of a test level, a test cycle, or an iteration), ideally once its exit criteria have been met. It draws on the test progress reports and other data. Its typical content is a test summary; an evaluation of testing and product quality against the original test plan (the test objectives and exit criteria); deviations from the plan, such as differences in schedule, duration, and effort; the testing impediments met and their workarounds; test metrics based on the progress reports; unmitigated risks and defects not fixed; and the lessons learned that are relevant to testing.</p>
 <p>Different audiences need different information, and the audience also shapes how formal and how frequent the reporting is. Reports to colleagues on the same team are often frequent and informal, whereas completion reporting follows a set template and happens once.</p>
 <p>Communicating the status of testing (FL-5.3.3) can use one or more of these options: verbal communication with team members and other stakeholders; dashboards, such as CI/CD dashboards, task boards, and burn-down charts; electronic channels, such as email and chat; online documentation; and formal test reports. The best choice depends on test management concerns, the organisation’s test strategy, regulatory standards, and, in self-organising teams, the team itself. More formal communication may suit distributed teams that cannot always talk face to face, and the content should be tailored to what each stakeholder group needs.</p>
-<p><em>Exam focus.</em> The exam builds distractors by deliberately swapping the content elements of these two reports. “The current blockers cutting off testing and next week’s run schedule” is discussed while testing is going on, so it belongs to the progress report. “Lessons learned, evaluation against the original test plan, and the closing summary” are written when the work is complete, so they are elements of the completion report.</p>
+<p><em>Exam focus.</em> Wrong options can swap the content elements of these two reports. “The current blockers cutting off testing and next week’s run schedule” is discussed while testing is going on, so it belongs to the progress report. “Lessons learned, evaluation against the original test plan, and the closing summary” are written when the work is complete, so they are elements of the completion report.</p>
 <p><strong>Check your understanding</strong></p>
 <p><em>CYU 5.3.2-a.</em> A test manager prepares a document after a system test phase fully closes, containing “the lessons learned by the teams throughout the process, the list of defects not fixed, and a summary of the unmitigated product risks.” Which document is this?</p>
 <div class="mc">
@@ -643,9 +642,9 @@
 <li>(d) A configuration-management baseline document</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (b). Lessons learned, defects not fixed, and unmitigated risks, prepared when the test level is complete, belong in the test completion report.</p>
-</div>
+</div></details>
 <p><em>CYU 5.3.2-b.</em> “The problems currently blocking testing and the workarounds in use” belong to which report?</p>
 <div class="mc">
 <ul>
@@ -655,9 +654,9 @@
 <li>(d) A configuration baseline</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (a). Current blockers and workarounds are in the progress report published while testing is going on.</p>
-</div>
+</div></details>
 <p><em>CYU 5.3.3.</em> How should test status be communicated to stakeholders?</p>
 <div class="mc">
 <ul>
@@ -667,15 +666,16 @@
 <li>(d) Only ever verbally</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (b). The syllabus lists several options for communicating test status and says the choice depends on the audience, the organisation’s test strategy, regulatory standards, and the team; a single format for everyone (a) or a single channel (c, d) ignores this.</p>
-</div>
+</div></details>
 </section>
 </section>
 <section id="configuration-management-fl-5.4.1-k2" class="level2">
 <h2>5.4 Configuration Management (FL-5.4.1 — K2)</h2>
 <p><span id="fl-5-4-1"></span>Configuration management (CM) is the discipline that keeps all a project’s engineering and test items (code blocks, requirement documents, analyses, test cases, automation scripts, test data, environment architectures) identifiable, under version control, monitored for changes, and linked to the other configuration items, so that traceability holds across the whole test process. It gives testing three basic guarantees. Unique identification: the exact version identity of the software object under test (the build version) and all its test documents is known clearly at any moment. Bidirectional relation: which version of a test case was run against exactly which build version of the software is mapped clearly. And reproducibility: all identified documentation and software items are referenced unambiguously in the testware, so earlier test results can be reproduced, even months later, by returning to the same code version, test-data set, and environment configuration. An item version approved for testing gains a baseline identity in configuration management. Once a baseline is created, that document or code can only be updated through a formal change-control process, which preserves the stability and interpretability of the test results. To support continuous integration, continuous delivery, and continuous deployment, automated configuration management is normally part of the DevOps pipeline.</p>
 <p><em>In practice.</em> When a critical production failure is assigned to a developer, they may close the defect report saying “it works on my machine; the failure could not be reproduced.” This is exactly where configuration management steps in and shows, with records, that the tester caught the failure in build 7.3.1 with data set v2, while the developer accidentally examined code version 7.3.2 to fix it. Without these records, the disagreement could go on for days.</p>
+<p><em>Exam focus.</em> This objective asks how configuration management supports testing: it identifies and version-controls the test object and the testware, and it references them unambiguously, so that test results can be reproduced. Watch for options that give configuration management the work of another discipline, such as finding or fixing defects, deciding which defect is fixed first, or writing test cases.</p>
 <p><strong>Check your understanding</strong></p>
 <p><em>CYU 5.4.1-a.</em> How does configuration management support testing?</p>
 <div class="mc">
@@ -686,9 +686,9 @@
 <li>(d) By deciding which defects are fixed first</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (a). CM provides identification, versioning, and reproducibility; it does not find defects.</p>
-</div>
+</div></details>
 <p><em>CYU 5.4.1-b.</em> A configuration item approved for testing, which can now only change through formal change control, becomes what?</p>
 <div class="mc">
 <ul>
@@ -698,9 +698,9 @@
 <li>(d) A baseline</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (d). The approved item is a baseline; it preserves the interpretability of the results.</p>
-</div>
+</div></details>
 <p><em>CYU 5.4.1-c.</em> A developer closes a defect report as “cannot reproduce.” How does configuration management help to settle the question?</p>
 <div class="mc">
 <ul>
@@ -710,9 +710,9 @@
 <li>(d) It shows which build, test data, and environment versions the failed test used, so the same baseline can be restored and the test run again</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (d). CM keeps every configuration item identified and versioned, and it allows a return to a previous baseline to reproduce earlier test results. Any version mismatch between the tester’s run and the developer’s check then becomes visible.</p>
-</div>
+</div></details>
 </section>
 <section id="defect-management" class="level2">
 <h2>5.5 Defect Management</h2>
@@ -752,7 +752,7 @@
 </div>
 <section id="worked-example-a-weak-report-versus-a-professional-one" class="level4">
 <h4>Worked example — a weak report versus a professional one</h4>
-<p>On an airline ticketing project, a tester finds that when the boarding-pass PDF is downloaded for a child passenger, the document prints the name of the accompanying adult instead of the child’s name. (Environment: Staging, version 2.8.0, a desktop browser.)</p>
+<p>On an airline ticketing project, a tester finds that when the boarding-pass PDF is downloaded for a child passenger, the document prints the name of the accompanying adult instead of the child’s name. (Environment: Staging, version 2.8.0, Browser X 128.0 on OS Y 14.5. Browser X and OS Y stand in for product names here; a real report states the real names and versions.)</p>
 <p>A weak defect report: “Child boarding pass download is completely broken. Disgraceful, fix it immediately!!!” (This report has no version number, no environment information, no reproduction steps, and no separation of expected and actual result; it is emotional, speculative comment.)</p>
 <p>A correct, professional defect report:</p>
 <div class="table-wrap">
@@ -778,7 +778,7 @@
 </tr>
 <tr class="odd">
 <td>Software version / Environment</td>
-<td>Check-in Web Platform v2.8.0 · Staging · desktop browser (current version) on a desktop operating system</td>
+<td>Check-in Web Platform v2.8.0 · Staging · Browser X 128.0 on OS Y 14.5</td>
 </tr>
 <tr class="even">
 <td>Test context</td>
@@ -815,7 +815,15 @@
 </section>
 <section id="independent-exercise-5.c" class="level4">
 <h4>Independent exercise 5.C</h4>
-<p>A colleague enters this defect report: “The search bar is sometimes very slow in production. I am sure the problem is definitely coming from the database queries, someone needs to look at that urgently; the system should return results much faster.” Name the three most critical structural reporting elements this ticket is definitely missing, using the typical defect-report content in the syllabus. (Solution at the end of this chapter.)</p>
+<p>A colleague enters this defect report: “The search bar is sometimes very slow in production. I am sure the problem is definitely coming from the database queries, someone needs to look at that urgently; the system should return results much faster.” You reproduce the problem and note these facts:</p>
+<ul>
+<li>System: Library Catalogue web application v3.4.1, production environment, Browser X 128.0 on OS Y 14.5; date 2026-06-03.</li>
+<li>Searching for the keyword “history” with the branch filter set to “All branches” took between 18 and 22 seconds to show results, in 5 out of 5 attempts.</li>
+<li>The same search with the filter set to a single branch showed results in under 2 seconds, in 5 out of 5 attempts.</li>
+<li>Requirement REQ-SRCH-03: search results are shown within 3 seconds. Your test case for it is TC-SRCH-11.</li>
+<li>The search page is the catalogue’s main entry point for library members.</li>
+</ul>
+<p>Using these facts, write the complete defect report in the field layout of the worked example (title, date and author, version and environment, test context, steps to reproduce, expected result, actual result, status, severity and priority, references). Then say which parts of your colleague’s text you left out, and why. (Solution at the end of this chapter.)</p>
 <p><em>Check your understanding.</em> The practice is the worked example plus 5.C.</p>
 <p><em>CYU 5.5.1.</em> What is the difference between severity and priority?</p>
 <div class="mc">
@@ -826,9 +834,9 @@
 <li>(d) Severity measures urgency, priority measures impact</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (a). Severity is the degree of impact; priority is the urgency of the fix. They are separate fields (low severity with high priority is possible).</p>
-</div>
+</div></details>
 </section>
 </section>
 </section>
@@ -968,12 +976,18 @@
 <section id="exam-tips-and-common-traps-chapter-5" class="level3">
 <h3>Exam tips and common traps — Chapter 5</h3>
 <p>For K3 estimation questions, write out the three-point formulas clearly (E = (a + 4m + b) / 6 and SD = (b − a) / 6) before you start multiplying numbers on paper. The distractors are deliberately built from the plain-average result that forgets to weight m by 4. Check word by word whether the stem asks for remaining effort or total effort. For K3 prioritisation questions, before going to the options, list the tests by risk or business priority on paper, then examine the dependency column; move a precondition test to the left of (before) the tests that depend on it, however low its own priority. For K3 defect-report questions, watch for subjective words in the report text (such as “disgraceful,” “broken,” “I think it is a database bug”): a professional report contains no speculation or blame aimed at the developer, only objective steps and concrete expected and actual results.</p>
-<p>Two traps come up most often. The first is swapping the contents of the two reports: lessons learned are written after the test phase ends, so they can only go in the completion report, not the progress report, while the current blockers and the plan for the next period belong to the progress report. Keep in mind that the completion report also summarises the impediments met during testing and their workarounds. The second is severity-priority matching traps: if you see “a high-severity defect must always be fixed at the highest priority,” remember it is wrong; a crash in a module that will be scrapped next month has high severity but low fix priority.</p>
+<p>Two traps are worth knowing. The first is swapping the contents of the two reports: lessons learned look back on finished work, so the syllabus lists them in the completion report, not the progress report, while the current blockers and the plan for the next period belong to the progress report. Keep in mind that the completion report also summarises the impediments met during testing and their workarounds. The second is severity-priority matching traps: if you see “a high-severity defect must always be fixed at the highest priority,” remember it is wrong; a crash in a module that will be scrapped next month has high severity but low fix priority.</p>
 </section>
 </section>
 <section id="cumulative-retrieval-3" class="level2">
 <h2>Cumulative retrieval</h2>
-<p>Revisiting earlier chapters through this chapter’s lens: name whether “the automation architect resigning mid-release” is an error, a defect, or neither (Chapter 1); decide whether assigning the strictest techniques to the highest-risk module reflects risk-based testing or the exhaustive-testing limit (Chapters 5 and 1); and state which test level a Q4 performance test most naturally sits at (Chapter 2). Try to answer each from memory before you look back at the earlier chapters.</p>
+<p>Revisiting earlier chapters through this chapter’s lens:</p>
+<ul>
+<li><strong>R5-a.</strong> Name whether “the automation architect resigning mid-release” is an error, a defect, or neither (Chapter 1).</li>
+<li><strong>R5-b.</strong> Decide whether assigning the strictest techniques to the highest-risk module reflects risk-based testing or the exhaustive-testing limit (Chapters 5 and 1).</li>
+<li><strong>R5-c.</strong> State which test level a Q4 performance test of the complete system most naturally sits at (Chapter 2).</li>
+</ul>
+<p>Try to answer each from memory before you look back at the earlier chapters. Model answers are in Answers &amp; Rationale, under <em>Cumulative retrieval — model answers</em>.</p>
 </section>
 <section id="chapter-exercises-4" class="level2">
 <h2>Chapter exercises</h2>
@@ -987,7 +1001,7 @@
 <li>(d) E = 18 person-days, SD = 8 person-days</li>
 </ul>
 </div>
-<p><em>PB-C5-002.</em> A test manager has four test cases to schedule. T1 tests a high-risk area; T2 tests a low-risk area; T3 tests a high-risk area but technically depends on the output data T2 produces to run; T4 tests a medium-risk area. Respecting the technical dependency constraints and running risk-based prioritisation, what is the correct execution order?</p>
+<p><em>PB-C5-002.</em> A test manager has four test cases to schedule. The product risk analysis gives each area a risk level calculated as likelihood × impact (higher means riskier): T1 covers an area with risk level 20; T2, 4; T3, 15; T4, 9. T3 can run only after T2 has produced the output data it needs. Respecting this dependency and applying risk-based prioritisation, what is the correct execution order?</p>
 <div class="mc">
 <ul>
 <li>(a) T1, T3, T4, T2</li>
@@ -1080,7 +1094,7 @@
 <p><em>PB-C5-012.</em> At the start of a new project, the testers want every test case, test script, and test data set to be uniquely identified and version-controlled from the moment it is written, so that each later test result can be traced to the exact versions of the testware, the build, and the test environment it used. When should the team decide how test items and testware will be identified, version-controlled, and baselined?</p>
 <div class="mc">
 <ul>
-<li>(a) During test planning, as part of the test approach, before testware is produced</li>
+<li>(a) During test planning, before any testware is produced</li>
 <li>(b) During test execution, once the first builds arrive from development</li>
 <li>(c) During test completion, when the testware is archived for later use</li>
 <li>(d) After the first defect report is closed as “cannot reproduce”</li>
@@ -1091,16 +1105,73 @@
 <ul>
 <li>(a) “Voucher codes are broken again. Someone clearly did not test the checkout before handing it over.”</li>
 <li>(b) “Since build 5.2.1 on staging, the voucher function does not always accept valid codes at checkout, for example on some larger baskets, and the discount is then missing from the total.”</li>
-<li>(c) “Build 5.2.1, staging, current desktop browser: entering the valid code SAVE10 on a basket of 40.00 and selecting Apply shows ‘Code not recognised’. Expected: a 10 percent discount is applied and the total becomes 36.00. Steps to reproduce and a screenshot are attached; test case TC-VCH-03.”</li>
+<li>(c) “Build 5.2.1, staging, Browser X 128.0 on OS Y 14.5: entering the valid code SAVE10 on a basket of 40.00 and selecting Apply shows ‘Code not recognised’. Expected: a 10 percent discount is applied and the total becomes 36.00. Steps to reproduce and a screenshot are attached; test case TC-VCH-03.”</li>
 <li>(d) “On staging, after applying a voucher at checkout, the page feels slow and the discounted total looks wrong to me; the discount service is probably the cause, so it should be checked first.”</li>
 </ul>
 </div>
 </section>
 <section id="independent-exercise-solutions-1" class="level2">
 <h2>Independent exercise solutions</h2>
-<p><em>5.A.</em> E = (4 + 4 × 10 + 22) / 6 = (4 + 40 + 22) / 6 = 66 / 6 = 11 person-days. SD = (22 − 4) / 6 = 18 / 6 = 3 person-days. So 11 ± 3 person-days. (The plain average (4 + 10 + 22) / 3 = 12 is the classic wrong answer.)</p>
-<p><em>5.B.</em> By risk, the high-risk tests A and C come first, then medium B, then low D: pure order A, C, B, D. But C depends on B, so B must run before C. Moving B before C gives the final order: A, B, C, D. (A is high-risk and independent, so it stays first; B is pulled forward for the dependency; C follows B; D is last.)</p>
-<p><em>5.C.</em> The three most critical missing elements are: numbered steps to reproduce (with the exact conditions that trigger the slowness); the environment and version information (build, browser, environment); and a concrete, separated expected result and actual result (with measured data rather than “sometimes very slow”). The ticket also contains speculation (“definitely coming from the database queries”) that a professional report should not include.</p>
+<p><em>5.A.</em> E = (4 + 4 × 10 + 22) / 6 = (4 + 40 + 22) / 6 = 66 / 6 = 11 person-days. SD = (22 − 4) / 6 = 18 / 6 = 3 person-days. So 11 ± 3 person-days. (The plain average (4 + 10 + 22) / 3 = 12 is a common wrong answer.)</p>
+<p><em>5.B.</em> Step 1, order by risk level alone: C (20), A (16), B (8), D (3). Step 2, apply the dependency: C needs B, so B must run before C. Pull B forward only as far as it needs to go, to just before C. Step 3, final order: B, C, A, D. B now runs first even though its own risk level is low, because the highest-risk test cannot start without it; A and D keep their places relative to each other. (The tempting wrong answer, C, A, B, D, ignores the dependency; A, B, C, D moves B forward correctly but leaves the highest-risk test C waiting behind A.)</p>
+<p><em>5.C.</em> A complete report built from the facts:</p>
+<div class="table-wrap">
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Defect ID / Title</td>
+<td>DEF-0871 — Catalogue search with “All branches” filter takes 18–22 seconds to show results</td>
+</tr>
+<tr class="even">
+<td>Date / Author</td>
+<td>2026-06-03 · your name (Tester)</td>
+</tr>
+<tr class="odd">
+<td>Software version / Environment</td>
+<td>Library Catalogue v3.4.1 · Production · Browser X 128.0 on OS Y 14.5</td>
+</tr>
+<tr class="even">
+<td>Test context</td>
+<td>TC-SRCH-11 (search response time), reproduced during test execution</td>
+</tr>
+<tr class="odd">
+<td>Steps to reproduce</td>
+<td>1. Open the catalogue search page. 2. Set the branch filter to “All branches.” 3. Enter the keyword “history.” 4. Select Search and measure the time until the results appear.</td>
+</tr>
+<tr class="even">
+<td>Expected result</td>
+<td>Results are shown within 3 seconds (REQ-SRCH-03).</td>
+</tr>
+<tr class="odd">
+<td>Actual result</td>
+<td>Results appeared after 18 to 22 seconds in 5 out of 5 attempts. With a single-branch filter, the same search took under 2 seconds in 5 out of 5 attempts.</td>
+</tr>
+<tr class="even">
+<td>Status</td>
+<td>New</td>
+</tr>
+<tr class="odd">
+<td>Severity / Priority</td>
+<td>Severity: Medium (search still works, but the response time breaks the stated requirement). Priority: High (the search page is the main entry point for library members and the problem is in production).</td>
+</tr>
+<tr class="even">
+<td>References</td>
+<td>Requirement: REQ-SRCH-03 · Test case: TC-SRCH-11</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>What you left out of the colleague’s text, and why: “I am sure the problem is definitely coming from the database queries” is a guess about the cause, and finding the cause is the job of whoever analyses the defect; “someone needs to look at that urgently” is a demand, which the priority field now expresses objectively; “sometimes very slow” and “much faster” are vague, so the measured times and the 3-second requirement replace them. The single-branch result stays in the report because it is an observed fact that narrows down the triggering condition, not a guess.</p>
 </section>
 </section>
 
@@ -1109,5 +1180,6 @@
 </main>
 </div>
 <script>if (window.matchMedia('(min-width: 901px)').matches) document.getElementById('navd').open = true;</script>
+<script>(function(){function od(){var h=decodeURIComponent(location.hash.slice(1));if(!h)return;var e=document.getElementById(h);while(e){if(e.tagName==='DETAILS')e.open=true;e=e.parentElement;}}addEventListener('hashchange',od);od();})();</script>
 </body>
 </html>

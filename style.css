@@ -73,3 +73,11 @@ footer.site { font-family: var(--sans); font-size: 13px; color: var(--muted); ma
   .topbar a { font-size: 15px; }
 }
 @media (min-width: 901px) { nav.side details > summary { display: none; } }
+
+.draft-banner { font-family: var(--sans); font-size: 14px; text-align: center; padding: 7px 12px; background: #fff4d6; color: #5c4400; border-bottom: 1px solid #e3c766; }
+.draft-banner a { color: inherit; font-weight: 600; }
+details.ans { margin: .8rem 0 1.4rem; }
+details.ans > summary { cursor: pointer; font-family: var(--sans); font-size: 15px; font-weight: 600; color: var(--link); padding: 4px 0; }
+details.ans[open] > summary { margin-bottom: .4rem; }
+details.ans > .answer { margin-top: .4rem; }
+@media (prefers-color-scheme: dark) { .draft-banner { background: #3a2f0a; color: #f3dd9a; border-bottom-color: #6b5a1c; } }

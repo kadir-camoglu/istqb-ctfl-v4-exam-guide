@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="draft-banner" role="note"><strong>Public draft — under review.</strong> Feedback: <a href="mailto:kadir.camoglu@gmail.com">kadir.camoglu@gmail.com</a></div>
 <header class="topbar"><div class="inner"><a href="index.html">ISTQB® CTFL v4.0 Exam Guide</a><span class="meta"><span class="ind">Independent · Unofficial study guide · </span><a href="all.html">Full text on one page</a></span></div></header>
 <div class="layout">
 <nav class="side"><details id="navd"><summary>Contents</summary><div class="navbody">
@@ -51,12 +52,8 @@
 </li>
 <li><a href="final-revision.html">Final Revision Plan</a>
 </li>
-</ul>
-<div class="group">Mock exam</div><ul>
 <li><a href="mock-exam-1.html">Mock Exam 1 — 40 Questions with Rationale</a>
 </li>
-</ul>
-<div class="group">Back matter</div><ul>
 <li><a href="further-resources.html">Further Resources</a>
 </li>
 </ul>
@@ -86,8 +83,8 @@
 <tbody>
 <tr class="odd">
 <td>Questions</td>
-<td>40 multiple-choice (mostly “Select ONE”; some “Select TWO”, which may have 5 options)</td>
-<td>Exam Structure Tables v1.18</td>
+<td>40 multiple-choice (mostly “Select ONE”; some “Select TWO”, which have 5 options)</td>
+<td>Number: Exam Structure Tables v1.18; Select TWO format: the official sample exams A–D</td>
 </tr>
 <tr class="even">
 <td>Time</td>
@@ -214,12 +211,12 @@
 <p>The official exam rules also allow a question to draw on material from more than one part of the syllabus, and every syllabus keyword is examinable for its definition. In practical terms, a Chapter 5 scenario may still rely on a Chapter 1 term, so the glossary and the concept pairs matter across the whole exam.</p>
 <section id="the-anatomy-of-a-distractor" class="level3">
 <h3>The anatomy of a distractor</h3>
-<p>The wrong options on this exam are rarely random. A CTFL distractor is usually a near-miss, an option that sits right next to the correct answer. Four sources come up again and again:</p>
+<p>A well-built wrong option is rarely random: it usually sits right next to the correct answer. This book’s rationales name the strongest distractor in every mock question and classify it by one of four sources:</p>
 <ul>
 <li><strong>The sibling concept.</strong> The option names the neighbour of the target concept, for example regression testing where the scenario describes confirmation testing.</li>
-<li><strong>A correct list from another activity.</strong> The option is accurate, but it belongs somewhere else, for example the outputs of test implementation offered as the outputs of test design.</li>
-<li><strong>A shifted boundary.</strong> The value looks plausible but sits one step away from the true boundary, for example 17 where the partition actually starts at 18.</li>
-<li><strong>An outdated term.</strong> The option uses a 2018 name that v4.0 replaced, for example “pesticide paradox” instead of “tests wear out.”</li>
+<li><strong>Right idea, wrong place.</strong> The option is accurate, but it belongs somewhere else, for example the outputs of test implementation offered as the outputs of test design.</li>
+<li><strong>An overstated or reversed claim.</strong> The option stretches a true statement too far or turns it round, for example “testing proves that no defects remain.”</li>
+<li><strong>A calculation or derivation slip.</strong> The value looks plausible but comes from a common slip in the technique, for example 17 where the partition actually starts at 18, or a plain average where the formula weights the most likely value.</li>
 </ul>
 <p>This is why the book teaches distinctions so deliberately. When you know where distractors come from, you can usually name the reason an option is wrong, not just sense that it is. Do not ask only whether an option sounds true. Ask whether it is true for this concept, this activity, and this scenario.</p>
 </section>
@@ -229,7 +226,7 @@
 <p>Every worked example in this book follows the same two-step method. It is worth turning into a habit, because it works on almost every K1 and K2 question.</p>
 <ol>
 <li><strong>Eliminate the clearly wrong options.</strong> You can often remove two options quickly. They belong to a concept from another chapter, they contradict a basic definition, or they do not fit the logic of the scenario.</li>
-<li><strong>Reduce the remaining options to a single deciding criterion.</strong> Ask yourself, “What is the one difference between these two options?” Then go back to the stem and look for the word that decides it. For example, “after the fix” points to confirmation testing, a concern about side effects elsewhere in the system points to regression testing, and “before testing can start” points to entry criteria. The stem usually contains that clue.</li>
+<li><strong>Reduce the remaining options to a single deciding criterion.</strong> Ask yourself, “What is the one difference between these two options?” Then go back to the stem and look for the word that decides it. For example, “after the fix” points to confirmation testing, a concern about side effects of the change points to regression testing, and “before testing can start” points to entry criteria. The stem usually contains that clue.</li>
 </ol>
 <p>K3 questions need a different second step. Solve the problem on paper first, and look at the options only when you have your own answer. Deriving the result independently is safer and usually faster than testing each option against the scenario one by one. It also protects you from distractors built on common slips, such as a 2-value boundary set offered where the question asks for 3-value boundary value analysis. Do not read the options first on a K3 question. Work the answer out, then find it in the list.</p>
 <p>On a Select TWO item, apply the first step to each option on its own. Treat every option as a separate true-or-false statement about the scenario, and keep the two that survive.</p>
@@ -237,7 +234,7 @@
 </section>
 <section id="managing-your-60-minutes" class="level2">
 <h2>Managing your 60 minutes</h2>
-<p>Sixty minutes for forty questions is about ninety seconds each, but the eight K3 questions each take roughly three minutes to work through, so budget your time deliberately. This book recommends the <strong>two-pass approach</strong> for that. On the first pass, move quickly through the K1 and K2 questions, answer the ones you are sure of with the two-step strategy above, and flag anything you are unsure of. On the second pass, use the back half of your time for the K3 work and your flagged items. Every question is worth one point, so an unanswered question costs exactly as much as a wrong one. For that reason, never leave a blank. If your provider grants the 25% extension (see “Extra time” above), you have 75 minutes, which eases the pressure but does not remove the need to pace the K3 questions.</p>
+<p>Sixty minutes for forty questions is about ninety seconds each, but the time is not spread evenly. The official Exam Structures and Rules suggest about 1 minute for a K1 question, 1 to 2 minutes for a K2 question, and 3 minutes for a K3 question. Eight K1 and eight K3 questions already use about 32 minutes, which leaves roughly 70 seconds on average for each of the 24 K2 questions. Budget your time deliberately. This book recommends the <strong>two-pass approach</strong> for that. On the first pass, move quickly through the K1 and K2 questions, answer the ones you are sure of with the two-step strategy above, and flag anything you are unsure of. On the second pass, use the back half of your time for the K3 work and your flagged items. Every question is worth one point, so an unanswered question costs exactly as much as a wrong one. For that reason, never leave a blank. If your provider grants the 25% extension (see “Extra time” above), you have 75 minutes, which eases the pressure but does not remove the need to pace the K3 questions.</p>
 </section>
 </section>
 
@@ -246,5 +243,6 @@
 </main>
 </div>
 <script>if (window.matchMedia('(min-width: 901px)').matches) document.getElementById('navd').open = true;</script>
+<script>(function(){function od(){var h=decodeURIComponent(location.hash.slice(1));if(!h)return;var e=document.getElementById(h);while(e){if(e.tagName==='DETAILS')e.open=true;e=e.parentElement;}}addEventListener('hashchange',od);od();})();</script>
 </body>
 </html>

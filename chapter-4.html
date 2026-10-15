@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="draft-banner" role="note"><strong>Public draft — under review.</strong> Feedback: <a href="mailto:kadir.camoglu@gmail.com">kadir.camoglu@gmail.com</a></div>
 <header class="topbar"><div class="inner"><a href="index.html">ISTQB® CTFL v4.0 Exam Guide</a><span class="meta"><span class="ind">Independent · Unofficial study guide · </span><a href="all.html">Full text on one page</a></span></div></header>
 <div class="layout">
 <nav class="side"><details id="navd"><summary>Contents</summary><div class="navbody">
@@ -51,12 +52,8 @@
 </li>
 <li><a href="final-revision.html">Final Revision Plan</a>
 </li>
-</ul>
-<div class="group">Mock exam</div><ul>
 <li><a href="mock-exam-1.html">Mock Exam 1 — 40 Questions with Rationale</a>
 </li>
-</ul>
-<div class="group">Back matter</div><ul>
 <li><a href="further-resources.html">Further Resources</a>
 </li>
 </ul>
@@ -71,9 +68,9 @@
 <h2>4.1 Overview of Test Techniques (FL-4.1.1 — K2)</h2>
 <p><span id="fl-4-1-1"></span>A test technique is a structured way of deriving test conditions, coverage items, and test cases from the test basis, rather than making tests up at random. Techniques support both test analysis (what to test) and test design (how to test). The syllabus organises them into three classes. Black-box (specification-based) techniques derive tests from the documented, specified behaviour, requirements, stories, and models, without knowledge of the internal structure; coverage is measured against items of the test basis, such as equivalence partitions, boundaries, table columns, and transitions. White-box (structure-based) techniques derive tests from the system’s internal structure, code and architecture; coverage is measured against the structural elements executed, such as statements and branches. Experience-based techniques derive tests from the tester’s knowledge and experience of the application, likely defects, and users; their effectiveness depends heavily on the tester’s skills. Figure 4.1 shows the three classes and the techniques this syllabus places in each.</p>
 <figure>
-<img src="figures/fig_4_1_technique_classes.png" alt="" /><figcaption>Figure 4.1 — The three classes of test techniques and the techniques in each. A tree starts from a box labelled “Test techniques” and branches into three boxes. Black-box, derived from specified behaviour, lists equivalence partitioning, boundary value analysis, decision table testing, and state transition testing. White-box, derived from internal structure, lists statement testing and branch testing. Experience-based, derived from tester knowledge, lists error guessing, exploratory testing, and checklist-based testing.</figcaption>
+<img src="figures/fig_4_1_technique_classes.png" alt="Figure 4.1 — The three classes of test techniques and the techniques in each. A tree starts from a box labelled “Test techniques” and branches into three boxes. Black-box, derived from specified behaviour, lists equivalence partitioning, boundary value analysis, decision table testing, and state transition testing. White-box, derived from internal structure, lists statement testing and branch testing. Experience-based, derived from tester knowledge, lists error guessing, exploratory testing, and checklist-based testing." /><figcaption>Figure 4.1 — The three classes of test techniques and the techniques in each.</figcaption>
 </figure>
-<p>These definitions have a practical consequence. As long as the required behaviour stays the same, black-box tests often remain useful even if the implementation changes, because they were never tied to the code. White-box tests depend on how the software is designed, so they cannot be written until the design or the implementation exists, and they need revisiting when the code changes. Experience-based techniques can find defects the systematic techniques miss, but their effectiveness depends heavily on the tester’s skills, so they complement the other techniques rather than replace them.</p>
+<p>These definitions have a practical consequence. As long as the required behaviour stays the same, black-box tests often remain useful even if the implementation changes, because they were never tied to the code. White-box tests depend on how the software is designed, so they cannot be written until the design or the implementation exists, and they need revisiting when the code changes. Experience-based techniques can find defects the systematic techniques may miss, but their effectiveness depends heavily on the tester’s skills, so they complement the other techniques rather than replace them.</p>
 <p>A note on the word coverage, which this chapter uses constantly: coverage is the number of coverage items executed divided by the total number of coverage items, expressed as a percentage. Each technique defines its own coverage item: an equivalence partition, a boundary value (and, in 3-value BVA, its neighbours), a table column, a state or a transition, a statement, a branch.</p>
 <p>When a scenario asks which technique fits, the wording of the test basis usually points to the answer. Value ranges handled the same way point to equivalence partitioning. Behaviour that changes at the edges of ordered ranges points to boundary value analysis. Results that depend on combinations of conditions point to decision table testing. Behaviour that depends on the current state and what came before points to state transition testing. The structure of the code itself points to statement and branch testing. Knowledge of past failures and likely defects points to error guessing. Weak specifications or serious time pressure point to exploratory testing. A list of test conditions built from experience, used where there are no detailed test cases, points to checklist-based testing. And a user story with agreed acceptance criteria points to ATDD. Table 4.1 collects these signals in one place for revision.</p>
 <p><strong>Table 4.1 — What the test basis gives you, and which technique fits</strong></p>
@@ -140,9 +137,9 @@
 <li>(d) Collaboration-based</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (a). Deriving from specified behaviour without knowledge of the internal structure is black-box.</p>
-</div>
+</div></details>
 <p><em>CYU 4.1.1-b.</em> Which class does exploratory testing belong to?</p>
 <div class="mc">
 <ul>
@@ -152,9 +149,9 @@
 <li>(d) Collaboration-based</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (c). Exploratory testing is an experience-based technique; a common trap is to take it for black-box.</p>
-</div>
+</div></details>
 <p><em>CYU 4.1.1-c.</em> When the required behaviour stays the same, which tests often remain useful even if the code changes?</p>
 <div class="mc">
 <ul>
@@ -164,9 +161,9 @@
 <li>(d) Tests designed from the current control-flow graph</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (c). Black-box tests are not tied to the code, so they stay useful when behaviour is fixed and the code changes; white-box tests are tied to the structure.</p>
-</div>
+</div></details>
 </section>
 <section id="black-box-test-techniques" class="level2">
 <h2>4.2 Black-box Test Techniques</h2>
@@ -183,7 +180,7 @@
 <p>Step 1, find the behavioural break points. The charge changes after minute 60, after minute 240, and after minute 1,440. Values below 1 minute are invalid input for this field.</p>
 <p>Step 2, list the partitions. There are five: [below 1, invalid], [1 to 60], [61 to 240], [241 to 1,440], [above 1,440, flagged to staff]. Figure 4.2 shows them on a number line, with the break points between neighbouring partitions.</p>
 <figure>
-<img src="figures/fig_4_2_ep_number_line.png" alt="" /><figcaption>Figure 4.2 — The five equivalence partitions of the parking-time input. A number line of parking time in minutes is divided into five partitions: P1, below 1, invalid; P2, 1 to 60, EUR 3; P3, 61 to 240, EUR 8; P4, 241 to 1,440, EUR 15; and P5, above 1,440, flagged to staff. Dashed lines mark the break points between 0 and 1, 60 and 61, 240 and 241, and 1,440 and 1,441.</figcaption>
+<img src="figures/fig_4_2_ep_number_line.png" alt="Figure 4.2 — The five equivalence partitions of the parking-time input. A number line of parking time in minutes is divided into five partitions: P1, below 1, invalid; P2, 1 to 60, EUR 3; P3, 61 to 240, EUR 8; P4, 241 to 1,440, EUR 15; and P5, above 1,440, flagged to staff. Dashed lines mark the break points between 0 and 1, 60 and 61, 240 and 241, and 1,440 and 1,441." /><figcaption>Figure 4.2 — The five equivalence partitions of the parking-time input.</figcaption>
 </figure>
 <p>Step 3, pick one representative from each partition. Any member works; mid-range values are conventional:</p>
 <div class="table-wrap">
@@ -231,7 +228,7 @@
 </table>
 </div>
 <p>Answer: five partitions, so a minimum of five test cases for 100 percent EP coverage. If only TC2 to TC4 were run, coverage would be 3/5 = 60 percent.</p>
-<p><em>Exam focus.</em> K3 questions come in predictable shapes: how many partitions, the minimum number of test cases, which value belongs to which partition, and what coverage a given test set achieves. The most common mistake is forgetting the invalid partitions, counting three here instead of five. The second most common is adding boundary neighbours as extra partitions; boundaries are the next technique’s job, not this one.</p>
+<p><em>Exam focus.</em> K3 questions come in predictable shapes: how many partitions, the minimum number of test cases, which value belongs to which partition, and what coverage a given test set achieves. An easy mistake is forgetting the invalid partitions, counting three here instead of five. The second most common is adding boundary neighbours as extra partitions; boundaries are the next technique’s job, not this one.</p>
 </section>
 <section id="independent-exercise-4.a" class="level4">
 <h4>Independent exercise 4.A</h4>
@@ -246,9 +243,9 @@
 <li>(d) Each partition must be tested at its minimum and its maximum</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (b). Partitions must be non-empty and must not overlap, and EP coverage counts invalid partitions as well as valid ones. Option (c) forgets the invalid partitions, and option (d) describes boundary value analysis.</p>
-</div>
+</div></details>
 </section>
 </section>
 <section id="fl-4-2-2" class="level3">
@@ -262,11 +259,11 @@
 <p>Task: list the values that 2-value and 3-value BVA test at this boundary.</p>
 <p>Step 1, identify the boundary pair. The maximum of the child partition is 17, and the minimum of the adult partition is 18. The point to notice: there are two boundary values between two adjacent partitions, not one, 17 and 18, each the edge of its own partition. Figure 4.3 shows which values each variant tests at this boundary.</p>
 <figure>
-<img src="figures/fig_4_3_bva_boundary.png" alt="" /><figcaption>Figure 4.3 — 2-value and 3-value boundary value analysis at the museum’s child/adult boundary. A number line from 15 to 20 is split by a dashed line between 17 and 18, with the child price up to 17 on the left and the adult price from 18 on the right. Circles mark the 2-value set {17, 18}; squares mark the 3-value set {16, 17, 18, 19}.</figcaption>
+<img src="figures/fig_4_3_bva_boundary.png" alt="Figure 4.3 — 2-value and 3-value boundary value analysis at the museum’s child/adult boundary. A number line from 15 to 20 is split by a dashed line between 17 and 18, with the child price up to 17 on the left and the adult price from 18 on the right. Circles mark the 2-value set {17, 18}; squares mark the 3-value set {16, 17, 18, 19}." /><figcaption>Figure 4.3 — 2-value and 3-value boundary value analysis at the museum’s child/adult boundary.</figcaption>
 </figure>
 <p>Step 2, apply 2-value BVA. Each boundary value plus its nearest neighbour in the adjacent partition: for 17 that neighbour is 18, and for 18 it is 17. Result: {17, 18}, two test values for this boundary.</p>
 <p>Step 3, apply 3-value BVA. Each boundary value plus both of its neighbours: 17 gives {16, 17, 18}; 18 gives {17, 18, 19}. The union is {16, 17, 18, 19}, four test values.</p>
-<p>Full-element counts, which “minimum number of test cases” questions often need: for the full museum input with partitions [below 0 invalid] [0 to 5] [6 to 17] [18 to 64] [65 to 120] [above 120 invalid], 2-value BVA tests each partition’s minimum and maximum plus the nearest neighbour across each boundary: −1, 0, 5, 6, 17, 18, 64, 65, 120, 121, which is 10 values. Each value is a coverage item; running 7 of the 10 gives 70 percent coverage. With 3-value BVA, each of the five boundaries contributes four values: −2, −1, 0, 1, 4, 5, 6, 7, 16, 17, 18, 19, 63, 64, 65, 66, 119, 120, 121, 122, which is 20 values. Note that the boundary values of the invalid partitions (−1 and 121) also get both of their neighbours.</p>
+<p>Full-element counts, which “minimum number of test cases” questions need: for the full museum input with partitions [below 0 invalid] [0 to 5] [6 to 17] [18 to 64] [65 to 120] [above 120 invalid], 2-value BVA tests each partition’s minimum and maximum plus the nearest neighbour across each boundary: −1, 0, 5, 6, 17, 18, 64, 65, 120, 121, which is 10 values. Each value is a coverage item; running 7 of the 10 gives 70 percent coverage. With 3-value BVA, each of the five boundaries contributes four values: −2, −1, 0, 1, 4, 5, 6, 7, 16, 17, 18, 19, 63, 64, 65, 66, 119, 120, 121, 122, which is 20 values. Note that the boundary values of the invalid partitions (−1 and 121) also get both of their neighbours.</p>
 <p><em>Exam focus.</em> The two highest-frequency questions are “which values does 2-value (or 3-value) BVA require here?” and “what is the minimum number of test cases for 100 percent coverage?” The usual mistakes are off-by-one values, forgetting that adjacent partitions contribute two boundary values rather than one, and confusing which variant includes the inner neighbour. A quick check: at a single boundary between two partitions, 2-value BVA needs exactly 2 values and 3-value BVA needs exactly 4.</p>
 </section>
 <section id="independent-exercise-4.b" class="level4">
@@ -282,9 +279,9 @@
 <li>(d) 2-value 2 values; 3-value 4 values</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (d). At a single boundary, 2-value requires exactly 2 and 3-value requires exactly 4.</p>
-</div>
+</div></details>
 </section>
 </section>
 <section id="fl-4-2-3" class="level3">
@@ -448,7 +445,7 @@
 </section>
 <section id="independent-exercise-4.c" class="level4">
 <h4>Independent exercise 4.C</h4>
-<p>An online store gives free shipping if the order total is at least EUR 50 or the customer is a Plus member, but never to addresses outside the country; those always pay shipping. Conditions: total at least EUR 50 (T/F), Plus member (T/F), domestic address (T/F). (a) How many columns are in the full decision table? (b) What is the expected action for this case: total EUR 30, Plus member, domestic address? (Solution at the end of this chapter.)</p>
+<p>An online store gives free shipping if the order total is at least EUR 50 or the customer is a Plus member, but never to addresses outside the country; those always pay shipping. Conditions: total at least EUR 50 (T/F), Plus member (T/F), domestic address (T/F). (a) Build the full decision table and fill in the action for every column. (b) Collapse the table, and state the minimum number of test cases for 100 percent coverage of the full table and of the collapsed table. (c) Write one concrete test case, with input values and expected result, for each column of the collapsed table. (Solution at the end of this chapter.)</p>
 <p><em>Check your understanding.</em> The practice is the worked example plus 4.C.</p>
 <p><em>CYU 4.2.3.</em> How many columns are in the full decision table of a rule with 4 independent Boolean conditions?</p>
 <div class="mc">
@@ -459,20 +456,20 @@
 <li>(d) 32</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (c). The full table has 2^n columns; 2^4 = 16. (Do not confuse the number of conditions with the number of columns.)</p>
-</div>
+</div></details>
 </section>
 </section>
 <section id="fl-4-2-4" class="level3">
 <h3>State transition testing (FL-4.2.4 — K3)</h3>
 <p><strong>The idea.</strong> Some systems respond to the same event differently depending on their state, on what came before. In a music app, pressing “play” does different things if the song is paused, already playing, or not loaded at all. A state diagram models this: the nodes are states, the arrows are transitions, and each arrow is labelled with the triggering event. The full label syntax is “event [guard condition] / action”: a guard condition must be true for the transition to fire, and an action is what the system does during it; both are left out when they do not exist or do not matter to the tester. In the state table, the columns are events (with guard conditions, if any), and each valid cell holds the target state and any action. The equivalent state table lists every state-event pair, including the invalid pairs the diagram does not show. That is exactly why the table form matters: only the table shows, systematically, what should not happen.</p>
-<p>The coverage criteria to apply: all states coverage means each state is visited at least once; coverage equals states visited divided by total states. It is the weaker criterion and can be met while many transitions go untested. Valid transitions coverage (also called 0-switch coverage) means each valid transition is exercised at least once; coverage equals valid transitions exercised divided by total valid transitions. It is the most commonly used criterion. Reaching 100 percent valid transitions coverage also guarantees all states coverage, but not vice versa. All transitions coverage exercises every valid transition and attempts every invalid transition shown in the state table. Put only one invalid-transition attempt in a test case where practical, to avoid defect masking, where an earlier defect hides a later one. Full all transitions coverage guarantees both full valid transitions and full all states coverage and should be the minimum for mission- and safety-critical software.</p>
+<p>The coverage criteria to apply: all states coverage means each state is exercised at least once; coverage equals states exercised divided by total states. It is the weaker criterion and can be met while many transitions go untested. Valid transitions coverage (also called 0-switch coverage) means each valid transition is exercised at least once; coverage equals valid transitions exercised divided by total valid transitions. It is the most commonly used criterion. Reaching 100 percent valid transitions coverage also guarantees all states coverage, but not vice versa. All transitions coverage exercises every valid transition and attempts every invalid transition shown in the state table. Put only one invalid-transition attempt in a test case where practical, to avoid defect masking, where an earlier defect hides a later one. Full all transitions coverage guarantees both full valid transitions and full all states coverage and should be the minimum for mission- and safety-critical software.</p>
 <section id="worked-example-library-book-loan" class="level4">
 <h4>Worked example — library book loan</h4>
 <p>A library system tracks each copy of a book in these states: Available, On loan, Reserved, Withdrawn. The events and valid transitions are: lend (Available to On loan), return (On loan to Available), reserve (Available to Reserved), collect (Reserved to On loan), cancel (Reserved to Available), withdraw (Available to Withdrawn). Every copy starts in Available; Withdrawn has no outgoing transitions. Figure 4.4 shows these states and transitions as a diagram.</p>
 <figure>
-<img src="figures/fig_4_4_state_transition.png" alt="" /><figcaption>Figure 4.4 — The states of a library book and its six valid transitions. Four states are shown: Available, On loan, Reserved, and Withdrawn. Arrows show lend from Available to On loan, return from On loan to Available, reserve from Available to Reserved, collect from Reserved to On loan, cancel from Reserved to Available, and withdraw from Available to Withdrawn.</figcaption>
+<img src="figures/fig_4_4_state_transition.png" alt="Figure 4.4 — The states of a library book and its six valid transitions. Four states are shown: Available, On loan, Reserved, and Withdrawn. Arrows show lend from Available to On loan, return from On loan to Available, reserve from Available to Reserved, collect from Reserved to On loan, cancel from Reserved to Available, and withdraw from Available to Withdrawn." /><figcaption>Figure 4.4 — The states of a library book and its six valid transitions.</figcaption>
 </figure>
 <p>The equivalent state table has rows as states and columns as events, and every cell marked “invalid” is an invalid state-event pair:</p>
 <div class="table-wrap">
@@ -529,14 +526,14 @@
 </table>
 </div>
 <p>Task: (a) how many test cases minimum for all-states coverage? (b) how many transitions must be exercised for 100 percent valid transitions coverage? (c) give one invalid transition the state table reveals.</p>
-<p>Step (a), all states. A single sequence can visit several states. The sequence lend, return, reserve, collect, return, withdraw walks Available to On loan to Available to Reserved to On loan to Available to Withdrawn: all four states in one test case. The minimum is 1.</p>
+<p>Step (a), all states. A single sequence can exercise several states. The sequence lend, return, reserve, collect, return, withdraw walks Available to On loan to Available to Reserved to On loan to Available to Withdrawn: all four states in one test case. The minimum is 1.</p>
 <p>Step (b), valid transitions. Count the arrows: there are 6 valid transitions, and 100 percent valid transitions coverage requires exercising all six. Because a test case starts in Available and nothing leaves Withdrawn, withdraw must come last. The single sequence lend, return, reserve, cancel, reserve, collect, return, withdraw exercises all six, so one test case is enough; the sequence in (a) missed only cancel.</p>
 <p>Step (c), an invalid transition. The table has 4 states times 6 events = 24 cells, of which only 6 are valid. A realistic invalid pair: the lend event while the copy is already On loan, a second person trying to take the same copy. The system should reject this, and a test for it comes naturally from the table, not from the diagram.</p>
 <p><em>Exam focus.</em> Recurring questions: is this event sequence valid; what do the different coverage criteria require here; which transition is invalid; and what coverage does a given set of sequences achieve. Hold onto two facts. All states coverage is weaker than valid transitions coverage, and the implication is one-way: full valid transitions coverage guarantees all states coverage, not vice versa. And it is the table, not the diagram, that reveals the invalid transitions.</p>
 </section>
 <section id="independent-exercise-4.d" class="level4">
 <h4>Independent exercise 4.D</h4>
-<p>A document workflow has states Draft, Submitted, Approved, with events: submit (Draft to Submitted), approve (Submitted to Approved), reject (Submitted to Draft). (a) What is the minimum number of test cases for all states coverage? (b) How many valid transitions must be covered for 100 percent valid transitions coverage? (Solution at the end of this chapter.)</p>
+<p>A document workflow has states Draft, Submitted, Approved, with events: submit (Draft to Submitted), approve (Submitted to Approved), reject (Submitted to Draft). Every document starts in Draft; Approved has no outgoing transitions. (a) Build the state table and count the valid and the invalid state-event pairs. (b) Derive the test cases, as few as possible, for 100 percent all states coverage and for 100 percent valid transitions coverage, and write each one as a path through the states. (c) Write one test case for an invalid transition: starting state, event, and expected result. (Solution at the end of this chapter.)</p>
 <p><em>Check your understanding.</em> The practice is the worked example plus 4.D.</p>
 <p><em>CYU 4.2.4.</em> Which statement about state transition coverage criteria is correct?</p>
 <div class="mc">
@@ -547,9 +544,9 @@
 <li>(d) The diagram reveals the invalid transitions</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (b). Valid transitions coverage implies all states coverage (one way); all states coverage is weaker, and it is the table that reveals invalid transitions.</p>
-</div>
+</div></details>
 </section>
 </section>
 </section>
@@ -570,9 +567,9 @@
 <li>(d) 100 percent branch coverage</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (b). Statement coverage shows every statement ran; it does not guarantee decision outcomes or defect-freeness.</p>
-</div>
+</div></details>
 <p><em>CYU 4.3.1-b.</em> What can go untested despite 100 percent statement coverage?</p>
 <div class="mc">
 <ul>
@@ -582,9 +579,9 @@
 <li>(d) A decision outcome that only skips code (for example the false branch of an if with no else)</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (d). A code-skipping decision outcome can go unexecuted even if all statements run.</p>
-</div>
+</div></details>
 <p><em>CYU 4.3.1-c.</em> A test suite reaches 100 percent statement coverage of a pricing function. Later, the function returns a wrong total, but only when the quantity entered is negative. Which statement best explains this?</p>
 <div class="mc">
 <ul>
@@ -594,9 +591,9 @@
 <li>(d) Statement coverage is measured against requirements, so negative quantities were out of scope</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (b). Statement coverage is the proportion of executable statements exercised by the tests, so 100 percent shows only that every statement ran at least once. A defect that appears only with particular data can still go undetected. Nothing points to a measurement error (a), statement coverage does not guarantee decision outcomes (c), and it counts statements, not requirements (d).</p>
-</div>
+</div></details>
 </section>
 <section id="fl-4-3-2" class="level3">
 <h3>Branch testing (FL-4.3.2 — K2)</h3>
@@ -606,11 +603,11 @@
 ship();</code></pre>
 <p>Figure 4.5 shows the control flow of this code. The true branch runs <code>applyDiscount()</code> and then <code>ship()</code>, while the false branch skips the discount and goes straight to <code>ship()</code>.</p>
 <figure>
-<img src="figures/fig_4_5_branch_control_flow.png" alt="" /><figcaption>Figure 4.5 — The control flow of an if with no else. A decision diamond labelled “premium?” has two exits. The true branch leads to applyDiscount() and then to ship(). The false branch bypasses applyDiscount() and goes directly to ship().</figcaption>
+<img src="figures/fig_4_5_branch_control_flow.png" alt="Figure 4.5 — The control flow of an if with no else. A decision diamond labelled “premium?” has two exits. The true branch leads to applyDiscount() and then to ship(). The false branch bypasses applyDiscount() and goes directly to ship()." /><figcaption>Figure 4.5 — The control flow of an if with no else.</figcaption>
 </figure>
 <p>A single test with <code>premium = true</code> runs both statements, 100 percent statement coverage, but the false branch where the discount is skipped never runs. For 100 percent branch coverage a second test with <code>premium = false</code> is needed. This small example carries the general rule: 100 percent branch coverage guarantees 100 percent statement coverage, but not vice versa. Branch coverage is the stronger measure. Figure 4.6 shows this one-way relationship.</p>
 <figure>
-<img src="figures/fig_4_6_subsumption.png" alt="" /><figcaption>Figure 4.6 — Subsumption: 100 percent branch coverage contains 100 percent statement coverage. A large box labelled “100% Branch coverage” contains a smaller box labelled “100% Statement coverage”: what a test suite with 100 percent branch coverage exercises includes all the statements. The note below reads: 100% branch coverage implies 100% statement coverage, but not vice versa.</figcaption>
+<img src="figures/fig_4_6_subsumption.png" alt="Figure 4.6 — Subsumption: 100 percent branch coverage contains 100 percent statement coverage. A large box labelled “100% Branch coverage” contains a smaller box labelled “100% Statement coverage”: what a test suite with 100 percent branch coverage exercises includes all the statements. The note below reads: 100% branch coverage implies 100% statement coverage, but not vice versa." /><figcaption>Figure 4.6 — Subsumption: 100 percent branch coverage contains 100 percent statement coverage.</figcaption>
 </figure>
 <p><em>Exam focus.</em> Questions on this objective turn on the relationship between the two coverage measures. Everything rests on the subsumption rule: 100 percent branch coverage guarantees 100 percent statement coverage, but not vice versa. Watch for the reverse claim, which is the standard wrong option, presenting statement coverage as if it guarantees branch coverage. Before committing to an answer, write down the rule “branch subsumes statement” and test each option against that one direction.</p>
 <p><strong>Check your understanding</strong></p>
@@ -623,9 +620,9 @@ ship();</code></pre>
 <li>(d) The two are unrelated</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (c). Branch coverage implies statement coverage, in one direction only.</p>
-</div>
+</div></details>
 <p><em>CYU 4.3.2-b.</em> For an if with no else, which coverage does a single <code>premium = true</code> test achieve, and which does it not?</p>
 <div class="mc">
 <ul>
@@ -635,9 +632,9 @@ ship();</code></pre>
 <li>(d) It achieves neither</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (b). The single true-branch test runs all statements but skips the false branch, so branch coverage is incomplete.</p>
-</div>
+</div></details>
 <p><em>CYU 4.3.2-c.</em> In branch testing, which of the following is a branch?</p>
 <div class="mc">
 <ul>
@@ -647,16 +644,16 @@ ship();</code></pre>
 <li>(d) An individual Boolean sub-condition inside a compound decision</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (c). A branch is a transfer of control between two nodes, and it can be unconditional (straight-line code) or conditional (a decision outcome). A statement is the coverage item of statement testing, while full paths and sub-conditions belong to more rigorous techniques outside the Foundation syllabus.</p>
-</div>
+</div></details>
 </section>
 <section id="fl-4-3-3" class="level3">
 <h3>The value of white-box testing (FL-4.3.3 — K2)</h3>
-<p>White-box testing has several distinct values. It tests the implementation that really exists: specification-based techniques can test only what the specification mentions, whereas the code often contains behaviour the specification never describes, such as extra branches, error handling, and optimisations, and white-box testing reaches that behaviour. Coverage measurement gives objective feedback on how thoroughly the code has been exercised; this is useful even when the tests themselves are black-box, because measuring the structural coverage that black-box tests achieve reveals their blind spots and tells you where extra tests are worth writing. White-box thinking also works in static testing: the techniques can be applied while stepping through the code by hand (a dry run) and suit reviewing code not yet ready to run, pseudocode, and other high-level logic modelled with a control-flow graph. And an honest limitation: white-box techniques cannot find missing functionality, because code never written has no statement to cover; finding omission defects is the strength of the specification-based family.</p>
-<p><em>Exam focus.</em> Three questions recur: define statement and branch coverage; state the one-way implication (branch subsumes statement, not vice versa); and match the value to the limitation, white-box reaches unspecified code, black-box finds missing functionality. For small numeric cases, the if-with-no-else above answers most of them.</p>
+<p>White-box testing has several distinct values. It tests the implementation that really exists: specification-based techniques can test only what the specification mentions, whereas the code often contains behaviour the specification never describes, such as extra branches, error handling, and optimisations, and white-box testing reaches that behaviour. Coverage measurement gives objective feedback on how thoroughly the code has been exercised; this is useful even when the tests themselves are black-box, because measuring the structural coverage that black-box tests achieve reveals their blind spots and tells you where extra tests are worth writing. White-box thinking also works in static testing: the techniques can be applied while stepping through the code by hand (a dry run) and suit reviewing code not yet ready to run, pseudocode, and other high-level logic modelled with a control-flow graph. And an honest limitation: if a requirement was never implemented, white-box testing may not detect the resulting defect of omission, because code that was never written has no statement or branch to cover; specification-based testing is better placed to reveal such gaps.</p>
+<p><em>Exam focus.</em> Three questions recur: define statement and branch coverage; state the one-way implication (branch subsumes statement, not vice versa); and match the value to the limitation, white-box reaches unspecified code but may not detect functionality that was never implemented, which black-box testing is better placed to reveal. For small numeric cases, the if-with-no-else above answers most of them.</p>
 <p><strong>Check your understanding</strong></p>
-<p><em>CYU 4.3.3-a.</em> What can white-box testing NOT catch?</p>
+<p><em>CYU 4.3.3-a.</em> What is white-box testing most likely to miss?</p>
 <div class="mc">
 <ul>
 <li>(a) Extra branches the specification does not mention</li>
@@ -665,9 +662,9 @@ ship();</code></pre>
 <li>(d) Missing (never-written) functionality</li>
 </ul>
 </div>
-<div class="answer">
-<p>Answer: (d). Code never written has no statement to cover; omission is found by black-box (specification-based) testing.</p>
-</div>
+<details class="ans"><summary>Show answer</summary><div class="answer">
+<p>Answer: (d). Code that was never written has no statement or branch to cover, so white-box testing may not detect the omission; black-box (specification-based) testing is better placed to reveal it. Options (a), (b), and (c) are code that exists, which white-box testing does reach.</p>
+</div></details>
 <p><em>CYU 4.3.3-b.</em> What does measuring structural coverage while running black-box tests provide?</p>
 <div class="mc">
 <ul>
@@ -677,9 +674,9 @@ ship();</code></pre>
 <li>(d) It makes branch coverage unnecessary</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (a). Coverage measurement gives objective feedback on what the existing tests skip.</p>
-</div>
+</div></details>
 <p><em>CYU 4.3.3-c.</em> The specification of a legacy billing module is outdated and incomplete. Why can white-box testing still help the team find defects in the module?</p>
 <div class="mc">
 <ul>
@@ -689,9 +686,9 @@ ship();</code></pre>
 <li>(d) Because white-box testing takes the entire implementation into account, whatever the specification says</li>
 </ul>
 </div>
-<div class="answer">
-<p>Answer: (d). White-box techniques work from the code that exists, so they help even when the specification is vague, outdated, or incomplete. They cannot find defects of omission (a), they complement black-box testing rather than replace it (b), and branch coverage does not guarantee that every path is tested (c).</p>
-</div>
+<details class="ans"><summary>Show answer</summary><div class="answer">
+<p>Answer: (d). White-box techniques work from the code that exists, so they help even when the specification is vague, outdated, or incomplete. They may not detect defects of omission (a), they complement black-box testing rather than replace it (b), and branch coverage does not guarantee that every path is tested (c).</p>
+</div></details>
 </section>
 </section>
 <section id="experience-based-test-techniques" class="level2">
@@ -700,7 +697,7 @@ ship();</code></pre>
 <h3>Error guessing (FL-4.4.1 — K2)</h3>
 <p>Error guessing predicts where errors, defects, and failures are likely, based on the tester’s knowledge of three things: how the application has worked in the past, the kinds of errors developers tend to make and the defects that arise from them, and the failure types seen in other similar applications. The syllabus also names the areas to which errors, defects, and failures may be related, which give a practical list to work from: input (correct input not accepted, parameters wrong or missing), output (wrong format, wrong result), logic (missing cases, wrong operator), computation (wrong operand, wrong calculation), interfaces (parameter mismatch, incompatible types), and data (wrong initialisation, wrong type). One way to run error guessing in a structured way is a fault attack: the tester builds or obtains a list of possible errors, defects, and failures, based on experience, defect and failure data, or common knowledge about why software fails, and designs tests that deliberately try to provoke each one.</p>
 <p><em>In practice.</em> A tester is handed a new discount-code field. Without reading any specification, they try an empty code, a code with a trailing space, a lowercase version of a valid code, an expired code, and a 500-character string. None of these came from a document; all came from years of watching where input handling breaks.</p>
-<p><em>Exam focus.</em> The typical question asks what error guessing is based on or what a fault attack is. Error guessing predicts likely errors, defects, and failures from three sources: how the application failed before, the errors its developers tend to make, and failures seen in similar applications. Keep it apart from exploratory testing: error guessing aims tests at predicted defects, while exploratory testing designs and runs tests while learning the product. Before answering, ask whether the tester in the scenario is drawing on known failure patterns; if so, the answer is error guessing.</p>
+<p><em>Exam focus.</em> A question can ask what error guessing is based on or what a fault attack is. Error guessing predicts likely errors, defects, and failures from three sources: how the application failed before, the errors its developers tend to make, and failures seen in similar applications. Keep it apart from exploratory testing: error guessing aims tests at predicted defects, while exploratory testing designs and runs tests while learning the product. Before answering, ask whether the tester in the scenario is drawing on known failure patterns; if so, the answer is error guessing.</p>
 <p><strong>Check your understanding</strong></p>
 <p><em>CYU 4.4.1-a.</em> What is error guessing based on?</p>
 <div class="mc">
@@ -711,9 +708,9 @@ ship();</code></pre>
 <li>(d) Knowledge of past failures, developers’ typical errors, and failures in similar applications</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (d). Error guessing draws on known and likely failure patterns.</p>
-</div>
+</div></details>
 <p><em>CYU 4.4.1-b.</em> What is a fault attack?</p>
 <div class="mc">
 <ul>
@@ -723,9 +720,9 @@ ship();</code></pre>
 <li>(d) Deriving tests from acceptance criteria</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (a). A fault attack is a structured way of running error guessing.</p>
-</div>
+</div></details>
 <p><em>CYU 4.4.1-c.</em> Maya tests a new booking screen by choosing each next input from what the screen did with the previous one. Daniel lists the date-handling mistakes the team’s developers tend to make and designs a test to provoke each one. Which statement correctly identifies the techniques?</p>
 <div class="mc">
 <ul>
@@ -735,14 +732,14 @@ ship();</code></pre>
 <li>(d) Both are applying exploratory testing, because both rely on their experience</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (b). Maya designs, runs, and evaluates tests while she learns the screen, which is exploratory testing. Daniel aims his tests at predicted errors from a list, which is a fault attack, a way to implement error guessing. The mechanism decides between the two, not the absence of a specification.</p>
-</div>
+</div></details>
 </section>
 <section id="fl-4-4-2" class="level3">
 <h3>Exploratory testing (FL-4.4.2 — K2)</h3>
-<p>In exploratory testing, tests are designed, run, and evaluated at the same time as the tester learns the test object, and each result guides the next test. It is most useful when specifications are few or inadequate, when there is serious time pressure, or as a complement to more formal techniques. Exploratory testing can incorporate other test techniques, such as equivalence partitioning. Test objectives may be treated as high-level test conditions, and coverage items are identified and exercised during the test session. Its effectiveness depends heavily on the tester’s experience, domain knowledge, and skills such as curiosity and analytical thinking. To keep exploratory testing accountable, it is often run as session-based testing: a time-boxed session guided by a test charter that states the session’s objectives, followed by a debrief with the relevant stakeholders. The tester can use session sheets to record the steps followed and the discoveries made.</p>
-<p><em>Exam focus.</em> Scenario questions describe a way of working and ask you to recognise exploratory testing, or ask when it is most useful. The defining feature is simultaneity: tests are designed, run, and evaluated at once, and each result guides the next. It is most useful when specifications are weak or time is short. Note the role of session-based testing: the time-boxed session and the test charter are the structure that makes exploratory work accountable, not a separate technique. Before choosing an option, look for the sign of learning while testing, because running prepared, scripted tests is never exploratory.</p>
+<p>In exploratory testing, tests are designed, run, and evaluated at the same time as the tester learns the test object, and each result guides the next test. It is most useful when specifications are few or inadequate, when there is serious time pressure, or as a complement to more formal techniques. Exploratory testing can incorporate other test techniques, such as equivalence partitioning. Test objectives may be treated as high-level test conditions, and coverage items are identified and exercised during the test session. Its effectiveness depends heavily on the tester’s experience, domain knowledge, and skills such as curiosity and analytical thinking. To give exploratory testing structure, teams sometimes run it as session-based testing: a time-boxed session guided by a test charter that states the session’s objectives, followed by a debrief with the relevant stakeholders. The tester can use session sheets to record the steps followed and the discoveries made.</p>
+<p><em>Exam focus.</em> Scenario questions describe a way of working and ask you to recognise exploratory testing, or ask when it is most useful. The defining feature is simultaneity: tests are designed, run, and evaluated at once, and each result guides the next. It is most useful when specifications are weak or time is short. Note the role of session-based testing: when it is used, the time-boxed session and the test charter structure the exploratory work; they are not a separate technique. Before choosing an option, look for the sign of learning while testing, because running prepared, scripted tests is never exploratory.</p>
 <p><strong>Check your understanding</strong></p>
 <p><em>CYU 4.4.2-a.</em> What is the defining feature of exploratory testing?</p>
 <div class="mc">
@@ -753,9 +750,9 @@ ship();</code></pre>
 <li>(d) Deriving tests from acceptance criteria before coding</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (c). Simultaneous learn-design-run-evaluate is the essence of exploratory testing.</p>
-</div>
+</div></details>
 <p><em>CYU 4.4.2-b.</em> When is exploratory testing most useful?</p>
 <div class="mc">
 <ul>
@@ -765,9 +762,9 @@ ship();</code></pre>
 <li>(d) Only in unit testing</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (a). Exploratory testing is most useful when specifications are few or inadequate, or when there is serious time pressure.</p>
-</div>
+</div></details>
 <p><em>CYU 4.4.2-c.</em> In session-based exploratory testing, what is the purpose of the test charter?</p>
 <div class="mc">
 <ul>
@@ -777,14 +774,14 @@ ship();</code></pre>
 <li>(d) It defines the exit criteria for the test level in which the session runs</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (c). The charter contains the test objectives that guide the session. Recording steps and discoveries is the job of the test session sheet (b), detailed steps with expected results describe scripted testing (a), and exit criteria belong to test planning (d).</p>
-</div>
+</div></details>
 </section>
 <section id="fl-4-4-3" class="level3">
 <h3>Checklist-based testing (FL-4.4.3 — K2)</h3>
-<p>In checklist-based testing, the tester designs, implements, and runs tests to cover test conditions taken from a checklist, a list built from experience, from knowledge of what matters to the user, or from an understanding of why and how software fails. The syllabus sets useful constraints on what belongs on such a checklist. The items should not be things that can be checked automatically, should not be items better suited as entry or exit criteria, and should not be too general. In other words, a good checklist holds conditions that genuinely need a thinking human, written concretely enough to be acted on. Checklists are maintained over time: new items are added from defect analysis, and old items become less effective as developers stop making those defects, the “tests wear out” principle applied to a list. In the absence of detailed test cases, checklists provide guidelines and some degree of consistency. If the items are high-level, two testers will usually test them in slightly different ways; this variability can give greater coverage, but it reduces repeatability.</p>
-<p>With all three experience-based techniques now in view, Table 4.2 sets them side by side. The column to read first is the one that names what drives the tests, because that is the detail exam scenarios usually reveal.</p>
+<p>In checklist-based testing, the tester designs, implements, and runs tests to cover test conditions taken from a checklist, a list built from experience, from knowledge of what matters to the user, or from an understanding of why and how software fails. The syllabus sets useful constraints on what belongs on such a checklist. The items should not be things that can be checked automatically, should not be items better suited as entry or exit criteria, and should not be too general. In other words, a good checklist holds conditions that genuinely need a thinking human, written concretely enough to be acted on. Checklists are maintained over time: new items are added from defect analysis, and old items become less effective as developers stop making those defects, the “tests wear out” principle applied to a list. Updating does not only mean adding, though: a checklist that keeps growing becomes hard to use, so the syllabus advises against letting it get too long. In the absence of detailed test cases, checklists provide guidelines and some degree of consistency. If the items are high-level, two testers will usually test them in slightly different ways; this variability can give greater coverage, but it reduces repeatability.</p>
+<p>With all three experience-based techniques now in view, Table 4.2 sets them side by side. The column to read first is the one that names what drives the tests, because that is the detail a scenario reveals.</p>
 <p><strong>Table 4.2 — Error guessing, exploratory testing, and checklist-based testing compared</strong></p>
 <div class="table-wrap">
 <table>
@@ -835,9 +832,9 @@ ship();</code></pre>
 <li>(d) Whether fields handle text pasted from external applications</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (a). Something checkable automatically does not belong on a checklist; the list is for conditions that need a thinking human.</p>
-</div>
+</div></details>
 <p><em>CYU 4.4.3-b.</em> Two testers work from the same high-level checklist. What is the most likely effect?</p>
 <div class="mc">
 <ul>
@@ -847,9 +844,9 @@ ship();</code></pre>
 <li>(d) Detailed test cases are produced automatically from the checklist</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (b). High-level items are interpreted slightly differently by each tester; the syllabus notes that this can give greater coverage but less repeatability.</p>
-</div>
+</div></details>
 <p><em>CYU 4.4.3-c.</em> A checklist item about missing input-length checks has found no defects for several releases, because the developers now handle it routinely. At the same time, defect analysis reveals a new type of high-severity defect. What should the team do with the checklist?</p>
 <div class="mc">
 <ul>
@@ -859,9 +856,9 @@ ship();</code></pre>
 <li>(d) Update it based on the defect analysis, reviewing items that have become less effective, without letting it grow too long</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (d). Items lose effectiveness as developers learn to avoid the same errors, and new high-severity defects call for new items, so the checklist is updated regularly from defect analysis. The syllabus also warns against letting a checklist become too long (c), and items better suited as exit criteria do not belong on it at all (b).</p>
-</div>
+</div></details>
 </section>
 </section>
 <section id="collaboration-based-test-approaches" class="level2">
@@ -871,7 +868,7 @@ ship();</code></pre>
 <h3>Collaborative user story writing (FL-4.5.1 — K2)</h3>
 <p>A user story expresses a requirement from the user’s point of view, typically in the form: “As a [role], I want [goal], so that [business value].” A good story has the three Cs: Card (the medium that holds the story, a short token such as an index card or an entry on an electronic board), Conversation (which explains how the software will be used and can be verbal or documented), and Confirmation (the acceptance criteria). Stories are written collaboratively, with the business, development, and testing viewpoints together, for example in refinement workshops supported by collaboration practices such as brainstorming and mind mapping. The aim of the collaboration is that ambiguities, missing cases, and testability problems surface before any code is written. A widely used set of quality criteria for stories is INVEST: Independent, Negotiable, Valuable, Estimable, Small, Testable. When a stakeholder cannot say how they would check a story, the cause is usually one of three things: the story is still vague, it does not capture a benefit the stakeholder cares about, or the stakeholder needs help working out the tests. Figure 4.7 shows the three Cs of a story together.</p>
 <figure>
-<img src="figures/fig_4_7_three_cs.png" alt="" /><figcaption>Figure 4.7 — The three Cs of a user story. A triangle links three boxes: Card, the medium that holds the story; Conversation, how the software will be used, verbal or documented; and Confirmation, the acceptance criteria.</figcaption>
+<img src="figures/fig_4_7_three_cs.png" alt="Figure 4.7 — The three Cs of a user story. A triangle links three boxes: Card, the medium that holds the story; Conversation, how the software will be used, verbal or documented; and Confirmation, the acceptance criteria." /><figcaption>Figure 4.7 — The three Cs of a user story.</figcaption>
 </figure>
 <p><em>Exam focus.</em> Questions on this objective ask about the three Cs or INVEST. A user story is a short card, a conversation, and a confirmation in the form of acceptance criteria, and the story is written collaboratively so that ambiguities surface before code exists. For INVEST, remember what an untestable story may signal: it may be unclear, it may not reflect something valuable, or the tester may need help. Before answering, match each option to its C (card, conversation, or confirmation) and reject the option that fits none.</p>
 <p><strong>Check your understanding</strong></p>
@@ -884,9 +881,9 @@ ship();</code></pre>
 <li>(d) The unit test the developer writes</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (a). Confirmation is the acceptance criteria; Card is the short token and Conversation is the discussion of detail.</p>
-</div>
+</div></details>
 <p><em>CYU 4.5.1-b.</em> A tester says they cannot see how a new user story could be tested. What may this indicate?</p>
 <div class="mc">
 <ul>
@@ -896,9 +893,9 @@ ship();</code></pre>
 <li>(d) The story may not be clear enough, may not reflect something valuable, or the tester may need help in testing</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (d). The syllabus names these three possibilities when a stakeholder does not know how to test a story. Options (a) and (b) are not preconditions for testability, and (c) contradicts the aim of collaborative story writing, which is to surface testability problems before code is written.</p>
-</div>
+</div></details>
 <p><em>CYU 4.5.1-c.</em> What is the main reason user stories are written collaboratively by business representatives, developers, and testers?</p>
 <div class="mc">
 <ul>
@@ -908,14 +905,14 @@ ship();</code></pre>
 <li>(d) To let developers estimate the story without involving the business representatives</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (c). Collaboration brings the three perspectives together, so the team shares one view of what should be delivered and ambiguities surface before code is written. Options (a), (b), and (d) each remove part of the collaboration instead of using it.</p>
-</div>
+</div></details>
 </section>
 <section id="fl-4-5-2" class="level3">
 <h3>Acceptance criteria (FL-4.5.2 — K2)</h3>
 <p>Acceptance criteria are the conditions a user story’s implementation must meet to be accepted, the Confirmation in the three Cs. They define the story’s scope, create shared understanding, and serve as the test basis for the story’s acceptance tests, including both positive and negative scenarios. There are two common ways to write them. Scenario-oriented criteria are concrete examples in Given/When/Then form: Given a precondition, When an event occurs, Then an expected result follows. Rule-oriented criteria are a bulleted list of verifiable rules or input-output mappings, for example “reservations can be made at most 90 days in advance” or “cancellation at least 48 hours before the start: full refund.” Most criteria can be written either way. A team may also use another, custom format, as long as the criteria are well-defined and unambiguous. Acceptance criteria also help stakeholders reach consensus and allow accurate planning and estimation. They usually result from the Conversation and can be viewed as the test conditions the tests should exercise. What matters is that every criterion is verifiable: checkable as true or false. “The page should load quickly” is not a criterion; “the page loads within 2 seconds” is.</p>
-<p><em>Exam focus.</em> The typical question shows a criterion and asks whether it is well-formed or asks you to name the writing style. Acceptance criteria must be verifiable and come in two common forms: scenario-oriented in Given/When/Then, and rule-oriented as a list of checkable rules. Watch for an unverifiable statement presented as a criterion: “the page should load quickly” cannot be checked true or false, while “the page loads within 2 seconds” can. Before choosing an option, apply the true-or-false test to the criterion in the question, and only then classify its form.</p>
+<p><em>Exam focus.</em> A question can show a criterion and ask whether it is well-formed or asks you to name the writing style. Acceptance criteria must be verifiable and come in two common forms: scenario-oriented in Given/When/Then, and rule-oriented as a list of checkable rules. Watch for an unverifiable statement presented as a criterion: “the page should load quickly” cannot be checked true or false, while “the page loads within 2 seconds” can. Before choosing an option, apply the true-or-false test to the criterion in the question, and only then classify its form.</p>
 <p><strong>Check your understanding</strong></p>
 <p><em>CYU 4.5.2-a.</em> Which of the following is a verifiable acceptance criterion?</p>
 <div class="mc">
@@ -926,21 +923,21 @@ ship();</code></pre>
 <li>(d) Search returns results within 3 seconds for a catalogue of 100,000 items</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (d). Only (d) can be checked true or false; the others are unmeasurable statements.</p>
-</div>
-<p><em>CYU 4.5.2-b.</em> A team rewrites the criterion “Cancellation at least 48 hours before the start gives a full refund” as “Given a booking starting in 72 hours, When the guest cancels, Then the full amount is refunded.” What has the team done?</p>
+</div></details>
+<p><em>CYU 4.5.2-b.</em> A team keeps the criterion “Cancellation at least 48 hours before the start gives a full refund” and adds this example under it: “Given a booking starting in 72 hours, When the guest cancels, Then the full amount is refunded.” What has the team added?</p>
 <div class="mc">
 <ul>
-<li>(a) Rewritten a rule-oriented criterion in the scenario-oriented format</li>
-<li>(b) Turned the criterion into a test charter for exploratory testing</li>
-<li>(c) Replaced the criterion with a component test</li>
-<li>(d) Changed the scope of the user story</li>
+<li>(a) A scenario-oriented example that illustrates the rule-oriented criterion</li>
+<li>(b) A test charter for exploratory testing</li>
+<li>(c) A component test that replaces the criterion</li>
+<li>(d) A change to the scope of the user story</li>
 </ul>
 </div>
-<div class="answer">
-<p>Answer: (a). The original is a rule; the rewrite is a concrete Given/When/Then example of it, which is the scenario-oriented format. The rule and the scope are unchanged, and neither a charter (b) nor a component test (c) is involved.</p>
-</div>
+<details class="ans"><summary>Show answer</summary><div class="answer">
+<p>Answer: (a). The criterion is a rule; the example shows one case of it in Given/When/Then form, which is the scenario-oriented format. One example does not carry the whole rule, because nothing in it marks the 48-hour limit, which is why the rule stays in place and the scope is unchanged (d). Neither a charter (b) nor a component test (c) is involved.</p>
+</div></details>
 <p><em>CYU 4.5.2-c.</em> A team documents its acceptance criteria as annotated screen mock-ups with numbered expected results, instead of Given/When/Then scenarios or a bullet list of rules. Which statement is correct?</p>
 <div class="mc">
 <ul>
@@ -950,37 +947,40 @@ ship();</code></pre>
 <li>(d) This is acceptable only if the criteria are rewritten in Given/When/Then form before testing</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (b). Scenario-oriented and rule-oriented are the two most common formats, but a team may use a custom format as long as the criteria are well-defined and unambiguous. What matters is that each criterion can be checked, not which notation holds it.</p>
-</div>
+</div></details>
 </section>
 <section id="fl-4-5-3" class="level3">
 <h3>Acceptance test-driven development (FL-4.5.3 — K3)</h3>
 <p><strong>The idea.</strong> ATDD is a test-first approach: test cases are derived from a user story’s acceptance criteria before that piece of the application is implemented. The aim is twofold. The tests guide development towards exactly the agreed behaviour, and when they pass they give the team confidence that the implementation meets the acceptance criteria. Figure 4.8 shows the flow from the user story to passing tests.</p>
 <figure>
-<img src="figures/fig_4_8_atdd_flow.png" alt="" /><figcaption>Figure 4.8 — The ATDD flow, from the user story to passing tests. Six boxes are connected by arrows: user story; specification workshop; acceptance criteria agreed; test cases written, positive first, then negative, then non-functional; developers may automate the tests by writing the supporting code while implementing; and automated tests act as executable requirements, so the story meets its criteria when they pass.</figcaption>
+<img src="figures/fig_4_8_atdd_flow.png" alt="Figure 4.8 — The ATDD flow, from the user story to passing tests. Six boxes are connected by arrows: user story; specification workshop; acceptance criteria agreed; test cases written, positive first, then negative, then non-functional; developers may automate the tests by writing the supporting code while implementing; and automated tests act as executable requirements, so the story meets its criteria when they pass." /><figcaption>Figure 4.8 — The ATDD flow, from the user story to passing tests.</figcaption>
 </figure>
 <p>The flow has three steps. A specification workshop, with business representatives, developers, and testers together, analyses the story, resolves gaps and ambiguities, and agrees the acceptance criteria. Test cases are created from the acceptance criteria, by the team as a whole or by the tester individually: typically the positive path first, then the negative cases, and non-functional aspects where needed. Techniques from Sections 4.2 to 4.4 may be applied. The test cases should not go beyond the story, and no two test cases should describe the same characteristics. The tests are written in a language all stakeholders understand, often Given/When/Then, and should cover every distinct rule the criteria contain. The test cases may be run manually or automated. When they are captured in a format that a test automation framework supports, the developers automate them by writing the supporting code as they implement the feature. The acceptance tests then become executable requirements: they guide the implementation, and the code is written to make them pass. They make the criteria concrete, but they do not replace the conversation around the requirement.</p>
 <section id="worked-example-meeting-room-reservation-story" class="level4">
 <h4>Worked example — meeting-room reservation story</h4>
 <p>Story: As an employee, I want to reserve a meeting room online, so that I can book a room without calling reception. Acceptance criteria (rule-oriented): (1) A reservation requires a room, a date, a start time, and a duration of 30, 60, or 90 minutes. (2) A reservation is confirmed only if the room is free for the whole requested duration. (3) Reservations can be made at most 30 days in advance. (4) A confirmed reservation sends the employee a calendar invitation.</p>
 <p>Task: derive an ATDD test set from the criteria.</p>
-<p>Step 1, one positive test for the happy path, combining criteria where natural:</p>
+<p>Step 1, positive tests. The happy path comes first, combining criteria where natural; then the edge of a rule that must still pass:</p>
 <ul>
-<li>T1 (AC1 + AC2 + AC4): Given Room A is free tomorrow from 10:00 to 11:00, When the employee reserves Room A, tomorrow, 10:00, 60 minutes, Then the reservation is confirmed and a calendar invitation is sent.</li>
+<li>T1 (AC1 + AC2 + AC4): Given Room A is free tomorrow from 10:00 to 11:00, When the employee reserves Room A for tomorrow, 10:00, 60 minutes, Then the reservation is confirmed and a calendar invitation is sent to the employee.</li>
+<li>T2 (AC3, boundary): Given Room A is free 30 days from today from 14:00 to 14:30, When the employee reserves Room A for that date, 14:00, 30 minutes, Then the reservation is confirmed.</li>
 </ul>
-<p>Step 2, negative tests for each rule’s violation:</p>
+<p>Step 2, negative tests, one for each way a rule can be broken:</p>
 <ul>
-<li>T2 (AC1): a reservation with a 45-minute duration is rejected, because only 30, 60, or 90 are allowed.</li>
-<li>T3 (AC2): Room A is already reserved 10:30 to 11:00; a request for 10:00 to 11:00 is rejected. Note the partial overlap, the sharpest reading of “free for the whole duration.”</li>
-<li>T4 (AC3): a reservation dated 31 days ahead is rejected. T5 (AC3 boundary): a reservation 30 days ahead is confirmed.</li>
+<li>T3 (AC1, a scenario outline with one row per required field): Given Room A is free tomorrow from 10:00 to 11:00, When the employee submits a reservation for Room A, tomorrow, 10:00, 60 minutes with the <field> left empty, Then the reservation is rejected. Rows: room, date, start time, duration. This is four test cases, because each required field is a separate rule.</li>
+<li>T4 (AC1): Given Room A is free tomorrow from 10:00 to 11:00, When the employee reserves Room A for tomorrow, 10:00, 45 minutes, Then the reservation is rejected.</li>
+<li>T5 (AC2, and the negative side of AC4): Given Room A is already reserved tomorrow from 10:30 to 11:00, When the employee reserves Room A for tomorrow, 10:00, 60 minutes, Then the reservation is rejected and no calendar invitation is sent. Note the partial overlap, the sharpest reading of “free for the whole duration.”</li>
+<li>T6 (AC3): Given Room A is free 31 days from today from 14:00 to 14:30, When the employee reserves Room A for that date, 14:00, 30 minutes, Then the reservation is rejected. T2 and T6 are the two boundary values that 2-value BVA gives for the 30-day limit.</li>
 </ul>
-<p>Step 3, check coverage of the criteria. Every criterion has at least one test, and AC1, AC2, and AC3 have both a passing and a failing side (T5 is a boundary value from BVA). All five tests exist before implementation starts. If the team automates them, the developers write the supporting code as they implement the story, and the tests become executable requirements; when they all pass, the story meets its agreed criteria.</p>
+<p>Step 3, non-functional tests. The criteria say nothing about non-functional characteristics such as response time, so no non-functional test is written here. Adding one would take the tests beyond the story; if the specification workshop agrees such a criterion, its test is added last.</p>
+<p>Step 4, check coverage of the criteria. Every criterion has both a passing and a failing side: AC1 passes in T1 and T2 and fails in T3 and T4; AC2 passes in T1 and fails in T5; AC3 passes in T2 and fails in T6; AC4 sends an invitation in T1 and none in T5. No two tests describe the same characteristic: only T1 checks that an invitation is sent, and only T5 checks that none is sent. The criteria do not define error messages, so no Then names one. Every precondition sits in a Given. All nine test cases exist before implementation starts. If the team automates them, the developers write the supporting code as they implement the story, and the tests become executable requirements; when they all pass, the story meets its agreed criteria.</p>
 <p><em>Exam focus.</em> The K3 question gives a story with acceptance criteria and asks which test case is derived correctly, which criterion is left uncovered, or which Given/When/Then matches a given criterion. The method is mechanical: match each candidate test to a criterion and check the logic direction, a test that violates a rule should expect rejection. The most tempting wrong option tests reasonable behaviour the criteria never state; in ATDD a test must be derivable from the agreed criteria, not from general knowledge.</p>
 </section>
 <section id="independent-exercise-4.e" class="level4">
 <h4>Independent exercise 4.E</h4>
-<p>Story: As a customer, I want to use a coupon at checkout. Acceptance criteria: (1) a coupon applies only if it has not expired; (2) only one coupon per order; (3) the discount never exceeds the order total. Write a Given/When/Then test for criterion (3). (Solution at the end of this chapter.)</p>
+<p>Story: As a customer, I want to use a coupon at checkout. Acceptance criteria: (1) a coupon applies only if it has not expired; (2) only one coupon per order; (3) the discount never exceeds the order total: if the coupon’s value is larger than the order total, the discount equals the order total and the total becomes EUR 0. Write a Given/When/Then test for criterion (3). (Solution at the end of this chapter.)</p>
 <p><em>Check your understanding.</em> The practice is the worked example plus 4.E.</p>
 <p><em>CYU 4.5.3.</em> In ATDD, what must a test case be derivable from?</p>
 <div class="mc">
@@ -991,9 +991,9 @@ ship();</code></pre>
 <li>(d) Only past failure patterns</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (a). An ATDD test is derived from the acceptance criteria; behaviour that is “reasonable” but not in the criteria is the most tempting wrong option.</p>
-</div>
+</div></details>
 </section>
 </section>
 </section>
@@ -1062,7 +1062,7 @@ ship();</code></pre>
 <td>Exploratory testing</td>
 <td>identified during the session</td>
 <td>—</td>
-<td>simultaneous learn-design-run-evaluate; session-based with a charter</td>
+<td>simultaneous learn-design-run-evaluate; sometimes session-based, with a charter</td>
 </tr>
 <tr class="odd">
 <td>Checklist-based</td>
@@ -1124,7 +1124,7 @@ ship();</code></pre>
 </tr>
 <tr class="odd">
 <td>All states coverage</td>
-<td>visit every state</td>
+<td>exercise every state</td>
 <td>Valid transitions coverage</td>
 <td>exercise every valid arrow; the stronger one</td>
 </tr>
@@ -1164,14 +1164,20 @@ ship();</code></pre>
 </section>
 <section id="exam-tips-and-common-traps-chapter-4" class="level3">
 <h3>Exam tips and common traps — Chapter 4</h3>
-<p>On every K3 question, do the procedure on paper before looking at the options. Derive the partitions, list the boundary values, count the columns, or trace the transitions, and only then compare your result with the options. Working backwards from the options is slower and far more error-prone, because the wrong options are built from the most common slips.</p>
+<p>On every K3 question, do the procedure on paper before looking at the options. Derive the partitions, list the boundary values, count the columns, or trace the transitions, and only then compare your result with the options. Working backwards from the options is slower and far more error-prone, because wrong options can be built from common slips.</p>
 <p>Each technique has its own counting trap. In equivalence partitioning, count the partitions the specification defines, including the invalid ones on both sides, and pick one representative per partition; boundary values are the next technique’s job. In boundary value analysis, check which variant the question asks for before counting, because 2-value and 3-value produce different sets. In decision tables, do not confuse the number of conditions with the number of columns: the full limited-entry table is 2 to the power of the number of conditions. In boundary value analysis, remember that the boundary values of invalid partitions count too, so 3-value BVA takes four values at every boundary. In state transition testing, use the diagram for valid transitions and the table for invalid ones, and read carefully whether the question asks about states, valid transitions, or all state-event combinations.</p>
 <p>For the white-box pair, the implication runs one way: 100 percent branch coverage guarantees 100 percent statement coverage, not vice versa. Separate the experience-based techniques by mechanism. Aiming tests at predicted defects is error guessing, learning while running is exploratory testing, and working from maintained conditions is checklist-based testing.</p>
 </section>
 </section>
 <section id="cumulative-retrieval-2" class="level2">
 <h2>Cumulative retrieval</h2>
-<p>Revisiting earlier chapters through this chapter’s lens: decide whether a defect caught only at a range edge illustrates the “defects cluster” principle or simple boundary behaviour (Chapter 1); state which test level a component’s branch-coverage measurement most naturally belongs to (Chapter 2); and explain why deriving acceptance tests before coding is an example of both shift left and the early-testing principle (Chapters 2 and 1). Try to answer each from memory before you look back at the earlier chapters.</p>
+<p>Revisiting earlier chapters through this chapter’s lens:</p>
+<ul>
+<li><strong>R4-a.</strong> Decide whether a defect caught only at a range edge illustrates the “defects cluster” principle or simple boundary behaviour (Chapter 1).</li>
+<li><strong>R4-b.</strong> State which test level a component’s branch-coverage measurement most naturally belongs to (Chapter 2).</li>
+<li><strong>R4-c.</strong> Explain why deriving acceptance tests before coding is an example of both shift left and the early-testing principle (Chapters 2 and 1).</li>
+</ul>
+<p>Try to answer each from memory before you look back at the earlier chapters. Model answers are in Answers &amp; Rationale, under <em>Cumulative retrieval — model answers</em>.</p>
 </section>
 <section id="chapter-exercises-3" class="level2">
 <h2>Chapter exercises</h2>
@@ -1320,13 +1326,13 @@ ship();</code></pre>
 <li>(d) Rule-oriented, because the criteria are a list of verifiable rules and numeric limits</li>
 </ul>
 </div>
-<p><em>PB-C4-017.</em> A user story’s acceptance criterion is: “Given an order contains at least one digital product, When the customer completes payment, Then a download link is emailed within 5 minutes.” Which test case tests this criterion correctly?</p>
+<p><em>PB-C4-017.</em> A user story for an online shop has these acceptance criteria: (1) When payment is completed, a download link for each digital product in the order is emailed within 5 minutes. (2) The link remains valid for 168 hours (7 days) after it is sent; its age is measured in whole hours, and a link up to and including 168 hours old starts the download. (3) Opening an expired link shows the message “Link expired” and an option to request a new link. A tester applies 2-value boundary value analysis to the age of the link to derive a negative test case. Which test case is derived correctly?</p>
 <div class="mc">
 <ul>
-<li>(a) Place an order containing a digital product, complete payment, and verify a download link arrives by email within 5 minutes</li>
-<li>(b) Place an order containing no digital product, complete payment, and verify a download link arrives by email within 5 minutes</li>
-<li>(c) Place an order containing a digital product and verify a download link is shown on the order confirmation page</li>
-<li>(d) Place an order containing a digital product, complete payment, and verify the order status changes to “paid”</li>
+<li>(a) Given a download link was sent 169 hours ago, When the customer opens the link, Then the message “Link expired” and an option to request a new link are shown</li>
+<li>(b) Given a download link was sent 168 hours ago, When the customer opens the link, Then the download starts</li>
+<li>(c) Given a download link was sent 240 hours ago, When the customer opens the link, Then the message “Link expired” and an option to request a new link are shown</li>
+<li>(d) Given a download link was sent 169 hours ago, When the customer opens the link, Then a message asks the customer to contact customer support</li>
 </ul>
 </div>
 </section>
@@ -1334,9 +1340,177 @@ ship();</code></pre>
 <h2>Independent exercise solutions</h2>
 <p><em>4.A.</em> (a) Partitions: [below 0 invalid], [0 to 5 free], [6 to 17 child], [18 to 64 adult], [65 to 120 senior], [above 120 invalid], six partitions. (b) Six test cases, one per partition. Do not forget either invalid end.</p>
 <p><em>4.B.</em> There are two boundaries: between 4 (the largest rejected value below the range) and 5, and between 30 and 31. (a) 2-value BVA: 4, 5, 30, 31. (b) 3-value BVA takes each of these four boundary values with both of its neighbours: 3, 4, 5, 6, 29, 30, 31, 32, which is four values at each boundary.</p>
-<p><em>4.C.</em> (a) 3 conditions give 2^3 = 8 columns. (b) Total EUR 30 (F), Plus (T), domestic (T): a Plus member with a domestic address, so free shipping.</p>
-<p><em>4.D.</em> (a) 1 test case, the sequence submit, approve visits the Draft, Submitted, and Approved states. (b) 3 valid transitions (submit, approve, reject) must be exercised; covering reject needs a sequence that returns to Draft, for example submit, reject, submit, approve.</p>
-<p><em>4.E.</em> Example: Given an order with a total of EUR 10 and a valid coupon worth EUR 25, When the customer applies the coupon at checkout, Then the discount applied is EUR 10 and the order total is EUR 0, the discount does not exceed the order total.</p>
+<p><em>4.C.</em> (a) Three Boolean conditions give 2^3 = 8 columns. Shipping is free when the address is domestic and at least one of the other two conditions is true:</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>R1</th>
+<th>R2</th>
+<th>R3</th>
+<th>R4</th>
+<th>R5</th>
+<th>R6</th>
+<th>R7</th>
+<th>R8</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>C1 total at least EUR 50</td>
+<td>T</td>
+<td>T</td>
+<td>T</td>
+<td>T</td>
+<td>F</td>
+<td>F</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr class="even">
+<td>C2 Plus member</td>
+<td>T</td>
+<td>T</td>
+<td>F</td>
+<td>F</td>
+<td>T</td>
+<td>T</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr class="odd">
+<td>C3 domestic address</td>
+<td>T</td>
+<td>F</td>
+<td>T</td>
+<td>F</td>
+<td>T</td>
+<td>F</td>
+<td>T</td>
+<td>F</td>
+</tr>
+<tr class="even">
+<td>A1: free shipping</td>
+<td>X</td>
+<td></td>
+<td>X</td>
+<td></td>
+<td>X</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>A2: customer pays shipping</td>
+<td></td>
+<td>X</td>
+<td></td>
+<td>X</td>
+<td></td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>(b) R1 and R3 have the same action and differ only in C2, so they merge. R2, R4, R6, and R8 all have a foreign address and the same action, so C1 and C2 are irrelevant there and the four merge into one column. R5 and R7 stay separate, because there C2 decides the outcome.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>M1 (R1+R3)</th>
+<th>M2 (R5)</th>
+<th>M3 (R7)</th>
+<th>M4 (R2+R4+R6+R8)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>C1 total at least EUR 50</td>
+<td>T</td>
+<td>F</td>
+<td>F</td>
+<td>–</td>
+</tr>
+<tr class="even">
+<td>C2 Plus member</td>
+<td>–</td>
+<td>T</td>
+<td>F</td>
+<td>–</td>
+</tr>
+<tr class="odd">
+<td>C3 domestic address</td>
+<td>T</td>
+<td>T</td>
+<td>T</td>
+<td>F</td>
+</tr>
+<tr class="even">
+<td>A1: free shipping</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>A2: customer pays shipping</td>
+<td></td>
+<td></td>
+<td>X</td>
+<td>X</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Full table: 8 columns, so a minimum of 8 test cases. Collapsed table: 4 columns, so a minimum of 4.</p>
+<p>(c) One test per collapsed column:</p>
+<ul>
+<li>M1: total EUR 60, not a Plus member, domestic address. Expected: free shipping. (A non-member shows that the total alone is enough.)</li>
+<li>M2: total EUR 30, Plus member, domestic address. Expected: free shipping.</li>
+<li>M3: total EUR 30, not a Plus member, domestic address. Expected: the customer pays shipping.</li>
+<li>M4: total EUR 80, Plus member, foreign address. Expected: the customer pays shipping. (Both other conditions are true, which shows that a foreign address overrides them.)</li>
+</ul>
+<p><em>4.D.</em> (a) Three states times three events give 9 cells:</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr class="header">
+<th>State / Event</th>
+<th>submit</th>
+<th>approve</th>
+<th>reject</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Draft</td>
+<td>Submitted</td>
+<td>invalid</td>
+<td>invalid</td>
+</tr>
+<tr class="even">
+<td>Submitted</td>
+<td>invalid</td>
+<td>Approved</td>
+<td>Draft</td>
+</tr>
+<tr class="odd">
+<td>Approved</td>
+<td>invalid</td>
+<td>invalid</td>
+<td>invalid</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>There are 3 valid pairs and 6 invalid ones.</p>
+<p>(b) All states coverage: one test case, Draft, submit, Submitted, approve, Approved, exercises all three states. Valid transitions coverage: reject has to be covered too, and because Approved has no way out, reject must come before approve. One test case is enough: Draft, submit, Submitted, reject, Draft, submit, Submitted, approve, Approved. It exercises all 3 valid transitions.</p>
+<p>(c) Example: starting state Approved; event reject. Expected result: the event is not accepted and the document stays in Approved. (Any of the other five invalid cells works as well. Keep one invalid attempt per test case, so that one defect cannot hide another.)</p>
+<p><em>4.E.</em> Example: Given an order with a total of EUR 10, and a coupon worth EUR 25 that has not expired and is the only coupon on the order, When the customer applies the coupon at checkout, Then the discount applied is EUR 10 and the order total is EUR 0. (The Given rules out criteria (1) and (2), so the test checks criterion (3) alone.)</p>
 </section>
 </section>
 
@@ -1345,5 +1519,6 @@ ship();</code></pre>
 </main>
 </div>
 <script>if (window.matchMedia('(min-width: 901px)').matches) document.getElementById('navd').open = true;</script>
+<script>(function(){function od(){var h=decodeURIComponent(location.hash.slice(1));if(!h)return;var e=document.getElementById(h);while(e){if(e.tagName==='DETAILS')e.open=true;e=e.parentElement;}}addEventListener('hashchange',od);od();})();</script>
 </body>
 </html>

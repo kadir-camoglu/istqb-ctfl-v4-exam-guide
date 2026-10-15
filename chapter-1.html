@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="draft-banner" role="note"><strong>Public draft — under review.</strong> Feedback: <a href="mailto:kadir.camoglu@gmail.com">kadir.camoglu@gmail.com</a></div>
 <header class="topbar"><div class="inner"><a href="index.html">ISTQB® CTFL v4.0 Exam Guide</a><span class="meta"><span class="ind">Independent · Unofficial study guide · </span><a href="all.html">Full text on one page</a></span></div></header>
 <div class="layout">
 <nav class="side"><details id="navd"><summary>Contents</summary><div class="navbody">
@@ -51,12 +52,8 @@
 </li>
 <li><a href="final-revision.html">Final Revision Plan</a>
 </li>
-</ul>
-<div class="group">Mock exam</div><ul>
 <li><a href="mock-exam-1.html">Mock Exam 1 — 40 Questions with Rationale</a>
 </li>
-</ul>
-<div class="group">Back matter</div><ul>
 <li><a href="further-resources.html">Further Resources</a>
 </li>
 </ul>
@@ -74,7 +71,7 @@
 <p>When people first hear the word “testing,” they usually picture someone running the software and watching what happens. Real testing is much wider than that. It includes planning the work, analysing what needs to be tested, designing the tests, preparing them, reporting the results, and judging the quality of the test object. (The work product being tested is called the <strong>test object</strong>.) In other words, the test process starts before a single line of code exists, and it continues after execution has finished.</p>
 <p>The part you carry out by running the software is called <strong>dynamic testing</strong>. Work you do without running the software, such as reviewing a requirements document, is <strong>static testing</strong>, which Chapter 3 covers in detail. The point to hold on to is that testing is a chain of activities, and executing the software is only one link in it. Figure 1.1 shows this chain of activities and where static testing fits into it. Static testing can be applied to work products at any point in this chain.</p>
 <figure>
-<img src="figures/fig_1_1_testing_is_more_than_execution.png" alt="" /><figcaption>Figure 1.1 — Testing is more than test execution. Six test activities run from left to right: test planning, test analysis, test design, test implementation, test execution (the dynamic part), and test completion. Above the chain, a box for static testing (reviews and static analysis) points to test analysis with a dashed arrow labelled “also part of testing,” and a note below says that test monitoring and test control run throughout.</figcaption>
+<img src="figures/fig_1_1_testing_is_more_than_execution.png" alt="Figure 1.1 — Testing is more than test execution. Six test activities run from left to right: test planning, test analysis, test design, test implementation, test execution (the dynamic part), and test completion. Above the chain, a box for static testing (reviews and static analysis) is linked by dashed arrows to all six activities and labelled “can apply at any point in the chain,” and a note below says that test monitoring and test control run throughout." /><figcaption>Figure 1.1 — Testing is more than test execution.</figcaption>
 </figure>
 <p>There is one pair of terms worth fixing at the very start, because the rest of the book leans on it constantly. <strong>Verification</strong> asks, “Are we building the product right?” It checks whether the software meets its specified requirements. <strong>Validation</strong> asks, “Are we building the right product?” It checks whether the software meets the real business needs of users and stakeholders. The test process covers both. A product can pass every verification step and still fail validation. A payroll system, for example, may calculate every amount exactly as the specification says. However, if the specification never covered the part-time contracts that a third of the staff work on, every test can pass while the system still fails the people who use it.</p>
 </section>
@@ -95,7 +92,7 @@
 <p>Test objectives can vary with the context, such as the work product being tested, the test level, the risks, the SDLC, and business factors such as time to market. Notice the two terms introduced above: objectives five and six are verification objectives, while objective nine is a validation objective.</p>
 <p>To make a nine-item list easier to hold in mind, you can group the objectives into four themes. Evaluation and discovery covers evaluating work products and causing failures. Conformance and expectations covers verifying specified requirements, verifying legal and regulatory compliance, and meeting stakeholder expectations. Coverage and risk management covers ensuring the required coverage and reducing risk. Information and confidence covers supplying information for decisions and building confidence in quality.</p>
 <p><em>In practice.</em> Just before a release decision, the product owner asks the test team one question: “How confident are we in this product?” The team answers with the current coverage figures and the remaining risk analysis. At that moment, even if the recent test activities found no new defects, testing is meeting objectives seven and eight, providing information and building confidence. The value of testing does not depend on finding defects alone.</p>
-<p><em>Exam focus.</em> A common pattern gives you several similar-looking options and asks you to pick the one that is a genuine test objective. The distractors are usually activities from a different discipline: fixing defects is debugging (a development activity), and preventing defects by improving the process is quality assurance. Proving that no defects remain is, as the first principle will show, logically impossible. Before you choose an option, make sure it is not a development or QA activity.</p>
+<p><em>Exam focus.</em> A common pattern gives you several similar-looking options and asks you to pick the one that is a genuine test objective. Watch for options that name activities from a different discipline: fixing defects is debugging (a development activity), and preventing defects by improving the process is quality assurance. Proving that no defects remain is, as the first principle will show, logically impossible. Before you choose an option, make sure it is not a development or QA activity.</p>
 <p><strong>Check your understanding</strong></p>
 <p><em>CYU 1.1.1-a.</em> Which of the following objectives concerns validation rather than verification?</p>
 <div class="mc">
@@ -106,9 +103,9 @@
 <li>(d) Checking that the required coverage of the test object has been reached</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (c). “Are we building the right product?” is validation. Options (a) and (b) check conformance to requirements, which is verification; (d) is a coverage objective.</p>
-</div>
+</div></details>
 <p><em>CYU 1.1.1-b.</em> Which of the following is NOT a legitimate test objective?</p>
 <div class="mc">
 <ul>
@@ -118,9 +115,9 @@
 <li>(d) Reducing the risk of inadequate software quality</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (c). Improving the process to prevent defects is quality assurance, not a test objective. The other three appear on the official list.</p>
-</div>
+</div></details>
 <p><em>CYU 1.1.1-c.</em> Before a release, a team checks every functional requirement in the approved specification against the delivered build. Which kind of test objective are they pursuing?</p>
 <div class="mc">
 <ul>
@@ -130,16 +127,16 @@
 <li>(d) A debugging objective, because it removes the defects found</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (a). Checking the product against what was specified answers “Are we building the product right?”, which is verification. Validation would ask whether the product meets stakeholders’ real needs; (c) and (d) are not test objectives at all.</p>
-</div>
+</div></details>
 </section>
 <section id="fl-1-1-2" class="level3">
 <h3>Testing and debugging (FL-1.1.2 — K2)</h3>
 <p>Testing and debugging are two different activities with a clear division of labour. Testing triggers failures by running the software (dynamic testing) or finds defects directly in a work product (static testing). Debugging, by contrast, is a development activity: its purpose is to find, analyse, and remove the cause of a failure.</p>
 <p>The good news is that the split is easy to remember once you separate their goals. Testing shows that failures occur, or finds defects directly. Debugging finds the cause of a failure and removes it. Testers (and the whole team) do the first; developers do the second. After a fix, the original test is run again to see whether the fix worked; that follow-up run is <strong>confirmation testing</strong>, which Chapter 2 covers. It is preferably done by the same person who ran the initial test. Figure 1.2 shows this cycle, from the first failed test to the confirming re-run.</p>
 <figure>
-<img src="figures/fig_1_2_testing_debugging_confirmation.png" alt="" /><figcaption>Figure 1.2 — Testing, debugging, and confirmation testing. Flow from a tester running a test and reporting a failure, through a developer reproducing, diagnosing, and fixing the defect, to the tester re-running the original test for confirmation.</figcaption>
+<img src="figures/fig_1_2_testing_debugging_confirmation.png" alt="Figure 1.2 — Testing, debugging, and confirmation testing. Flow from a tester running a test and reporting a failure, through a developer reproducing, diagnosing, and fixing the defect, to the tester re-running the original test for confirmation." /><figcaption>Figure 1.2 — Testing, debugging, and confirmation testing.</figcaption>
 </figure>
 <p>When dynamic testing reveals a failure, debugging usually follows three steps: reproduce the failure, diagnose it (find the defect that caused it), and fix the defect. In static testing the process is simpler. Because no software is running, there is no failure to reproduce; the defect is already visible in the document or the code, so debugging here is simply a matter of correcting it directly.</p>
 <p><strong>Table 1.1 — Testing versus debugging</strong></p>
@@ -182,7 +179,7 @@
 </table>
 </div>
 <p><em>In practice.</em> You come home and notice water dripping from the bathroom ceiling. Seeing the leak and reporting it to the building manager is testing: its job is only to make the problem visible and record what is happening. Your upstairs neighbour calling a plumber, who inspects the ceiling, works out where the water comes from, diagnoses a burst pipe, and replaces it, is debugging. Afterwards, opening every upstairs tap on purpose to put the pipe under pressure and checking whether your ceiling still drips is confirmation testing.</p>
-<p><em>Exam focus.</em> Scenario questions often give you a sequence of events and ask you to name the activities in order. The standard correct flow is testing, then debugging, then confirmation testing. The most common distractor swaps confirmation testing for regression testing. The difference matters, and Chapter 2 returns to it, but keep this hint for now: confirmation testing checks whether the original defect was fixed, whereas regression testing checks whether a change caused adverse consequences elsewhere.</p>
+<p><em>Exam focus.</em> A scenario question can give you a sequence of events and ask you to name the activities in order. The standard correct flow is testing, then debugging, then confirmation testing. A tempting wrong option swaps confirmation testing for regression testing. The difference matters, and Chapter 2 returns to it, but keep this hint for now: confirmation testing checks whether the original defect was fixed, whereas regression testing checks whether a change caused adverse consequences anywhere in the system.</p>
 <p><strong>Check your understanding</strong></p>
 <p><em>CYU 1.1.2-a.</em> A developer reproduces a reported failure, diagnoses the defect in the code, and fixes it. Which activity is this?</p>
 <div class="mc">
@@ -193,9 +190,9 @@
 <li>(d) Confirmation testing</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (c). Finding and removing the cause of a failure is debugging, a development activity. Testing only makes the failure visible; checking the fix is confirmation testing.</p>
-</div>
+</div></details>
 <p><em>CYU 1.1.2-b.</em> What is the core distinction between testing and debugging?</p>
 <div class="mc">
 <ul>
@@ -205,9 +202,9 @@
 <li>(d) Both happen only in dynamic testing</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (b). Testing exposes failures (or finds defects directly); debugging is the development activity that locates and removes the cause.</p>
-</div>
+</div></details>
 <p><em>CYU 1.1.2-c.</em> During a review of a requirements specification, Tom finds a contradiction between two business rules. What does debugging involve in this case?</p>
 <div class="mc">
 <ul>
@@ -217,9 +214,9 @@
 <li>(d) Nothing, because defects found by static testing do not need to be corrected</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (c). Static testing finds defects directly and cannot cause failures, so debugging is simply removing the defect. Reproduction and diagnosis belong to failures found by dynamic testing.</p>
-</div>
+</div></details>
 </section>
 </section>
 <section id="why-is-testing-necessary" class="level2">
@@ -228,7 +225,7 @@
 <h3>How testing contributes to success (FL-1.2.1 — K2)</h3>
 <p>Testing contributes to a project’s success in several concrete ways. It helps to treat each one as measurable value rather than a vague benefit. Finding defects early is the clearest example: catching a problem while a requirements document is still under review costs a few minutes of revision, whereas the same misunderstanding discovered in production can cause outages, emergency fixes, and unhappy users. Testing also evaluates quality directly, giving management real data across all the work products of the software development lifecycle so that release decisions rest on evidence. The defects that testing finds are then removed by debugging, which is not a testing activity, so testing contributes to higher quality indirectly. Testing is also not only the testers’ business: any stakeholder can use their testing skills to help the project succeed. It keeps the end user’s point of view present throughout development, which raises the chance that the delivered product meets real needs. And where test evidence is required, it helps the organisation meet contractual, legal, and regulatory standards.</p>
 <p><em>In practice.</em> While a hospital appointment system is being built, the requirements are reviewed before any code is written. A tester asks, “What happens if a patient tries to book two different doctors in the same time slot?” The rule for this case was simply left out of the analysis document. Catching the gap on paper costs a ten-minute meeting; letting thousands of patients discover it in production would be an operational crisis.</p>
-<p><em>Exam focus.</em> This objective is usually tested with scenario-matching questions: you are given an event and asked whether it is a genuine contribution of testing. The trap to watch out for is an option in which testing itself repairs defects or adds quality directly. Testing contributes to quality indirectly: it finds the defects that debugging then removes. Before you mark an answer, make sure it describes the information, analysis, or evaluation that testing provides, not a coding or repair task.</p>
+<p><em>Exam focus.</em> This objective can be tested with scenario-matching questions: you are given an event and asked whether it is a genuine contribution of testing. The trap to watch out for is an option in which testing itself repairs defects or adds quality directly. Testing contributes to quality indirectly: it finds the defects that debugging then removes. Before you mark an answer, make sure it describes the information, analysis, or evaluation that testing provides, not a coding or repair task.</p>
 <p><strong>Check your understanding</strong></p>
 <p><em>CYU 1.2.1-a.</em> A vague rule in a requirements document is caught and fixed during a review, before any code is written. Which contribution of testing is this?</p>
 <div class="mc">
@@ -239,9 +236,9 @@
 <li>(d) Adding quality directly to the product</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (a). The defect was caught at the cheapest stage, before coding. Option (d) is wrong because testing does not add quality directly; it contributes indirectly, by finding defects that are then removed.</p>
-</div>
+</div></details>
 <p><em>CYU 1.2.1-b.</em> Which of the following is NOT a genuine contribution of testing?</p>
 <div class="mc">
 <ul>
@@ -251,9 +248,9 @@
 <li>(d) Providing evidence for regulatory compliance</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (c). Repairing defects is debugging, a development activity. What testing provides is information and evaluation.</p>
-</div>
+</div></details>
 <p><em>CYU 1.2.1-c.</em> A regulator asks a bank for documented test evidence before a new lending system may go live, and the team supplies its test reports. Which contribution of testing does this show?</p>
 <div class="mc">
 <ul>
@@ -263,9 +260,9 @@
 <li>(d) Meeting contractual, legal, or regulatory requirements</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (d). Contracts, laws, and regulators can all demand testing, and the resulting test evidence is what satisfies them. Option (c) describes debugging, not testing.</p>
-</div>
+</div></details>
 </section>
 <section id="fl-1-2-2" class="level3">
 <h3>Testing and quality assurance (FL-1.2.2 — K1)</h3>
@@ -310,7 +307,7 @@
 </tbody>
 </table>
 </div>
-<p><em>Exam focus.</em> Questions on this objective turn on the distinction between “product and corrective” and “process and preventive.” A distractor will often describe a process-level, defect-prevention activity and call it testing, or claim that the test activity itself goes and repairs the defects. Classify by asking whether the focus is the product or the process.</p>
+<p><em>Exam focus.</em> Questions on this objective turn on the distinction between “product and corrective” and “process and preventive.” A wrong option may describe a process-level, defect-prevention activity and call it testing, or claim that the test activity itself goes and repairs the defects. Classify by asking whether the focus is the product or the process.</p>
 <p><strong>Check your understanding</strong></p>
 <p><em>CYU 1.2.2-a.</em> After three projects, a team analyses where in its development process most defects are introduced and changes that step. Which activity is this?</p>
 <div class="mc">
@@ -321,9 +318,9 @@
 <li>(d) Debugging</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (b). A process-focused, preventive activity is quality assurance. Testing is product-focused and corrective.</p>
-</div>
+</div></details>
 <p><em>CYU 1.2.2-b.</em> A team defines code-review standards and process checklists so that fewer defects occur in future. Which activity is this?</p>
 <div class="mc">
 <ul>
@@ -333,9 +330,9 @@
 <li>(d) Quality assurance (QA)</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (d). This is preventive, process-level work, so it is quality assurance.</p>
-</div>
+</div></details>
 <p><em>CYU 1.2.2-c.</em> Which statement describes testing, as distinct from quality assurance?</p>
 <div class="mc">
 <ul>
@@ -345,17 +342,17 @@
 <li>(d) It works mainly by improving development standards across projects</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (c). Testing examines the product and reveals its defects so that they can be corrected. Options (a), (b), and (d) all describe quality assurance.</p>
-</div>
+</div></details>
 </section>
 <section id="fl-1-2-3" class="level3">
 <h3>Errors, defects, failures, and root causes (FL-1.2.3 — K2)</h3>
-<p>This is one of the central conceptual chains in the syllabus, and it needs to be clear before the exam. The process follows a linear cause and effect. An <strong>error</strong> (also called a mistake) is a wrong action taken by a person, often under time pressure, complexity, fatigue, or lack of training. A <strong>defect</strong> (or bug) is the concrete result of that error in a work product: a flaw left in a requirements document, a design, a line of code, or a configuration file. A <strong>failure</strong> is the wrong behaviour the software shows when a defect in the code is executed; it is the defect becoming externally visible. Figure 1.3 shows the full chain, including the root cause that starts it, which is explained later in this section.</p>
+<p>This is one of the central conceptual chains in the syllabus, and it needs to be clear before the exam. The process follows a linear cause and effect. An <strong>error</strong> (also called a mistake) is a wrong action taken by a person, often under time pressure, complexity, fatigue, or lack of training. A <strong>defect</strong> (also called a fault or bug) is the concrete result of that error in a work product: a flaw left in a requirements document, a design, a line of code, or a configuration file. A <strong>failure</strong> is the wrong behaviour the software shows when a defect in the code is executed; it is the defect becoming externally visible. Figure 1.3 shows the full chain, including the root cause that starts it, which is explained later in this section.</p>
 <figure>
-<img src="figures/fig_1_3_root_cause_error_defect_failure.png" alt="" /><figcaption>Figure 1.3 — From root cause to failure. Four boxes are joined by arrows: root cause (why the mistake happened), error (a human mistake), defect (a flaw in a work product), and failure (wrong behaviour at run time). The step from defect to failure is marked “may cause a failure when executed,” and a note below adds that failures can also be caused by environmental conditions.</figcaption>
+<img src="figures/fig_1_3_root_cause_error_defect_failure.png" alt="Figure 1.3 — From root cause to failure. Four boxes are joined by arrows: root cause (why the mistake happened), error (a human mistake), defect (a flaw in a work product), and failure (wrong behaviour at run time). The step from defect to failure is marked “may cause a failure when executed,” and a note below adds that failures can also be caused by environmental conditions." /><figcaption>Figure 1.3 — From root cause to failure.</figcaption>
 </figure>
-<p>The chain does not always run cleanly from start to finish, and the exam tests two important exceptions to it.</p>
+<p>The chain does not always run cleanly from start to finish, and two exceptions to it are worth knowing.</p>
 <p>First, not every defect leads to a failure. Some defects sit in code that runs rarely or never (sometimes called a dormant defect). Imagine a booking system with a faulty calculation that only runs on 29 February. The defect may sit in the code for three years without causing a single failure, simply because no triggering leap day occurred in production during that time. The defect is real; it has just not produced a failure yet.</p>
 <p>Second, errors and defects are not the only causes of failures. A system can sometimes fail because of its environment. The syllabus gives a physical example: radiation or electromagnetic fields can cause defects in firmware and lead to failures. Environmental conditions, not a human error in the code, are the source. (A related but distinct case is a test that reports a failure only because stale data was loaded into the environment. Strictly, that is a false-positive result, a wrong test result rather than a genuine failure.)</p>
 <p>At the very start of this chain sits the <strong>root cause</strong>, the underlying reason that led to the error. Root cause analysis identifies the root cause, typically when a failure occurs or a defect is found. Addressing the root cause, for example by removing it, does more than fix one defect; it is expected to prevent similar failures or defects, or at least reduce how often they occur. In a billing system, for example, the root cause might be that tax-rule changes are passed to teams in informal emails with no review; the error is the developer misreading the rounding rule; the defect is the wrong rounding rule written into the code; and the failure is customers being charged the wrong amount each month. Correcting the code fixes that one billing problem, but addressing the root cause, by setting up a formal, reviewed change process for tax rules, makes it far less likely that the developer misreads the next rule as well.</p>
@@ -398,7 +395,7 @@
 </tbody>
 </table>
 </div>
-<p><em>Exam focus.</em> Scenario questions usually describe a sequence of events and ask which step is the error, the defect, the failure, or the root cause. Keep your anchors sharp: a person’s action is an error, a static flaw sitting in a document or code is a defect, a system deviation you observe on screen or in output is a failure, and the underlying reason that led to the error (for example, time pressure, missing training, or a missing review step) is the root cause. Do not confuse these with a false-positive result, where a test reports a failure although there is no defect; Chapter 5 returns to it under defect management.</p>
+<p><em>Exam focus.</em> Scenario questions can describe a sequence of events and ask which step is the error, the defect, the failure, or the root cause. Keep your anchors sharp: a person’s action is an error, a static flaw sitting in a document or code is a defect, a system deviation you observe on screen or in output is a failure, and the underlying reason that led to the error (for example, time pressure, missing training, or a missing review step) is the root cause. Do not confuse these with a false-positive result, where a test reports a failure although there is no defect; Chapter 5 returns to it under defect management.</p>
 <p><strong>Check your understanding</strong></p>
 <p><em>CYU 1.2.3-a.</em> A developer copies a discount rate from a price list, types one digit wrongly, and so writes a wrong discount rate into the code. When the code runs in production, customers are shown incorrect amounts. In this chain, what are the incorrect amounts shown to customers?</p>
 <div class="mc">
@@ -409,9 +406,9 @@
 <li>(d) Root cause</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (c). The defect being executed and becoming externally visible is a failure. The typing slip is the error; the wrong rate in the code is the defect.</p>
-</div>
+</div></details>
 <p><em>CYU 1.2.3-b.</em> A faulty calculation runs only on 29 February and has produced no failure in three years because no leap day occurred in production. What fact does this show?</p>
 <div class="mc">
 <ul>
@@ -421,9 +418,9 @@
 <li>(d) Testing proves the absence of defects</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (b). A defect that is never executed is real but produces no failure until it is triggered.</p>
-</div>
+</div></details>
 <p><em>CYU 1.2.3-c.</em> Correctly written firmware behaves wrongly because a strong electromagnetic field corrupts its memory. What fact does this show?</p>
 <div class="mc">
 <ul>
@@ -433,9 +430,9 @@
 <li>(d) Static testing would have prevented this failure</li>
 </ul>
 </div>
-<div class="answer">
-<p>Answer: (a). A failure can come from environmental conditions rather than from a defect in the code.</p>
-</div>
+<details class="ans"><summary>Show answer</summary><div class="answer">
+<p>Answer: (a). The failure starts from an environmental condition, not from a human error: the field corrupts the firmware’s memory even though the code was written correctly.</p>
+</div></details>
 <p><em>CYU 1.2.3-d.</em> Under pressure to finish quickly, a product owner writes a user story with the wrong maximum loan term. The developer implements the story exactly as written. In production, an applicant receives a loan offer for a term the lender does not allow. Which of the following is a defect in this chain?</p>
 <div class="mc">
 <ul>
@@ -445,9 +442,9 @@
 <li>(d) The loan offer with a term that is not allowed</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (c). A defect is a flaw in a work product, and a user story is a work product. The slip is the error, the loan offer is the failure, and the time pressure is a likely root cause.</p>
-</div>
+</div></details>
 </section>
 </section>
 <section id="the-seven-testing-principles-fl-1.3.1-k2" class="level2">
@@ -457,7 +454,7 @@
 <p>The second is that <strong>exhaustive testing is impossible</strong>. Outside trivial cases, trying every possible input is out of reach, so test techniques, test case prioritisation, and risk-based testing focus the effort. The signal is a scenario noting millions of possible input combinations that cannot all be tried.</p>
 <p>The third is that <strong>early testing saves time and money</strong>. The earlier a defect is caught and fixed, the lower its cost to the project. To find defects early, both static testing and dynamic testing should start as early as possible. The signal is a logic error caught while reviewing requirements (static testing) that avoids a later crisis.</p>
 <p>The fourth is that <strong>defects cluster together</strong>. A small number of components usually contain most of the defects found or are responsible for most of the failures (an illustration of the Pareto principle). The signal is a statistic such as “80 percent of last quarter’s critical outages came from the payment module alone.”</p>
-<p>The fifth is that <strong>tests wear out</strong>. If the same tests are run over and over with no change, they become increasingly ineffective at finding new defects, so test suites need to be reviewed and updated. In some cases, though, repeating the same tests can have a beneficial outcome, as in automated regression testing. This principle was formerly known as the “pesticide paradox”; the exam uses only the current name. The signal is a scenario such as “our regression suite has found no new defect in six months; we need to refresh it.”</p>
+<p>The fifth is that <strong>tests wear out</strong>. If the same tests are run over and over with no change, they become increasingly ineffective at finding new defects, so test suites need to be reviewed and updated. In some cases, though, repeating the same tests can have a beneficial outcome, as in automated regression testing. This principle was formerly known as the “pesticide paradox”; use only the current name. The signal is a scenario such as “our regression suite has found no new defect in six months; we need to refresh it.”</p>
 <p>The sixth is that <strong>testing is context dependent</strong>. Not every project is tested the same way; the approach, rigour, and strategy for a medical device differ from those for a mobile game. The signal contrasts two very different systems that cannot be tested to the same depth.</p>
 <p>The seventh is the <strong>absence-of-defects fallacy</strong>. Testing all the specified requirements and fixing all the defects found does not guarantee that the system will be a success. The system may still not meet users’ needs and expectations, not help the customer reach its business goals, or be inferior to competing systems. The signal is a scenario where “every rule in the analysis document was verified and the system works flawlessly, but users abandon it because of a confusing interface.”</p>
 <p>The seventh principle deserves a little more attention, because it connects directly to the verification-versus-validation line drawn earlier. A development team can produce a product that is technically flawless against the written specification. But if the specification itself missed the user’s real need in the first place, the delivered product will not be useful. Technical verification succeeded; validation failed.</p>
@@ -516,7 +513,7 @@
 </table>
 </div>
 <p><em>In practice.</em> The fourth principle, that defects cluster, has direct strategic value. If the team’s historical defect statistics show that most failures come from one module (say, the shipping integration), the test manager brings in a risk-based test strategy (Chapter 5) and gives that cluster a larger share of the test effort. This principle is not just a theoretical observation; it is an input to budget and resource management.</p>
-<p><em>Exam focus.</em> Almost every question on this objective gives you a short business scenario and asks which principle explains it. The pair candidates most often confuse is the first principle and the seventh. The first is about the logical and mathematical limit of what testing can prove (you cannot claim that no defects remain). The seventh is about a system that is technically verified as defect-free but still fails in the user’s world (the wrong product was built). If a scenario says “everything was verified and all bugs were cleared, but users cannot or will not use the system,” it points to the seventh principle.</p>
+<p><em>Exam focus.</em> Almost every question on this objective gives you a short business scenario and asks which principle explains it. The first principle and the seventh are easy to confuse. The first is about the logical and mathematical limit of what testing can prove (you cannot claim that no defects remain). The seventh is about a system that was thoroughly verified, with the defects found fixed, but still fails in the user’s world (the wrong product was built). If a scenario says “everything was verified and all bugs were cleared, but users cannot or will not use the system,” it points to the seventh principle.</p>
 <p><strong>Check your understanding</strong></p>
 <p><em>CYU 1.3.1-a.</em> “Our regression suite has found no new defect in six months; we need to refresh its steps.” Which principle does this point to?</p>
 <div class="mc">
@@ -527,9 +524,9 @@
 <li>(d) Testing shows the presence, not the absence, of defects</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (a). As the same tests are repeated, they lose their power to find new defects, so suites need review and renewal.</p>
-</div>
+</div></details>
 <p><em>CYU 1.3.1-b.</em> “We cannot test a pacemaker’s software to the same depth, rigour, and rules as a mobile game.” Which principle is this based on?</p>
 <div class="mc">
 <ul>
@@ -539,9 +536,9 @@
 <li>(d) Testing is context dependent</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (d). There is no single universal way to test; the approach changes with the project’s context.</p>
-</div>
+</div></details>
 <p><em>CYU 1.3.1-c.</em> “Our software has millions of possible input combinations, so we cannot try them all; we will prioritise by risk instead.” Which principle does this reflect?</p>
 <div class="mc">
 <ul>
@@ -551,9 +548,9 @@
 <li>(d) Early testing saves time and money</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (a). Testing everything is not feasible except in trivial cases, so risk-based prioritisation is used instead.</p>
-</div>
+</div></details>
 <p><em>CYU 1.3.1-d.</em> Defect data from the last three releases shows that most production failures came from two of the system’s forty components. The test manager plans extra test effort for those two components. Which principle supports this decision?</p>
 <div class="mc">
 <ul>
@@ -563,9 +560,9 @@
 <li>(d) Defects cluster together</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (d). A small number of components usually contain most of the defects, and observed clusters are an input to risk-based testing. Option (b) explains why effort must be focused at all, but not why it goes to these two components.</p>
-</div>
+</div></details>
 </section>
 <section id="test-activities-testware-and-test-roles" class="level2">
 <h2>1.4 Test Activities, Testware, and Test Roles</h2>
@@ -573,7 +570,7 @@
 <h3>Test activities (FL-1.4.1 — K2)</h3>
 <p>A test process usually consists of seven main groups of activities. They do not follow a strict linear order; across a project they overlap, repeat, run in parallel, and adapt to the project’s context. An easy way to keep the four central activities apart is the question each one answers: test analysis answers “What to test?”, test design answers “How to test?”, test implementation answers “Are we ready to run the tests?”, and test execution answers “Does the software behave as expected?” (The first two questions come from the syllabus itself.) Figure 1.4 shows all seven activities together: six of them in their usual logical order, and test monitoring and test control running alongside them.</p>
 <figure>
-<img src="figures/fig_1_4_seven_test_activities.png" alt="" /><figcaption>Figure 1.4 — The seven test activities. Six boxes appear in their usual logical order: test planning, test analysis (“what to test?”), test design (“how to test?”), test implementation (“get ready to run”), test execution (“run and compare”), and test completion (“close, archive, learn”). A dashed frame around them notes that test monitoring and test control run continuously alongside all activities, and that the activities are often iterative or run in parallel.</figcaption>
+<img src="figures/fig_1_4_seven_test_activities.png" alt="Figure 1.4 — The seven test activities. Six boxes appear in their usual logical order: test planning, test analysis (“what to test?”), test design (“how to test?”), test implementation (“get ready to run”), test execution (“run and compare”), and test completion (“close, archive, learn”). A dashed frame around them notes that test monitoring and test control run continuously alongside all activities, and that the activities are often iterative or run in parallel." /><figcaption>Figure 1.4 — The seven test activities.</figcaption>
 </figure>
 <ul>
 <li><strong>Test planning</strong> defines the test objectives and sets the overall approach for reaching them within the project’s constraints of time, budget, and resources. Chapter 5 covers this in depth.</li>
@@ -584,7 +581,7 @@
 <li><strong>Test execution</strong> runs the prepared tests according to the schedule and priority. It compares actual results with the expected results from design, records the outputs in logs, and analyses any anomaly. Anomalies are analysed to identify their likely causes and are then reported on the basis of the failures observed. Whether a reported anomaly is a real defect, a false-positive result, or a change request is settled later in defect management (Chapter 5).</li>
 <li><strong>Test completion</strong> takes place at project milestones (for example, a release, the end of an iteration, or the completion of a test level). Open defects become backlog items or change requests; valuable testware is archived or handed over; the test environment is closed down to an agreed state; lessons learned are gathered for future improvement; and a test completion report is created and communicated to stakeholders.</li>
 </ul>
-<p><em>Exam focus.</em> Two common question patterns come from this material. The first gives you a specific task and asks which activity it belongs to. The most frequent confusion is between test design and test implementation: test design only “decides” what kind of data is needed and “designs” the environment, whereas “producing” that data or “setting up” the environment is test implementation. The second pattern checks that you know the activities do not follow a fixed order but run iteratively and flexibly according to the project.</p>
+<p><em>Exam focus.</em> Two common question patterns come from this material. The first gives you a specific task and asks which activity it belongs to. Test design and test implementation are easy to confuse: test design only “decides” what kind of data is needed and “designs” the environment, whereas “producing” that data or “setting up” the environment is test implementation. The second pattern checks that you know the activities do not follow a fixed order but run iteratively and flexibly according to the project.</p>
 <p><strong>Check your understanding</strong></p>
 <p><em>CYU 1.4.1-a.</em> A tester runs the tests on schedule, compares actual results with expected results, and records the outputs. Which activity is this?</p>
 <div class="mc">
@@ -595,9 +592,9 @@
 <li>(d) Test planning</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (c). Running the tests, comparing results, and recording outputs is test execution.</p>
-</div>
+</div></details>
 <p><em>CYU 1.4.1-b.</em> When is test monitoring and control carried out?</p>
 <div class="mc">
 <ul>
@@ -607,9 +604,9 @@
 <li>(d) Only after planning is complete</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (c). Monitoring compares progress against the plan and control takes corrective action; both run throughout the process.</p>
-</div>
+</div></details>
 <p><em>CYU 1.4.1-c.</em> Maya studies the user stories for a new feature, identifies which features can be tested, and defines and prioritises test conditions for them. Which test activity is she carrying out?</p>
 <div class="mc">
 <ul>
@@ -619,9 +616,9 @@
 <li>(d) Test implementation</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (b). Analysing the test basis to identify testable features and to define and prioritise test conditions is test analysis. Test design would turn those conditions into test cases.</p>
-</div>
+</div></details>
 </section>
 <section id="fl-1-4-2" class="level3">
 <h3>Context factors (FL-1.4.2 — K2)</h3>
@@ -672,7 +669,7 @@
 </table>
 </div>
 <p><em>In practice.</em> Two teams can sit side by side in the same company. The first tests the company’s internal reporting dashboard with light, flexible exploratory sessions, while the team at the next desk tests a regulated payment gateway with formal traceability rules from every regulation down to every test step. Neither team is testing better or worse than the other; each is producing the right answer for its own context. This is the sixth principle, that testing is context dependent, in action.</p>
-<p><em>Exam focus.</em> A typical question gives you a specific context (for example, a safety-critical medical-device project or a very tight delivery schedule) and asks how the test process should respond. The core idea is clear: context shapes the process directly. More regulation brings more documentation and traceability; less time forces risk-based prioritisation. The usual trap is an option that treats one fixed process as universally correct for every project, because that contradicts the sixth principle. Diagnose the main context factor in the scenario first, then look for the effect that flows directly from it.</p>
+<p><em>Exam focus.</em> A question can give you a specific context (for example, a safety-critical medical-device project or a very tight delivery schedule) and asks how the test process should respond. The core idea is clear: context shapes the process directly. More regulation brings more documentation and traceability; less time forces risk-based prioritisation. The usual trap is an option that treats one fixed process as universally correct for every project, because that contradicts the sixth principle. Diagnose the main context factor in the scenario first, then look for the effect that flows directly from it.</p>
 <p><strong>Check your understanding</strong></p>
 <p><em>CYU 1.4.2-a.</em> In an agile team working in short iterations, what is the most likely effect on the test process?</p>
 <div class="mc">
@@ -683,9 +680,9 @@
 <li>(d) Continuous regression testing and greater reliance on automation</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (d). Short iterations bring lighter documentation, continuous regression, and heavier automation. Option (b) contradicts the sixth principle.</p>
-</div>
+</div></details>
 <p><em>CYU 1.4.2-b.</em> In a project with frequently changing requirements, what is the typical effect on testing?</p>
 <div class="mc">
 <ul>
@@ -695,9 +692,9 @@
 <li>(d) Abandoning automation completely</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (b). Changing requirements call for more frequent reviews, replanning, and ongoing test maintenance.</p>
-</div>
+</div></details>
 <p><em>CYU 1.4.2-c.</em> A project has a launch date that cannot move and a reduced test budget. What is the most likely effect on the test process?</p>
 <div class="mc">
 <ul>
@@ -707,13 +704,13 @@
 <li>(d) Keeping the same scope and simply working faster</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (a). Time and budget are project constraints, and tight constraints push the team to test the highest risks first and to narrow the scope. Option (b) contradicts the principle that exhaustive testing is impossible.</p>
-</div>
+</div></details>
 </section>
 <section id="fl-1-4-3" class="level3">
 <h3>Testware (FL-1.4.3 — K2)</h3>
-<p>Every test activity produces its own outputs, known as <strong>testware</strong>. (Testware is all the documents, data, scripts, records, and reporting components that the test process itself produces.) The exam often asks you to match an output to the activity that produced it, so the mapping is worth learning.</p>
+<p>Every test activity produces its own outputs, known as <strong>testware</strong>. (Testware is all the documents, data, scripts, records, and reporting components that the test process itself produces.) A question can ask you to match an output to the activity that produced it, so the mapping is worth learning.</p>
 <p>Test planning produces the test plan, schedules, a risk register, and entry and exit criteria. Test monitoring and control produces test progress reports, documented control directives, and information about risks. Test analysis produces prioritised test conditions and defect reports about gaps found in the test basis. Test design yields the test cases and charters, the coverage items they aim at, and the requirements for test data and test environments. Test implementation turns these into ready-to-run material: procedures, automation scripts, grouped suites, the actual data, the execution schedule, and environment components such as stubs, drivers, simulators, and service virtualisations. Test execution produces test logs, pass/fail results, and defect reports derived from anomalies. Test completion produces the test completion report, change requests or backlog items for unresolved defects, archived testware, and lessons learned.</p>
 <p><strong>Table 1.6 — Test activities, the questions they answer, and their typical testware</strong></p>
 <div class="table-wrap">
@@ -770,7 +767,7 @@
 </table>
 </div>
 <p>The key nuance in this mapping resolves a common confusion: test design defines the test data requirements, while test implementation creates that data in the database or system. The same holds for the environment; it is designed in test design and built and verified in test implementation.</p>
-<p><em>Exam focus.</em> This objective usually appears as a direct matching question: you are given a specific work product (an automation script, say, or a test progress report) and asked which activity produced it. Each activity owns its output, and Table 1.6 is the mapping to learn. Watch the design-versus-implementation split closely (design specifies the data, implementation produces it). Before choosing, ask yourself whether the output answers “What to test?”, “How to test?”, or “Are we ready to run the tests?”</p>
+<p><em>Exam focus.</em> This objective can appear as a direct matching question: you are given a specific work product (an automation script, say, or a test progress report) and asked which activity produced it. Each activity owns its output, and Table 1.6 is the mapping to learn. Watch the design-versus-implementation split closely (design specifies the data, implementation produces it). Before choosing, ask yourself whether the output answers “What to test?”, “How to test?”, or “Are we ready to run the tests?”</p>
 <p><strong>Check your understanding</strong></p>
 <p><em>CYU 1.4.3-a.</em> Automation scripts and the actual test data are typical outputs of which activity?</p>
 <div class="mc">
@@ -781,9 +778,9 @@
 <li>(d) Test planning</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (b). Writing the scripts and creating the data is test implementation; test design only defines the test data requirements.</p>
-</div>
+</div></details>
 <p><em>CYU 1.4.3-b.</em> For the test environment, which distinction is correct?</p>
 <div class="mc">
 <ul>
@@ -793,9 +790,9 @@
 <li>(d) Both designing and setting up the environment belong to test design</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (a). Test design designs the environment; test implementation sets it up and verifies it. The same split applies to test data.</p>
-</div>
+</div></details>
 <p><em>CYU 1.4.3-c.</em> Stubs, drivers, and service virtualisations prepared so that the tests can run are typical work products of which activity?</p>
 <div class="mc">
 <ul>
@@ -805,9 +802,9 @@
 <li>(d) Test implementation</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (d). These are test environment items, which test implementation produces when it gets everything ready to run. Test design only defines the test environment requirements, and test execution uses the environment rather than building it.</p>
-</div>
+</div></details>
 </section>
 <section id="fl-1-4-4" class="level3">
 <h3>The value of traceability (FL-1.4.4 — K2)</h3>
@@ -825,9 +822,9 @@
 <li>(d) Proving the absence of defects</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (b). Quickly finding the tests affected by a change is impact analysis. Options (c) and (d) are things traceability cannot do.</p>
-</div>
+</div></details>
 <p><em>CYU 1.4.4-b.</em> Which of the following is something traceability cannot provide?</p>
 <div class="mc">
 <ul>
@@ -837,9 +834,9 @@
 <li>(d) Preventing requirement changes</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (d). Traceability shows relationships; it does not prevent changes or prove the absence of defects.</p>
-</div>
+</div></details>
 <p><em>CYU 1.4.4-c.</em> Before an exit review, a test manager asks which requirements still have no test cases linked to them. Because traceability is maintained, the team answers at once. Which benefit of traceability does this show?</p>
 <div class="mc">
 <ul>
@@ -849,9 +846,9 @@
 <li>(d) Proof that no defects remain</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (a). Tracing test cases to requirements shows which requirements are covered and which are not. Impact analysis (b) starts from a change, which this scenario does not mention.</p>
-</div>
+</div></details>
 </section>
 <section id="fl-1-4-5" class="level3">
 <h3>Roles in testing (FL-1.4.5 — K2)</h3>
@@ -901,9 +898,9 @@
 <li>(d) The test management role</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (d). The activities that steer the process (planning, monitoring and control, completion) belong to the test management role.</p>
-</div>
+</div></details>
 <p><em>CYU 1.4.5-b.</em> Which statement about test roles is correct, according to ISTQB®?</p>
 <div class="mc">
 <ul>
@@ -913,9 +910,9 @@
 <li>(d) The testing role manages the process and the test management role writes code</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (c). These are roles, not titles; one person can take on both, and in Agile software development some test management tasks may be handled by the team.</p>
-</div>
+</div></details>
 <p><em>CYU 1.4.5-c.</em> On a small project, Daniel writes the test plan early in the week. Later the same week, he designs test cases and runs them. Which statement is correct?</p>
 <div class="mc">
 <ul>
@@ -925,9 +922,9 @@
 <li>(d) One person is not allowed to hold both roles on the same project</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (b). Roles follow the work being done, not the person. Planning belongs to the test management role, while test design and test execution belong to the testing role, and one person may take on both.</p>
-</div>
+</div></details>
 </section>
 </section>
 <section id="essential-skills-and-good-practices-in-testing" class="level2">
@@ -948,9 +945,9 @@
 <li>(d) Insufficient test independence</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (b). Confirmation bias makes it difficult to accept information that disagrees with what one already believes. This is why the syllabus stresses communication skills: test results can feel like criticism of the author. Options (a) and (d) do not explain the reaction, and (c) is a testing principle about meeting users’ needs.</p>
-</div>
+</div></details>
 <p><em>CYU 1.5.1-b.</em> A tester on a banking project sees at a glance that an interest calculation’s result is wrong. Which skill does this show?</p>
 <div class="mc">
 <ul>
@@ -960,9 +957,9 @@
 <li>(d) Thoroughness</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (a). Knowing the user’s real needs and business rules is domain knowledge.</p>
-</div>
+</div></details>
 <p><em>CYU 1.5.1-c.</em> Instead of writing “your code broke again,” Priya reports a defect with the build number, the steps to reproduce it, and the relevant logs. Her report describes the work product, not the developer. Which skill is she showing?</p>
 <div class="mc">
 <ul>
@@ -972,15 +969,15 @@
 <li>(d) Good communication skills</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (d). Reporting defects in a constructive, factual way that focuses on the work product is a communication skill. It keeps the developer from becoming defensive and helps the report to be understood.</p>
-</div>
+</div></details>
 </section>
 <section id="fl-1-5-2" class="level3">
 <h3>The whole team approach (FL-1.5.2 — K1)</h3>
 <p>The <strong>whole-team approach</strong>, which comes from Extreme Programming, holds that quality is not the testers’ job alone but a shared responsibility of everyone on the project. Any team member with the right knowledge and skill can take on any task. The team members share the same workspace, physical or virtual, because co-location makes communication and interaction easier. Testers work closely with the other team members to reach the desired quality levels. For example, they help business representatives to create suitable acceptance tests, and they work with developers to agree on the test strategy and on test automation approaches. In this way, testers pass testing knowledge to the rest of the team and influence how the product is developed. The main benefits are that it improves team dynamics, enhances communication and collaboration within the team, and combines the strengths of roles such as analyst, developer, and designer into real synergy for the project. The approach is not always appropriate, however: in a safety-critical context, for instance, a high level of test independence may be needed instead.</p>
 <p>An everyday comparison sums it up well. In a fine restaurant, hygiene and food safety cannot be the job of a single inspector who checks the plate just before it reaches the table. The chef, the cooks, the servers, and the dishwashers all have to protect that hygiene chain together in the kitchen, because a bacterium introduced at any stage ruins the quality of the final plate. Software is the same: a tester cannot add, at the very end and only by inspecting the product, a quality that the rest of the team never built in from the start.</p>
-<p><em>Exam focus.</em> This objective is a direct recall question. It asks you to pick the definition of the whole-team approach or the benefits it brings. The core focus is that quality is a collective responsibility and that the synergy of the disciplines in the team matters. The most common trap hands quality responsibility to “an independent test team only” or “a separate QA department,” which contradicts the whole-team philosophy by definition. Rule out any option that locks quality into a single role.</p>
+<p><em>Exam focus.</em> This objective is a direct recall question. It asks you to pick the definition of the whole-team approach or the benefits it brings. The core focus is that quality is a collective responsibility and that the synergy of the disciplines in the team matters. A trap to watch for hands quality responsibility to “an independent test team only” or “a separate QA department,” which contradicts the whole-team philosophy by definition. Rule out any option that locks quality into a single role.</p>
 <p><strong>Check your understanding</strong></p>
 <p><em>CYU 1.5.2-a.</em> Which of the following is a benefit of the whole-team approach?</p>
 <div class="mc">
@@ -991,9 +988,9 @@
 <li>(d) It strengthens communication and collaboration and creates synergy</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (d). The approach strengthens team dynamics, communication, and the synergy of different skills. The others contradict it.</p>
-</div>
+</div></details>
 <p><em>CYU 1.5.2-b.</em> In the whole-team approach, whose responsibility is quality?</p>
 <div class="mc">
 <ul>
@@ -1003,9 +1000,9 @@
 <li>(d) Only the product owner’s</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (c). Quality is the whole team’s responsibility, shared by every member with the right knowledge and skill.</p>
-</div>
+</div></details>
 <p><em>CYU 1.5.2-c.</em> Which of the following contradicts the whole team approach?</p>
 <div class="mc">
 <ul>
@@ -1015,15 +1012,15 @@
 <li>(d) The team members share the same workspace, physical or virtual</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (a). In the whole team approach everyone is responsible for quality, so leaving it to testers at the end contradicts the idea. Options (b), (c), and (d) are all part of the approach.</p>
-</div>
+</div></details>
 </section>
 <section id="fl-1-5-3" class="level3">
 <h3>Independence of testing (FL-1.5.3 — K2)</h3>
 <p>Independence in testing is not a binary, all-or-nothing idea. It is a spectrum that runs from the lowest to the highest level according to the structure of the project and the organisation. At the lowest level, with no independence, the author tests their own work. Above that, with some independence, the author’s peers from the same team test it. Higher still, with high independence, testers from outside the author’s team but within the organisation test it. At the highest, very high independence, testers from outside the organisation carry it out. Figure 1.5 places these four levels on a single scale.</p>
 <figure>
-<img src="figures/fig_1_5_independence_spectrum.png" alt="" /><figcaption>Figure 1.5 — The independence spectrum. An arrow runs from no independence to very high independence and marks four levels: the author tests their own work (no independence), peers in the same team test it (some independence), testers outside the author’s team but within the same organisation test it (high independence), and testers outside the organisation test it (very high independence).</figcaption>
+<img src="figures/fig_1_5_independence_spectrum.png" alt="Figure 1.5 — The independence spectrum. An arrow runs from no independence to very high independence and marks four levels: the author tests their own work (no independence), peers in the same team test it (some independence), testers outside the author’s team but within the same organisation test it (high independence), and testers outside the organisation test it (very high independence)." /><figcaption>Figure 1.5 — The independence spectrum.</figcaption>
 </figure>
 <p>Raising the level of independence can add real strength to a project. Independent testers, being free of the project’s past pressures and coding assumptions, catch kinds of failures that escape the developers’ notice, and they can question the business-logic assumptions that stakeholders or analysts accepted without challenge during specification and implementation. Independence is not a replacement for familiarity, however: developers can efficiently find many defects in their own code.</p>
 <p>Higher independence also brings management drawbacks. An independent test team can become too isolated from the actual development team, which can cause poor collaboration, communication breakdowns, or an adversarial relationship with developers. Developers, knowing that a strong independent test team stands behind them, can fall into the comfort of “the test team catches everything anyway” and lose the sense that quality is their own responsibility. And an independent test team can come to be seen as a bottleneck at the end of the project and made the scapegoat for late releases.</p>
@@ -1057,7 +1054,7 @@
 </table>
 </div>
 <p>For most projects, it is usually best to combine several levels of independence: for example, developers perform component and component integration testing, a test team performs system and system integration testing, and business representatives perform acceptance testing.</p>
-<p><em>Exam focus.</em> Questions usually state that an organisation is changing the level of independence in its test structure (for example, outsourcing the testing to an external company or embedding the tester inside the agile team) and ask you to pick the benefit or the drawback of that change for the project. Read the stem word by word, because a common distractor places a true “benefit” sentence in the options when the question asked for a drawback. Even if a statement is technically correct, make sure it matches the direction the question wants (advantage or disadvantage).</p>
+<p><em>Exam focus.</em> A question can state that an organisation is changing the level of independence in its test structure (for example, outsourcing the testing to an external company or embedding the tester inside the agile team) and ask you to pick the benefit or the drawback of that change for the project. Read the stem word by word, because a wrong option can place a true “benefit” sentence in the options when the question asked for a drawback. Even if a statement is technically correct, make sure it matches the direction the question wants (advantage or disadvantage).</p>
 <p><strong>Check your understanding</strong></p>
 <p><em>CYU 1.5.3-a.</em> On the independence spectrum, which is the highest level of independence?</p>
 <div class="mc">
@@ -1068,9 +1065,9 @@
 <li>(d) Testers from outside the organisation testing</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (d). Independence rises from authors testing their own work (lowest) to testers outside the organisation (highest).</p>
-</div>
+</div></details>
 <p><em>CYU 1.5.3-b.</em> Which of the following is a benefit of increasing test independence?</p>
 <div class="mc">
 <ul>
@@ -1080,9 +1077,9 @@
 <li>(d) Developers losing their sense of responsibility for quality</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (a). An independent viewpoint helps to see different failures and to question assumptions; (b), (c), and (d) are drawbacks.</p>
-</div>
+</div></details>
 <p><em>CYU 1.5.3-c.</em> Which statement about independence of testing is correct?</p>
 <div class="mc">
 <ul>
@@ -1092,9 +1089,9 @@
 <li>(d) Independence is binary: testing either is independent or it is not</li>
 </ul>
 </div>
-<div class="answer">
+<details class="ans"><summary>Show answer</summary><div class="answer">
 <p>Answer: (b). A typical mix has developers testing components, a test team testing the system, and business representatives running acceptance testing. Option (a) is wrong because developers can efficiently find many defects in their own code.</p>
-</div>
+</div></details>
 </section>
 </section>
 <section id="chapter-1-summary" class="level2">
@@ -1134,7 +1131,7 @@
 </tr>
 <tr class="even">
 <td>1.3.1 (K2)</td>
-<td>The seven principles are general guidelines for all testing; the pair most often confused is the first (presence, not absence, of defects) and the seventh (absence-of-defects fallacy).</td>
+<td>The seven principles are general guidelines for all testing; the first (presence, not absence, of defects) and the seventh (absence-of-defects fallacy) are easy to confuse.</td>
 </tr>
 <tr class="odd">
 <td>1.4.1 (K2)</td>
@@ -1244,10 +1241,10 @@
 </section>
 <section id="exam-tips-and-common-traps-chapter-1" class="level3">
 <h3>Exam tips and common traps — Chapter 1</h3>
-<p>A Chapter 1 question often turns on a single keyword in the stem, so slow down and catch those keywords. If the stem says “after the fix, the same test step is re-run with the same input,” the target is confirmation testing. If it asks for “the underlying reason that led to the mistake,” you are looking for the root cause.</p>
+<p>A Chapter 1 question can turn on a single keyword in the stem, so slow down and catch those keywords. If the stem says “after the fix, the same test step is re-run with the same input,” the target is confirmation testing. If it asks for “the underlying reason that led to the mistake,” you are looking for the root cause.</p>
 <p>In scenario flow questions, label the events yourself before you even look at the options: write “error” next to a person’s action, “defect” next to the static flaw left in the code, and “failure” next to the deviation the system shows. Once you have labelled them, the distractors are easier to rule out. In principle questions, match the essence of the scenario to a single principle.</p>
-<p>Two traps come up most often. The first is options that overstate what testing does. Testing does not repair defects itself, cannot inject quality into a project on its own, and can never prove that no defects remain. If an option gives testing a “repairing” or “absolute proof of no defects” role, it is wrong. The second is options that swap the outputs of neighbouring activities. A test case is an output of test design; turning those cases into automation code or producing their data is test implementation. Before you decide, ask yourself whether the output describes what or how something is done, or whether it makes the system fully ready to run.</p>
-<p>For time management, these questions are usually knowledge and comprehension items you can handle comfortably in 45 to 60 seconds. If, despite careful reading, you are stuck between two options, first eliminate the two that are logically impossible, then focus on the single-word nuance that separates the last two.</p>
+<p>Two traps are worth knowing. The first is options that overstate what testing does. Testing does not repair defects itself, cannot inject quality into a project on its own, and can never prove that no defects remain. If an option gives testing a “repairing” or “absolute proof of no defects” role, it is wrong. The second is options that swap the outputs of neighbouring activities. A test case is an output of test design; turning those cases into automation code or producing their data is test implementation. Before you decide, ask yourself whether the output describes what or how something is done, or whether it makes the system fully ready to run.</p>
+<p>For time management, follow the pacing in <em>How the CTFL Exam Works</em>: about a minute for a recall item. If, despite careful reading, you are stuck between two options, first eliminate the two that are logically impossible, then focus on the single-word nuance that separates the last two.</p>
 </section>
 </section>
 <section id="chapter-exercises" class="level2">
@@ -1262,7 +1259,7 @@
 <li>(d) Improving the software development process that produces defects</li>
 </ul>
 </div>
-<p><em>PB-C1-002.</em> A tester runs a test and observes a wrong currency symbol on the application screen. A developer then reproduces the failure in their own environment, finds a wrong locale parameter in the formatting function, and fixes it. When the tester re-runs the original test, it now passes. Which test activities are described, in order?</p>
+<p><em>PB-C1-002.</em> A tester runs a test and observes a wrong currency symbol on the application screen. A developer then reproduces the failure in their own environment, finds a wrong locale parameter in the formatting function, and fixes it. When the tester re-runs the original test, it now passes. Which activities are described, in order?</p>
 <div class="mc">
 <ul>
 <li>(a) Testing, then debugging, then confirmation testing</li>
@@ -1369,5 +1366,6 @@
 </main>
 </div>
 <script>if (window.matchMedia('(min-width: 901px)').matches) document.getElementById('navd').open = true;</script>
+<script>(function(){function od(){var h=decodeURIComponent(location.hash.slice(1));if(!h)return;var e=document.getElementById(h);while(e){if(e.tagName==='DETAILS')e.open=true;e=e.parentElement;}}addEventListener('hashchange',od);od();})();</script>
 </body>
 </html>

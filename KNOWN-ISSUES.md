@@ -21,3 +21,14 @@ This guide is a draft published before its final read-through. The items below a
 - The wording about per-LO question counts now matches the official Exam Structure Tables.
 - The 2-value boundary value analysis note now refers to the nearest neighbour across each boundary, not only to invalid partitions.
 - Passages that stayed too close to the syllabus wording have been rewritten in our own words across chapters 1–6, the front and back matter, and the Mock Exam 1 explanations.
+- Technical statements corrected against the syllabus and glossary: regression testing is now defined by its purpose; white-box testing "may not detect" wording; test object, test result, defect, informal review and coverage entries; interaction capability and all-states wording. The 64 learning-objective sentences stay in the official wording (checked by script).
+- Questions and exercises revised: Mock Q21, Q24, Q34 and Q38, several practice questions, exercises 4.C, 4.D, 4.E and 5.C, the ATDD worked example, the sample defect report, and numeric risk levels in the examples.
+- Claims the book makes about itself now match its content: front-matter promises, Exam focus paragraphs for FL-5.2.1, 5.3.1 and 5.4.1, the three-track study roadmap with hours, one scheme for distractor types, neutral wording instead of unsupported frequency claims, Master List scope, and the copyright statement and v4.0 author credits.
+- Figures 1.1, 2.4, 2.5 and 3.5 corrected: static testing can apply at any point of the test process; test levels are no longer ranked by size; regression testing is described by its purpose; not every anomaly is a defect.
+- Site: draft banner on every page; answers, mock answer key and model answers are collapsed by default; figures have short captions and full alt text; one "Back matter" group; the README is in English.
+- Edition label changed to "First Edition (public draft)".
+
+## Reviewed and not changed
+
+- The glossary "Risk" entry follows syllabus 5.2.1 (event, hazard, threat or situation; likelihood and impact) and is not a copy of the shorter official glossary sentence.
+- Review claims about the official K-level distribution, the Exam Structure Tables version, and the order of numeric answer options were checked against the official documents and not accepted.

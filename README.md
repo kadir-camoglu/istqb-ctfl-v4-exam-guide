@@ -1,6 +1,6 @@
 # ISTQB® CTFL v4.0 Exam Guide
 
-**Durum: taslak (draft).** Bu site son okuma öncesi herkese açık taslak olarak yayınlanmıştır. İçerik değişebilir.
+**Status: public draft.** This site is published before the final independent read-through. Content may still change.
 
 Free, independent study guide for the ISTQB® Certified Tester Foundation Level v4.0 exam (syllabus v4.0.1): learning objectives, worked examples, quick checks and a full mock exam.
 

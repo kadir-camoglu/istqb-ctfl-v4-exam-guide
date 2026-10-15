@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="draft-banner" role="note"><strong>Public draft — under review.</strong> Feedback: <a href="mailto:kadir.camoglu@gmail.com">kadir.camoglu@gmail.com</a></div>
 <header class="topbar"><div class="inner"><a href="index.html">ISTQB® CTFL v4.0 Exam Guide</a><span class="meta"><span class="ind">Independent · Unofficial study guide · </span><a href="all.html">Full text on one page</a></span></div></header>
 <div class="layout">
 <nav class="side"><details id="navd"><summary>Contents</summary><div class="navbody">
@@ -50,12 +51,8 @@
 </li>
 <li><a href="final-revision.html">Final Revision Plan</a>
 </li>
-</ul>
-<div class="group">Mock exam</div><ul>
 <li><a href="mock-exam-1.html">Mock Exam 1 — 40 Questions with Rationale</a>
 </li>
-</ul>
-<div class="group">Back matter</div><ul>
 <li><a href="further-resources.html">Further Resources</a>
 </li>
 </ul>
@@ -63,7 +60,7 @@
 <main>
 <section id="glossary" class="level1">
 <h1>Glossary</h1>
-<p>The technical terms taught across the six chapters are listed here in English alphabetical order, with the chapter where each is introduced. For exam strategy, remember one rule: every keyword in the syllabus is directly examinable, even if it does not appear inside any learning objective; you may be asked to recall its definition (K1) or understand its conceptual boundaries (K2). As you use this glossary for revision, keep asking yourself the critical question: can I tell this term’s definition clearly apart from the definition of its nearest neighbour?</p>
+<p>The technical terms taught across the six chapters are listed here in English alphabetical order, with the chapter where each is introduced. For exam strategy, remember one rule: every keyword in the syllabus is directly examinable, even if it does not appear inside any learning objective; you may be asked to understand its definition and its conceptual boundaries (K2), as Exam Structures and Rules v1.2 (rule 4.1.4) states. As you use this glossary for revision, keep asking yourself the critical question: can I tell this term’s definition clearly apart from the definition of its nearest neighbour?</p>
 <p><strong>Acceptance criteria</strong> (Chapter 4) — The conditions a user story’s implementation must meet to be accepted; the Confirmation in the three Cs. They define the story’s scope, create shared understanding, and serve as the test basis for the story’s acceptance tests. Written scenario-oriented (Given/When/Then) or rule-oriented; every criterion must be verifiable.</p>
 <p><strong>Acceptance test-driven development (ATDD)</strong> (Chapter 4) — A collaboration-based, test-first approach in which business representatives, developers, and testers write acceptance tests from a user story’s acceptance criteria before the story is implemented. The tests use the stakeholders’ own domain language and, once automated, can serve as regression tests. It works at story level, unlike TDD, which works at component level with developer unit tests.</p>
 <p><strong>Acceptance testing</strong> (Chapter 2) — A test level taking the whole system from the user’s or customer’s point of view; its primary aim is to validate that the product meets business needs and is ready for deployment, not to hunt defects. Forms include user acceptance testing, operational acceptance testing, contractual and regulatory acceptance testing, and alpha/beta testing.</p>
@@ -79,11 +76,11 @@
 <p><strong>Component testing</strong> (Chapter 2) — A test level (also called unit testing) checking the smallest functional units of code in isolation; usually done by developers in their own environment.</p>
 <p><strong>Configuration management</strong> (Chapter 5) — The discipline of uniquely identifying, version controlling, tracking changes to, and relating a project’s configuration items, including test items and testware, so that traceability is maintained and earlier test results can be reproduced; an approved item becomes a baseline.</p>
 <p><strong>Confirmation testing</strong> (Chapter 2) — Change-related testing after a defect is fixed, to confirm that the failure caused by that defect does not recur. Depending on risk, it may re-run all tests that failed because of the defect and add tests for the changes made to fix it; with tight constraints it may be limited to the original reproduction steps. Also called re-testing. Not to be confused with verification.</p>
-<p><strong>Coverage</strong> (Chapter 1) — The number of coverage items exercised divided by the total, as a percentage. Each technique defines its own coverage item.</p>
+<p><strong>Coverage</strong> (Chapter 1) — The degree to which specified coverage items are exercised by a test suite, expressed as a percentage (items exercised divided by the total). Each technique defines its own coverage item.</p>
 <p><strong>Coverage item</strong> (Chapter 4) — The unit a technique measures coverage against: a partition, a boundary value, a table column, a state or a transition, a statement, or a branch.</p>
 <p><strong>Debugging</strong> (Chapter 1) — The development activity of finding, diagnosing, and removing the defect behind a failure. Distinct from dynamic testing, which exposes failures but does not fix them.</p>
 <p><strong>Decision table testing</strong> (Chapter 4) — A black-box technique modelling combinations of conditions as columns (rules) with their triggered actions; a full limited-entry table has 2^n columns for n Boolean conditions, and tables can be simplified or minimised (collapsed).</p>
-<p><strong>Defect (flaw, bug)</strong> (Chapter 1) — A static flaw in a work product or line of code that keeps it from meeting its requirements. It results from a human error and, when executed, may cause a failure.</p>
+<p><strong>Defect (bug, fault)</strong> (Chapter 1) — An imperfection in a work product, such as a requirements document, a test script, source code, or a build file, that keeps it from meeting its requirements or impairs its intended use. Defects usually result from human errors, but environmental conditions such as radiation can also introduce them, for example in firmware. A defect in code, when executed, may cause a failure.</p>
 <p><strong>Defect management</strong> (Chapter 5) — The process that handles every reported anomaly from its discovery to its closure: logging, analysis and classification, a decision on the response, and closure.</p>
 <p><strong>Defect report</strong> (Chapter 5) — The record of an anomaly, ideally containing a unique identifier, a title, the date and author, the test object and environment, the context, steps to reproduce, separate expected and actual results, severity, priority, status, and references; it helps resolve the defect, track work-product quality, and improve the process.</p>
 <p><strong>Dynamic testing</strong> (Chapter 3) — Testing that executes the software, triggering failures whose underlying defects are then found indirectly through debugging. It complements static testing.</p>
@@ -92,12 +89,12 @@
 <p><strong>Error (mistake)</strong> (Chapter 1) — A wrong action taken by a person, which may leave a defect in a work product.</p>
 <p><strong>Error guessing</strong> (Chapter 4) — An experience-based technique predicting likely errors, defects, and failures from knowledge of past failures, developers’ typical mistakes, and failures in similar applications; a structured form is a fault attack.</p>
 <p><strong>Exit criteria</strong> (Chapter 5) — The success thresholds to declare a test activity complete and stop it (coverage reached, open defects below a limit). The agile equivalent is the Definition of Done.</p>
-<p><strong>Experience-based test technique</strong> (Chapter 4) — A test technique that derives tests from the tester’s knowledge, experience, and intuition rather than from a specification or the code structure. Its Foundation-level members are error guessing, exploratory testing, and checklist-based testing. In practical terms, it often finds defects that black-box and white-box techniques miss.</p>
-<p><strong>Exploratory testing</strong> (Chapter 4) — An experience-based technique where tests are designed, run, and evaluated at the same time as the tester learns the object; it can incorporate other test techniques and is often run as session-based testing with a charter.</p>
+<p><strong>Experience-based test technique</strong> (Chapter 4) — A test technique that derives tests from the tester’s knowledge, experience, and intuition rather than from a specification or the code structure. Its Foundation-level members are error guessing, exploratory testing, and checklist-based testing. It can detect defects that black-box and white-box techniques may miss.</p>
+<p><strong>Exploratory testing</strong> (Chapter 4) — An experience-based technique where tests are designed, run, and evaluated at the same time as the tester learns the object; it can incorporate other test techniques and is sometimes structured as session-based testing with a charter.</p>
 <p><strong>Failure</strong> (Chapter 1) — The wrong behaviour the software shows when a defect is executed; the defect becoming externally visible. Failures can also be caused by environmental conditions, not only by errors and defects.</p>
 <p><strong>Formal review</strong> (Chapter 3) — A review that follows a defined process and has a formally documented output; inspection is the most formal type.</p>
 <p><strong>Functional testing</strong> (Chapter 2) — Testing what the system does: whether it carries out the business rules and functional requirements expected of it.</p>
-<p><strong>Informal review</strong> (Chapter 3) — The most flexible review type, with no defined process or mandatory meeting; its aim is to remove obvious anomalies quickly and cheaply (for example a buddy check).</p>
+<p><strong>Informal review</strong> (Chapter 3) — A review that follows no defined process and needs no formally documented output; its main objective is detecting anomalies (for example a buddy check).</p>
 <p><strong>Inspection</strong> (Chapter 3) — The most formal review type; it follows the complete generic review process, collects metrics to improve the SDLC and the inspection process, and does not allow the author to act as review leader or scribe.</p>
 <p><strong>Integration testing</strong> (Chapter 2) — Testing focused on the interfaces and interactions between components or systems; run at component integration and system integration levels.</p>
 <p><strong>Maintenance testing</strong> (Chapter 2) — Testing changes to a system already in production; triggered by modifications, upgrades and migrations, or retirement (decommissioning).</p>
@@ -106,7 +103,7 @@
 <p><strong>Project risk</strong> (Chapter 5) — A risk related to the management and control of the project that affects its schedule, budget, or scope (for example delays, inaccurate estimates, staff shortage, scope creep, supplier failure).</p>
 <p><strong>Quality</strong> (Chapter 1) — The degree to which a component or system meets stated and implied needs.</p>
 <p><strong>Quality assurance (QA)</strong> (Chapter 1) — Process-focused, preventive activity that sets up standards and processes so fewer defects occur; distinct from testing, which is product-focused and corrective.</p>
-<p><strong>Regression testing</strong> (Chapter 2) — Re-running tests that passed before, to check whether a change has broken something else in the unchanged parts of the system; an impact analysis first sets its scope.</p>
+<p><strong>Regression testing</strong> (Chapter 2) — Change-related testing whose purpose is to detect adverse consequences of a change: defects the change has introduced or uncovered, whether in the changed component itself, in other components, in connected systems, or after a change to the environment. It also follows a fix that has already passed confirmation testing; an impact analysis first sets its scope.</p>
 <p><strong>Review</strong> (Chapter 3) — A static test activity where people read and manually examine work products to find anomalies, assess quality, and build shared understanding; four types by degree of formality.</p>
 <p><strong>Risk</strong> (Chapter 5) — Something that may happen (an event, hazard, threat, or situation) and, if it does, would cause harm; characterised by risk likelihood and risk impact.</p>
 <p><strong>Risk analysis</strong> (Chapter 5) — Risk identification plus risk assessment: listing risks and measuring their likelihood, impact, and level.</p>
@@ -131,7 +128,7 @@
 <p><strong>Test approach</strong> (Chapter 5) — The chosen test levels and types, design techniques, entry and exit criteria, independence levels, and data and environment requirements, recorded in the test plan.</p>
 <p><strong>Test automation</strong> (Chapter 6) — The use of software to perform or support test activities, such as test management, test design, test execution, and results checking. It can give consistency, more objective measures, and fast feedback, but acquiring a tool alone does not guarantee success.</p>
 <p><strong>Test basis</strong> (Chapter 1) — All the information a test is based on, such as requirements, user stories, designs, or code.</p>
-<p><strong>Test case</strong> (Chapter 1) — A concrete set of inputs, actions, and expected results derived from test conditions during test design.</p>
+<p><strong>Test case</strong> (Chapter 1) — A concrete specification of a test: its preconditions, inputs, and actions (where applicable), the expected results, and the postconditions, derived from test conditions during test design.</p>
 <p><strong>Test completion</strong> (Chapter 1) — The activity at a milestone that archives testware, records lessons learned, and produces the test completion report.</p>
 <p><strong>Test completion report</strong> (Chapter 5) — The report prepared when a project, test level, or test type is complete; it evaluates testing and product quality against the test plan and covers deviations, impediments, metrics, unmitigated risks, defects not fixed, and lessons learned. Not “test summary report.”</p>
 <p><strong>Test condition</strong> (Chapter 1) — A testable item or feature derived from the test basis during test analysis.</p>
@@ -142,7 +139,7 @@
 <p><strong>Test implementation</strong> (Chapter 1) — The activity that builds everything needed to run the tests: procedures, scripts, suites, the actual test data, and the set-up test environment.</p>
 <p><strong>Test level</strong> (Chapter 2) — A group of test activities organised together and tied to a stage of the lifecycle: component, component integration, system, system integration, and acceptance.</p>
 <p><strong>Test monitoring</strong> (Chapter 1) — Continuously gathering metrics and comparing progress against the plan.</p>
-<p><strong>Test object</strong> (Chapter 1) — The component or system being tested.</p>
+<p><strong>Test object</strong> (Chapter 1) — The work product being tested: a component or system in dynamic testing, or a document such as a requirements specification in static testing. A part of it used in testing is a test item.</p>
 <p><strong>Test objective</strong> (Chapter 1) — A reason for testing, such as finding defects, building confidence, or providing information for decisions.</p>
 <p><strong>Test plan</strong> (Chapter 5) — A document describing the test objectives and the means and schedule for achieving them; it communicates with stakeholders and shows adherence to, or deviation from, the test policy and test strategy. A living document.</p>
 <p><strong>Test planning</strong> (Chapter 1) — The activity that defines test objectives and the approach to reach them within the project’s constraints.</p>
@@ -150,10 +147,10 @@
 <p><strong>Test process</strong> (Chapter 1) — The set of test activities: planning, monitoring and control, analysis, design, implementation, execution, and completion.</p>
 <p><strong>Test progress report</strong> (Chapter 5) — A report published while testing runs, giving current metrics, status, blockers, and the next period’s plan.</p>
 <p><strong>Test pyramid</strong> (Chapter 5) — A model showing that tests may have different granularity: many small, isolated, fast tests in the bottom layer and few slow, end-to-end tests at the top; the number and naming of the layers may differ.</p>
-<p><strong>Test result</strong> (Chapter 1) — The outcome of running a test, logged as pass or fail.</p>
+<p><strong>Test result</strong> (Chapter 1) — The status a test receives when it is executed, for example passed or failed; also called the test outcome.</p>
 <p><strong>Test strategy</strong> (Chapter 5) — The high-level, often organisation-wide approach describing how testing is done across projects.</p>
 <p><strong>Test technique</strong> (Chapter 4) — A structured way of deriving test conditions, coverage items, and test cases from the test basis; black-box, white-box, or experience-based.</p>
-<p><strong>Test type</strong> (Chapter 2) — A group of test activities focused on a quality perspective: functional, non-functional, black-box, or white-box.</p>
+<p><strong>Test type</strong> (Chapter 2) — A group of test activities based on specific test objectives and aimed at particular characteristics of a component or system. The syllabus covers four: functional and non-functional testing differ in what is checked, while black-box and white-box testing differ in where the tests are derived from.</p>
 <p><strong>Testing</strong> (Chapter 1) — The set of activities to evaluate a work product’s quality and find defects, spanning static and dynamic techniques across the whole lifecycle.</p>
 <p><strong>Testing quadrants</strong> (Chapter 5) — A two-axis model classifying tests as team-supporting or product-critiquing and business-facing or technology-facing.</p>
 <p><strong>Testware</strong> (Chapter 1) — All the documents, data, scripts, records, and reports the test process produces.</p>
@@ -170,5 +167,6 @@
 </main>
 </div>
 <script>if (window.matchMedia('(min-width: 901px)').matches) document.getElementById('navd').open = true;</script>
+<script>(function(){function od(){var h=decodeURIComponent(location.hash.slice(1));if(!h)return;var e=document.getElementById(h);while(e){if(e.tagName==='DETAILS')e.open=true;e=e.parentElement;}}addEventListener('hashchange',od);od();})();</script>
 </body>
 </html>
