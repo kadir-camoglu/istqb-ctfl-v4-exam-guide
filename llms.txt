@@ -1,0 +1,28 @@
+# ISTQB® CTFL v4.0 Exam Guide
+
+> Free, independent study guide for the ISTQB® CTFL v4.0 exam (syllabus v4.0.1).
+
+- [Full text on one page](all.html)
+- [Markdown source](book.md)
+
+## Pages
+
+- [ISTQB® CTFL v4.0 Exam Guide: From Fundamentals to Exam-Ready](index.html)
+- [Copyright & Trademark Notice](copyright.html)
+- [Introduction — About This Book](introduction.html)
+- [How to Use This Book](how-to-use.html)
+- [How the CTFL Exam Works](the-exam.html)
+- [Objective Map](objective-map.html)
+- [Study Roadmap](study-roadmap.html)
+- [Chapter 1 — Fundamentals of Testing](chapter-1.html)
+- [Chapter 2 — Testing Throughout the Software Development Lifecycle](chapter-2.html)
+- [Chapter 3 — Static Testing](chapter-3.html)
+- [Chapter 4 — Test Analysis and Design](chapter-4.html)
+- [Chapter 5 — Managing the Test Activities](chapter-5.html)
+- [Chapter 6 — Test Tools](chapter-6.html)
+- [Answers & Rationale](rationale.html)
+- [Glossary](glossary.html)
+- [Commonly Confused Pairs — Master List](confused-pairs.html)
+- [Final Revision Plan](final-revision.html)
+- [Mock Exam 1 — 40 Questions with Rationale](mock-exam-1.html)
+- [Further Resources](further-resources.html)

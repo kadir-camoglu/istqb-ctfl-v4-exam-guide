@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 3 — Static Testing · ISTQB® CTFL v4.0 Exam Guide</title>
+<meta name="description" content="Free, independent study guide for the ISTQB® Certified Tester Foundation Level v4.0 exam: all 64 learning objectives, worked examples, quick checks, and a full mock exam.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><div class="inner"><a href="index.html">ISTQB® CTFL v4.0 Exam Guide</a><span class="meta"><span class="ind">Independent · Unofficial study guide · </span><a href="all.html">Full text on one page</a></span></div></header>
+<div class="layout">
+<nav class="side"><details id="navd"><summary>Contents</summary><div class="navbody">
+<div class="group">Front matter</div><ul>
+<li><a href="index.html">ISTQB® CTFL v4.0 Exam Guide: From Fundamentals to Exam-Ready</a>
+</li>
+<li><a href="copyright.html">Copyright &amp; Trademark Notice</a>
+</li>
+<li><a href="introduction.html">Introduction — About This Book</a>
+</li>
+<li><a href="how-to-use.html">How to Use This Book</a>
+</li>
+<li><a href="the-exam.html">How the CTFL Exam Works</a>
+</li>
+<li><a href="objective-map.html">Objective Map</a>
+</li>
+<li><a href="study-roadmap.html">Study Roadmap</a>
+</li>
+</ul>
+<div class="group">Chapters</div><ul>
+<li><a href="chapter-1.html">Chapter 1 — Fundamentals of Testing</a>
+</li>
+<li><a href="chapter-2.html">Chapter 2 — Testing Throughout the Software Development Lifecycle</a>
+</li>
+<li class="current"><a href="chapter-3.html">Chapter 3 — Static Testing</a>
+<ul class="sub"><li><a href="#static-testing-basics">3.1 Static Testing Basics</a></li><li><a href="#feedback-and-the-review-process">3.2 Feedback and the Review Process</a></li><li><a href="#chapter-3-summary">Chapter 3 summary</a></li><li><a href="#cumulative-retrieval-1">Cumulative retrieval</a></li><li><a href="#chapter-exercises-2">Chapter exercises</a></li></ul>
+</li>
+<li><a href="chapter-4.html">Chapter 4 — Test Analysis and Design</a>
+</li>
+<li><a href="chapter-5.html">Chapter 5 — Managing the Test Activities</a>
+</li>
+<li><a href="chapter-6.html">Chapter 6 — Test Tools</a>
+</li>
+</ul>
+<div class="group">Back matter</div><ul>
+<li><a href="rationale.html">Answers &amp; Rationale</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="confused-pairs.html">Commonly Confused Pairs — Master List</a>
+</li>
+<li><a href="final-revision.html">Final Revision Plan</a>
+</li>
+</ul>
+<div class="group">Mock exam</div><ul>
+<li><a href="mock-exam-1.html">Mock Exam 1 — 40 Questions with Rationale</a>
+</li>
+</ul>
+<div class="group">Back matter</div><ul>
+<li><a href="further-resources.html">Further Resources</a>
+</li>
+</ul>
+</div></details></nav>
+<main>
+<section id="chapter-3-static-testing" class="level1">
+<h1>Chapter 3 — Static Testing</h1>
+<p><strong>Learning objectives:</strong> 8 · K1 4 / K2 4 / K3 0 · <strong>Exam questions from this chapter:</strong> 4</p>
+<p><strong>Keywords:</strong> anomaly, dynamic testing, formal review, informal review, inspection, review, static analysis, static testing, technical review, walkthrough</p>
+<p>This chapter carries one of the lowest exam weights, with four of the forty questions. Two of them are K1 questions drawn from 3.1.1, 3.2.1, 3.2.3, and 3.2.5. One is a K2 question on the value of static testing or its comparison with dynamic testing (3.1.2 or 3.1.3), and one is a K2 question on the review process or the review types (3.2.2 or 3.2.4). The good news is that these questions rest on short, well-defined lists, so with focused study it is fair to see this chapter as one of the easier opportunities to gain points in the exam. Static testing is also a very direct application of the “early testing” principle from Chapter 1: it catches problems before coding has even begun, at the documentation stage, where fixing them is cheapest.</p>
+<section id="static-testing-basics" class="level2">
+<h2>3.1 Static Testing Basics</h2>
+<section id="fl-3-1-1" class="level3">
+<h3>What static testing can examine (FL-3.1.1 — K1)</h3>
+<p>Static testing is an evaluation carried out without ever running the software or the work product under examination. It runs through two channels. Reviews are the manual examination of work products by people, such as testers, analysts, and developers, who read and assess them. Static analysis is the automatic checking of structural defects by tools that scan code structures or models. Figure 3.1 shows how the two channels sit side by side under the single heading of static testing.</p>
+<p>Static testing has several objectives. It improves quality and detects defects. It also assesses characteristics such as readability, completeness, correctness, testability, and consistency, and it can be applied for both verification and validation. Testers, business representatives, and developers apply review techniques during example mapping, collaborative user story writing, and backlog refinement, so that user stories are complete, understandable, and have testable acceptance criteria that meet criteria such as the Definition of Ready. Static analysis is often built into continuous integration (CI) pipelines. It is mostly used to find specific code defects, but it also evaluates maintainability and security, and spelling checkers and readability tools are static analysis tools too.</p>
+<figure>
+<img src="figures/fig_3_1_static_testing_channels.png" alt="" /><figcaption>Figure 3.1 — The two channels of static testing. A top box labelled “Static testing: evaluate without executing” branches into two boxes. The left box, “Reviews”, says that people read and evaluate the work product. The right box, “Static analysis”, says that tools check a structured work product such as code or models.</figcaption>
+</figure>
+<p>Almost every work product produced in the software development lifecycle can be put through static testing. The syllabus lists examples such as requirement specifications, source code, test plans, test cases, backlog items, test charters, project documentation, formal contracts, and models. The universal rule here is simple: any work product a person can read and make sense of can be reviewed. For a static-analysis tool to work on a work product, however, that product must have a specific structural format or syntax, such as a block of code, a database schema, or an architectural model. This includes less obvious work products, such as infrastructure-as-code (IaC) configuration files or a project’s budget tables.</p>
+<p>Work products that are not appropriate for static testing are those that are difficult for people to interpret and that should not be analysed by tools. The syllabus example is third-party executable code. For legal reasons, such as licence terms, it should not be analysed by tools, and in compiled form a person can hardly read it. For such work products, dynamic testing remains the option.</p>
+<p><em>In practice.</em> Before an e-commerce project goes live, the static-review agenda includes the analysis document, the system architecture diagram, the test plan, and the formal supplier contract signed with the external payment provider. Reading the contract carefully, a tester notices that the maximum service response time the supplier promises is calculated as a monthly average, whereas the analysis document says it should be an absolute limit per transaction. No dynamic test run could have caught this contradiction in the documents; a careful human review found it while it was still at the contract stage.</p>
+<p><em>Exam focus.</em> A typical question gives you different work products and asks which is or is not suitable for static testing. Analysis documents, code, test plans, and even formal contracts and budget tables are suitable because they are readable. When a question asks which work product is not appropriate for static testing, look for a product that people cannot interpret and that tools should not analyse, such as third-party executable code.</p>
+<p><strong>Check your understanding</strong></p>
+<p><em>CYU 3.1.1-a.</em> What are the two channels through which static testing is carried out?</p>
+<div class="mc">
+<ul>
+<li>(a) Functional testing and non-functional testing</li>
+<li>(b) Confirmation testing and regression testing</li>
+<li>(c) Black-box techniques and white-box techniques</li>
+<li>(d) Reviews (through people) and static analysis (through tools)</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (d). Static testing is human-led reading and assessment (reviews) plus automatic code or model scans by tools (static analysis).</p>
+</div>
+<p><em>CYU 3.1.1-b.</em> Which of the following work products is, by its nature, suitable for static testing?</p>
+<div class="mc">
+<ul>
+<li>(a) Only binary code packages made executable in production</li>
+<li>(b) Only script files that automation tools can execute</li>
+<li>(c) Any readable work product, such as a supplier contract or a test plan</li>
+<li>(d) No document, because static testing applies only to source code</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (c). Any work product a person can read and interpret, contracts and budget plans included, can be reviewed statically.</p>
+</div>
+<p><em>CYU 3.1.1-c.</em> For an automated tool to run static analysis on a work product, what basic property must the product have?</p>
+<div class="mc">
+<ul>
+<li>(a) A specific syntax or structural format (such as code or an architectural model) the tool can check against rules</li>
+<li>(b) Being compiled into runnable software</li>
+<li>(c) Being supplied by an external third party outside the organisation</li>
+<li>(d) Being nothing more than plain, unformatted text</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (a). Static-analysis tools work by rules, so their input must be in a structural format such as code, a database schema, or a UML model.</p>
+</div>
+</section>
+<section id="fl-3-1-2" class="level3">
+<h3>The real value of static testing (FL-3.1.2 — K2)</h3>
+<p>Static testing is not a luxury on software projects but one of the basic practices that protect budget and quality. It finds defects at the lowest cost by detecting them at the very start of the software development lifecycle. Fixing a logic defect caught during analysis takes a one-sentence revision in the document, whereas letting the same defect slip into production leads to operational crises, emergency hot fixes, and damage to the company’s reputation. Figure 3.2 shows how the effort of fixing the same defect grows from one stage to the next.</p>
+<figure>
+<img src="figures/fig_3_2_cost_of_fixing.png" alt="" /><figcaption>Figure 3.2 — The earlier a defect is found, the cheaper the fix. Four rising bars show that defect-fix cost increases from requirements review (correct a sentence) to design review (revise a diagram), dynamic system testing (fix code, re-test, run regression), and production (handle an incident, apply an emergency fix).</figcaption>
+</figure>
+<p>Static testing identifies some defects that dynamic testing cannot find and can find other defect types more easily or cheaply. Unreachable code and design patterns that were not implemented as intended are examples of the first group; omissions in requirements are an example of the second. A gap in the analysis document gives a dynamic test no defined expected result; a careful reader can notice the missing rule before implementation. Static testing also strengthens shared understanding and communication by bringing business representatives, analysts, developers, and testers into a structured discussion over the same work product.</p>
+<p>Static testing also helps evaluate the quality of work products and build confidence in them, and it lets stakeholders confirm that the documented requirements describe their actual needs. Reviews can be costly to carry out. However, overall project costs are usually much lower than without reviews, because less time and effort is spent fixing defects later. Static analysis also finds certain code defects more efficiently than dynamic testing, which usually means fewer code defects and lower overall development effort.</p>
+<p><em>In practice.</em> While reviewing the analysis document of a subscription system, a tester catches this gap: “If the user opens their account on 31 January, on which day of February will the system run the ‘monthly renewal’?” The rule for this scenario has been left out of the document entirely. Because no one wrote the rule, the developer will code it on their own assumption, and by the dynamic testing stage no correct test can be designed, because the expected result is unknown. Static testing finds this missing requirement on paper. Dynamic testing could show only its consequence later, as a renewal date the business did not expect, and only if a test happened to use an account opened on 31 January.</p>
+<p><em>Exam focus.</em> A common pattern asks which defect types can be detected directly by static testing. Unreachable code and design patterns that were not implemented as intended cannot be found by dynamic testing, and neither can a defect that sits in a non-executable work product, such as a gap in a requirements document. Omissions in requirements are also much easier and cheaper to find by static testing, because dynamic testing can reveal only their consequences, later and indirectly. A common trap is an option praising static testing for “triggering failures such as system crashes or a frozen screen.” Such runtime behaviours (failures) can only be triggered by running the software, that is, by dynamic testing.</p>
+<p><strong>Check your understanding</strong></p>
+<p><em>CYU 3.1.2-a.</em> Which of the following defects can static testing find that dynamic testing cannot?</p>
+<div class="mc">
+<ul>
+<li>(a) The order page takes 40 seconds to load under normal use</li>
+<li>(b) The application crashes when an empty form is submitted</li>
+<li>(c) The invoice total is rounded incorrectly when it is printed</li>
+<li>(d) Two sections of the requirements specification state different maximum order values</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (d). The contradiction sits in a non-executable work product, so only static testing can find it. Options (a), (b), and (c) are failures that appear when the software runs, so dynamic testing finds them.</p>
+</div>
+<p><em>CYU 3.1.2-b.</em> An exam statement says “static test activities trigger hidden failures in the system and defects are cleared by analysing those failures.” What is true of this claim?</p>
+<div class="mc">
+<ul>
+<li>(a) It is true, because static-analysis tools run the code to make failures visible</li>
+<li>(b) It is true, because static testing is always done after dynamic testing</li>
+<li>(c) It is false, because static testing finds defects directly without running the software</li>
+<li>(d) It is false, because static testing cannot find software defects at all</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (c). A failure is wrong behaviour the software shows while running. Static testing does not run the software, so it triggers no failure; it finds the defect in the code or document directly, by eye or by tool.</p>
+</div>
+<p><em>CYU 3.1.2-c.</em> A missing validation rule could have been corrected with one sentence during the requirements review. Instead, it is found in production after release. What is the most likely effect on the cost of fixing it?</p>
+<div class="mc">
+<ul>
+<li>(a) About the same, because the change to the code itself is still small</li>
+<li>(b) Lower, because users have already described the exact failure</li>
+<li>(c) Much higher, because code, tests, and the live service are now affected, possibly with an emergency fix</li>
+<li>(d) Determined only by whether the regression tests are automated</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (c). The later a defect is found, the more work has already been built on top of it: code has to change, tests have to be re-run, and in production an incident may have to be handled. Options (a) and (b) ignore this growth, and test automation (d) may reduce re-testing effort, but it does not remove the other costs of a late fix.</p>
+</div>
+</section>
+<section id="fl-3-1-3" class="level3">
+<h3>The structural difference between static and dynamic testing (FL-3.1.3 — K2)</h3>
+<p>To secure software quality, these two approaches are not alternatives but complements. The most basic difference between them lies in how they catch a defect. Static testing finds defects directly inside the work product: the reviewer or the static-analysis tool points straight at the contradictory sentence in the document or the faulty line in the code. Dynamic testing finds defects indirectly: a test case is first run on the executable code and a failure the system shows to the outside world is observed, then the developer analyses the failure through debugging, a separate development activity, to find the defect that caused it. Figure 3.3 places the two paths next to each other, so you can see where the extra steps of the dynamic path come from.</p>
+<figure>
+<img src="figures/fig_3_3_static_vs_dynamic.png" alt="" /><figcaption>Figure 3.3 — Static testing reaches the defect directly; dynamic testing reaches it through a failure. Two vertical flows sit side by side. On the static-testing side, a work product is examined by a reviewer or a tool, and the defect is found directly. On the dynamic-testing side, executable software goes through test execution, a failure is observed, and debugging, a separate development activity, then locates the defect.</figcaption>
+</figure>
+<p>There are several practical contrasts. Static testing never runs the software; dynamic testing always does. Static testing can find a missing rule directly, because a reader notices the gap in the document. Dynamic testing can reveal only the consequence of that gap, later, and only if a test happens to exercise the unspecified behaviour. Static testing can measure quality characteristics that do not depend on executing code, such as maintainability; dynamic testing measures execution-dependent characteristics such as performance efficiency. Static testing needs readable documents or analysable structures; dynamic testing needs an executable test object. Table 3.1 collects these contrasts in one place for quick revision.</p>
+<p><strong>Table 3.1 — Static testing and dynamic testing compared</strong></p>
+<div class="table-wrap">
+<table>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 38%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Criterion</th>
+<th>Static testing</th>
+<th>Dynamic testing</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Runs the software?</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>How the defect is reached</td>
+<td>Directly, in the work product</td>
+<td>Indirectly: a failure is observed, then analysis locates the defect</td>
+</tr>
+<tr class="odd">
+<td>Missing rule in a document</td>
+<td>Found directly: a reader notices the gap</td>
+<td>Only its consequence can surface, later, as a failure</td>
+</tr>
+<tr class="even">
+<td>Quality characteristics measured</td>
+<td>Not dependent on execution (e.g., maintainability)</td>
+<td>Dependent on execution (e.g., performance efficiency)</td>
+</tr>
+<tr class="odd">
+<td>What it needs</td>
+<td>Readable documents or analysable structures (code, models)</td>
+<td>An executable test object</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The syllabus also lists typical defects that are easier or cheaper to find through static testing. The first group is defects in requirements, such as inconsistencies, ambiguities, contradictions, omissions, inaccuracies, and duplications. The second is design defects, such as inefficient database structures and poor modularisation. The third is certain coding defects, such as variables with undefined values, undeclared variables, unreachable or duplicated code, and excessive code complexity. The fourth is deviations from standards, such as ignoring naming conventions.</p>
+<p>The fifth is incorrect interface specifications, such as a mismatched number, type, or order of parameters. The sixth is specific security vulnerabilities, such as buffer overflows. The last is gaps or inaccuracies in test basis coverage, such as missing tests for an acceptance criterion. Static testing may also find defects more easily on code paths that are rarely executed or hard to reach with dynamic testing.</p>
+<p><em>Exam focus.</em> The exam often relies on confusing these two mechanisms. Trap options usually swap the tasks, claiming that dynamic tests fix gaps in analysis documents directly, or that static testing measures system performance stability by running the software. The one sentence to hold onto is: static testing catches the defect directly; dynamic testing finds a failure first.</p>
+<p><strong>Check your understanding</strong></p>
+<p><em>CYU 3.1.3-a.</em> What is the most basic difference between how static and dynamic testing reach a defect in the code?</p>
+<div class="mc">
+<ul>
+<li>(a) Static testing finds defects directly in the work product; dynamic testing first observes a runtime failure</li>
+<li>(b) Static testing first triggers a failure in the system; dynamic testing finds the defect directly in the document</li>
+<li>(c) Both approaches can reach defects only by running the software on a server</li>
+<li>(d) Neither approach ever needs the software code to be executed</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (a). Static testing is direct detection (without running); dynamic testing is seeing a system deviation (failure) and then going into the code.</p>
+</div>
+<p><em>CYU 3.1.3-b.</em> What does dynamic testing basically need in order to run?</p>
+<div class="mc">
+<ul>
+<li>(a) Only a readable analysis document</li>
+<li>(b) Only a review meeting and its participants</li>
+<li>(c) Only a static-analysis tool being installed</li>
+<li>(d) An executable test object, such as runnable software</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (d). Dynamic testing runs the test object itself, so runnable software must exist.</p>
+</div>
+<p><em>CYU 3.1.3-c.</em> Which defect is static testing likely to find more easily than dynamic testing?</p>
+<div class="mc">
+<ul>
+<li>(a) A screen that freezes when two users save the same record at once</li>
+<li>(b) A report that takes too long to generate under normal load</li>
+<li>(c) A defect in error-handling code that runs only after a rare hardware fault</li>
+<li>(d) A label that shows the wrong currency on the confirmation page</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (c). The syllabus notes that static testing may find defects more easily on code paths that are rarely executed or hard to reach with dynamic testing, because a reviewer or tool examines the code without having to trigger the rare fault. Options (a), (b), and (d) are failures that show up when the software runs, so dynamic testing finds them readily.</p>
+</div>
+</section>
+</section>
+<section id="feedback-and-the-review-process" class="level2">
+<h2>3.2 Feedback and the Review Process</h2>
+<section id="fl-3-2-1" class="level3">
+<h3>The project value of early and frequent stakeholder feedback (FL-3.2.1 — K1)</h3>
+<p>Early and frequent feedback from stakeholders, such as customers, end users, and business representatives, allows potential quality problems to be communicated early. If stakeholders are involved too little during the SDLC, the product may not meet their original or current vision. A failure to deliver what they want can lead to costly rework, missed deadlines, blame games, and even complete project failure.</p>
+<p>Frequent stakeholder feedback throughout the SDLC helps in four ways. It can prevent misunderstandings about requirements. It ensures that changes to requirements are understood and implemented earlier. It improves the development team’s understanding of what they are building. It also lets the team focus on the features that deliver the most value to stakeholders and have the most positive impact on identified risks.</p>
+<p>Reviews are one structured way to collect this feedback on work products.</p>
+<p><em>Exam focus.</em> Questions on this objective are usually recall items asking you to recognise the benefits of early stakeholder feedback. The distractor to watch for is an option claiming that postponing all stakeholder feedback to formal phase gateways at the end of the project speeds it up. Late feedback leads to costly rework, not to speed.</p>
+<p><strong>Check your understanding</strong></p>
+<p><em>CYU 3.2.1-a.</em> What is the clearest advantage of getting early and frequent stakeholder feedback?</p>
+<div class="mc">
+<ul>
+<li>(a) Catching critical misunderstandings in requirements at the start, while they are still cheap to fix</li>
+<li>(b) Postponing all approvals to a single formal sign-off at the end to save time</li>
+<li>(c) Keeping stakeholder involvement in the analysis phase to a minimum</li>
+<li>(d) Removing all analysis and test documentation standards from the project</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (a). Early feedback brings misunderstandings to light while they are still on paper and cheap to correct.</p>
+</div>
+<p><em>CYU 3.2.1-b.</em> What is the most likely result when stakeholder feedback is only gathered at the very end?</p>
+<div class="mc">
+<ul>
+<li>(a) Less rework and lower cost</li>
+<li>(b) Costly rework and missed deadlines</li>
+<li>(c) Stakeholder involvement rising on its own</li>
+<li>(d) The need for documentation disappearing</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (b). The syllabus warns that too little stakeholder involvement can lead to costly rework, missed deadlines, blame games, and even project failure.</p>
+</div>
+<p><em>CYU 3.2.1-c.</em> A product owner wants stakeholders’ views on a draft requirements specification before any design work starts. Which practice gives a structured way to collect that feedback on the work product itself?</p>
+<div class="mc">
+<ul>
+<li>(a) Holding a review of the draft specification with the stakeholders</li>
+<li>(b) Running a load test on the first executable build</li>
+<li>(c) Collecting all comments during user acceptance testing at the end</li>
+<li>(d) Running a static-analysis tool over the specification</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (a). A review brings stakeholders to the work product early and gives their feedback a defined route. A load test (b) needs running software and comes much later, (c) is the late feedback this objective warns against, and a static-analysis tool (d) checks structure; it cannot tell you what the stakeholders need.</p>
+</div>
+</section>
+<section id="fl-3-2-2" class="level3">
+<h3>The five activities of the generic review process (FL-3.2.2 — K2)</h3>
+<p>The syllabus describes a generic review process, defined in the ISO/IEC 20246 standard, with five activities. It is a structured but flexible framework: a specific review process is tailored from it, and the more formal the review, the more of the tasks in each activity are needed. A large work product may need the process to be run several times, and a follow-up review may be needed to complete actions. The exam checks both the order of the five activities and the tasks carried out within each. Figure 3.4 shows the five activities in their usual order.</p>
+<figure>
+<img src="figures/fig_3_4_review_process.png" alt="" /><figcaption>Figure 3.4 — The five activities of the generic review process. Five boxes are connected from left to right by arrows: planning, review initiation, individual review, communication and analysis, and fixing and reporting.</figcaption>
+</figure>
+<p>Planning defines the scope of the review: its purpose, the work product to be reviewed, the quality characteristics to be evaluated, the areas to focus on, the exit criteria, supporting information such as standards, and the effort and timeframes. Review initiation makes sure that everyone and everything involved is ready. Every participant has access to the work product, understands their role and responsibilities, and receives everything needed to perform the review.</p>
+<p>Individual review is where every reviewer, working alone, assesses the quality of the work product by applying one or more review techniques, such as checklist-based or scenario-based reviewing. Each reviewer logs the anomalies, recommendations, and questions they identify. An anomaly is a condition that deviates from expectation; whether it is a real defect is not decided at this stage.</p>
+<p>Communication and analysis is where the logged anomalies are analysed and discussed, because an anomaly is not necessarily a defect. For every anomaly, the participants decide its status, its owner, and the actions required. This is typically done in a review meeting, where the participants also decide the quality level of the reviewed work product and the follow-up actions needed. Fixing and reporting is where a defect report is created for every defect, so that corrective actions can be followed up, and the author fixes the work product. Once the exit criteria are reached, the work product can be accepted, and the review results are reported. Figure 3.5 follows a single anomaly from the moment it is logged to the decision the team takes on it.</p>
+<figure>
+<img src="figures/fig_3_5_anomaly_disposition.png" alt="" /><figcaption>Figure 3.5 — An anomaly becomes a defect only after the team discusses it. A box labelled “Anomaly logged during individual review” leads to a decision diamond labelled “Discussed in communication and analysis”. The diamond branches to three outcomes: a real defect, for which a defect report is raised and the author fixes it; an item that needs clarification, for which an action is assigned; and no action needed, where the item is closed.</figcaption>
+</figure>
+<p><em>Exam focus.</em> Two distractor patterns are built on this five-step flow. Trap one: making sure participants have access to the work product belongs to review initiation, not to planning. Trap two: the point where an anomaly formally becomes a “defect” is communication and analysis, not individual review. Watch these two boundaries closely.</p>
+<p><strong>Check your understanding</strong></p>
+<p><em>CYU 3.2.2-a.</em> Which option gives the chronological order of a generic review process correctly?</p>
+<div class="mc">
+<ul>
+<li>(a) Planning, review initiation, individual review, communication and analysis, fixing and reporting</li>
+<li>(b) Planning, individual review, review initiation, communication and analysis, fixing and reporting</li>
+<li>(c) Review initiation, planning, individual review, fixing and reporting, communication and analysis</li>
+<li>(d) Planning, review initiation, communication and analysis, individual review, fixing and reporting</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (a). The standard flow is to plan, initiate the team, read individually, discuss in the shared meeting, and finally fix and close.</p>
+</div>
+<p><em>CYU 3.2.2-b.</em> At which activity does a suspicious anomaly gain the formal, agreed status of a “defect”?</p>
+<div class="mc">
+<ul>
+<li>(a) The individual review stage</li>
+<li>(b) The communication and analysis stage</li>
+<li>(c) The planning stage</li>
+<li>(d) The fixing and reporting stage</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (b). In individual review, items are logged as anomalies; in communication and analysis the participants decide the status of each one, and only then is it treated as a defect.</p>
+</div>
+<p><em>CYU 3.2.2-c.</em> Distributing the work product and supporting materials to participants belongs to which step of the review process?</p>
+<div class="mc">
+<ul>
+<li>(a) Planning</li>
+<li>(b) Review initiation</li>
+<li>(c) Individual review</li>
+<li>(d) Communication and analysis</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (b). Making sure every participant has the material and understands their role belongs to review initiation, not planning.</p>
+</div>
+<p><em>CYU 3.2.2-d.</em> Priya has received the design document and her role for an upcoming review. Working alone, she reads the document against a checklist and logs every possible problem, question, and recommendation she finds. Which review activity is she performing?</p>
+<div class="mc">
+<ul>
+<li>(a) Review initiation</li>
+<li>(b) Communication and analysis</li>
+<li>(c) Fixing and reporting</li>
+<li>(d) Individual review</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (d). Reading the work product alone and logging anomalies, questions, and recommendations is individual review. Priya received the material and her role at review initiation (a), the decision on whether each item is a defect comes later in communication and analysis (b), and fixing and reporting (c) deals only with the confirmed defects.</p>
+</div>
+</section>
+<section id="fl-3-2-3" class="level3">
+<h3>The six roles in reviews (FL-3.2.3 — K1)</h3>
+<p>Reviews are carried out by several people in clearly defined roles. Roles must not be confused with job titles; one person can take on more than one role on the same project. The manager decides what is to be reviewed and provides resources, such as staff and time, for the review. The author is the person who produces the work product being reviewed (the analysis document or the code) and fixes the defects the team confirms. The moderator, also known as the facilitator, ensures that review meetings run effectively. This includes mediation, time management, and a safe review environment in which everyone can speak freely. The scribe, also called the recorder, collates anomalies from reviewers and records review information, including decisions, new anomalies found during the meeting, and open items. The reviewer performs the review. A reviewer may be someone working on the project, a subject matter expert, or any other stakeholder. The review leader takes overall responsibility for the review: they decide who will be involved and organise when and where the review takes place.</p>
+<p><em>Exam focus.</em> The place candidates most often go wrong is the fine line between review leader and moderator. To draw the line, hold onto this: the logistical and organisational work that stays outside and around the meeting (who attends, when it is held) belongs to the review leader, while managing the communication dynamics and the constructive atmosphere inside the meeting, from the moment it starts to the moment it ends, is the moderator’s responsibility.</p>
+<p><strong>Check your understanding</strong></p>
+<p><em>CYU 3.2.3-a.</em> Which role decides which experts to invite to a formal review and coordinates the schedule and logistics?</p>
+<div class="mc">
+<ul>
+<li>(a) Moderator</li>
+<li>(b) Scribe</li>
+<li>(c) Review leader</li>
+<li>(d) Author</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (c). Deciding who is involved and organising when and where the review takes place are the review leader’s responsibilities.</p>
+</div>
+<p><em>CYU 3.2.3-b.</em> Which role records the anomalies discussed, the decisions taken, and the open items during the review meeting?</p>
+<div class="mc">
+<ul>
+<li>(a) Reviewer</li>
+<li>(b) Manager</li>
+<li>(c) Scribe</li>
+<li>(d) Moderator</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (c). Collating anomalies and recording decisions, new anomalies, and open items is the scribe’s job.</p>
+</div>
+<p><em>CYU 3.2.3-c.</em> Which role decides what will be reviewed and provides the needed resources (such as staff and time)?</p>
+<div class="mc">
+<ul>
+<li>(a) Author</li>
+<li>(b) Manager</li>
+<li>(c) Reviewer</li>
+<li>(d) Moderator</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (b). Deciding what is examined and allocating resources is the manager’s job; the author produces the work product and fixes the confirmed defects.</p>
+</div>
+</section>
+<section id="fl-3-2-4" class="level3">
+<h3>The four review types by degree of formality (FL-3.2.4 — K2)</h3>
+<p>The syllabus notes that many review types exist, ranging from informal reviews to formal reviews, and it describes four commonly used ones. A formal review follows a defined process and has a formally documented output, whereas an informal review does neither. The level of formality a review needs depends on factors such as the SDLC being followed, the maturity of the development process, the criticality and complexity of the work product, legal or regulatory requirements, and the need for an audit trail. The same work product can be reviewed more than once with different types, for example first informally and later more formally. The choice of type also depends on the objectives, the project needs, available resources, the work product type and its risks, the business domain, and company culture. Exam questions on this objective usually describe a review and ask you to name its type. Figure 3.6 places the four commonly used types on a single scale, from less formal to more formal.</p>
+<figure>
+<img src="figures/fig_3_6_review_types_formality.png" alt="" /><figcaption>Figure 3.6 — The four review types on a scale of formality. A horizontal arrow runs from “Less formal” on the left to “More formal” on the right. Four boxes hang from it in order: informal review (no defined process), walkthrough (author-led), technical review (moderator, experts), and inspection (most formal, metrics).</figcaption>
+</figure>
+<p>An informal review does not follow a defined process and does not require a formal documented output; its main objective is detecting anomalies quickly and cheaply (for example, a buddy check, having the colleague at the next desk check the code). A walkthrough is led by the author. It can serve many objectives: evaluating quality and building confidence in the work product, educating reviewers, gaining consensus, generating new ideas, motivating and enabling authors to improve, and detecting anomalies. Reviewers may perform an individual review before the walkthrough, but this is not required. A technical review is performed by technically qualified reviewers and led by a moderator. Its objectives are to gain consensus and make decisions on a technical problem, but also to detect anomalies, evaluate quality and build confidence in the work product, generate new ideas, and motivate and enable authors to improve. An inspection is the most formal review type and follows the complete generic review process. Its main objective is to find the maximum number of anomalies. Its other objectives are to evaluate quality, build confidence in the work product, and motivate and enable authors to improve. Metrics are collected and used to improve the SDLC, including the inspection process. In an inspection, the author cannot act as the review leader or scribe. Table 3.2 sets the four types next to each other on three points that help tell them apart.</p>
+<p><strong>Table 3.2 — The four review types: who leads, how formal, and the main purpose</strong></p>
+<div class="table-wrap">
+<table>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 28%" />
+<col style="width: 34%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Review type</th>
+<th>Who leads</th>
+<th>Formality</th>
+<th>Main purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Informal review</td>
+<td>Not defined</td>
+<td>No defined process; no formal documented output</td>
+<td>Detecting anomalies</td>
+</tr>
+<tr class="even">
+<td>Walkthrough</td>
+<td>The author</td>
+<td>Individual preparation is optional</td>
+<td>Many, incl. evaluating quality, educating reviewers, gaining consensus, new ideas</td>
+</tr>
+<tr class="odd">
+<td>Technical review</td>
+<td>A moderator; technically qualified reviewers</td>
+<td>Formal</td>
+<td>Gaining consensus and making decisions on a technical problem</td>
+</tr>
+<tr class="even">
+<td>Inspection</td>
+<td>Not stated; author cannot be review leader or scribe</td>
+<td>Most formal; complete generic process; metrics collected</td>
+<td>Finding the maximum number of anomalies</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>In practice.</em> To help two junior developers who have just joined the company adapt to the project quickly, the senior architect projects the new database architecture diagram they prepared on screen. They present the document page by page, section by section, to their colleagues and answer their questions. The main aim of this session is to train the new engineers technically. This session is a clear example of a walkthrough, because it runs under the author’s leadership and carries a training and knowledge-transfer mission.</p>
+<p><em>Exam focus.</em> You are told a meeting setup and asked which type it is. The clues are clear: “no defined process” points to informal; “the author runs the session” points to a walkthrough; “technically qualified reviewers trying to reach a technical decision, led by a moderator” points to a technical review; “the complete process is followed, metrics are collected to improve the process, and the author may not be review leader or scribe” points to an inspection.</p>
+<p><strong>Check your understanding</strong></p>
+<p><em>CYU 3.2.4-a.</em> What is the most formal review type, and what is its restriction on the author?</p>
+<div class="mc">
+<ul>
+<li>(a) Informal review; the author may not take part</li>
+<li>(b) Walkthrough; the author must lead the session</li>
+<li>(c) Technical review; only the author may present</li>
+<li>(d) Inspection; the author cannot be review leader or scribe</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (d). Inspection is the most formal type. It follows the complete generic process, collects metrics, and does not allow the author to act as review leader or scribe.</p>
+</div>
+<p><em>CYU 3.2.4-b.</em> A system analyst presents the business-analysis document they wrote to the whole team piece by piece, and one of the primary aims is to train and transfer knowledge to others in the team. Which review type is this?</p>
+<div class="mc">
+<ul>
+<li>(a) Inspection</li>
+<li>(b) Technical review</li>
+<li>(c) Walkthrough</li>
+<li>(d) Informal review</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (c). “The author leading in person” and “training / knowledge sharing” are the clearest routes to a walkthrough.</p>
+</div>
+<p><em>CYU 3.2.4-c.</em> Led by a moderator, performed by technically qualified reviewers, and aimed at reaching agreement on a complex technical problem and taking architectural decisions, which review type is this?</p>
+<div class="mc">
+<ul>
+<li>(a) Walkthrough</li>
+<li>(b) Technical review</li>
+<li>(c) Informal review</li>
+<li>(d) Inspection</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (b). Moderator leadership plus technical experts plus an agreement/decision aim is the signal of a technical review.</p>
+</div>
+<p><em>CYU 3.2.4-d.</em> With no defined process, often without even a meeting, and aimed at catching anomalies quickly and cheaply (for example a buddy check), which review type is this?</p>
+<div class="mc">
+<ul>
+<li>(a) Informal review</li>
+<li>(b) Inspection</li>
+<li>(c) Technical review</li>
+<li>(d) Walkthrough</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (a). The absence of a defined process plus fast, cheap anomaly-finding is the signal of an informal review.</p>
+</div>
+</section>
+<section id="fl-3-2-5" class="level3">
+<h3>The factors that make reviews successful (FL-3.2.5 — K1)</h3>
+<p>The success of a review depends not only on technical tools but very largely on organisational and cultural conditions. Before the session, clear objectives and measurable exit criteria should be set; the review type most suitable to the work product and context should be chosen; the work product should be presented in small, manageable pieces rather than one big block, so participants can focus; reviewers should be given adequate preparation time; and management should support the process with real time and resources. Review feedback should reach stakeholders and authors so they can improve both the product and their activities. Reviews should become part of the organisation’s learning culture, and every participant should receive enough training to fulfil their role. During the session, professional facilitation should keep the tone constructive and ensure that feedback focuses on the work product rather than a person’s ability.</p>
+<p>One success factor deserves special attention: the syllabus states that evaluation of participants should never be an objective of a review, so findings and defect lists must not be used to measure participants’ personal performance. If a developer feels that reporting the defects in their code will lower their year-end performance score, they will choose to stay silent in meetings, hide defects, and the review culture at that company will quietly collapse.</p>
+<p><em>Exam focus.</em> When success factors are asked, look first for two items: first, that the document is examined in small pieces to protect quality; and second, that scoring participants’ performance can never be a review aim. Treat any option that breaks this rule as wrong.</p>
+<p><strong>Check your understanding</strong></p>
+<p><em>CYU 3.2.5-a.</em> According to ISTQB®, which of the following should never be an objective of a review?</p>
+<div class="mc">
+<ul>
+<li>(a) Catching critical defects in work products early</li>
+<li>(b) Evaluating the individual performance of the participants</li>
+<li>(c) Evaluating the quality of the analysis document</li>
+<li>(d) Gaining consensus among stakeholders on complex business rules</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (b). Evaluation of participants should never be an objective of a review; reviews focus on the work product. Options (a), (c), and (d) are legitimate review objectives.</p>
+</div>
+<p><em>CYU 3.2.5-b.</em> Which of the following is a success factor the syllabus lists for a successful review?</p>
+<div class="mc">
+<ul>
+<li>(a) Examining the work product in one large block in a single session</li>
+<li>(b) Giving participants no time for individual preparation</li>
+<li>(c) Directing feedback at the author’s personality</li>
+<li>(d) Examining the work product in small chunks</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (d). Examining in small chunks keeps reviewers’ concentration high; (a), (b), and (c) directly undermine success.</p>
+</div>
+<p><em>CYU 3.2.5-c.</em> What sort of conditions are review success factors mostly?</p>
+<div class="mc">
+<ul>
+<li>(a) Mostly organisational and cultural, such as clear objectives and management support</li>
+<li>(b) Mostly technical (the tool and programming language used)</li>
+<li>(c) Only financial (the size of the budget)</li>
+<li>(d) Only legal (a regulatory requirement)</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (a). A review’s success depends less on technical tools than on organisational and human conditions.</p>
+</div>
+</section>
+</section>
+<section id="chapter-3-summary" class="level2">
+<h2>Chapter 3 summary</h2>
+<div class="table-wrap">
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 83%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Learning objective</th>
+<th>One-sentence summary</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>3.1.1 (K1)</td>
+<td>Almost any work product that can be read and understood can be reviewed, and static analysis needs a structure it can check. Work products that are hard for people to interpret and should not be analysed by tools, such as third-party executable code (for legal reasons), are not appropriate.</td>
+</tr>
+<tr class="even">
+<td>3.1.2 (K2)</td>
+<td>Static testing finds defects early, when they are cheapest to fix. It finds some defects that dynamic testing cannot (unreachable code, defects in non-executable work products) and finds others, such as requirement omissions, more easily and cheaply.</td>
+</tr>
+<tr class="odd">
+<td>3.1.3 (K2)</td>
+<td>Static testing detects defects directly in the work product; dynamic testing first triggers a system failure, then looks for the cause through debugging.</td>
+</tr>
+<tr class="even">
+<td>3.2.1 (K1)</td>
+<td>Early and frequent stakeholder feedback communicates potential quality problems early, prevents requirement misunderstandings, gets requirement changes understood and implemented earlier, and keeps the team focused on the most valuable features.</td>
+</tr>
+<tr class="odd">
+<td>3.2.2 (K2)</td>
+<td>There are five generic process activities: planning, review initiation, individual review, communication and analysis, fixing and reporting.</td>
+</tr>
+<tr class="even">
+<td>3.2.3 (K1)</td>
+<td>Six principal roles are defined; the review leader manages logistics outside the meeting, while the moderator manages the communication inside it.</td>
+</tr>
+<tr class="odd">
+<td>3.2.4 (K2)</td>
+<td>Four commonly used types by formality: informal, walkthrough (author-led), technical review (moderator, technically qualified reviewers), inspection (most formal, metrics, author not leader or scribe).</td>
+</tr>
+<tr class="even">
+<td>3.2.5 (K1)</td>
+<td>Success is organisational: examining documents in small pieces, fair preparation time, and never using defect lists as a personal-performance tool.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="critical-concept-pairs-often-confused-2" class="level3">
+<h3>Critical concept pairs often confused</h3>
+<div class="table-wrap">
+<table>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 32%" />
+<col style="width: 17%" />
+<col style="width: 32%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>This concept</th>
+<th>is</th>
+<th>not this concept</th>
+<th>which is</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Anomaly</td>
+<td>a condition that deviates from expectation, logged in individual review</td>
+<td>Defect</td>
+<td>a flaw in the work product, confirmed when the anomaly is analysed in communication and analysis</td>
+</tr>
+<tr class="even">
+<td>Review leader</td>
+<td>takes overall responsibility: who is involved, when and where</td>
+<td>Moderator</td>
+<td>ensures the meeting runs effectively: mediation, time management, a safe environment</td>
+</tr>
+<tr class="odd">
+<td>Walkthrough</td>
+<td>led by the author, with many objectives, including educating reviewers</td>
+<td>Technical review</td>
+<td>led by a moderator, technically qualified reviewers, aiming to gain consensus and decide on a technical problem</td>
+</tr>
+<tr class="even">
+<td>Technical review</td>
+<td>a formal review led by a moderator</td>
+<td>Inspection</td>
+<td>the most formal type: complete generic process, metrics collected, author cannot be review leader or scribe</td>
+</tr>
+<tr class="odd">
+<td>Review</td>
+<td>manual examination of work products by people to find anomalies and evaluate quality</td>
+<td>Static analysis</td>
+<td>automatic checking of source code or models by tools</td>
+</tr>
+<tr class="even">
+<td>Planning</td>
+<td>defining the review’s scope, purpose, exit criteria, effort, and timeframes</td>
+<td>Review initiation</td>
+<td>making sure every participant has access to the work product and understands their role</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="exam-tips-and-common-traps-chapter-3" class="level3">
+<h3>Exam tips and common traps — Chapter 3</h3>
+<p>For review-type questions, focus on two decisive facts in the scenario: who leads the session, and what its stated aim is. If the leader is the author, the answer is walkthrough; if a moderator leads technically qualified reviewers towards a technical decision, the answer is technical review; if the text stresses the complete process, collected metrics, and an author who may not lead, the answer is inspection. Do not decide on the aim alone, because gaining consensus and generating new ideas belong to both walkthroughs and technical reviews. Check who leads the review first. For process questions, know the order of the five activities, and remember the two boundaries that questions test most often: participants get access to the work product at review initiation, and the status of each anomaly is decided in communication and analysis.</p>
+<p>Two traps appear often. The first is options like “developers who make fewer defects in the review will get a bonus”; any option containing the words “scoring or evaluating people, employees, or participants by a performance criterion” is against the review success factors and is wrong. The second is options showing static testing doing dynamic testing’s job. If an option claims static testing “triggers system failures and crashes by running the software,” remember this contradicts the definition of static testing and rule it out from the start.</p>
+</section>
+</section>
+<section id="cumulative-retrieval-1" class="level2">
+<h2>Cumulative retrieval</h2>
+<p>Revisiting earlier chapters through this chapter’s lens: name whether a missing requirement caught in a review is an error, a defect, or a failure (Chapter 1); explain how reviewing requirements as soon as drafts exist reflects both shift left and the early-testing principle (Chapter 2); and state which review type best fits a safety-critical context that needs the strictest formality. Try to answer each from memory before you look back at the earlier chapters.</p>
+</section>
+<section id="chapter-exercises-2" class="level2">
+<h2>Chapter exercises</h2>
+<p>Answers, rationale, and learning-objective references are in the “Answers &amp; Rationale” section at the end of the book.</p>
+<p><em>PB-C3-001.</em> Which of the following software work products is, by its nature, least suitable for examination by static test activities?</p>
+<div class="mc">
+<ul>
+<li>(a) A database schema for the order service</li>
+<li>(b) A third-party library delivered only as executable code</li>
+<li>(c) An infrastructure-as-code (IaC) configuration file that sets up cloud servers</li>
+<li>(d) A state model of the checkout process</li>
+</ul>
+</div>
+<p><em>PB-C3-002.</em> Which of the following statements comparing static and dynamic testing is correct?</p>
+<div class="mc">
+<ul>
+<li>(a) Static testing detects defects in the code or document directly, without needing to create an external failure in the system</li>
+<li>(b) Static test activities trigger system failures at runtime, and hidden code defects are found by tracing those failures</li>
+<li>(c) Dynamic testing finds defects directly on the document without ever running the source-code blocks</li>
+<li>(d) Static testing measures the coverage of the commands and functions being executed live on the system</li>
+</ul>
+</div>
+<p><em>PB-C3-003.</em> During a formal review meeting of a business-analysis document, a participant keeps the discussion constructive and professional, supports every expert in voicing their findings freely, and steps in as an impartial referee to facilitate when clashes of opinion heat up. Which role in the formal review process is this participant performing?</p>
+<div class="mc">
+<ul>
+<li>(a) Review leader</li>
+<li>(b) Scribe</li>
+<li>(c) Moderator</li>
+<li>(d) Manager</li>
+</ul>
+</div>
+<p><em>PB-C3-004.</em> A product owner who wrote a set of user stories leads a session in which she steps through them with developers and testers. The participants were not asked to prepare in advance. The stated aims are to agree on the scope of the stories and to collect ideas for alternative solutions. Which review type does this scenario describe?</p>
+<div class="mc">
+<ul>
+<li>(a) Informal review</li>
+<li>(b) Walkthrough</li>
+<li>(c) Technical review</li>
+<li>(d) Inspection</li>
+</ul>
+</div>
+<p><em>PB-C3-005.</em> After the review meeting, a defect report is created for each confirmed defect so that the corrective actions can be followed up. Once the exit criteria are reached, the work product is accepted and the review results are reported. Which activity of the review process is being carried out?</p>
+<div class="mc">
+<ul>
+<li>(a) Communication and analysis</li>
+<li>(b) Review initiation</li>
+<li>(c) Planning</li>
+<li>(d) Fixing and reporting</li>
+</ul>
+</div>
+<p><em>PB-C3-006.</em> During a requirements review for an e-commerce platform, a tester notices that the analysis document nowhere states what error message the system should produce if the end user’s import file exceeds the size limit. The rule was simply left missing in the analysis. What is the basic reason this missing requirement is easier and cheaper to find by static testing than by dynamic testing?</p>
+<div class="mc">
+<ul>
+<li>(a) Dynamic test tools cannot automatically parse syntax and spelling errors in requirements documents</li>
+<li>(b) Such analysis defects can only appear inside third-party packages whose source is closed</li>
+<li>(c) Dynamic test activities are by nature designed only to test non-functional qualities such as speed and security</li>
+<li>(d) The gap sits in a non-executable document, so a reviewer sees it directly; dynamic testing sees only later effects</li>
+</ul>
+</div>
+</section>
+</section>
+
+<div class="pager"><a href="chapter-2.html"><span class="lbl">Previous</span>Chapter 2 — Testing Throughout the Software Development Lifecycle</a><a href="chapter-4.html" style="text-align:right"><span class="lbl">Next</span>Chapter 4 — Test Analysis and Design</a></div>
+<footer class="site">© 2026 Kadir Çamoğlu · Own content licensed CC BY-NC 4.0 · ISTQB® is a registered trademark of the International Software Testing Qualifications Board; this guide is not affiliated with or endorsed by ISTQB®.</footer>
+</main>
+</div>
+<script>if (window.matchMedia('(min-width: 901px)').matches) document.getElementById('navd').open = true;</script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 6 — Test Tools · ISTQB® CTFL v4.0 Exam Guide</title>
+<meta name="description" content="Free, independent study guide for the ISTQB® Certified Tester Foundation Level v4.0 exam: all 64 learning objectives, worked examples, quick checks, and a full mock exam.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><div class="inner"><a href="index.html">ISTQB® CTFL v4.0 Exam Guide</a><span class="meta"><span class="ind">Independent · Unofficial study guide · </span><a href="all.html">Full text on one page</a></span></div></header>
+<div class="layout">
+<nav class="side"><details id="navd"><summary>Contents</summary><div class="navbody">
+<div class="group">Front matter</div><ul>
+<li><a href="index.html">ISTQB® CTFL v4.0 Exam Guide: From Fundamentals to Exam-Ready</a>
+</li>
+<li><a href="copyright.html">Copyright &amp; Trademark Notice</a>
+</li>
+<li><a href="introduction.html">Introduction — About This Book</a>
+</li>
+<li><a href="how-to-use.html">How to Use This Book</a>
+</li>
+<li><a href="the-exam.html">How the CTFL Exam Works</a>
+</li>
+<li><a href="objective-map.html">Objective Map</a>
+</li>
+<li><a href="study-roadmap.html">Study Roadmap</a>
+</li>
+</ul>
+<div class="group">Chapters</div><ul>
+<li><a href="chapter-1.html">Chapter 1 — Fundamentals of Testing</a>
+</li>
+<li><a href="chapter-2.html">Chapter 2 — Testing Throughout the Software Development Lifecycle</a>
+</li>
+<li><a href="chapter-3.html">Chapter 3 — Static Testing</a>
+</li>
+<li><a href="chapter-4.html">Chapter 4 — Test Analysis and Design</a>
+</li>
+<li><a href="chapter-5.html">Chapter 5 — Managing the Test Activities</a>
+</li>
+<li class="current"><a href="chapter-6.html">Chapter 6 — Test Tools</a>
+<ul class="sub"><li><a href="#tool-support-for-testing">6.1 Tool Support for Testing</a></li><li><a href="#benefits-and-risks-of-test-automation">6.2 Benefits and Risks of Test Automation</a></li><li><a href="#chapter-6-summary">Chapter 6 summary</a></li><li><a href="#cumulative-retrieval-4">Cumulative retrieval</a></li><li><a href="#chapter-exercises-5">Chapter exercises</a></li></ul>
+</li>
+</ul>
+<div class="group">Back matter</div><ul>
+<li><a href="rationale.html">Answers &amp; Rationale</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="confused-pairs.html">Commonly Confused Pairs — Master List</a>
+</li>
+<li><a href="final-revision.html">Final Revision Plan</a>
+</li>
+</ul>
+<div class="group">Mock exam</div><ul>
+<li><a href="mock-exam-1.html">Mock Exam 1 — 40 Questions with Rationale</a>
+</li>
+</ul>
+<div class="group">Back matter</div><ul>
+<li><a href="further-resources.html">Further Resources</a>
+</li>
+</ul>
+</div></details></nav>
+<main>
+<section id="chapter-6-test-tools" class="level1">
+<h1>Chapter 6 — Test Tools</h1>
+<p><strong>Learning objectives:</strong> 2 · K1 1 / K2 1 / K3 0 · <strong>Exam questions from this chapter:</strong> 2</p>
+<p><strong>Keywords:</strong> test automation</p>
+<p>This is the shortest chapter of the ISTQB® Foundation Level syllabus. The two questions you will meet on the exam rest entirely on two short, defined lists: the first asks you to match a test tool to the test activity it supports (K2), and the second asks you to tell a legitimate benefit or risk of test automation from the options (K1). The good news is that, with one careful reading and the practice questions at the end, this chapter is usually one of the easier opportunities to gain points in the exam.</p>
+<section id="tool-support-for-testing" class="level2">
+<h2>6.1 Tool Support for Testing</h2>
+<section id="fl-6-1-1" class="level3">
+<h3>Types of test tool and how they support testing (FL-6.1.1 — K2)</h3>
+<p>Software test tools support and ease many test activities, with the aim of making the test process more efficient, faster, and more accurate. The syllabus names eight types of tool by what they help with, and then closes the list with a catch-all for any other tool that assists in testing. It also presents the eight as examples rather than a closed set. In other words, the list tells you how to think about a tool, which is by the test activity it supports, and the catch-all makes sure nothing that genuinely helps testing falls outside it. Figure 6.1 shows the eight named types side by side, with the catch-all underneath.</p>
+<figure>
+<img src="figures/fig_6_1_tool_categories.png" alt="" /><figcaption>Figure 6.1 — The test tool types named in the syllabus. Eight boxes in two columns name the tool types: test management tools; static testing tools; test design and test implementation tools; test execution and test coverage tools; non-functional testing tools; DevOps tools; collaboration tools; and tools supporting scalability and deployment standardisation, for example virtual machines and containerisation. A line underneath adds that any other tool that assists in testing counts, even a spreadsheet.</figcaption>
+</figure>
+<p>Test management tools increase the efficiency of the test process by helping the team manage the SDLC, requirements, tests, defects, and configuration. In practical terms, this is the place where traceability between requirements, test cases, and defect reports is kept, and where test progress reports come from.</p>
+<p>Static testing tools support the tester in performing reviews and static analysis. Neither activity executes the test object. For example, one tool may help reviewers record and track their comments on a requirements document, while another scans source code for violations of coding standards.</p>
+<p>Test design and test implementation tools facilitate the generation of test cases, test data, and test procedures. For instance, a tool may produce a large set of valid and invalid input records from a data model, which would take a person days to prepare by hand.</p>
+<p>Test execution and test coverage tools facilitate automated test execution and coverage measurement. The two often go together in practice, because the same automated run that executes the tests can also report which statements or branches of the code it exercised.</p>
+<p>Non-functional testing tools allow the tester to perform non-functional testing that is difficult or impossible to perform manually. A load test with 10,000 concurrent virtual users is the usual example. No team could produce that load by hand, but a tool can generate it and measure the response times under it.</p>
+<p>DevOps tools support the DevOps delivery pipeline, workflow tracking, automated build processes, and continuous integration and continuous delivery (CI/CD). Their link to testing is that automated tests run inside that pipeline whenever the code changes, which is one of the practices you met in Chapter 2.</p>
+<p>Collaboration tools facilitate communication. This includes the day-to-day exchange between different roles on a team, such as business analysts, developers, and testers, who need to share questions, decisions, and test results without delay.</p>
+<p>Tools supporting scalability and deployment standardisation include virtual machines and containerisation tools. They let the team create standard test environments on demand. As a result, the same environment can be set up again for every test run, or several identical copies can run in parallel.</p>
+<p>Finally, the syllabus adds any other tool that assists in testing. Its own example is a spreadsheet: in the context of testing, a spreadsheet used to track test cases or to prepare test data is a test tool. Put differently, what makes software a test tool is the use it is put to, not its price, its licence, or what it is called.</p>
+<p><strong>Table 6.1 — Test tool types and what they support</strong></p>
+<div class="table-wrap">
+<table>
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 72%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tool type</th>
+<th>What it supports</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Test management tools</td>
+<td>Managing the SDLC, requirements, tests, defects, and configuration; traceability and progress reporting</td>
+</tr>
+<tr class="even">
+<td>Static testing tools</td>
+<td>Reviews and static analysis, without executing the test object</td>
+</tr>
+<tr class="odd">
+<td>Test design and test implementation tools</td>
+<td>Generating test cases, test data, and test procedures</td>
+</tr>
+<tr class="even">
+<td>Test execution and test coverage tools</td>
+<td>Running automated tests and measuring coverage</td>
+</tr>
+<tr class="odd">
+<td>Non-functional testing tools</td>
+<td>Non-functional testing that is difficult or impossible manually, such as load testing</td>
+</tr>
+<tr class="even">
+<td>DevOps tools</td>
+<td>The delivery pipeline, workflow tracking, automated builds, and CI/CD, in which automated tests run</td>
+</tr>
+<tr class="odd">
+<td>Collaboration tools</td>
+<td>Communication within and between teams</td>
+</tr>
+<tr class="even">
+<td>Tools supporting scalability and deployment standardisation</td>
+<td>Standard environments on demand, such as virtual machines and containers</td>
+</tr>
+<tr class="odd">
+<td>Any other tool that assists in testing</td>
+<td>Whatever helps testing in context, even a spreadsheet</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>In practice.</em> A mid-sized agile product team’s daily toolkit maps onto this list. The team uses an issue tracker such as Jira, extended for test management, to keep bidirectional traceability between requirements and test cases and to record defect reports. SonarQube running on every commit is a static analysis tool. Selenium or Playwright running the regression suite is a test execution tool, while JaCoCo, which measures how much of the Java code and its branches the tests exercised, is a coverage tool. JMeter loading the system before go-live is a non-functional testing tool, and Jenkins automating the flow end to end is a DevOps tool.</p>
+<p><em>Exam focus.</em> The K2 question on this objective asks you to connect tool types with the test activities they support, and it usually takes one of three forms. It may describe a tool, or a feature of one, and ask which activity or category it supports; for example, the answer to “Which type of tool manages requirements, tracks defects, and reports progress?” is a test management tool. It may give a list of descriptions and a list of categories and ask you to match them. It may also turn the question around, name one activity, and ask which categories support it. In that form, more than one category can be correct, because several tool types run tests as part of their job. Keep the catch-all in mind as well: the syllabus states that “a spreadsheet is a test tool in the context of testing”, so an option claiming that only dedicated or licensed software counts is wrong.</p>
+<p>The thing to watch out for is a distractor that moves a tool into a neighbouring category. A static analysis tool, for example, may be offered as a non-functional testing tool, or a coverage tool as a test management tool, because both pairs sound related. Do not match the tool by how technical it sounds. Ask which test activity it supports and what it works on, and then pick the category in Table 6.1 that names that activity.</p>
+<p><strong>Check your understanding</strong></p>
+<p><em>CYU 6.1.1-a.</em> Before each nightly test run, a team starts several identical, isolated copies of the test environment from the same container image and removes them when the run ends. Which type of test tool supports this?</p>
+<div class="mc">
+<ul>
+<li>(a) Test management tools</li>
+<li>(b) Collaboration tools</li>
+<li>(c) Tools supporting scalability and deployment standardisation</li>
+<li>(d) Static testing tools</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (c). Virtual machines and containerisation tools are the syllabus’s examples of tools supporting scalability and deployment standardisation; they create standard test environments on demand. Test management tools manage tests, defects, and traceability, collaboration tools support communication, and static testing tools support reviews and static analysis, so none of them provides the environments.</p>
+</div>
+<p><em>CYU 6.1.1-b.</em> According to the ISTQB® syllabus, which of the following statements about tool use is correct?</p>
+<div class="mc">
+<ul>
+<li>(a) Even an ordinary spreadsheet counts as a test tool when it is used in testing, for example to track test cases or test data</li>
+<li>(b) Only licensed commercial automation software can be classed as a test tool</li>
+<li>(c) Code compilers and debugging tools form the main backbone of test management tools</li>
+<li>(d) Static analysis tools, which scan code without running it, are non-functional testing tools</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (a). The syllabus closes its list of tool types with any other tool that assists in testing and states that a spreadsheet is a test tool in the context of testing. Option (b) contradicts this, because the use a tool is put to matters, not its licence. Option (c) confuses development tools with test management tools, and option (d) places a static testing tool in the wrong category.</p>
+</div>
+<p><em>CYU 6.1.1-c.</em> A tool checks the team’s source code against its coding standards and reports every violation, without running the code. Which type of test tool is this?</p>
+<div class="mc">
+<ul>
+<li>(a) Test execution and test coverage tools</li>
+<li>(b) Non-functional testing tools</li>
+<li>(c) DevOps tools</li>
+<li>(d) Static testing tools</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (d). Checking code against coding standards without executing it is static analysis, which static testing tools support. Test execution and test coverage tools run tests and measure coverage, non-functional testing tools perform tests such as load tests that are hard to do manually, and DevOps tools run the delivery pipeline in which such a check may be started.</p>
+</div>
+</section>
+</section>
+<section id="benefits-and-risks-of-test-automation" class="level2">
+<h2>6.2 Benefits and Risks of Test Automation</h2>
+<section id="fl-6-2-1" class="level3">
+<h3>The benefits and risks of test automation (FL-6.2.1 — K1)</h3>
+<p>Test automation, the only keyword of this chapter, is wider than its name suggests. The ISTQB® glossary defines it as the use of software to perform or support test activities, such as test management, test design, test execution, and results checking. In other words, test automation covers more than running automated tests; using a tool to manage or design tests counts as well.</p>
+<p>The syllabus opens this topic with an important warning: simply acquiring a tool does not guarantee success. Each new tool needs effort before it gives real and lasting benefits. Put differently, the tool has to be introduced, the team trained, and the test scripts maintained.</p>
+<p>The syllabus lists six potential benefits of test automation:</p>
+<ul>
+<li>Time is saved by reducing repetitive manual work, such as executing regression tests, re-entering the same test data, comparing expected results with actual results, and checking code against coding standards.</li>
+<li>Simple human errors are prevented through greater consistency and repeatability. For example, tests are derived from requirements in a consistent way, test data is created systematically, and a tool executes the tests in the same order with the same frequency.</li>
+<li>Assessment becomes more objective, for example of coverage, and the tool can provide measures that are too complicated for people to determine.</li>
+<li>Information about testing becomes easier to access, which supports test management and test reporting with statistics, graphs, and aggregated data on test progress, failure rates, and test execution duration.</li>
+<li>Test execution times are reduced, which gives earlier defect detection, faster feedback, and a faster time to market.</li>
+<li>Testers gain more time to design new, deeper, and more effective tests.</li>
+</ul>
+<p>The syllabus also lists eight potential risks, which need analysis and mitigation:</p>
+<ul>
+<li>Expectations about the benefits of the tool, including its functionality and ease of use, may be unrealistic.</li>
+<li>The time, cost, and effort needed to introduce the tool, maintain the test scripts, and change the existing manual test process may be estimated inaccurately.</li>
+<li>A test tool may be used where manual testing is more appropriate.</li>
+<li>The team may rely on the tool too much, for example by ignoring the need for human critical thinking.</li>
+<li>The team depends on the tool vendor, which may go out of business, retire the tool, sell it to a different vendor, or provide poor support for queries, upgrades, and defect fixes.</li>
+<li>Open-source software may be abandoned, so that no further updates are available, or its internal components may need quite frequent updates as it develops further.</li>
+<li>The automation tool may not be compatible with the development platform.</li>
+<li>The chosen tool may be unsuitable because it does not comply with the applicable regulatory requirements or safety standards.</li>
+</ul>
+<p><em>In practice.</em> A test team starts a big automation project to eliminate a 400-test-case, two-day manual regression load each release. At first everything goes well; tests run automatically and green reports appear. However, by the sixth month, a broad redesign of the software’s user interface breaks 180 automated test cases. Because the team ignored the regular maintenance effort of the automation code in its planning, the testers now have to spend their time repairing scripts instead of testing new features. As a result, the automation slows the team down instead of speeding it up. This is the syllabus risk of inaccurate estimates of the effort needed to maintain test scripts.</p>
+<p><em>Exam focus.</em> Questions on this objective are K1 recall: you pick the option that is a benefit, or the one that is a risk. The distractors usually take one of three forms. The first exaggerates a benefit into a guarantee or denies a real risk, such as “removes the need for manual testing” or “once written, automated scripts need no further maintenance”. The second keeps the words of a listed item but reverses its direction or widens its scope, for example “less time for testers to design new tests” or “prevents all errors in the test object”. The third offers a real benefit when the question asks for a risk, or a real risk when it asks for a benefit.</p>
+<p>Do not ask whether an option sounds positive. Ask whether the syllabus lists it as a benefit, as a risk, or not at all, and then check that its wording matches the listed item. Table 6.2 sets each real benefit and the most common risks next to the distractor version you are likely to meet.</p>
+<p><strong>Table 6.2 — Real benefits and risks of test automation versus their distractor versions</strong></p>
+<div class="table-wrap">
+<table>
+<colgroup>
+<col style="width: 37%" />
+<col style="width: 30%" />
+<col style="width: 32%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>What the syllabus says</th>
+<th>Distractor version in the exam</th>
+<th>Why the distractor fails</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Benefit: time saved by reducing repetitive manual work</td>
+<td>“Automation removes the need for manual testing.”</td>
+<td>Using a tool where manual testing is more appropriate is a listed risk.</td>
+</tr>
+<tr class="even">
+<td>Benefit: fewer simple human errors through consistency and repeatability</td>
+<td>“Automation removes the need for human critical thinking.”</td>
+<td>Ignoring human critical thinking is the over-reliance risk.</td>
+</tr>
+<tr class="odd">
+<td>Benefit: more objective assessment, such as coverage</td>
+<td>“Automation guarantees that the software is defect-free.”</td>
+<td>Testing shows the presence of defects, not their absence (Chapter 1).</td>
+</tr>
+<tr class="even">
+<td>Benefit: easier access to test information for management and reporting</td>
+<td>“The tool’s dashboard decides when to release.”</td>
+<td>The information supports people’s decisions; it does not replace them.</td>
+</tr>
+<tr class="odd">
+<td>Benefit: shorter execution times, earlier defect detection, faster feedback</td>
+<td>“Automated tests always find more defects than human testers.”</td>
+<td>The benefit is speed, not a guaranteed higher defect count.</td>
+</tr>
+<tr class="even">
+<td>Benefit: more time for testers to design new, deeper tests</td>
+<td>“Testers are no longer needed once the tests are automated.”</td>
+<td>The time is freed for testers, not taken away from them.</td>
+</tr>
+<tr class="odd">
+<td>Risk: inaccurate estimates of the time, cost, and effort to introduce a tool, maintain test scripts, and change the existing manual test process</td>
+<td>“Once written, automated scripts need no further maintenance.”</td>
+<td>Script maintenance is an ongoing cost that teams often underestimate.</td>
+</tr>
+<tr class="even">
+<td>Opening warning: simply acquiring a tool does not guarantee success</td>
+<td>“A well-known commercial tool removes the automation risks.”</td>
+<td>Vendor dependency is itself a listed risk.</td>
+</tr>
+<tr class="odd">
+<td>Risk: an open-source tool may be abandoned or need frequent updates</td>
+<td>“An open-source tool carries no dependency risk because there is no vendor.”</td>
+<td>The dependency moves to the open-source project and its developers.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Check your understanding</strong></p>
+<p><em>CYU 6.2.1-a.</em> Which of the following is a potential benefit of test automation?</p>
+<div class="mc">
+<ul>
+<li>(a) Test scripts that keep working without maintenance when the user interface changes</li>
+<li>(b) Less dependence on the tool vendor for upgrades and defect fixes</li>
+<li>(c) Release decisions taken by the tool, based on its dashboard, instead of by people</li>
+<li>(d) Easier access to information about testing, such as statistics on test progress and failure rates</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (d). The syllabus lists easier access to information about testing, such as statistics, graphs, and aggregated data on test progress, failure rates, and execution duration, as a benefit. Option (a) denies the script-maintenance effort that the syllabus names as a risk, and option (b) reverses the listed risk of dependency on the tool vendor. Option (c) turns information that supports people’s decisions into the decision itself, which is the over-reliance risk.</p>
+</div>
+<p><em>CYU 6.2.1-b.</em> Which of the following is a risk of test automation according to the syllabus?</p>
+<div class="mc">
+<ul>
+<li>(a) Over-reliance on the tool and its automatic green reports, ignoring the human need for intuitive and critical thinking</li>
+<li>(b) Evaluating coverage ratios far more objectively than by eye</li>
+<li>(c) Saving the team serious time on monotonous, repetitive manual data-entry steps</li>
+<li>(d) Freeing testers from routine load so they can design more creative test cases</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (a). Relying on a tool too much, for example by ignoring the need for human critical thinking, is a risk the syllabus lists. The tool only executes the steps written for it and cannot judge the results as a person does. Options (b), (c), and (d) are benefits.</p>
+</div>
+<p><em>CYU 6.2.1-c.</em> “Buying and installing a globally recognised, powerful, expensive commercial test-automation tool removes all the automation risks and process bottlenecks in a project entirely.” What is true of this claim?</p>
+<div class="mc">
+<ul>
+<li>(a) It is certainly true, because commercial enterprise software isolates projects from every risk by nature</li>
+<li>(b) It is false; simply acquiring a tool does not guarantee success, and each new tool needs effort for introduction, maintenance, and training</li>
+<li>(c) It is true; risks arise only when free open-source libraries are used</li>
+<li>(d) It is false, because no commercially sold test tool has any ability to find defects in dynamic code</li>
+</ul>
+</div>
+<div class="answer">
+<p>Answer: (b). The syllabus opens Section 6.2 with this warning: simply acquiring a tool does not guarantee success, and each new tool needs effort for introduction, maintenance, and training before it gives real and lasting benefits.</p>
+</div>
+</section>
+</section>
+<section id="chapter-6-summary" class="level2">
+<h2>Chapter 6 summary</h2>
+<div class="table-wrap">
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 83%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Learning objective</th>
+<th>One-sentence summary</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>6.1.1 (K2)</td>
+<td>The syllabus names eight tool types and a catch-all: test management tools coordinate the testing, test execution and test coverage tools run tests and measure coverage, and even a spreadsheet used in testing is a test tool.</td>
+</tr>
+<tr class="even">
+<td>6.2.1 (K1)</td>
+<td>Potential benefits include time saved, fewer simple human errors, more objective assessment, easier access to test information, faster feedback, and more time for testers to design better tests. Potential risks include unrealistic expectations, inaccurate effort estimates, over-reliance on the tool, dependency on the tool vendor, and open-source software that may be abandoned.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="critical-concept-pairs-often-confused-5" class="level3">
+<h3>Critical concept pairs often confused</h3>
+<div class="table-wrap">
+<table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 35%" />
+<col style="width: 14%" />
+<col style="width: 35%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>This concept</th>
+<th>is</th>
+<th>not this concept</th>
+<th>which is</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Test execution tool</td>
+<td>runs the automated tests and records their results</td>
+<td>Test management tool</td>
+<td>stores requirements, tests, and defect reports and keeps the traceability between them</td>
+</tr>
+<tr class="even">
+<td>Benefit: preventing simple human errors</td>
+<td>the same steps run the same way every time, so slips such as typos or skipped steps do not occur</td>
+<td>Risk: over-reliance on the tool</td>
+<td>trusting the tool’s results without human critical thinking, so problems the scripts do not check go unnoticed</td>
+</tr>
+<tr class="odd">
+<td>Acquisition</td>
+<td>buying or downloading a test tool</td>
+<td>Success</td>
+<td>real and lasting benefit, which needs effort for tool introduction, training, and maintenance</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="exam-tips-and-common-traps-chapter-6" class="level3">
+<h3>Exam tips and common traps — Chapter 6</h3>
+<p>For tool-classification questions, focus on the tool’s purpose in the project and what it operates on. If it stores work products and links defect reports, choose management; if it supports reviews or analyses a work product without executing it, choose static; if it runs test steps and measures coverage, choose execution and coverage. For automation benefit/risk questions, be very sceptical of sharp, exaggerated words in the options (such as “removes entirely,” “guarantees 100 percent quality,” “leaves no need for a human”); such options are almost always wrong. Also look for an option that reverses one word of a listed item, and for a benefit offered as a risk or a risk offered as a benefit.</p>
+<p>For time management, this chapter’s questions are pure knowledge and comprehension, so they can be solved very quickly, in 30 to 45 seconds; the time you save here can be handed confidently to the K3 questions from Chapters 4 and 5.</p>
+</section>
+</section>
+<section id="cumulative-retrieval-4" class="level2">
+<h2>Cumulative retrieval</h2>
+<p>Revisiting earlier chapters through this chapter’s lens: name whether a load-testing tool supports functional or non-functional testing (Chapter 2); decide whether “over-reliance on automation’s green reports” echoes the first principle (testing shows presence, not absence, of defects) from Chapter 1; and decide whether running a security-scanning tool on every build is risk mitigation, risk acceptance, risk transfer, or a contingency plan (Chapter 5). As the final chapter, this set can be the broadest cross-cutting review.</p>
+</section>
+<section id="chapter-exercises-5" class="level2">
+<h2>Chapter exercises</h2>
+<p>Answers, rationale, and learning-objective references are in the “Answers &amp; Rationale” section at the end of the book.</p>
+<p><em>PB-C6-001.</em> A test team wants to store customers’ business requirements centrally, link the prepared test cases back to those requirement items, track defects found in system testing instantly, and report the release’s test-run progress to senior management with metric dashboards. Which tool type best supports this whole set of activities?</p>
+<div class="mc">
+<ul>
+<li>(a) Test execution and test coverage tools</li>
+<li>(b) Test management tools</li>
+<li>(c) Static testing tools</li>
+<li>(d) DevOps tools</li>
+</ul>
+</div>
+<p><em>PB-C6-002.</em> Which of the following is a possible, legitimate benefit of bringing tool support and automation into an organisation’s test process?</p>
+<div class="mc">
+<ul>
+<li>(a) Automation scripts, once written, removing the future need for all test-code maintenance and updates entirely</li>
+<li>(b) Human experts’ analytical and critical thinking no longer being needed at all during test runs and analysis</li>
+<li>(c) Reduced test execution times for repetitive regression tests, which gives the team earlier defect detection and faster feedback</li>
+<li>(d) The chosen enterprise test tool alone legally guaranteeing full compliance with sector regulations and strict standards</li>
+</ul>
+</div>
+<p><em>PB-C6-003.</em> A development team has built the whole project’s critical regression-testing strategy on a free open-source automation library maintained by a single volunteer developer. Which test-automation risk does this most directly expose?</p>
+<div class="mc">
+<ul>
+<li>(a) The open-source library being abandoned, so that no further updates are available</li>
+<li>(b) Stubbornly using an automation tool in an area far better suited to manual testing</li>
+<li>(c) Unrealistic expectations arising at management level about the tool’s technical power</li>
+<li>(d) Coverage ratios being evaluated far more objectively than by eye</li>
+</ul>
+</div>
+<p><em>PB-C6-004.</em> A test team uses a tool that simulates 5,000 concurrent virtual users hitting the new ticketing platform at once and measures the server response times under that load. Which type of test tool is this?</p>
+<div class="mc">
+<ul>
+<li>(a) Test management tools</li>
+<li>(b) Test execution and test coverage tools</li>
+<li>(c) DevOps tools</li>
+<li>(d) Non-functional testing tools</li>
+</ul>
+</div>
+</section>
+</section>
+
+<div class="pager"><a href="chapter-5.html"><span class="lbl">Previous</span>Chapter 5 — Managing the Test Activities</a><a href="rationale.html" style="text-align:right"><span class="lbl">Next</span>Answers &amp; Rationale</a></div>
+<footer class="site">© 2026 Kadir Çamoğlu · Own content licensed CC BY-NC 4.0 · ISTQB® is a registered trademark of the International Software Testing Qualifications Board; this guide is not affiliated with or endorsed by ISTQB®.</footer>
+</main>
+</div>
+<script>if (window.matchMedia('(min-width: 901px)').matches) document.getElementById('navd').open = true;</script>
+</body>
+</html>

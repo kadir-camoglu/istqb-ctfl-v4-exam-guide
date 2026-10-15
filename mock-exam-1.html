@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mock Exam 1 — 40 Questions with Rationale · ISTQB® CTFL v4.0 Exam Guide</title>
+<meta name="description" content="Free, independent study guide for the ISTQB® Certified Tester Foundation Level v4.0 exam: all 64 learning objectives, worked examples, quick checks, and a full mock exam.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><div class="inner"><a href="index.html">ISTQB® CTFL v4.0 Exam Guide</a><span class="meta"><span class="ind">Independent · Unofficial study guide · </span><a href="all.html">Full text on one page</a></span></div></header>
+<div class="layout">
+<nav class="side"><details id="navd"><summary>Contents</summary><div class="navbody">
+<div class="group">Front matter</div><ul>
+<li><a href="index.html">ISTQB® CTFL v4.0 Exam Guide: From Fundamentals to Exam-Ready</a>
+</li>
+<li><a href="copyright.html">Copyright &amp; Trademark Notice</a>
+</li>
+<li><a href="introduction.html">Introduction — About This Book</a>
+</li>
+<li><a href="how-to-use.html">How to Use This Book</a>
+</li>
+<li><a href="the-exam.html">How the CTFL Exam Works</a>
+</li>
+<li><a href="objective-map.html">Objective Map</a>
+</li>
+<li><a href="study-roadmap.html">Study Roadmap</a>
+</li>
+</ul>
+<div class="group">Chapters</div><ul>
+<li><a href="chapter-1.html">Chapter 1 — Fundamentals of Testing</a>
+</li>
+<li><a href="chapter-2.html">Chapter 2 — Testing Throughout the Software Development Lifecycle</a>
+</li>
+<li><a href="chapter-3.html">Chapter 3 — Static Testing</a>
+</li>
+<li><a href="chapter-4.html">Chapter 4 — Test Analysis and Design</a>
+</li>
+<li><a href="chapter-5.html">Chapter 5 — Managing the Test Activities</a>
+</li>
+<li><a href="chapter-6.html">Chapter 6 — Test Tools</a>
+</li>
+</ul>
+<div class="group">Back matter</div><ul>
+<li><a href="rationale.html">Answers &amp; Rationale</a>
+</li>
+<li><a href="glossary.html">Glossary</a>
+</li>
+<li><a href="confused-pairs.html">Commonly Confused Pairs — Master List</a>
+</li>
+<li><a href="final-revision.html">Final Revision Plan</a>
+</li>
+</ul>
+<div class="group">Mock exam</div><ul>
+<li class="current"><a href="mock-exam-1.html">Mock Exam 1 — 40 Questions with Rationale</a>
+<ul class="sub"><li><a href="#part-1-questions">Part 1 — Questions</a></li><li><a href="#part-2-answer-key-and-score-interpretation">Part 2 — Answer Key and Score Interpretation</a></li><li><a href="#part-3-answers-explanations-and-references">Part 3 — Answers, Explanations, and References</a></li></ul>
+</li>
+</ul>
+<div class="group">Back matter</div><ul>
+<li><a href="further-resources.html">Further Resources</a>
+</li>
+</ul>
+</div></details></nav>
+<main>
+<section id="mock-exam-1-40-questions-with-rationale" class="level1">
+<h1>Mock Exam 1 — 40 Questions with Rationale</h1>
+<p>This mock exam follows the official structure of the real ISTQB® CTFL v4.0 exam exactly: the chapter distribution, the cognitive levels, and the time all match the values in the official documents. None of the questions here copy real exam content; all are original questions written for exam preparation.</p>
+<p><strong>Exam rules (reminder)</strong></p>
+<div class="table-wrap">
+<table>
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 72%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Number of questions</td>
+<td>40 multiple-choice: 38 with one correct answer, and 2 “Select TWO” questions (16 and 32) with two correct answers among five options</td>
+</tr>
+<tr class="even">
+<td>Total points</td>
+<td>40 (1 point per question)</td>
+</tr>
+<tr class="odd">
+<td>Pass mark</td>
+<td>26 points (65%)</td>
+</tr>
+<tr class="even">
+<td>Time</td>
+<td>60 minutes (some candidates get +25%; see <em>How the CTFL Exam Works</em>)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Cognitive distribution: K1 = 8, K2 = 24, K3 = 8. Chapter distribution: Chapter 1 → 8, Chapter 2 → 6, Chapter 3 → 4, Chapter 4 → 11, Chapter 5 → 9, Chapter 6 → 2.</p>
+<p><strong>How to use it.</strong> There are two ways. Timed mode: set a timer for 60 minutes (or 75 if your exam provider grants you the +25% extension), answer all 40 questions without looking anything up, and only then open the answer key in Part 2; this measures whether you are ready. Review mode: solve the questions chapter by chapter, untimed, and read the rationale in Part 3 after each; this strengthens your “why should I not have picked the distractor?” instinct. Whichever mode you choose, read the rationale even for the questions you answered correctly, because that is where the learning happens.</p>
+<section id="part-1-questions" class="level2">
+<h2>Part 1 — Questions</h2>
+<p><em>Do not look at the answer key in Part 2 until you have answered all 40 questions.</em></p>
+<section id="chapter-1-fundamentals-of-testing-3" class="level3">
+<h3>Chapter 1 — Fundamentals of Testing</h3>
+<p><strong>Question 1.</strong> A product owner must decide whether a delayed feature can still go into the next release. She asks the testers for a summary of the defects found so far and the risks that remain. Which typical test objective does this request serve?</p>
+<div class="mc">
+<ul>
+<li>(a) Verifying that the test object complies with contractual and legal requirements</li>
+<li>(b) Providing information to stakeholders to allow them to make informed decisions</li>
+<li>(c) Validating whether the test object is complete and works as the stakeholders expect</li>
+<li>(d) Ensuring the required coverage of the test object</li>
+</ul>
+</div>
+<p><strong>Question 2.</strong> A flight-booking company does not tell a new developer about its rule that all departure times are stored in Coordinated Universal Time (UTC). The developer assumes that the times are local and writes code that stores them without conversion. A week after release, a passenger’s boarding reminder arrives an hour after the flight has left. Which statement classifies what happened correctly?</p>
+<div class="mc">
+<ul>
+<li>(a) The missing briefing is the error, and the code that stores local times is the failure</li>
+<li>(b) The developer’s wrong assumption is the root cause, and the stored local times are the failure</li>
+<li>(c) The developer’s wrong assumption is the error, and the late boarding reminder is the failure</li>
+<li>(d) The code that stores local times is the root cause, and the missing briefing is the defect</li>
+</ul>
+</div>
+<p><strong>Question 3.</strong> In one release, a reviewer spots two contradictory rules in a user story before any code is written, and the product owner corrects the story in ten minutes. In the next release, a similar contradiction is missed. It is built into the design and the code, copied into the test cases, and found only in production, where fixing it takes changes to the story, the design, the code, and the tests, plus an emergency patch. Which testing principle does this comparison illustrate best?</p>
+<div class="mc">
+<ul>
+<li>(a) Defects cluster together</li>
+<li>(b) Testing shows the presence, not the absence, of defects</li>
+<li>(c) The absence-of-defects fallacy</li>
+<li>(d) Early testing saves time and money</li>
+</ul>
+</div>
+<p><strong>Question 4.</strong> A tester takes the prioritised test conditions for a loyalty-points feature and turns them into test cases, identifying the coverage items each case must exercise. She also works out which data the cases will need and what the test environment must provide. Which test activity is she carrying out?</p>
+<div class="mc">
+<ul>
+<li>(a) Test analysis</li>
+<li>(b) Test implementation</li>
+<li>(c) Test planning</li>
+<li>(d) Test design</li>
+</ul>
+</div>
+<p><strong>Question 5.</strong> While deriving test conditions from a user story, a tester finds that two of its acceptance criteria contradict each other. The product owner cannot correct the story straight away, so the tester records the problem in a defect report. Which test activity produces this defect report as one of its work products?</p>
+<div class="mc">
+<ul>
+<li>(a) Test execution</li>
+<li>(b) Test analysis</li>
+<li>(c) Test design</li>
+<li>(d) Test completion</li>
+</ul>
+</div>
+<p><strong>Question 6.</strong> An auditor asks the test manager to show that every requirement in the release is covered by at least one executed test. Which property of the testware makes this question efficient to answer?</p>
+<div class="mc">
+<ul>
+<li>(a) Traceability between the test basis and the test work products</li>
+<li>(b) The independence of the test team from the development team</li>
+<li>(c) A high level of test automation in the regression suite</li>
+<li>(d) Detailed entry criteria defined for each test level</li>
+</ul>
+</div>
+<p><strong>Question 7.</strong> A department head asks an agile coach what her teams will gain by adopting the whole team approach. Which answer should the coach give?</p>
+<div class="mc">
+<ul>
+<li>(a) Each specialist can concentrate on their own tasks without taking part in other team activities</li>
+<li>(b) A high level of test independence is achieved, which suits safety-critical products best</li>
+<li>(c) The various skill sets within the team can be leveraged for the benefit of the project</li>
+<li>(d) Responsibility for quality moves from the developers to a dedicated quality team</li>
+</ul>
+</div>
+<p><strong>Question 8.</strong> A fintech company contracts an external test lab to test its mobile app. After two releases, the project manager lists four observations. Which observation describes a typical drawback of this high level of test independence?</p>
+<div class="mc">
+<ul>
+<li>(a) The lab’s testers challenged several assumptions in the specification, which delayed the sign-off of two user stories</li>
+<li>(b) The lab’s testers found failures that the developers had missed, because they did not share the developers’ assumptions</li>
+<li>(c) The lab’s testers learned about requirement changes late, because they were outside the team’s daily communication</li>
+<li>(d) The developers continued to test their own components before handing builds to the lab</li>
+</ul>
+</div>
+</section>
+<section id="chapter-2-testing-throughout-the-sdlc-1" class="level3">
+<h3>Chapter 2 — Testing Throughout the SDLC</h3>
+<p><strong>Question 9.</strong> A project moves from a sequential development model to a two-week iterative one. What change should the team expect in testing?</p>
+<div class="mc">
+<ul>
+<li>(a) Test activities repeat in every iteration as new increments are delivered</li>
+<li>(b) Testing must wait until all iterations have produced a complete system</li>
+<li>(c) System testing becomes unnecessary because each increment is small</li>
+<li>(d) Test levels must be merged into one level to fit the iteration length</li>
+</ul>
+</div>
+<p><strong>Question 10.</strong> In a hybrid project, testers receive each user story only when it is marked “ready for test”, after the code is complete. As a result, defects in the stories themselves are found late. Which good testing practice, valid in every software development lifecycle, would address this most directly?</p>
+<div class="mc">
+<ul>
+<li>(a) Every test level is given objectives that do not overlap with those of the other levels</li>
+<li>(b) Test execution starts once the code is feature-complete</li>
+<li>(c) Testers are involved in reviewing work products as soon as drafts are available</li>
+<li>(d) Testers write the acceptance criteria on behalf of the business representatives</li>
+</ul>
+</div>
+<p><strong>Question 11.</strong> Which statement about test-first approaches to development is correct?</p>
+<div class="mc">
+<ul>
+<li>(a) In ATDD, the tests are derived from the code once each component is complete</li>
+<li>(b) In TDD, ATDD, and BDD, the tests may persist as automated tests that protect the code during later changes and refactoring</li>
+<li>(c) In BDD, the test cases are written in a programming language so that only developers can read them</li>
+<li>(d) In TDD, business representatives write the tests from the acceptance criteria of user stories</li>
+</ul>
+</div>
+<p><strong>Question 12.</strong> On a mobile-banking project, the team runs performance and security tests on each component as soon as it is built, instead of waiting until the complete system is available in a representative test environment. Which concept does this practice illustrate?</p>
+<div class="mc">
+<ul>
+<li>(a) Test-driven development</li>
+<li>(b) Confirmation testing</li>
+<li>(c) Risk-based testing</li>
+<li>(d) Shift left</li>
+</ul>
+</div>
+<p><strong>Question 13.</strong> Before a hospital’s new appointment system goes live, the IT operations staff test the backup and restore procedures, disaster recovery, and user-account management in a production-like environment. Their aim is to confirm that they can run the system in production, so that it can be declared ready for deployment. Which test level is this?</p>
+<div class="mc">
+<ul>
+<li>(a) Acceptance testing</li>
+<li>(b) System testing</li>
+<li>(c) System integration testing</li>
+<li>(d) Component integration testing</li>
+</ul>
+</div>
+<p><strong>Question 14.</strong> A hotel-booking app showed the wrong number of nights for stays that crossed the end of a month. After the developer’s fix, the tester first repeats the test that revealed the failure, a stay from 30 April to 2 May, and checks the number of nights. She then re-runs the automated suites for payment, loyalty points, and cancellation, which the fix did not touch. What are these two activities, in order?</p>
+<div class="mc">
+<ul>
+<li>(a) Maintenance testing, then system testing</li>
+<li>(b) Confirmation testing, then regression testing</li>
+<li>(c) Regression testing, then confirmation testing</li>
+<li>(d) Re-testing, then maintenance testing</li>
+</ul>
+</div>
+</section>
+<section id="chapter-3-static-testing-3" class="level3">
+<h3>Chapter 3 — Static Testing</h3>
+<p><strong>Question 15.</strong> A test manager wants to extend static testing beyond source code and requirement specifications. Which of the following could the team examine with static testing?</p>
+<div class="mc">
+<ul>
+<li>(a) The response times of the deployed checkout service under peak load</li>
+<li>(b) The memory consumption of the mobile app during a long user session</li>
+<li>(c) The behaviour of the payment screen when the network connection drops</li>
+<li>(d) The supplier contract and the test charters for the next release</li>
+</ul>
+</div>
+<p><strong>Question 16.</strong> Which TWO of the following statements correctly describe differences between static testing and dynamic testing? (Select TWO options.)</p>
+<div class="mc">
+<ul>
+<li>(a) Dynamic testing can be applied to non-executable work products, such as requirement specifications</li>
+<li>(b) Static testing can measure quality characteristics that do not depend on executing code, such as maintainability</li>
+<li>(c) Static testing is the better way to measure performance efficiency, such as response times under load</li>
+<li>(d) Dynamic testing finds gaps in test basis coverage, such as a missing test for an acceptance criterion, more easily than static testing</li>
+<li>(e) Static testing can more easily detect defects on code paths that are rarely executed or hard to reach with dynamic testing</li>
+</ul>
+</div>
+<p><strong>Question 17.</strong> In a review of a data-migration specification, the participants agree on eleven defects. Which review role is responsible for correcting these defects in the specification?</p>
+<div class="mc">
+<ul>
+<li>(a) The author</li>
+<li>(b) The review leader</li>
+<li>(c) The scribe</li>
+<li>(d) The moderator</li>
+</ul>
+</div>
+<p><strong>Question 18.</strong> For the design of its railway-signalling software, a team runs a review that follows the complete generic review process. The participants prepare individually, the author takes part but may not act as review leader or scribe, and metrics such as anomalies found per page and preparation time are collected to improve the organisation’s review process. The main aim is to find as many anomalies as possible. Which review type is this?</p>
+<div class="mc">
+<ul>
+<li>(a) Technical review</li>
+<li>(b) Inspection</li>
+<li>(c) Walkthrough</li>
+<li>(d) Informal review</li>
+</ul>
+</div>
+</section>
+<section id="chapter-4-test-analysis-and-design-3" class="level3">
+<h3>Chapter 4 — Test Analysis and Design</h3>
+<p><strong>Question 19.</strong> A tester derives test cases from a state diagram in the specification, with no knowledge of the code. Another tester designs extra tests by analysing branch-coverage gaps in the source code. How are these two approaches classified?</p>
+<div class="mc">
+<ul>
+<li>(a) Both are white-box test techniques</li>
+<li>(b) The first is experience-based and the second is black-box</li>
+<li>(c) The first is black-box and the second is white-box</li>
+<li>(d) The first is white-box and the second is experience-based</li>
+</ul>
+</div>
+<p><strong>Question 20.</strong> An online ticket desk accepts 1 to 100 tickets per order. 1 to 9 tickets are charged at the standard price, 10 to 49 tickets get a 10 percent discount, and 50 to 100 tickets get a 20 percent discount. Quantities below 1 are rejected with an “order too small” error, and quantities above 100 are rejected with an “order limit exceeded” error. Using equivalence partitioning on the ticket quantity, how many equivalence partitions (valid and invalid) must be identified?</p>
+<div class="mc">
+<ul>
+<li>(a) 3</li>
+<li>(b) 4</li>
+<li>(c) 6</li>
+<li>(d) 5</li>
+</ul>
+</div>
+<p><strong>Question 21.</strong> A registration form accepts passwords of 8 to 20 characters; lengths outside this range are rejected. Using 2-value boundary value analysis on the password length, how many distinct length values must be tested?</p>
+<div class="mc">
+<ul>
+<li>(a) 4</li>
+<li>(b) 2</li>
+<li>(c) 6</li>
+<li>(d) 8</li>
+</ul>
+</div>
+<p><strong>Question 22.</strong> A car-rental price rule depends on three conditions: the driver’s age group (under 25, 25 to 69, or 70 and over), whether the customer holds a loyalty card (yes or no), and whether the car is collected at an airport (yes or no). The team builds an extended-entry decision table and wants the full table before removing or merging any column. How many columns must the full decision table contain?</p>
+<div class="mc">
+<ul>
+<li>(a) 7</li>
+<li>(b) 12</li>
+<li>(c) 8</li>
+<li>(d) 6</li>
+</ul>
+</div>
+<p><strong>Question 23.</strong> A media player has only these state transitions, and no others:</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr class="header">
+<th>Source</th>
+<th>Event</th>
+<th>Target</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Idle</td>
+<td>start</td>
+<td>Playing</td>
+</tr>
+<tr class="even">
+<td>Playing</td>
+<td>pause</td>
+<td>Paused</td>
+</tr>
+<tr class="odd">
+<td>Paused</td>
+<td>resume</td>
+<td>Playing</td>
+</tr>
+<tr class="even">
+<td>Playing</td>
+<td>stop</td>
+<td>Stopped</td>
+</tr>
+<tr class="odd">
+<td>Paused</td>
+<td>stop</td>
+<td>Stopped</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The player starts in the Idle state. According to the state transition model, which of the following event sequences is a valid test case?</p>
+<div class="mc">
+<ul>
+<li>(a) start, resume, stop</li>
+<li>(b) start, pause, pause, stop</li>
+<li>(c) start, pause, resume, stop</li>
+<li>(d) start, stop, resume</li>
+</ul>
+</div>
+<p><strong>Question 24.</strong> What are the coverage items used to measure coverage in statement testing?</p>
+<div class="mc">
+<ul>
+<li>(a) The decision outcomes in the code</li>
+<li>(b) The conditions inside each decision</li>
+<li>(c) The paths through the code</li>
+<li>(d) The executable statements in the code</li>
+</ul>
+</div>
+<p><strong>Question 25.</strong> Which of the following is a strength of white-box testing compared with black-box testing?</p>
+<div class="mc">
+<ul>
+<li>(a) It can detect that a specified requirement is entirely missing from the implementation</li>
+<li>(b) It can cover parts of the implementation the specification does not mention</li>
+<li>(c) It validates that the system meets the users’ business needs</li>
+<li>(d) It removes the need to update test cases when the code changes</li>
+</ul>
+</div>
+<p><strong>Question 26.</strong> A tester on a payroll system remembers that, in earlier releases, the application mishandled employees who joined in the middle of a month and employees with zero hours recorded. For a new overtime feature, she designs tests with a mid-month starter and with an employee who has recorded zero hours. Which technique is she using?</p>
+<div class="mc">
+<ul>
+<li>(a) Exploratory testing</li>
+<li>(b) Error guessing</li>
+<li>(c) Checklist-based testing</li>
+<li>(d) Boundary value analysis</li>
+</ul>
+</div>
+<p><strong>Question 27.</strong> Which of the following is true about checklist-based testing?</p>
+<div class="mc">
+<ul>
+<li>(a) Checklists must contain detailed step-by-step instructions so any tester gets the same results</li>
+<li>(b) Checklist items should be removed from the list once the related tests have passed in a release</li>
+<li>(c) In the absence of detailed test cases, checklists can provide guidance and some consistency</li>
+<li>(d) Test checklists should be created by developers, since they know the application best</li>
+</ul>
+</div>
+<p><strong>Question 28.</strong> A user story about shipping fees has this acceptance criterion:</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr class="header">
+<th>Membership</th>
+<th>Order total</th>
+<th>Shipping fee</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Standard</td>
+<td>Below 50</td>
+<td>4.99</td>
+</tr>
+<tr class="even">
+<td>Standard</td>
+<td>50 or more</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td>Gold</td>
+<td>Any amount</td>
+<td>0.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Which form of writing acceptance criteria does this illustrate?</p>
+<div class="mc">
+<ul>
+<li>(a) Scenario-oriented, because each row describes a concrete example</li>
+<li>(b) Structure-oriented, because the table follows the structure of the code</li>
+<li>(c) Rule-oriented, because a table mapping inputs to outputs is a rule-oriented form</li>
+<li>(d) None, because acceptance criteria must use the Given/When/Then format</li>
+</ul>
+</div>
+<p><strong>Question 29.</strong> A user story reads: “As a customer, I want free shipping on eligible orders.” The acceptance criterion reads: “Orders over 500 placed by members get free shipping.” Following ATDD, which test case is derived correctly from this acceptance criterion?</p>
+<div class="mc">
+<ul>
+<li>(a) Input: order total 520, customer is a member — Expected result: the shipping fee is zero</li>
+<li>(b) Input: order total 520, customer is a member — Expected result: the order is saved to the database</li>
+<li>(c) Input: order total 480, customer is not a member — Expected result: free shipping is given</li>
+<li>(d) Input: customer is a member — Expected result: free shipping is given on all orders</li>
+</ul>
+</div>
+</section>
+<section id="chapter-5-managing-the-test-activities-3" class="level3">
+<h3>Chapter 5 — Managing the Test Activities</h3>
+<p><strong>Question 30.</strong> While planning system testing for a payroll release, a test manager writes two lists. List 1: “Test data for 500 employees is available, and the system test cases have been reviewed.” List 2: “Branch coverage of the tax module reaches 85 percent, and no critical defect remains open.” What are the two lists?</p>
+<div class="mc">
+<ul>
+<li>(a) List 1 is exit criteria, and list 2 is entry criteria</li>
+<li>(b) List 1 is entry criteria, and list 2 is exit criteria</li>
+<li>(c) Both lists are entry criteria, because both are written before testing starts</li>
+<li>(d) Both lists are acceptance criteria, because both describe conditions the release must meet</li>
+</ul>
+</div>
+<p><strong>Question 31.</strong> Two teams draw their test pyramids differently. One names the layers “unit tests”, “service tests”, and “UI tests”; the other names them “component tests”, “integration tests”, and “end-to-end tests”. Which statement about the test pyramid is correct?</p>
+<div class="mc">
+<ul>
+<li>(a) Only one of the teams can be right, because the model prescribes three layers with fixed names</li>
+<li>(b) The higher the layer, the higher the test isolation</li>
+<li>(c) The model shows which test technique to use in each layer</li>
+<li>(d) The number and naming of the layers can differ, so both drawings can be valid</li>
+</ul>
+</div>
+<p><strong>Question 32.</strong> A team maps the tests in its test strategy onto the testing quadrants. Which TWO of the following placements are correct? (Select TWO options.)</p>
+<div class="mc">
+<ul>
+<li>(a) Security tests of the login service, in Q4 (technology-facing, critique the product)</li>
+<li>(b) Usability tests with real users, in Q4 (technology-facing, critique the product)</li>
+<li>(c) Component integration tests in the CI pipeline, in Q3 (business-facing, critique the product)</li>
+<li>(d) User story tests agreed with the product owner, in Q2 (business-facing, support the team)</li>
+<li>(e) Exploratory testing sessions, in Q2 (business-facing, support the team)</li>
+</ul>
+</div>
+<p><strong>Question 33.</strong> A risk analysis rates a new payment-provider integration as a high product risk for the first peak sales weekend. In addition to its testing, the team prepares and rehearses a procedure for switching all payments back to the previous provider within 15 minutes if the integration fails in production. What does this procedure represent?</p>
+<div class="mc">
+<ul>
+<li>(a) Risk acceptance</li>
+<li>(b) Risk transfer</li>
+<li>(c) Risk mitigation by testing</li>
+<li>(d) A contingency plan</li>
+</ul>
+</div>
+<p><strong>Question 34.</strong> On a previous similar project the ratio of development effort to test effort was 4:3. The new project’s development effort is estimated at 720 person-days. Using the ratio-based estimation technique, what is the estimated test effort for the new project?</p>
+<div class="mc">
+<ul>
+<li>(a) 320 person-days</li>
+<li>(b) 540 person-days</li>
+<li>(c) 960 person-days</li>
+<li>(d) 360 person-days</li>
+</ul>
+</div>
+<p><strong>Question 35.</strong> A component has ten executable statements, S1 to S10. The team uses additional coverage prioritisation to order four test cases:</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr class="header">
+<th>Test case</th>
+<th>Statements exercised</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TC1</td>
+<td>S1, S2, S3, S4, S5, S6</td>
+</tr>
+<tr class="even">
+<td>TC2</td>
+<td>S1, S2, S3, S4, S5</td>
+</tr>
+<tr class="odd">
+<td>TC3</td>
+<td>S7, S8, S9</td>
+</tr>
+<tr class="even">
+<td>TC4</td>
+<td>S6, S10</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Which execution order is correct?</p>
+<div class="mc">
+<ul>
+<li>(a) TC1, TC2, TC3, TC4</li>
+<li>(b) TC1, TC3, TC2, TC4</li>
+<li>(c) TC4, TC3, TC2, TC1</li>
+<li>(d) TC1, TC3, TC4, TC2</li>
+</ul>
+</div>
+<p><strong>Question 36.</strong> Halfway through system testing, the weekly test progress report shows that 30 percent of the planned tests are blocked by an unstable test environment. What is the main purpose of reporting this in the test progress report?</p>
+<div class="mc">
+<ul>
+<li>(a) To give enough information for the test schedule, resources, or test plan to be adjusted</li>
+<li>(b) To record the lessons learned for future projects</li>
+<li>(c) To replace the defect reports for the environment problems</li>
+<li>(d) To document the final evaluation of product quality against the exit criteria</li>
+</ul>
+</div>
+<p><strong>Question 37.</strong> A test completion report states: “The regression suite passed against the release candidate.” It names neither the build of the release candidate nor the version of the regression suite, and an auditor rejects the report as evidence. Which practice would have made the report acceptable?</p>
+<div class="mc">
+<ul>
+<li>(a) Increasing the level of test automation in the regression suite</li>
+<li>(b) Defining stricter exit criteria for system testing</li>
+<li>(c) Configuration management, so that each test item and testware version is uniquely identified and referenced unambiguously in test documentation</li>
+<li>(d) Writing more detailed defect reports with full version information</li>
+</ul>
+</div>
+<p><strong>Question 38.</strong> A tester drafts this defect report:</p>
+<ul>
+<li>ID: DR-2107 — Title: “Discount not applied on member orders over 500”</li>
+<li>Date: 2026-06-08 — Author: J. Marsh</li>
+<li>Test object: checkout service v2.3 — Environment: staging, build 5511</li>
+<li>Steps: 1. log in as a member — 2. add items totalling 520 — 3. apply the coupon “SAVE10” — 4. open the checkout page</li>
+<li>Actual result: the checkout page shows the full price</li>
+<li>Severity: major — Priority: high</li>
+</ul>
+<p>Which essential element is missing from this defect report?</p>
+<div class="mc">
+<ul>
+<li>(a) The expected result</li>
+<li>(b) The severity of the defect</li>
+<li>(c) The identification of the environment that produced the result</li>
+<li>(d) The steps to reproduce the failure</li>
+</ul>
+</div>
+</section>
+<section id="chapter-6-test-tools-3" class="level3">
+<h3>Chapter 6 — Test Tools</h3>
+<p><strong>Question 39.</strong> A team adopts a tool that runs its automated test suites on every commit, gathers the results, and measures how thoroughly the code has been exercised. Which test-tool category does this tool belong to?</p>
+<div class="mc">
+<ul>
+<li>(a) Test management tools</li>
+<li>(b) Test execution and test coverage tools</li>
+<li>(c) Static testing tools</li>
+<li>(d) Test design and implementation tools</li>
+</ul>
+</div>
+<p><strong>Question 40.</strong> Six months after automating its regression suite through the user interface, a team finds that every screen change breaks dozens of scripts. Updating them now takes more effort than the team had planned for the whole automation project. Which risk of test automation has occurred?</p>
+<div class="mc">
+<ul>
+<li>(a) Dependency on a tool vendor that may go out of business or retire the tool</li>
+<li>(b) Using a test tool where manual testing would be more appropriate</li>
+<li>(c) Relying on the tool too much and ignoring the need for human critical thinking</li>
+<li>(d) Inaccurate estimation of the effort needed to maintain the test scripts</li>
+</ul>
+</div>
+<p><em>Solve all 40 questions under timed conditions before looking at the answer key that follows. Seeing the answers early destroys the measurement value of this mock exam.</em></p>
+</section>
+</section>
+<section id="part-2-answer-key-and-score-interpretation" class="level2">
+<h2>Part 2 — Answer Key and Score Interpretation</h2>
+<section id="answer-key" class="level3">
+<h3>Answer key</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr class="header">
+<th>Q</th>
+<th>A</th>
+<th>Q</th>
+<th>A</th>
+<th>Q</th>
+<th>A</th>
+<th>Q</th>
+<th>A</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>b</td>
+<td>11</td>
+<td>b</td>
+<td>21</td>
+<td>a</td>
+<td>31</td>
+<td>d</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>c</td>
+<td>12</td>
+<td>d</td>
+<td>22</td>
+<td>b</td>
+<td>32</td>
+<td>a, d</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>d</td>
+<td>13</td>
+<td>a</td>
+<td>23</td>
+<td>c</td>
+<td>33</td>
+<td>d</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>d</td>
+<td>14</td>
+<td>b</td>
+<td>24</td>
+<td>d</td>
+<td>34</td>
+<td>b</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>b</td>
+<td>15</td>
+<td>d</td>
+<td>25</td>
+<td>b</td>
+<td>35</td>
+<td>d</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>a</td>
+<td>16</td>
+<td>b, e</td>
+<td>26</td>
+<td>b</td>
+<td>36</td>
+<td>a</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>c</td>
+<td>17</td>
+<td>a</td>
+<td>27</td>
+<td>c</td>
+<td>37</td>
+<td>c</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>c</td>
+<td>18</td>
+<td>b</td>
+<td>28</td>
+<td>c</td>
+<td>38</td>
+<td>a</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>a</td>
+<td>19</td>
+<td>c</td>
+<td>29</td>
+<td>a</td>
+<td>39</td>
+<td>b</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>c</td>
+<td>20</td>
+<td>d</td>
+<td>30</td>
+<td>b</td>
+<td>40</td>
+<td>d</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Questions 16 and 32 are “Select TWO” questions, so the key gives two letters for each. Under the official exam rules every question is worth exactly one point, and a Select TWO question is no exception. Score it strictly: you earn the point only if you marked both correct options and no other option, so one correct option out of two earns nothing.</p>
+</section>
+<section id="what-your-score-means" class="level3">
+<h3>What your score means</h3>
+<div class="table-wrap">
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 87%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Score</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>35–40</td>
+<td>A strong readiness signal for this mock. Still, confirm with at least one more timed mock before you book the exam.</td>
+</tr>
+<tr class="even">
+<td>30–34</td>
+<td>You are above the pass line on this mock. Review every question you missed and close those specific gaps before the exam.</td>
+</tr>
+<tr class="odd">
+<td>26–29</td>
+<td>You are at the pass level but with no safety margin. Study Part 3 carefully and take one more timed mock before you decide.</td>
+</tr>
+<tr class="even">
+<td>Below 26</td>
+<td>You are not ready yet, which is itself valuable information. Use the chapter scorecard below to find where the points were lost and study those chapters first.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>On the real exam the pass mark is 26 out of 40 (65%). The one caveat with these bands: they all assume a first, honest, timed attempt. A score from a review-mode pass, or from a second look at the same questions, measures familiarity, not readiness.</p>
+</section>
+<section id="chapter-scorecard" class="level3">
+<h3>Chapter scorecard</h3>
+<p>Count your correct answers per chapter and compare with the totals.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr class="header">
+<th>Chapter</th>
+<th>Questions</th>
+<th>Available points</th>
+<th>Your score</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1 — Fundamentals of Testing</td>
+<td>1–8</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2 — Testing Throughout the SDLC</td>
+<td>9–14</td>
+<td>6</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>3 — Static Testing</td>
+<td>15–18</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>4 — Test Analysis and Design</td>
+<td>19–29</td>
+<td>11</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>5 — Managing the Test Activities</td>
+<td>30–38</td>
+<td>9</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>6 — Test Tools</td>
+<td>39–40</td>
+<td>2</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Whatever your total, a chapter where you scored half or less of the available points is a study priority.</p>
+</section>
+</section>
+<section id="part-3-answers-explanations-and-references" class="level2">
+<h2>Part 3 — Answers, Explanations, and References</h2>
+<p>Each question is explained option by option. The explanation names the strongest distractor, states the key takeaway, and gives the syllabus source.</p>
+<section id="chapter-1-fundamentals-of-testing-4" class="level3">
+<h3>Chapter 1 — Fundamentals of Testing</h3>
+<p><strong>Question 1 — Correct answer: (b).</strong> <em>Trap: source gap · LO 1.1.1 (K1).</em> The product owner is a stakeholder facing a decision, and she asks testing for the facts she needs to make it: the defects found and the risks that remain. Providing information to stakeholders so that they can make informed decisions is one of the typical test objectives the syllabus lists, and it is exactly what this request serves. <em>(a)</em> compliance with contractual and legal requirements is a legitimate objective too, but nothing in the scenario mentions a contract, a law, or a regulator. <em>(c) Validating that the test object works as the stakeholders expect</em> is the strongest distractor because the scenario also involves a stakeholder, but validation checks the product against the stakeholders’ expectations; the product owner is not asking whether the feature meets her expectations, she is asking for input to a decision. <em>(d)</em> ensuring the required coverage concerns how thoroughly the test object is exercised, not how a decision is informed. Key takeaway: when a stakeholder asks testing for facts to support a go or no-go choice, the objective is providing information for informed decisions. Source: Syllabus 1.1.1. Review in this book: <a href="chapter-1.html#fl-1-1-1">Typical test objectives (Section 1.1)</a>.</p>
+<p><strong>Question 2 — Correct answer: (c).</strong> <em>Trap: near-miss · LO 1.2.3 (K2).</em> Read the chain in order. The root cause is the gap that made the mistake likely: the company never told the new developer about its UTC rule. The error is the person’s wrong action, the developer’s assumption that the times are local. The defect is what that error left in a work product, the code that stores times without conversion. The failure is what users experience at run time, the reminder that arrives after departure. Option (c) names the error and the failure correctly. <em>(a)</em> calls the missing briefing an error, but it is an organisational gap behind the error rather than a person’s wrong action; it also calls code a failure, whereas a flaw in code is a defect. <em>(b) The developer’s wrong assumption is the root cause</em> is the strongest distractor because the assumption does sit near the start of the chain, but it is the human action itself, the error; the root cause is the deeper reason the error happened, the missing briefing on the UTC rule. Its second half also labels a defect as a failure. <em>(d)</em> reverses two labels: the code is the defect, and the missing briefing is the root cause, not a defect, because it is not a flaw in any work product. Key takeaway: ask where each item lives, a gap in the organisation is a root cause, a person’s wrong action is an error, a flaw in a work product is a defect, and wrong behaviour at run time is a failure. Source: Syllabus 1.2.3. Review in this book: <a href="chapter-1.html#fl-1-2-3">Errors, defects, failures, and root causes (Section 1.2)</a>.</p>
+<p><strong>Question 3 — Correct answer: (d).</strong> <em>Trap: near-miss · LO 1.3.1 (K2).</em> The principle “early testing saves time and money” says that a defect removed early does not cause further defects in the work products derived from it, which lowers the cost of quality. The two releases show both sides: the contradiction caught in review cost ten minutes, while the one that slipped through spread into the design, the code, and the tests, and needed an emergency patch. <em>(a) Defects cluster together</em> is the strongest distractor because both contradictions sit in the same kind of work product, user stories, which can look like a cluster, but that principle explains where defects concentrate, not why the cost of a fix grows the later the defect is found. <em>(b)</em> is about what testing can prove, and nothing in the scenario turns on proving the absence of defects. <em>(c)</em> the absence-of-defects fallacy concerns a verified system that still fails its users’ needs, which is not the issue here. Key takeaway: when a scenario contrasts a cheap early fix with an expensive late fix of the same kind of defect, the principle is early testing. Source: Syllabus 1.3. Review in this book: <a href="chapter-1.html#fl-1-3-1">The Seven Testing Principles (Section 1.3)</a>.</p>
+<p><strong>Question 4 — Correct answer: (d).</strong> <em>Trap: near-miss · LO 1.4.1 (K2).</em> Test design elaborates test conditions into test cases and other testware, often by identifying coverage items, and it also defines the test data requirements and designs the test environment. Each task in the scenario belongs there; test design answers the question “how to test?”. <em>(a)</em> test analysis comes one step earlier: it derives and prioritises the test conditions that this tester already has. <em>(b) Test implementation</em> is the strongest distractor because test data and the test environment both appear in the scenario, and implementation is where test data is created and the environment is built. However, the tester only works out which data is needed and what the environment must provide; creating the data and building the environment come later, in implementation. <em>(c)</em> test planning sets the objectives and the approach, not individual test cases. Key takeaway: defining and designing belong to test design, while creating and building belong to test implementation, so look at the verb before you choose. Source: Syllabus 1.4.1. Review in this book: <a href="chapter-1.html#fl-1-4-1">Test activities (Section 1.4)</a>.</p>
+<p><strong>Question 5 — Correct answer: (b).</strong> <em>Trap: near-miss · LO 1.4.3 (K2).</em> The syllabus lists two kinds of work product for test analysis: prioritised test conditions, and defect reports about defects in the test basis when those defects are not fixed directly. The tester is deriving test conditions, which is test analysis, and the contradiction sits in the test basis, the user story. <em>(a) Test execution</em> is the strongest distractor because defect reports are the best-known output of test execution, but those reports describe failures observed when tests run; no test has run here, and the defect was found by reading the story. <em>(c)</em> test design produces test cases, test charters, coverage items, and test data and environment requirements. <em>(d)</em> test completion produces the test completion report, lessons learned, and change requests for unresolved defects. Key takeaway: defect reports are not only an execution output; when the defect sits in the test basis and is found while deriving test conditions, the report is a test analysis work product. Source: Syllabus 1.4.3. Review in this book: <a href="chapter-1.html#fl-1-4-3">Testware (Section 1.4)</a>.</p>
+<p><strong>Question 6 — Correct answer: (a).</strong> <em>Trap: source gap · LO 1.4.4 (K2).</em> Maintaining traceability between the test basis and the test work products makes coverage assessable against requirements, so the team can show an auditor, with evidence, which requirement is covered by which executed test. <em>(b)</em> independence affects objectivity, not showing coverage. <em>(c) High test automation</em> is the strongest distractor because automation produces fast, well-documented results, but without traceability links no tool can say which requirement a given test covers; the capability the auditor needs is the linkage, not automation. <em>(d)</em> entry criteria govern when testing can start, not the tie between tests and requirements. Key takeaway: when a question asks how to show coverage in terms of requirements, the answer runs through traceability. Source: Syllabus 1.4.4. Review in this book: <a href="chapter-1.html#fl-1-4-4">The value of traceability (Section 1.4)</a>.</p>
+<p><strong>Question 7 — Correct answer: (c).</strong> <em>Trap: source gap · LO 1.5.2 (K1).</em> The syllabus says the whole team approach improves team dynamics, enhances communication and collaboration, and creates synergy by allowing the various skill sets within the team to be leveraged for the benefit of the project. Option (c) is the last of these advantages. <em>(a)</em> describes the opposite: in the whole team approach any team member with the necessary knowledge and skills can perform any task. <em>(b) A high level of test independence</em> is the strongest distractor because independence is a real benefit discussed right next to the whole team approach in the syllabus, but the syllabus notes that safety-critical contexts may need a high level of independence and that the whole team approach may not be appropriate there. <em>(d)</em> in the whole team approach everyone is responsible for quality; moving that responsibility to a separate quality team contradicts it. Key takeaway: the whole team approach is about shared responsibility and combined skills, and it trades some independence for closer collaboration. Source: Syllabus 1.5.2. Review in this book: <a href="chapter-1.html#fl-1-5-2">The whole team approach (Section 1.5)</a>.</p>
+<p><strong>Question 8 — Correct answer: (c).</strong> <em>Trap: near-miss · LO 1.5.3 (K2).</em> Independent testers may be isolated from the development team, which can lead to a lack of collaboration and to communication problems. Hearing about requirement changes late, because the testers sit outside the team’s daily communication, is exactly this isolation. <em>(a) Challenging assumptions that delayed a sign-off</em> is the strongest distractor because it reports a cost, a delay, but the cause is a benefit of independence: an independent tester can verify, challenge, or disprove the assumptions made during specification. Catching those problems before sign-off is the purpose of independence, not its drawback. <em>(b)</em> is the main benefit of independence, recognising different kinds of failures thanks to a different background and different biases. <em>(d)</em> is not a drawback at all; the syllabus recommends combining several levels of independence, with developers testing their own components and an independent team testing later. Key takeaway: separate the cost of a benefit from a real drawback; isolation, communication problems, developers losing their sense of responsibility for quality, and testers being seen as a bottleneck are the drawbacks the syllabus names. Source: Syllabus 1.5.3. Review in this book: <a href="chapter-1.html#fl-1-5-3">Independence of testing (Section 1.5)</a>.</p>
+</section>
+<section id="chapter-2-testing-throughout-the-sdlc-2" class="level3">
+<h3>Chapter 2 — Testing Throughout the SDLC</h3>
+<p><strong>Question 9 — Correct answer: (a).</strong> <em>Trap: near-miss · LO 2.1.1 (K2).</em> In iterative development, each increment is built and delivered in its own cycle, so test activities repeat in every iteration, and regression testing grows in importance because each new increment can affect what was built before. <em>(b)</em> is the sequential thinking the team is leaving behind. <em>(c)</em> small increments still integrate into a full system that must be tested at its own level. <em>(d) Merging test levels into one</em> is the strongest distractor because short iterations do compress the levels in time, but compressing is not merging; even when they overlap within one iteration, the levels keep their distinct objectives. Key takeaway: moving to iterations changes when and how often test activities happen; it does not remove or merge the test levels. Source: Syllabus 2.1.1. Review in this book: <a href="chapter-2.html#fl-2-1-1">How the lifecycle shapes the test process (Section 2.1)</a>.</p>
+<p><strong>Question 10 — Correct answer: (c).</strong> <em>Trap: source gap · LO 2.1.2 (K1).</em> One of the good testing practices that hold in every SDLC is that testers are involved in reviewing work products as soon as drafts are available, so that defects are detected earlier. Defects in the stories are found late here precisely because the testers see the stories only after coding. <em>(a) Objectives that do not overlap between test levels</em> is the strongest distractor because it is a genuine good practice from the same syllabus list, but it serves to avoid overlap between test levels; it does nothing about when testers first see the stories. <em>(b)</em> describes the current problem, not a remedy, because waiting for feature-complete code is what makes the defects late. <em>(d)</em> acceptance criteria are written together with the business representatives, not on their behalf, and this is not one of the listed practices. Key takeaway: know the four practices that apply in every lifecycle, and match the symptom in the scenario to the practice that addresses it. Source: Syllabus 2.1.2. Review in this book: <a href="chapter-2.html#fl-2-1-2">Good testing practices for every lifecycle (Section 2.1)</a>.</p>
+<p><strong>Question 11 — Correct answer: (b).</strong> <em>Trap: near-miss · LO 2.1.3 (K1).</em> The syllabus describes TDD, ATDD, and BDD as test-first approaches, and it adds that, for all three, the tests may persist as automated tests to ensure code quality during future adaptations and refactoring. <em>(a)</em> contradicts the idea of test-first: ATDD derives its tests from acceptance criteria before the part of the application is developed. <em>(c)</em> BDD expresses the desired behaviour in a simple form of natural language that stakeholders can understand, usually Given/When/Then. <em>(d) Business representatives writing TDD tests from acceptance criteria</em> is the strongest distractor because every element in it is real, but it is attached to the wrong approach: deriving tests from acceptance criteria is ATDD, while TDD directs the coding through tests that developers write first. Key takeaway: tie each approach to its source of tests, TDD to developer-written tests, ATDD to acceptance criteria, and BDD to natural-language behaviour, and remember that all three can leave an automated regression asset behind. Source: Syllabus 2.1.3. Review in this book: <a href="chapter-2.html#fl-2-1-3">Test-first approaches: TDD, ATDD, and BDD (Section 2.1)</a>.</p>
+<p><strong>Question 12 — Correct answer: (d).</strong> <em>Trap: near-miss · LO 2.1.5 (K2).</em> Non-functional tests are traditionally run late, when a complete system and a representative environment exist. Performing them from the component test level onwards, where possible, is one of the shift-left practices the syllabus lists, because it moves testing earlier in the lifecycle. <em>(a) Test-driven development</em> is the strongest distractor because it also works at the component level and also brings testing forward, but TDD means writing the tests before the code so that the tests direct the coding; here the components are already built, and the point is when non-functional testing starts. <em>(b)</em> confirmation testing checks that a specific fix works, and no fix is involved. <em>(c)</em> risk-based testing selects and prioritises tests by risk level; performance and security may well be high risks in banking, but the scenario is about timing, not about prioritising by risk. Key takeaway: whenever a test activity moves earlier than its traditional place in the lifecycle, without dropping the later testing, the concept is shift left. Source: Syllabus 2.1.5. Review in this book: <a href="chapter-2.html#fl-2-1-5">Shift left (Section 2.1)</a>.</p>
+<p><strong>Question 13 — Correct answer: (a).</strong> <em>Trap: near-miss · LO 2.2.1 (K2).</em> Acceptance testing focuses on validation and on demonstrating readiness for deployment. One of its main forms is operational acceptance testing, in which the people who will run the system check tasks such as backup and restore, disaster recovery, and user management. The scenario names both the people involved and the aim, readiness for deployment. <em>(b) System testing</em> is the strongest distractor because it also tests the whole system, including non-functional characteristics, in a representative environment, but its focus is the system’s behaviour and capabilities against its specifications; the deciding clues here are the operations staff and the go-live decision, which point to acceptance. <em>(c)</em> system integration testing focuses on the interfaces to other systems and external services, which the scenario does not mention. <em>(d)</em> component integration testing checks the interfaces between internal components and is usually done by developers. Key takeaway: when the level is decided by who tests and why, operations staff confirming that they can run the system in production means acceptance testing, in its operational form. Source: Syllabus 2.2.1. Review in this book: <a href="chapter-2.html#fl-2-2-1">The five test levels (Section 2.2)</a>.</p>
+<p><strong>Question 14 — Correct answer: (b).</strong> <em>Trap: near-miss · LO 2.2.3 (K2).</em> Repeating the test that revealed the failure, the stay from 30 April to 2 May, to check that the defect is really fixed is confirmation testing. Re-running the suites for payment, loyalty points, and cancellation, which the fix did not touch, to check that the change broke nothing else is regression testing. The scenario’s order matches. <em>(a)</em> maintenance testing names a context (changes to a system in operation), not the first activity, and the second activity is not a full system test. <em>(c) Regression testing, then confirmation testing</em> is the strongest distractor because it contains exactly the two right concepts, but in the wrong order; those who memorise the pair without linking each name to its purpose land here. <em>(d)</em> re-testing is a synonym for confirmation testing, so the first half looks acceptable, but the second activity is not maintenance testing. Key takeaway: match the pair by purpose, confirmation asks “is the defect really fixed?”, regression asks “did the fix break something else?”. Source: Syllabus 2.2.3. Review in this book: <a href="chapter-2.html#fl-2-2-3">Confirmation testing and regression testing (Section 2.2)</a>.</p>
+</section>
+<section id="chapter-3-static-testing-4" class="level3">
+<h3>Chapter 3 — Static Testing</h3>
+<p><strong>Question 15 — Correct answer: (d).</strong> <em>Trap: source gap · LO 3.1.1 (K1).</em> Almost any work product can be examined by static testing, and the syllabus names contracts and test charters among its examples, alongside test plans, test cases, product backlog items, project documentation, and models. A contract and a set of charters can be read and understood, so they can be reviewed. <em>(a)</em> response times exist only when the deployed service runs under load, so measuring them is dynamic, non-functional testing. <em>(b)</em> memory consumption during a session is also observed by running the app. <em>(c) The behaviour of the payment screen when the network drops</em> is the strongest distractor because a reviewer could study the design for that case, but the option asks about behaviour, and behaviour can only be observed by executing the software. Key takeaway: static testing examines work products that can be read; anything described as behaviour, timing, or resource use at run time belongs to dynamic testing. Source: Syllabus 3.1.1. Review in this book: <a href="chapter-3.html#fl-3-1-1">What static testing can examine (Section 3.1)</a>.</p>
+<p><strong>Question 16 — Correct answers: (b) and (e).</strong> <em>Trap: near-miss · LO 3.1.3 (K2).</em> Two of the differences the syllabus lists appear here. Static testing can measure quality characteristics that do not depend on executing code, with maintainability as the syllabus’s example, so (b) is correct. Static testing may also more easily detect defects on paths through the code that are rarely executed or hard to reach with dynamic testing, so (e) is correct. <em>(a)</em> reverses a difference: static testing can be applied to non-executable work products, while dynamic testing can be applied only to executable ones. <em>(c) Static testing as the better way to measure performance efficiency</em> is the strongest distractor because it sits right next to statement (b) in the syllabus, but it swaps the example: performance efficiency depends on executing code, so dynamic testing measures it. <em>(d)</em> is also reversed: gaps in test basis coverage are among the defects that are easier and cheaper to find through static testing, for example by reviewing which acceptance criteria have no tests. Key takeaway: in a Select TWO question, judge each option on its own against the syllabus pairs, static for non-executable work products and characteristics that do not need execution, dynamic for executable work products and characteristics that do. Source: Syllabus 3.1.3. Review in this book: <a href="chapter-3.html#fl-3-1-3">The structural difference between static and dynamic testing (Section 3.1)</a>.</p>
+<p><strong>Question 17 — Correct answer: (a).</strong> <em>Trap: near-miss · LO 3.2.3 (K1).</em> The syllabus defines the author as the person who creates the work product under review and fixes it. Correcting the agreed defects in the specification is therefore the author’s responsibility. <em>(b) The review leader</em> is the strongest distractor because the review leader takes overall responsibility for the review, so seeing it through can sound like their job, but that responsibility covers deciding who is involved and organising when and where the review takes place, not changing the work product. <em>(c)</em> the scribe collates the anomalies and records the decisions, and recording a defect is not fixing it. <em>(d)</em> the moderator ensures that the review meetings run effectively and that everyone can speak freely; the role does not include changing the work product. Key takeaway: link each role to its verb, the author creates and fixes, the review leader organises, the moderator facilitates, the scribe records, the reviewer reviews, and the manager decides what is reviewed and provides resources. Source: Syllabus 3.2.3. Review in this book: <a href="chapter-3.html#fl-3-2-3">The six roles in reviews (Section 3.2)</a>.</p>
+<p><strong>Question 18 — Correct answer: (b).</strong> <em>Trap: near-miss · LO 3.2.4 (K2).</em> An inspection is the most formal review type. It follows the complete generic review process, its main objective is to find the maximum number of anomalies, metrics are collected and used to improve the SDLC including the inspection process, and the author cannot act as the review leader or scribe. Every one of these features appears in the scenario. <em>(a) Technical review</em> is the strongest distractor because it also uses qualified reviewers who prepare individually, but its main objectives are to gain consensus and make decisions on a technical problem; the aim of finding the maximum number of anomalies, the metrics, and the restriction on the author mark the stricter type. <em>(c)</em> a walkthrough is led by the author, which this scenario rules out. <em>(d)</em> an informal review follows no defined process, the opposite of the complete process described here. Key takeaway: an aim of finding as many anomalies as possible, together with metrics and a restricted author role, identifies an inspection. Source: Syllabus 3.2.4. Review in this book: <a href="chapter-3.html#fl-3-2-4">The four review types by degree of formality (Section 3.2)</a>.</p>
+</section>
+<section id="chapter-4-test-analysis-and-design-4" class="level3">
+<h3>Chapter 4 — Test Analysis and Design</h3>
+<p><strong>Question 19 — Correct answer: (c).</strong> <em>Trap: near-miss · LO 4.1.1 (K2).</em> Classification depends on the source of the tests. The first tester derives tests from the specification, a state diagram, without looking at the code, which is black-box work. The second derives tests from the code’s structure, branch-coverage gaps, which is white-box work. <em>(a) Both white-box</em> is the strongest distractor because a state diagram can look like internal structure, being technical and precise, but the diagram belongs to the specification; what matters is where the tests come from, not how technical the model looks. <em>(b)</em> experience-based techniques rest on knowledge and intuition, which neither tester uses. <em>(d)</em> mislabels both testers at once. Key takeaway: classify by source, specification gives black-box, code structure gives white-box, the tester’s experience gives experience-based. Source: Syllabus 4.1.1. Review in this book: <a href="chapter-4.html#fl-4-1-1">Overview of Test Techniques (Section 4.1)</a>.</p>
+<p><strong>Question 20 — Correct answer: (d).</strong> <em>Trap: procedure · LO 4.2.1 (K3).</em> Behaviour changes across three valid ranges, 1 to 9 standard, 10 to 49 a small discount, 50 to 100 a larger discount, so each range is its own partition. Below 1 and above 100 are rejected and form two separate invalid partitions. The total is five. Step by step: list the valid partitions from the pricing behaviour, three; add the invalid partitions from the rejection rule, one below 1 and one above 100, two; sum, 3 + 2 = 5. <em>(a) 3</em> is the strongest distractor because the price tiers are the visible structure of the problem, but counting only the valid tiers forgets that invalid inputs also form partitions, the most common equivalence-partitioning error. <em>(b) 4</em> comes from merging the two invalid ranges into one; here the two rejections are handled differently (an “order too small” error below 1, an “order limit exceeded” error above 100), so they are distinct invalid partitions, not one. <em>(c) 6</em> comes from counting boundary values as partitions; boundaries belong to boundary value analysis, not partition counting. Key takeaway: count the valid behaviour classes first, then add one invalid partition for each rejected side. Source: Syllabus 4.2.1. Review in this book: <a href="chapter-4.html#fl-4-2-1">Equivalence partitioning (Section 4.2)</a>.</p>
+<p><strong>Question 21 — Correct answer: (a).</strong> <em>Trap: procedure · LO 4.2.2 (K3).</em> The 2-value variant takes each boundary with its nearest neighbour in the adjacent partition. The lower boundary gives 7 and 8, the upper gives 20 and 21, four distinct values. A practical note: the real exam states the BVA variant in the stem, as here; read that word before you start counting. <em>(b) 2</em> tests only the boundaries themselves and skips the neighbours that catch off-by-one errors. <em>(c) 6</em> is the strongest distractor because it is what you get by applying 3-value BVA only to the valid range’s boundary values 8 and 20 (7, 8, 9 and 19, 20, 21), but the question asks for 2-value BVA, and even the 3-value count would be different. <em>(d) 8</em> is the full 3-value count: the boundary values 7, 8, 20, and 21 each with both neighbours, giving 6, 7, 8, 9, 19, 20, 21, 22; the question clearly says 2-value. Key takeaway: underline the variant before counting; the same range gives four values in 2-value BVA and eight in 3-value BVA, because the boundary values of the invalid partitions count too. Source: Syllabus 4.2.2. Review in this book: <a href="chapter-4.html#fl-4-2-2">Boundary value analysis (Section 4.2)</a>.</p>
+<p><strong>Question 22 — Correct answer: (b).</strong> <em>Trap: procedure · LO 4.2.3 (K3).</em> A full decision table has one column for every combination of condition values. Here the conditions do not all have two values: the age group has three, while the loyalty card and the airport collection have two each. This is an extended-entry decision table, which the syllabus allows when conditions take multiple values. Step by step: list the number of values per condition, 3, 2, and 2; then multiply them, 3 × 2 × 2 = 12. <em>(a) 7</em> adds the values (3 + 2 + 2) instead of multiplying them, but combinations multiply. <em>(c) 8</em> is the strongest distractor because 2 to the power of 3 = 8 is the familiar rule for three conditions, but that rule holds only when every condition is Boolean; with one three-valued condition it undercounts. <em>(d) 6</em> multiplies the age groups by only one of the two-valued conditions and forgets the third condition. Key takeaway: the 2^n rule is a special case for Boolean conditions; for an extended-entry table, multiply the number of values of every condition. Source: Syllabus 4.2.3. Review in this book: <a href="chapter-4.html#fl-4-2-3">Decision table testing (Section 4.2)</a>.</p>
+<p><strong>Question 23 — Correct answer: (c).</strong> <em>Trap: procedure · LO 4.2.4 (K3).</em> Walk the sequence through the table, tracking the current state. Start in Idle: start moves the player to Playing, pause to Paused, resume back to Playing, stop to Stopped. Each step uses a transition the table defines, so the sequence is valid. <em>(a) start, resume, stop</em> fails: after start the player is in Playing, and the table defines no resume event from Playing; it breaks at the second step. <em>(b) start, pause, pause, stop</em> is the strongest distractor because every event name in it exists in the table, but the second pause is attempted from Paused, where pause is not defined; checking event names without tracking the current state is exactly the mistake it catches. <em>(d) start, stop, resume</em> fails: after stop the player is in Stopped, from which there is no transition, so the final resume is invalid. Key takeaway: in state transition questions do not match event names; track the current state step by step and check each transition from that state. Source: Syllabus 4.2.4. Review in this book: <a href="chapter-4.html#fl-4-2-4">State transition testing (Section 4.2)</a>.</p>
+<p><strong>Question 24 — Correct answer: (d).</strong> <em>Trap: near-miss · LO 4.3.1 (K2).</em> In statement testing the coverage items are the executable statements, and coverage is the number of statements exercised divided by the total executable statements, as a percentage. <em>(a) Decision outcomes</em> is the strongest distractor because decision outcomes are conditional branches, and branches are the coverage items of branch testing, the neighbouring technique; the two Foundation-level white-box techniques are easy to swap on purpose. <em>(b)</em> condition-level coverage exists but is beyond the Foundation syllabus and is not what statement testing measures. <em>(c)</em> path coverage is also outside Foundation-level white-box coverage. An exam tip: if an option names a coverage type the Foundation syllabus does not teach, condition or path coverage, it is rarely the answer. Key takeaway: match each white-box technique to its item, statements for statement testing, branches for branch testing, leaving conditions and paths outside Foundation-level coverage. Source: Syllabus 4.3.1. Review in this book: <a href="chapter-4.html#fl-4-3-1">Statement testing (Section 4.3)</a>.</p>
+<p><strong>Question 25 — Correct answer: (b).</strong> <em>Trap: near-miss · LO 4.3.3 (K2).</em> White-box testing exercises the implementation exactly as it exists, so it can reach and test behaviour the specification never mentions, a gap no specification-based technique can see because there is nothing in the specification to derive from. <em>(a) Detecting that a requirement is missing from the implementation</em> is the strongest distractor because it sounds like the same idea, but it is the mirror image and describes a weakness: if a requirement was never implemented, white-box tests have no code to run, so the gap stays invisible; detecting it needs specification-based testing. <em>(c)</em> validating that the system meets users’ business needs is validation, belonging to acceptance-focused, business-facing testing, not a structural technique. <em>(d)</em> the opposite is true; structural tests are typically more affected by code changes, not less. Key takeaway: white-box sees the code the specification forgot; black-box sees the requirements the code forgot, each covering the other’s blind spot. Source: Syllabus 4.3.3. Review in this book: <a href="chapter-4.html#fl-4-3-3">The value of white-box testing (Section 4.3)</a>.</p>
+<p><strong>Question 26 — Correct answer: (b).</strong> <em>Trap: near-miss · LO 4.4.1 (K2).</em> Error guessing anticipates errors, defects, and failures from the tester’s knowledge, and one of the sources the syllabus names is how the application has worked in the past. The tester picks her inputs because the application has failed on them before, which is the defining feature of the technique. <em>(a)</em> exploratory testing designs, runs, and evaluates tests at the same time, with each result guiding the next; here the tests are chosen in advance from memory. <em>(c)</em> checklist-based testing works from a prepared list of test conditions, and the scenario has no such list. <em>(d) Boundary value analysis</em> is the strongest distractor because zero hours looks like a boundary value, but BVA derives its values from the edges of specified partitions; the tester chose zero hours because it caused failures before, not because a specified range ends there. Key takeaway: classify an experience-based technique by its source; past failures and typical developer mistakes point to error guessing, even when an input happens to look like a boundary. Source: Syllabus 4.4.1. Review in this book: <a href="chapter-4.html#fl-4-4-1">Error guessing (Section 4.4)</a>.</p>
+<p><strong>Question 27 — Correct answer: (c).</strong> <em>Trap: near-miss · LO 4.4.3 (K2).</em> The syllabus states that, in the absence of detailed test cases, checklist-based testing can provide guidance and some consistency. A checklist gives structure while leaving room for the tester’s judgement in how each item is checked. <em>(a) Checklists must contain detailed step-by-step instructions</em> is the strongest distractor because “consistency” evokes identical execution, but checklist items are deliberately not detailed scripts; they are reminders of what to check, and adding more detail turns them into test procedures and loses their flexibility. <em>(b)</em> checklists are maintained over time and updated from defect analysis; passing once is no reason to remove an item. <em>(d)</em> checklist-based testing is an experience-based technique, and the lists are typically built by testers from their own experience. Key takeaway: a high-level checklist trades some repeatability for variability, which can give greater coverage; make it fully detailed and you have written a procedure, not a checklist. Source: Syllabus 4.4.3. Review in this book: <a href="chapter-4.html#fl-4-4-3">Checklist-based testing (Section 4.4)</a>.</p>
+<p><strong>Question 28 — Correct answer: (c).</strong> <em>Trap: source gap · LO 4.5.2 (K2).</em> The syllabus names two common forms. Scenario-oriented criteria use a format such as Given/When/Then. Rule-oriented criteria are written as a bullet-point verification list or as a tabulated form of input-output mapping, which is exactly what this table is: each row maps membership and order total to a shipping fee. <em>(a) Scenario-oriented</em> is the strongest distractor because each row can be read as a small example, but a scenario-oriented criterion describes a precondition, an event, and an expected result; a table of inputs and outputs states rules, and the syllabus classifies it as rule-oriented. <em>(b)</em> structure-oriented is not a form of acceptance criteria; it borrows a word from white-box testing. <em>(d)</em> teams may use other formats as long as the criteria are well-defined and unambiguous, and Given/When/Then is only one example of the scenario-oriented form. Key takeaway: a bullet list of rules and a table of input-output mappings are both rule-oriented, while Given/When/Then is scenario-oriented. Source: Syllabus 4.5.2. Review in this book: <a href="chapter-4.html#fl-4-5-2">Acceptance criteria (Section 4.5)</a>.</p>
+<p><strong>Question 29 — Correct answer: (a).</strong> <em>Trap: procedure · LO 4.5.3 (K3).</em> The acceptance criterion has two conditions, order total over 500 and customer is a member, and one promised outcome, free shipping. The correct test sets both conditions (total 520, member) and verifies exactly the promised outcome (shipping fee zero). <em>(b)</em> expecting the order to be saved to the database checks an implementation side effect, not the acceptance criterion. <em>(c)</em> with total 480 and not a member, neither condition holds, so the criterion promises no free shipping; the expected result contradicts the rule. <em>(d) Member only, free shipping on all orders</em> is the strongest distractor because membership really is one of the conditions, but the test silently drops the order-total condition and widens the rule; incomplete condition coverage is the typical error in deriving tests from acceptance criteria. Key takeaway: a test derived from an acceptance criterion must exercise every condition in it and verify the outcome it promises, no more and no less. Source: Syllabus 4.5.3. Review in this book: <a href="chapter-4.html#fl-4-5-3">Acceptance test-driven development (Section 4.5)</a>.</p>
+</section>
+<section id="chapter-5-managing-the-test-activities-4" class="level3">
+<h3>Chapter 5 — Managing the Test Activities</h3>
+<p><strong>Question 30 — Correct answer: (b).</strong> <em>Trap: near-miss · LO 5.1.3 (K2).</em> Entry criteria define the preconditions for starting an activity, and typical examples are the availability of resources such as test data and the availability of testware such as reviewed test cases. Exit criteria define what must be achieved to declare an activity complete, and typical examples are measures of thoroughness such as achieved coverage and the number of unresolved defects. List 1 is about being able to start, and list 2 is about being able to stop. <em>(a)</em> reverses the two lists. <em>(c) Both lists are entry criteria</em> is the strongest distractor because both lists are indeed written during planning, before testing starts, but the moment a criterion is written does not decide its type; what it governs does, and list 2 governs when system testing may end. <em>(d)</em> acceptance criteria are the conditions a user story or product must meet to be accepted by stakeholders, not gates that control a test level. Key takeaway: classify a criterion by the moment it controls, the start of an activity or its completion, not by the moment it was written. Source: Syllabus 5.1.3. Review in this book: <a href="chapter-5.html#fl-5-1-3">Managing entry criteria and exit criteria (Section 5.1)</a>.</p>
+<p><strong>Question 31 — Correct answer: (d).</strong> <em>Trap: near-miss · LO 5.1.6 (K1).</em> The syllabus states that the number and naming of the layers in the test pyramid may differ, and both of these variants are common: unit, service, and UI tests in the original model, and component, integration, and end-to-end tests in another popular one. What stays the same is the shape, with many small, fast tests at the bottom and a few slow, broad tests at the top. <em>(a) A fixed set of three layers with fixed names</em> is the strongest distractor because the original model does have three layers with those names, but the model is used in several versions, and the syllabus allows other numbers and names of layers. <em>(b)</em> reverses the rule: the higher the layer, the lower the test isolation, because higher-level tests depend on more parts of the system. <em>(c)</em> the pyramid supports test automation and test effort allocation by showing test granularity; it does not assign test techniques to layers. Key takeaway: learn the pyramid by its shape and its trend, many fast isolated tests at the base and fewer slow integrated tests above, not by one set of layer names. Source: Syllabus 5.1.6. Review in this book: <a href="chapter-5.html#fl-5-1-6">The test pyramid (Section 5.1)</a>.</p>
+<p><strong>Question 32 — Correct answers: (a) and (d).</strong> <em>Trap: near-miss · LO 5.1.7 (K2).</em> Q4 contains smoke tests and non-functional tests except usability tests, so security tests belong there and (a) is correct. Q2 contains functional tests, examples, user story tests, user experience prototypes, API testing, and simulations, which guide development from the business side, so (d) is correct. <em>(b) Usability tests in Q4</em> is the strongest distractor because usability is a non-functional characteristic and Q4 holds the non-functional tests, but the syllabus makes usability the explicit exception: usability tests are user-oriented and belong to Q3. <em>(c)</em> component integration tests are technology-facing and support the team, which places them in Q1, not Q3. <em>(e)</em> exploratory testing is business-facing, but it critiques the product rather than guiding development, so it belongs to Q3, not Q2. Key takeaway: place each test with two questions in turn, whom it faces and whether it supports the team or critiques the product, and remember the single exception, usability, which leaves the non-functional group for Q3. Source: Syllabus 5.1.7. Review in this book: <a href="chapter-5.html#fl-5-1-7">The testing quadrants (Section 5.1)</a>.</p>
+<p><strong>Question 33 — Correct answer: (d).</strong> <em>Trap: near-miss · LO 5.2.4 (K2).</em> Once a product risk has been analysed, the syllabus names several response options: risk mitigation by testing, risk acceptance, risk transfer, and a contingency plan. A prepared fallback that is ready to use if the risk occurs is a contingency plan. The switch-back procedure does not make a failure less likely; it limits the damage if a failure happens. <em>(a)</em> accepting a risk means consciously deciding not to act, and the team is clearly acting. <em>(b)</em> risk transfer moves the consequence to a third party, for example through a contract or insurance; switching back to the previous provider keeps the consequence with the company and simply restores the service. <em>(c) Risk mitigation by testing</em> is the strongest distractor because the team is also testing the integration, and mitigation is the most familiar response, but mitigation by testing reduces the risk level through actions such as experienced testers, reviews, and suitable coverage, and the procedure in the question is not a test activity. Key takeaway: ask what the action does, whether it reduces the risk (mitigation), moves its consequence to someone else (transfer), consciously lives with it (acceptance), or prepares a fallback for when it happens (contingency plan). Source: Syllabus 5.2.4. Review in this book: <a href="chapter-5.html#fl-5-2-4">Risk-based testing and risk control (Section 5.2)</a>.</p>
+<p><strong>Question 34 — Correct answer: (b).</strong> <em>Trap: procedure · LO 5.1.4 (K3).</em> On the comparable project the ratio of development effort to test effort was 4:3, so test effort is three-quarters of development effort: 720 × 3/4 = 540 person-days. Step by step: write the ratio as a directed fraction, development:test = 4:3, so test = development × 3/4; then multiply, 720 × 3/4 = 540. <em>(a) 320</em> comes from misreading the ratio as a share of the total, taking four of nine parts (720 × 4/9), which no reading of 4:3 supports. <em>(c) 960</em> is the strongest distractor because it keeps the ratio idea, but applies it in reverse (720 × 4/3), making test larger than development; the whole question is reading the direction of the ratio. <em>(d) 360</em> halves the development effort and ignores the stated ratio. Key takeaway: write the ratio as a fraction and check the direction before you compute, development:test = 4:3 means test = development × 3/4. Source: Syllabus 5.1.4. Review in this book: <a href="chapter-5.html#fl-5-1-4">Estimation techniques (Section 5.1)</a>.</p>
+<p><strong>Question 35 — Correct answer: (d).</strong> <em>Trap: procedure · LO 5.1.5 (K3).</em> In additional coverage prioritisation, the test case with the highest coverage runs first, and each next test case is the one that adds the most coverage not yet achieved. Step by step: TC1 exercises six statements, the most, so it runs first. After TC1, TC2 adds nothing (S1 to S5 are already covered), TC3 adds three statements (S7, S8, S9), and TC4 adds one (S10), so TC3 runs second. After TC3, TC4 still adds S10 while TC2 still adds nothing, so TC4 runs third and TC2 last. <em>(a) TC1, TC2, TC3, TC4</em> is the strongest distractor because it applies plain coverage-based prioritisation, ordering by each test case’s own total (6, 5, 3, 2); the question names the additional variant, which counts only what is not yet covered. <em>(b)</em> applies the additional rule for the second slot but then falls back to the original order. <em>(c)</em> runs the test cases from the lowest coverage upwards, the reverse of any coverage-based strategy. Key takeaway: in additional coverage prioritisation, recompute what each remaining test case adds after every pick; a large test case that only repeats covered statements drops to the end. Source: Syllabus 5.1.5. Review in this book: <a href="chapter-5.html#fl-5-1-5">Test case prioritisation (Section 5.1)</a>.</p>
+<p><strong>Question 36 — Correct answer: (a).</strong> <em>Trap: near-miss · LO 5.3.2 (K2).</em> Test progress reports support ongoing test control. The syllabus says they must provide enough information to modify the test schedule, resources, or test plan when testing deviates from the plan, and impediments with their workarounds are part of their typical content. A blocked environment halfway through the phase is exactly such a deviation. <em>(b)</em> lessons learned belong to the test completion report, written when the activity is over. <em>(c)</em> a progress report summarises the state of testing; it does not replace the individual defect reports, which still have to be raised. <em>(d) The final evaluation of product quality against the exit criteria</em> is the strongest distractor because a progress report does contain metrics and status, but the evaluation against the original plan and its exit criteria is the content of the test completion report, prepared at the end. Key takeaway: a progress report exists so that someone can steer while testing is still running, and a completion report evaluates and draws lessons after it has finished. Source: Syllabus 5.3.2. Review in this book: <a href="chapter-5.html#fl-5-3-2">Test reports: progress and completion (Section 5.3)</a>.</p>
+<p><strong>Question 37 — Correct answer: (c).</strong> <em>Trap: source gap · LO 5.4.1 (K2).</em> To support testing, configuration management ensures that all configuration items, including test items, are uniquely identified and version controlled, and that all identified documentation and software items are referenced unambiguously in testware. A report built on that discipline would name the exact build and suite version, and the auditor could check the claim. <em>(a) More test automation</em> is the strongest distractor because automated runs often produce detailed logs, but a log that does not record which build and which suite version ran has the same gap; the missing capability is identification and referencing, not automation. <em>(b)</em> exit criteria decide when testing may stop; they do not make a report name the versions it refers to. <em>(d)</em> defect reports describe individual anomalies, and a passed regression run may produce none, so they cannot document what was tested. Key takeaway: when evidence is rejected because no one can tell which version was tested, the answer is configuration management, with unique identification, version control, and unambiguous references in testware. Source: Syllabus 5.4. Review in this book: <a href="chapter-5.html#fl-5-4-1">Configuration Management (Section 5.4)</a>.</p>
+<p><strong>Question 38 — Correct answer: (a).</strong> <em>Trap: carelessness · LO 5.5.1 (K3).</em> A defect report must include both the expected result and the actual result. The report in the scenario gives the actual result, the full price was shown, but never states what should have happened. Without the expected result, the reader cannot judge what correct behaviour looks like. <em>(b)</em> the report states the severity explicitly, major; this option is there for those who scan the options without checking the report. <em>(c)</em> the environment is present, staging, build 5511. <em>(d)</em> the report lists four numbered steps, present and reasonably precise. This question has no conceptual near-miss; it is a careful-reading check, and every wrong option names an element clearly present in the report. Key takeaway: on “what is missing from this report” questions, check each option against the report line by line before answering. Source: Syllabus 5.5. Review in this book: <a href="chapter-5.html#fl-5-5-1">Preparing a professional defect report (Section 5.5)</a>.</p>
+</section>
+<section id="chapter-6-test-tools-4" class="level3">
+<h3>Chapter 6 — Test Tools</h3>
+<p><strong>Question 39 — Correct answer: (b).</strong> <em>Trap: near-miss · LO 6.1.1 (K2).</em> Tools that run automated test suites and measure how thoroughly the code has been exercised belong to the test execution and test coverage category. Running on every commit and gathering the results is part of the same job. <em>(a) Test management tools</em> is the strongest distractor because gathering and reporting results sounds like management, but test management tools manage the test process and testware, plans, progress, defects; the tool in the scenario runs the tests, and its reporting is a by-product of execution. <em>(c)</em> static testing tools examine work products without running them, whereas this tool runs the suites. <em>(d)</em> design and implementation tools help derive and prepare test cases; this tool runs tests that already exist. Key takeaway: classify a tool by its primary verb, if it runs the tests and measures coverage, it is a test execution and test coverage tool, whatever else it reports. Source: Syllabus 6.1.1. Review in this book: <a href="chapter-6.html#fl-6-1-1">Types of test tool and how they support testing (Section 6.1)</a>.</p>
+<p><strong>Question 40 — Correct answer: (d).</strong> <em>Trap: near-miss · LO 6.2.1 (K1).</em> Among the risks of test automation, the syllabus lists inaccurate estimation of the time, costs, and effort required to introduce a tool, maintain test scripts, and change the existing manual test process. The team planned for building the suite but not for keeping it working as the screens change, and the maintenance effort is now larger than the original plan. <em>(a)</em> the scenario says nothing about the vendor; the scripts break because the application changes. <em>(b) Using a tool where manual testing is more appropriate</em> is the strongest distractor because fragile scripts can make automation look like the wrong choice, but regression testing is a typical and legitimate use of automation; the problem is the unplanned maintenance, not the decision to automate. <em>(c)</em> over-reliance on the tool would show as the team trusting tool results without critical thinking, which is not what happened. Key takeaway: automation brings a lasting maintenance cost, and underestimating that cost is a named risk, so match the symptom in the scenario to the risk it actually shows. Source: Syllabus 6.2.1. Review in this book: <a href="chapter-6.html#fl-6-2-1">The benefits and risks of test automation (Section 6.2)</a>.</p>
+</section>
+</section>
+</section>
+
+<div class="pager"><a href="final-revision.html"><span class="lbl">Previous</span>Final Revision Plan</a><a href="further-resources.html" style="text-align:right"><span class="lbl">Next</span>Further Resources</a></div>
+<footer class="site">© 2026 Kadir Çamoğlu · Own content licensed CC BY-NC 4.0 · ISTQB® is a registered trademark of the International Software Testing Qualifications Board; this guide is not affiliated with or endorsed by ISTQB®.</footer>
+</main>
+</div>
+<script>if (window.matchMedia('(min-width: 901px)').matches) document.getElementById('navd').open = true;</script>
+</body>
+</html>
