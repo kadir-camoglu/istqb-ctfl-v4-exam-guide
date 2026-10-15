@@ -76,10 +76,10 @@
 <img src="figures/fig_6_1_tool_categories.png" alt="" /><figcaption>Figure 6.1 — The test tool types named in the syllabus. Eight boxes in two columns name the tool types: test management tools; static testing tools; test design and test implementation tools; test execution and test coverage tools; non-functional testing tools; DevOps tools; collaboration tools; and tools supporting scalability and deployment standardisation, for example virtual machines and containerisation. A line underneath adds that any other tool that assists in testing counts, even a spreadsheet.</figcaption>
 </figure>
 <p>Test management tools increase the efficiency of the test process by helping the team manage the SDLC, requirements, tests, defects, and configuration. In practical terms, this is the place where traceability between requirements, test cases, and defect reports is kept, and where test progress reports come from.</p>
-<p>Static testing tools support the tester in performing reviews and static analysis. Neither activity executes the test object. For example, one tool may help reviewers record and track their comments on a requirements document, while another scans source code for violations of coding standards.</p>
+<p>These tools help the tester carry out reviews and static analysis. Neither activity executes the test object. For example, one tool may help reviewers record and track their comments on a requirements document, while another scans source code for violations of coding standards.</p>
 <p>Test design and test implementation tools facilitate the generation of test cases, test data, and test procedures. For instance, a tool may produce a large set of valid and invalid input records from a data model, which would take a person days to prepare by hand.</p>
-<p>Test execution and test coverage tools facilitate automated test execution and coverage measurement. The two often go together in practice, because the same automated run that executes the tests can also report which statements or branches of the code it exercised.</p>
-<p>Non-functional testing tools allow the tester to perform non-functional testing that is difficult or impossible to perform manually. A load test with 10,000 concurrent virtual users is the usual example. No team could produce that load by hand, but a tool can generate it and measure the response times under it.</p>
+<p>Test execution and coverage tools make automated runs and coverage measurement possible. The two often go together in practice, because the same automated run that executes the tests can also report which statements or branches of the code it exercised.</p>
+<p>Non-functional testing tools make it possible to run tests that are hard or impossible to do by hand. A load test with 10,000 concurrent virtual users is the usual example. No team could produce that load by hand, but a tool can generate it and measure the response times under it.</p>
 <p>DevOps tools support the DevOps delivery pipeline, workflow tracking, automated build processes, and continuous integration and continuous delivery (CI/CD). Their link to testing is that automated tests run inside that pipeline whenever the code changes, which is one of the practices you met in Chapter 2.</p>
 <p>Collaboration tools facilitate communication. This includes the day-to-day exchange between different roles on a team, such as business analysts, developers, and testers, who need to share questions, decisions, and test results without delay.</p>
 <p>Tools supporting scalability and deployment standardisation include virtual machines and containerisation tools. They let the team create standard test environments on demand. As a result, the same environment can be set up again for every test run, or several identical copies can run in parallel.</p>
@@ -200,7 +200,7 @@
 <li>The time, cost, and effort needed to introduce the tool, maintain the test scripts, and change the existing manual test process may be estimated inaccurately.</li>
 <li>A test tool may be used where manual testing is more appropriate.</li>
 <li>The team may rely on the tool too much, for example by ignoring the need for human critical thinking.</li>
-<li>The team depends on the tool vendor, which may go out of business, retire the tool, sell it to a different vendor, or provide poor support for queries, upgrades, and defect fixes.</li>
+<li>The team is tied to the vendor, which might fold, discontinue the product, be bought by another company, or give weak support for queries, upgrades, and defect fixes.</li>
 <li>Open-source software may be abandoned, so that no further updates are available, or its internal components may need quite frequent updates as it develops further.</li>
 <li>The automation tool may not be compatible with the development platform.</li>
 <li>The chosen tool may be unsuitable because it does not comply with the applicable regulatory requirements or safety standards.</li>
@@ -255,7 +255,7 @@
 <td>The time is freed for testers, not taken away from them.</td>
 </tr>
 <tr class="odd">
-<td>Risk: inaccurate estimates of the time, cost, and effort to introduce a tool, maintain test scripts, and change the existing manual test process</td>
+<td>Risk: underestimating what it costs in time, money, and effort to adopt a tool, keep its scripts working, and rework the manual process</td>
 <td>“Once written, automated scripts need no further maintenance.”</td>
 <td>Script maintenance is an ongoing cost that teams often underestimate.</td>
 </tr>

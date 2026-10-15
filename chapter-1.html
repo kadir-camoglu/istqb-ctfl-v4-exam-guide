@@ -82,15 +82,15 @@
 <h3>Typical test objectives (FL-1.1.1 — K1)</h3>
 <p>The syllabus lists nine reasons behind test activities. On the exam you need to recognise each of them as a legitimate test objective:</p>
 <ul>
-<li>evaluating work products such as requirements, user stories, designs, and code;</li>
-<li>causing failures and finding defects;</li>
-<li>ensuring the required coverage of the test object;</li>
-<li>reducing the level of risk of inadequate software quality;</li>
-<li>verifying whether specified requirements have been fulfilled;</li>
-<li>verifying that the test object complies with contractual, legal, and regulatory requirements;</li>
-<li>providing stakeholders with clear information so they can make informed decisions;</li>
-<li>building confidence in the quality of the test object;</li>
-<li>validating whether the test object is complete and works as stakeholders expect.</li>
+<li>assessing work products such as requirements, user stories, designs, and code;</li>
+<li>triggering failures and uncovering defects;</li>
+<li>making sure the test object reaches the required coverage;</li>
+<li>lowering the risk that software quality is inadequate;</li>
+<li>checking whether the specified requirements are met;</li>
+<li>checking that the test object meets contractual, legal, and regulatory obligations;</li>
+<li>giving stakeholders clear information for informed decisions;</li>
+<li>creating confidence in the test object’s quality;</li>
+<li>confirming that the test object is complete and behaves as stakeholders expect.</li>
 </ul>
 <p>Test objectives can vary with the context, such as the work product being tested, the test level, the risks, the SDLC, and business factors such as time to market. Notice the two terms introduced above: objectives five and six are verification objectives, while objective nine is a validation objective.</p>
 <p>To make a nine-item list easier to hold in mind, you can group the objectives into four themes. Evaluation and discovery covers evaluating work products and causing failures. Conformance and expectations covers verifying specified requirements, verifying legal and regulatory compliance, and meeting stakeholder expectations. Coverage and risk management covers ensuring the required coverage and reducing risk. Information and confidence covers supplying information for decisions and building confidence in quality.</p>
@@ -264,7 +264,7 @@
 </ul>
 </div>
 <div class="answer">
-<p>Answer: (d). Testing may be required to meet contractual or legal requirements or to comply with regulatory standards, and test evidence serves that purpose. Option (c) describes debugging, not testing.</p>
+<p>Answer: (d). Contracts, laws, and regulators can all demand testing, and the resulting test evidence is what satisfies them. Option (c) describes debugging, not testing.</p>
 </div>
 </section>
 <section id="fl-1-2-2" class="level3">
@@ -454,7 +454,7 @@
 <h2>1.3 The Seven Testing Principles (FL-1.3.1 — K2)</h2>
 <p><span id="fl-1-3-1"></span>The seven testing principles are general guidelines that apply across all test activities. On the exam you are expected to read a short business scenario and recognise which principle it points to. Here is each principle with a plain restatement and the kind of scenario that signals it.</p>
 <p>The first principle is that <strong>testing shows the presence, not the absence, of defects</strong>. Testing can prove that defects exist, but it can never prove that none remain. The scenario signal is a claim like “all 2,000 of our tests passed, so our software has no defects,” which is logically invalid.</p>
-<p>The second is that <strong>exhaustive testing is impossible</strong>. Testing everything is not feasible except in trivial cases, so test techniques, test case prioritisation, and risk-based testing are used to focus the effort. The signal is a scenario noting millions of possible input combinations that cannot all be tried.</p>
+<p>The second is that <strong>exhaustive testing is impossible</strong>. Outside trivial cases, trying every possible input is out of reach, so test techniques, test case prioritisation, and risk-based testing focus the effort. The signal is a scenario noting millions of possible input combinations that cannot all be tried.</p>
 <p>The third is that <strong>early testing saves time and money</strong>. The earlier a defect is caught and fixed, the lower its cost to the project. To find defects early, both static testing and dynamic testing should start as early as possible. The signal is a logic error caught while reviewing requirements (static testing) that avoids a later crisis.</p>
 <p>The fourth is that <strong>defects cluster together</strong>. A small number of components usually contain most of the defects found or are responsible for most of the failures (an illustration of the Pareto principle). The signal is a statistic such as “80 percent of last quarter’s critical outages came from the payment module alone.”</p>
 <p>The fifth is that <strong>tests wear out</strong>. If the same tests are run over and over with no change, they become increasingly ineffective at finding new defects, so test suites need to be reviewed and updated. In some cases, though, repeating the same tests can have a beneficial outcome, as in automated regression testing. This principle was formerly known as the “pesticide paradox”; the exam uses only the current name. The signal is a scenario such as “our regression suite has found no new defect in six months; we need to refresh it.”</p>
@@ -479,12 +479,12 @@
 <tbody>
 <tr class="odd">
 <td>Testing shows the presence, not the absence of defects</td>
-<td>Testing can show that defects exist, but it cannot prove that none remain</td>
+<td>Defects can be shown to exist, but a passing run cannot prove that none remain</td>
 <td>Someone claims that because all tests passed, the software has no defects</td>
 </tr>
 <tr class="even">
 <td>Exhaustive testing is impossible</td>
-<td>Testing everything is not feasible except in trivial cases, so effort is focused with techniques, prioritisation, and risk</td>
+<td>Outside trivial cases, full coverage is out of reach, so effort is focused with techniques, prioritisation, and risk</td>
 <td>There are far too many input combinations to try them all</td>
 </tr>
 <tr class="odd">
@@ -714,7 +714,7 @@
 <section id="fl-1-4-3" class="level3">
 <h3>Testware (FL-1.4.3 — K2)</h3>
 <p>Every test activity produces its own outputs, known as <strong>testware</strong>. (Testware is all the documents, data, scripts, records, and reporting components that the test process itself produces.) The exam often asks you to match an output to the activity that produced it, so the mapping is worth learning.</p>
-<p>Test planning produces the test plan, schedules, a risk register, and entry and exit criteria. Test monitoring and control produces test progress reports, documented control directives, and information about risks. Test analysis produces prioritised test conditions and defect reports about gaps found in the test basis. Test design produces test cases, test charters, coverage items, test data requirements, and test environment requirements. Test implementation produces test procedures, automation scripts, test suites, the actual test data, the execution schedule, and test environment items such as stubs, drivers, simulators, and service virtualisations. Test execution produces test logs, pass/fail results, and defect reports derived from anomalies. Test completion produces the test completion report, change requests or backlog items for unresolved defects, archived testware, and lessons learned.</p>
+<p>Test planning produces the test plan, schedules, a risk register, and entry and exit criteria. Test monitoring and control produces test progress reports, documented control directives, and information about risks. Test analysis produces prioritised test conditions and defect reports about gaps found in the test basis. Test design yields the test cases and charters, the coverage items they aim at, and the requirements for test data and test environments. Test implementation turns these into ready-to-run material: procedures, automation scripts, grouped suites, the actual data, the execution schedule, and environment components such as stubs, drivers, simulators, and service virtualisations. Test execution produces test logs, pass/fail results, and defect reports derived from anomalies. Test completion produces the test completion report, change requests or backlog items for unresolved defects, archived testware, and lessons learned.</p>
 <p><strong>Table 1.6 — Test activities, the questions they answer, and their typical testware</strong></p>
 <div class="table-wrap">
 <table>
@@ -754,7 +754,7 @@
 <tr class="odd">
 <td>Test implementation</td>
 <td>Are we ready to run the tests?</td>
-<td>Test procedures, manual and automated test scripts, test suites, test data, test execution schedule, test environment items (stubs, drivers, simulators, service virtualisations)</td>
+<td>Test procedures, manual and automated scripts, suites, data, the execution schedule, and environment components (stubs, drivers, simulators, service virtualisations)</td>
 </tr>
 <tr class="even">
 <td>Test execution</td>
@@ -812,7 +812,7 @@
 <section id="fl-1-4-4" class="level3">
 <h3>The value of traceability (FL-1.4.4 — K2)</h3>
 <p><strong>Traceability</strong> means maintaining the relationships between the test basis elements, the testware linked to them (such as test conditions, risks, and test cases), the test results, and the defects. The syllabus ties it first to test monitoring and test control: without these links, progress cannot be measured against the test basis.</p>
-<p>Its value is practical. It supports coverage evaluation; for example, tracing test cases to requirements shows which requirements are covered and which are not. Tracing test results to risks shows the level of residual risk in the test object. It makes it possible to determine the impact of changes, it facilitates audits and helps meet IT governance criteria, and it makes test progress reports and test completion reports easier to understand by including the status of each test basis element. In this way it gives stakeholders information to assess product quality, process capability, and project progress against business goals.</p>
+<p>Its value is practical. It supports coverage evaluation; for example, tracing test cases to requirements shows which requirements are covered and which are not. Tracing test results to risks shows the level of residual risk in the test object. It makes it possible to determine the impact of changes, it facilitates audits and helps meet IT governance criteria, and it makes test progress reports and test completion reports easier to understand by including the status of each test basis element. In this way stakeholders can judge product quality, process capability, and how far the project has moved toward its business goals.</p>
 <p><em>In practice.</em> A business analyst changes a single rule: the minimum password length rises from 8 to 12 characters. Because traceability is maintained, the tester does not comb through the whole project by hand. A query on the traceability information returns exactly the three test cases and one automation script tied to that requirement, and only those are updated. Without traceability, the same change would trigger a slow, uncertain hunt, and something would usually be missed.</p>
 <p><em>Exam focus.</em> The usual question describes a situation and asks which benefit of traceability it shows, or asks you to pick a genuine benefit from a list. The key idea is that traceability links requirements, test conditions, test cases, results, and defects, and that this linkage enables coverage evaluation, residual-risk evaluation, impact analysis, audits, and understandable reporting. Watch for the option that promises something traceability cannot do, such as preventing requirement changes or proving the absence of defects. Make sure the option describes finding or showing a relationship between work products, because that is what traceability provides.</p>
 <p><strong>Check your understanding</strong></p>
@@ -935,7 +935,7 @@
 <section id="fl-1-5-1" class="level3">
 <h3>Generic skills required for testing (FL-1.5.1 — K2)</h3>
 <p>A successful tester needs a balanced set of skills that covers both technical and human strengths. Testing knowledge, meaning a command of test techniques, methods, and standards, raises the effectiveness of testing. Thoroughness, carefulness, curiosity, attention to detail, and being methodical let a tester notice the small, easily missed inconsistencies or log details that can be the early sign of a large system problem. Good communication skills, active listening, and being a team player make it possible to report critical defects in a constructive, professional way that the development team can hear without becoming defensive. Analytical thinking, critical thinking, and creativity help a tester break complex business rules into small pieces, question assumptions, and imagine the unusual failure modes a user might reach. Technical knowledge supports efficient use of automation tools, database queries, integration infrastructure, and test environments. And domain knowledge lets a tester understand users’ real business needs; a tester on a banking project, for example, should know interest calculations, credit limits, or transfer rules well enough to call a system output “wrong” at a glance.</p>
-<p>There is a psychological side to this work as well. Testers are often the bearers of bad news, because reporting defects and failures is a visible part of their work. Communicating test results may be perceived as criticism of the product and of its author, and confirmation bias can make it difficult for people to accept information that disagrees with what they currently believe. This is why defects and failures should be reported constructively, focusing on the work product rather than on people. Testers are not immune to the same bias when they judge their own tests.</p>
+<p>There is a psychological side to this work as well. Testers are often the bearers of bad news, because reporting defects and failures is a visible part of their work. Reporting results can feel to the product’s author like criticism of their work, and confirmation bias can make it difficult for people to accept information that disagrees with what they currently believe. This is why defects and failures should be reported constructively, focusing on the work product rather than on people. Testers are not immune to the same bias when they judge their own tests.</p>
 <p><em>In practice.</em> Compare two defect reports raised for the same system crash. The first tester writes only “the code crashed again.” That tone triggers a defensive reaction on the developer’s side and harms collaboration. The second tester writes, “build 4.2 returns a 500 server error at step 3 of the payment flow; reproduction steps and logs attached.” This report pulls the focus onto the work product instead of assigning blame to a person, and its real gain is that it protects professional trust between the teams and lets everyone look at the same problem together without friction.</p>
 <p><em>Exam focus.</em> This objective is tested with matching questions that give a tester’s behaviour and ask which skill it shows. Confirmation bias may also appear; the syllabus links it to how people receive bad news, which is why communication skills matter. Before choosing an option, separate the tester’s technical knowledge (what they know) firmly from their communication and behaviour (how they act).</p>
 <p><strong>Check your understanding</strong></p>
@@ -1010,7 +1010,7 @@
 <div class="mc">
 <ul>
 <li>(a) Quality is checked only by the testers at the end of each iteration</li>
-<li>(b) Any team member with the necessary knowledge and skills can perform any task</li>
+<li>(b) Members with the right knowledge and skills can take on any task, whatever their job title</li>
 <li>(c) Testers work with business representatives so that they can write good acceptance tests</li>
 <li>(d) The team members share the same workspace, physical or virtual</li>
 </ul>
@@ -1026,7 +1026,7 @@
 <img src="figures/fig_1_5_independence_spectrum.png" alt="" /><figcaption>Figure 1.5 — The independence spectrum. An arrow runs from no independence to very high independence and marks four levels: the author tests their own work (no independence), peers in the same team test it (some independence), testers outside the author’s team but within the same organisation test it (high independence), and testers outside the organisation test it (very high independence).</figcaption>
 </figure>
 <p>Raising the level of independence can add real strength to a project. Independent testers, being free of the project’s past pressures and coding assumptions, catch kinds of failures that escape the developers’ notice, and they can question the business-logic assumptions that stakeholders or analysts accepted without challenge during specification and implementation. Independence is not a replacement for familiarity, however: developers can efficiently find many defects in their own code.</p>
-<p>Higher independence also brings management drawbacks. An independent test team can become too isolated from the actual development team, which can lead to a lack of collaboration, communication problems, or an adversarial relationship with the development team. Developers, knowing that a strong independent test team stands behind them, can fall into the comfort of “the test team catches everything anyway” and lose the sense that quality is their own responsibility. And an independent test team can come to be seen as a bottleneck at the end of the project and made the scapegoat for late releases.</p>
+<p>Higher independence also brings management drawbacks. An independent test team can become too isolated from the actual development team, which can cause poor collaboration, communication breakdowns, or an adversarial relationship with developers. Developers, knowing that a strong independent test team stands behind them, can fall into the comfort of “the test team catches everything anyway” and lose the sense that quality is their own responsibility. And an independent test team can come to be seen as a bottleneck at the end of the project and made the scapegoat for late releases.</p>
 <p><strong>Table 1.8 — Benefits and drawbacks of independence of testing</strong></p>
 <div class="table-wrap">
 <table>
@@ -1051,7 +1051,7 @@
 </tr>
 <tr class="odd">
 <td>(the syllabus names only two benefits)</td>
-<td>Independent testers may be seen as a bottleneck or be blamed for delays in release</td>
+<td>Independent testers can be viewed as a bottleneck and blamed for late releases</td>
 </tr>
 </tbody>
 </table>

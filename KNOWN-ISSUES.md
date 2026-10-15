@@ -20,3 +20,4 @@ This guide is a draft published before its final read-through. The items below a
 - An uncited statement about bilingual exams not granting extra time has been removed.
 - The wording about per-LO question counts now matches the official Exam Structure Tables.
 - The 2-value boundary value analysis note now refers to the nearest neighbour across each boundary, not only to invalid partitions.
+- Passages that stayed too close to the syllabus wording have been rewritten in our own words across chapters 1–6, the front and back matter, and the Mock Exam 1 explanations.
