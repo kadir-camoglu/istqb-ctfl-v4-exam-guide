@@ -396,7 +396,7 @@ Two maps, deliberately kept separate: the **LO coverage map** (what the book tea
 
 ## Coverage + weight summary
 
-The last column is a rough study-priority signal (exam questions divided by LOs). It is a heuristic, not an official weighting. ISTQB® does not publish a per-LO question count, and questions are not distributed evenly across a chapter's LOs. Read absolute exam-question count (the "Exam Q" column) as the primary weight: Chapter 6's 1.00 ratio comes from just 2 questions, while Chapter 5's lower ratio still carries 9. Chapter 5 has the most LOs (16) but yields 9 questions; Chapter 4 yields 11 questions from 14 LOs. No chapter is skippable — all content is examinable at K1.
+The last column is a rough study-priority signal (exam questions divided by LOs). It is a heuristic, not an official weighting. ISTQB® publishes question counts per group of learning objectives. Where a group contains a single LO, the count is per LO. Questions are not distributed evenly across a chapter's LOs. Read absolute exam-question count (the "Exam Q" column) as the primary weight: Chapter 6's 1.00 ratio comes from just 2 questions, while Chapter 5's lower ratio still carries 9. Chapter 5 has the most LOs (16) but yields 9 questions; Chapter 4 yields 11 questions from 14 LOs. No chapter is skippable — all content is examinable at K1.
 
 | Chapter | LOs | K1 | K2 | K3 | Exam Q | Q per LO (study yield) |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
