@@ -3003,7 +3003,7 @@ Step 1, positive tests. The happy path comes first, combining criteria where nat
 
 Step 2, negative tests, one for each way a rule can be broken:
 
-- T3 (AC1, a scenario outline with one row per required field): Given Room A is free tomorrow from 10:00 to 11:00, When the employee submits a reservation for Room A, tomorrow, 10:00, 60 minutes with the <field> left empty, Then the reservation is rejected. Rows: room, date, start time, duration. This is four test cases, because each required field is a separate rule.
+- T3 (AC1, a scenario outline with one row per required field): Given Room A is free tomorrow from 10:00 to 11:00, When the employee submits a reservation for Room A, tomorrow, 10:00, 60 minutes with the `<field>` left empty, Then the reservation is rejected. Rows: room, date, start time, duration. This is four test cases, because each required field is a separate rule.
 - T4 (AC1): Given Room A is free tomorrow from 10:00 to 11:00, When the employee reserves Room A for tomorrow, 10:00, 45 minutes, Then the reservation is rejected.
 - T5 (AC2, and the negative side of AC4): Given Room A is already reserved tomorrow from 10:30 to 11:00, When the employee reserves Room A for tomorrow, 10:00, 60 minutes, Then the reservation is rejected and no calendar invitation is sent. Note the partial overlap, the sharpest reading of "free for the whole duration."
 - T6 (AC3): Given Room A is free 31 days from today from 14:00 to 14:30, When the employee reserves Room A for that date, 14:00, 30 minutes, Then the reservation is rejected. T2 and T6 are the two boundary values that 2-value BVA gives for the 30-day limit.

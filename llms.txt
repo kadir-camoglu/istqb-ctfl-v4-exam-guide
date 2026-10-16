@@ -1,4 +1,4 @@
-# ISTQB® CTFL v4.0 Exam Guide
+# ISTQB® CTFL v4.0 Exam Guide: From Fundamentals to Exam-Ready
 
 > Free, independent study guide for the ISTQB® CTFL v4.0 exam (syllabus v4.0.1).
 

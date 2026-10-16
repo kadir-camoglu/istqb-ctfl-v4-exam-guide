@@ -81,3 +81,6 @@ details.ans > summary { cursor: pointer; font-family: var(--sans); font-size: 15
 details.ans[open] > summary { margin-bottom: .4rem; }
 details.ans > .answer { margin-top: .4rem; }
 @media (prefers-color-scheme: dark) { .draft-banner { background: #3a2f0a; color: #f3dd9a; border-bottom-color: #6b5a1c; } }
+
+/* Site sync (2026-10-16, Y-1): long bare URLs wrap on narrow screens */
+a.uri { overflow-wrap: anywhere; }

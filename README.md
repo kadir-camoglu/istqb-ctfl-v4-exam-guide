@@ -8,10 +8,11 @@ Free, independent study guide for the ISTQB® Certified Tester Foundation Level 
 - Full text on one page: `all.html`
 - Markdown source: `book.md`
 - Feedback: kadir.camoglu@gmail.com
+- Turkish edition (Türkçe sürüm): https://kadir-camoglu.github.io/istqb-ctfl-v4-sinav-rehberi/
 
 Independent and unofficial. Not affiliated with or endorsed by ISTQB®.
 
 ## License
 
-Own content: [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) · © 2026 Kadir Çamoğlu.
+Own content: [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) · © 2026 Kadir Çamoğlu. Full license text: `LICENSE`.
 ISTQB® names, syllabus wording and trademarks are not covered by this license. See `copyright.html`.

@@ -10,7 +10,7 @@ This guide is a draft published before its final read-through. The items below a
 4. **Site search is not available.** The site is static HTML. To search, open `all.html` and use the browser's find function.
 5. **Only the HTML edition is published.** PDF and EPUB editions are paused.
 6. **Exam-condition facts need checking before final publication.** Format, timing, extra-time rule and pass mark should be re-checked against the official ISTQB® CTFL page. The extra-time rule (25% when the candidate's native language is not the exam language) comes from Exam Structures and Rules v1.2. How it is applied depends on the exam provider and the Member Board.
-7. **Other editions are separate works.** The Turkish edition and its mock exams will be published separately, after their own review.
+7. **Other editions are separate works.** The Turkish edition is published separately as a public draft, with its own review still in progress: https://kadir-camoglu.github.io/istqb-ctfl-v4-sinav-rehberi/
 
 ## Fixed in this revision
 
@@ -27,6 +27,13 @@ This guide is a draft published before its final read-through. The items below a
 - Figures 1.1, 2.4, 2.5 and 3.5 corrected: static testing can apply at any point of the test process; test levels are no longer ranked by size; regression testing is described by its purpose; not every anomaly is a defect.
 - Site: draft banner on every page; answers, mock answer key and model answers are collapsed by default; figures have short captions and full alt text; one "Back matter" group; the README is in English.
 - Edition label changed to "First Edition (public draft)".
+
+## Fixed in the site update of 2026-10-16
+
+- Chapter 4 ATDD worked example: the `<field>` placeholder in test T3 is now shown. The HTML renderer had hidden it.
+- Long web addresses now wrap on narrow screens, so pages no longer scroll sideways on phones.
+- Every page links to the Turkish edition in the top bar, and the top bar shows the draft label.
+- The CC BY-NC 4.0 `LICENSE` file has been added to the repository.
 
 ## Reviewed and not changed
 
