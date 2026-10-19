@@ -6,10 +6,69 @@
 <title>Commonly Confused Pairs — Master List · ISTQB® CTFL v4.0 Exam Guide</title>
 <meta name="description" content="Free, independent study guide for the ISTQB® Certified Tester Foundation Level v4.0 exam: all 64 learning objectives, worked examples, quick checks, and a full mock exam.">
 <link rel="stylesheet" href="style.css">
+<style id="ctfl-navigation-css">/* Scoped to coexist with guide, interactive mock and reading-page styles. */
+header.ctfl-header.topbar{position:sticky;top:0;z-index:25;width:100%;max-width:none;margin:0;padding:0;border:0;border-bottom:3px solid #2ec4b6;background:#172a45;color:#fff;font:14px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;box-sizing:border-box}
+.ctfl-header *{box-sizing:border-box}
+.ctfl-header .ctfl-inner{max-width:1280px;margin:0 auto;padding:8px 16px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.ctfl-header a,.ctfl-header summary{color:#fff;font-size:14px;font-weight:600;text-decoration:none;letter-spacing:normal;min-height:40px;display:flex;align-items:center;border-radius:5px;padding:8px 10px;line-height:1.4}
+.ctfl-header a:hover,.ctfl-header summary:hover{background:#294461;text-decoration:underline;text-underline-offset:4px}
+.ctfl-header a:focus-visible,.ctfl-header summary:focus-visible,.ctfl-header button:focus-visible{outline:3px solid #75e4d8;outline-offset:2px}
+.ctfl-header .ctfl-brand{white-space:nowrap;padding-left:0;font-size:15px;flex-shrink:0}
+.ctfl-header .ctfl-nav{display:flex;align-items:center;gap:4px;flex:1;width:auto;max-width:none;margin:0;padding:0;border:0;background:none}
+.ctfl-header [aria-current=true],.ctfl-header summary[data-current=true]{background:#294461;box-shadow:inset 0 -2px #75e4d8}
+.ctfl-header .ctfl-languages{display:flex;align-items:center;gap:3px;white-space:nowrap;font-size:13px}
+.ctfl-header .ctfl-languages a,.ctfl-header .ctfl-languages span[lang]{font-size:13px;padding:8px 5px}
+.ctfl-header .ctfl-languages span[lang]{font-weight:600;border-radius:4px}
+.ctfl-header .ctfl-tools{display:flex;gap:6px;align-items:center}
+.ctfl-header .ctfl-tools a,.ctfl-header .ctfl-tools button{font-size:12px;white-space:nowrap}
+.ctfl-header .ctfl-tools button{min-height:36px;padding:6px 8px;border:1px solid #8293a8;border-radius:5px;background:transparent;color:#fff;font-family:inherit;cursor:pointer}
+.ctfl-header details.ctfl-mocks{position:relative;margin:0;padding:0;border:0;background:none;color:inherit;overflow:visible}
+.ctfl-header .ctfl-mocks>summary{list-style:none;cursor:pointer;gap:7px;white-space:nowrap}
+.ctfl-header .ctfl-mocks>summary::-webkit-details-marker{display:none}
+.ctfl-header .ctfl-mocks>summary:after{content:"▾";font-size:11px}
+.ctfl-header .ctfl-mocks[open]>summary:after{content:"▴"}
+.ctfl-header .ctfl-dropdown{position:absolute;top:calc(100% + 6px);right:0;width:250px;max-width:calc(100vw - 24px);max-height:calc(100dvh - var(--ctfl-header-height,110px) - 16px);overflow-y:auto;overscroll-behavior:contain;padding:10px;background:#fff;color:#172a45;border:1px solid #b4c0cd;border-radius:8px;box-shadow:0 8px 24px #10203940}
+.ctfl-header .ctfl-dropdown p{margin:3px 8px 8px;color:#526174;font-size:12px;font-weight:600;line-height:1.5}
+.ctfl-header .ctfl-dropdown ul{list-style:none;padding:0;margin:0;display:block}
+.ctfl-header .ctfl-dropdown li{padding:0;margin:0;display:block}
+.ctfl-header .ctfl-dropdown a{color:#172a45;min-height:42px;padding:10px 12px;display:flex;font-size:14px}
+.ctfl-header .ctfl-dropdown a:hover,.ctfl-header .ctfl-dropdown a[aria-current=true]{background:#e4f3f0;box-shadow:none}
+.ctfl-header .ctfl-dropdown a[aria-current=true]:after{content:"✓";margin-left:auto}
+.ctfl-header .ctfl-dropdown .ctfl-inside{border-top:1px solid #dce2e9;margin-top:8px;border-radius:0;font-size:12px}
+html:has(.ctfl-header) :target{scroll-margin-top:calc(var(--ctfl-header-height,110px) + 16px)}
+body:has(.ctfl-header) nav.side{top:var(--ctfl-header-height,70px);max-height:calc(100dvh - var(--ctfl-header-height,70px))}
+@media(max-width:760px){
+ .ctfl-header .ctfl-inner{gap:2px 6px;padding:6px 12px}
+ .ctfl-header .ctfl-brand{order:1;flex:1;font-size:13px;min-height:32px}
+ .ctfl-header .ctfl-languages{order:2}
+ .ctfl-header .ctfl-languages a,.ctfl-header .ctfl-languages span[lang]{min-height:32px;font-size:12px;padding:6px 4px}
+ .ctfl-header .ctfl-nav{order:3;flex:1 1 auto;gap:0}
+ .ctfl-header .ctfl-nav>a,.ctfl-header .ctfl-mocks>summary{font-size:13px;padding:8px 7px;min-height:40px}
+ .ctfl-header .ctfl-tools{order:4;margin-left:auto}
+ .ctfl-header .ctfl-tools a,.ctfl-header .ctfl-tools button{font-size:11px;padding:6px}
+ .ctfl-header details.ctfl-mocks{position:static}
+ .ctfl-header .ctfl-dropdown{left:12px;right:12px;top:100%;width:auto;max-width:none}
+ .ctfl-header .ctfl-languages+ .ctfl-tools:empty{display:none}
+}
+@media(max-width:650px){
+ .ctfl-header[data-ctfl-kind=preparation]~main .intro{padding:15px 0 13px}
+ .ctfl-header[data-ctfl-kind=preparation]~main .guide{padding:17px}
+}
+@media print{header.ctfl-header.topbar{display:none!important}}
+</style>
 </head>
 <body>
 <div class="draft-banner" role="note"><strong>Public draft — under review.</strong> Feedback: <a href="mailto:kadir.camoglu@gmail.com">kadir.camoglu@gmail.com</a></div>
-<header class="topbar"><div class="inner"><a href="index.html">ISTQB® CTFL v4.0 Exam Guide</a><span class="meta"><span class="ind">Independent · Unofficial study guide · Public draft · 2026-10 · </span><a href="all.html">Full text on one page</a> · <a href="https://kadir-camoglu.github.io/istqb-ctfl-v4-sinav-rehberi/" lang="tr">Türkçe sürüm</a></span></div></header>
+<header class="topbar ctfl-header" data-ctfl-kind="guide" data-ctfl-lang="en">
+<div class="ctfl-inner"><a class="ctfl-brand" href="./">CTFL® · v4.0</a>
+<nav class="ctfl-nav" aria-label="CTFL resources">
+<a href="https://kadir-camoglu.github.io/istqb-ctfl-v4-exam-preparation/">Preparation</a>
+<a href="https://kadir-camoglu.github.io/istqb-ctfl-v4-exam-guide/" aria-current="true">Guide</a>
+<details class="ctfl-mocks"><summary>Mocks</summary>
+<div class="ctfl-dropdown"><p>Independent practice exams</p><ul><li><a href="https://kadir-camoglu.github.io/istqb-ctfl-v4-0-1-mock-exam-1-en/">Mock 1</a></li><li><a href="https://kadir-camoglu.github.io/istqb-ctfl-v4-0-1-mock-exam-2-en/">Mock 2</a></li><li><a href="https://kadir-camoglu.github.io/istqb-ctfl-v4-0-1-mock-exam-3-en/">Mock 3</a></li><li><a href="https://kadir-camoglu.github.io/istqb-ctfl-v4-0-1-mock-exam-4-en/">Mock 4</a></li><li><a href="https://kadir-camoglu.github.io/istqb-ctfl-v4-0-1-mock-exam-5-en/">Mock 5</a></li></ul>
+<a class="ctfl-inside" href="https://kadir-camoglu.github.io/istqb-ctfl-v4-exam-guide/mock-exam-1.html">In-guide mock exam</a></div></details>
+</nav><div class="ctfl-languages"><a class="ctfl-language-link" href="https://kadir-camoglu.github.io/istqb-ctfl-v4-sinav-rehberi/confused-pairs.html" lang="tr" hreflang="tr">Türkçe</a><span aria-hidden="true">/</span><span lang="en" aria-current="true">English</span></div>
+<div class="ctfl-tools"><a href="all.html">Full text</a></div></div></header>
 <div class="layout">
 <nav class="side"><details id="navd"><summary>Contents</summary><div class="navbody">
 <div class="group">Front matter</div><ul>
@@ -407,5 +466,45 @@
 </div>
 <script>if (window.matchMedia('(min-width: 901px)').matches) document.getElementById('navd').open = true;</script>
 <script>(function(){function od(){var h=decodeURIComponent(location.hash.slice(1));if(!h)return;var e=document.getElementById(h);while(e){if(e.tagName==='DETAILS')e.open=true;e=e.parentElement;}}addEventListener('hashchange',od);od();})();</script>
+<script id="ctfl-navigation-js">(function () {
+  'use strict';
+  var header = document.querySelector('.ctfl-header');
+  if (!header) return;
+  var menu = header.querySelector('.ctfl-mocks');
+  var summary = menu.querySelector('summary');
+  function measure() {
+    var height = header.getBoundingClientRect().height + 'px';
+    document.documentElement.style.setProperty('--ctfl-header-height', height);
+    document.documentElement.style.setProperty('--topbar-h', height);
+  }
+  measure();
+  if (window.ResizeObserver) new ResizeObserver(measure).observe(header);
+  window.addEventListener('resize', measure);
+  document.addEventListener('click', function (event) {
+    if (!menu.contains(event.target)) menu.open = false;
+  });
+  // Keep mock answer shortcuts from handling keys used inside the resource menu.
+  header.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && menu.open) {
+      menu.open = false;
+      summary.focus();
+      event.preventDefault();
+    }
+    event.stopPropagation();
+  });
+  menu.addEventListener('click', function (event) {
+    if (event.target.closest('a')) menu.open = false;
+  });
+  var language = header.querySelector('.ctfl-language-link');
+  function updateLanguage() {
+    if (header.dataset.ctflKind !== 'guide') return;
+    var url = new URL(language.href);
+    url.hash = location.hash;
+    language.href = url.href;
+  }
+  updateLanguage();
+  window.addEventListener('hashchange', updateLanguage);
+})();
+</script>
 </body>
 </html>
